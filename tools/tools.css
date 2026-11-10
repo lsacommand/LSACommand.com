@@ -60,3 +60,28 @@ button.button{cursor:pointer;font-family:inherit}
 @media(max-width:600px){.calc{padding:22px 18px;border-radius:18px}.fields{grid-template-columns:1fr;gap:16px}.results{padding:22px 18px;border-radius:18px}.tool-notes .article-body{padding:24px 20px}.tool-grid{grid-template-columns:1fr}.calc-actions .button{flex:1 1 auto}}
 .tool-notes .article-body>h2:first-child{margin-top:0}
 [data-status]{flex-basis:100%}[data-status]:empty{display:none}
+/* Account health grader: multiple-choice questions, grade letter, category bars, fix list. */
+.form-intro{font-size:.88rem;color:var(--muted);margin:0 0 20px}
+.field.wide{grid-column:1/-1}
+.q-label{font-weight:700;font-size:.9rem;line-height:1.35;margin:0 0 8px}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choices label{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-weight:600;font-size:.86rem;line-height:1.35;cursor:pointer;background:#fff}
+.choices label:has(input:checked){background:#e2fbfe;border-color:#04bdce;color:#052536}
+.choices input{accent-color:#007b8d;margin:0;flex:none}
+.grade-letter{display:inline-block;vertical-align:middle;font-size:.55em;line-height:1;padding:.18em .42em;margin-left:.2em;border-radius:12px;background:#04d9eb;color:#052536}
+.grade-letter:empty{display:none}
+.grade-letter.grade-d,.grade-letter.grade-f{background:#ffb4a6}
+.grade-letter.grade-c{background:#ffe08a}
+.results .cat-bars>div{flex-wrap:wrap;row-gap:6px}
+.results .cat-bars .bar{flex-basis:100%;height:6px;background:rgba(255,255,255,.14);border-radius:3px;overflow:hidden}
+.results .cat-bars .bar i{display:block;height:100%;background:#04d9eb;border-radius:3px;transition:width .2s}
+.results .fixes p{margin:0 0 8px}
+.results .fixes ol{margin:0;padding-left:20px}
+.results .fixes li{margin:0 0 10px}.results .fixes li:last-child{margin-bottom:0}
+.results .fixes a{color:#04d9eb;font-weight:700;white-space:nowrap}
+.results-note{margin:14px 0 0;font-size:.8rem;color:#b9dbe4}
+.weights-table{width:100%;border-collapse:collapse;font-size:.9rem;margin:0 0 18px}
+.weights-table th,.weights-table td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.weights-table td:nth-child(2){font-weight:750;white-space:nowrap}
+.tool-grid{grid-template-columns:repeat(2,1fr)}
+@media(max-width:600px){.tool-grid{grid-template-columns:1fr}.weights-table{font-size:.84rem}.weights-table th,.weights-table td{padding:8px 6px}}
