@@ -79,7 +79,7 @@
       options: { every: 5, sometimes: 2, never: 0 },
       source: '7496631',
       fix: 'Ask for a review after every completed job.',
-      why: 'Google says customers are more likely to leave a review when the request comes from the business directly, using its own review link.' },
+      why: 'Google says customers are more likely to leave a review when the request comes from the business directly, and it gives each business a review link to share.' },
     { key: 'profile', cat: 'profile', max: 8, type: 'choice',
       options: { complete: 8, partial: 4, bare: 0 },
       source: '7527305',
@@ -113,7 +113,7 @@
       options: { maximize: 4, manualReviewed: 3, manualStale: 0 },
       source: '7527305',
       fix: 'Move to Maximize leads, or review manual bids monthly.',
-      why: 'The bid is one of Google’s ranking factors and Google recommends Maximize leads. Manual bids nobody has looked at in months drift out of line.' }
+      why: 'The bid is one of Google’s ranking factors and Google recommends Maximize leads. Manual bids nobody has looked at in months drift out of line, and manual bidding goes away when the account moves into Google Ads.' }
   ];
 
   var TOTAL = QUESTIONS.reduce(function (s, q) { return s + q.max; }, 0); // 100
