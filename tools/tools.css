@@ -29,6 +29,7 @@ button.button{cursor:pointer;font-family:inherit}
 .error-note{display:none;color:#a5281b;font-size:.85rem;font-weight:650;margin:0 0 14px}
 .calc.has-errors .error-note{display:block}
 .results{position:sticky;top:24px;background:#052536;color:#e8fbff;border-radius:24px;padding:28px;box-shadow:0 20px 60px rgba(7,36,58,.18)}
+.results{min-width:0;overflow-wrap:anywhere}.results dd{white-space:normal}
 .results h2{color:#fff;font-size:1rem;letter-spacing:.12em;text-transform:uppercase;font-family:Inter,sans-serif;font-weight:800;margin:0 0 18px}
 .headline-label{color:#b9dbe4;font-size:.9rem;font-weight:650;margin:0 0 4px}
 .headline{font-family:Outfit,Inter,sans-serif;font-size:clamp(2.4rem,5vw,3.2rem);font-weight:900;line-height:1.05;color:#04d9eb;margin:0}
