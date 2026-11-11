@@ -85,3 +85,22 @@ button.button{cursor:pointer;font-family:inherit}
 .weights-table td:nth-child(2){font-weight:750;white-space:nowrap}
 .tool-grid{grid-template-columns:repeat(2,1fr)}
 @media(max-width:600px){.tool-grid{grid-template-columns:1fr}.weights-table{font-size:.84rem}.weights-table th,.weights-table td{padding:8px 6px}}
+/* Lead dispute helper: verdict pill, notes list, draft text box, optional-field label, textarea, checklist. */
+.optional{font-weight:500;color:var(--muted)}
+.field textarea{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:.92rem;line-height:1.45;resize:vertical;background:#fff}
+.field textarea:focus{outline:2px solid #04bdce;outline-offset:1px}
+.input-wrap input[type="date"]{min-width:0}
+.verdict{display:inline-block;margin:6px 0 4px;padding:.35em .7em;border-radius:12px;font-family:Outfit,Inter,sans-serif;font-weight:800;font-size:1.35rem;line-height:1.2;background:rgba(255,255,255,.12);color:#fff}
+.verdict-strong{background:#04d9eb;color:#052536}
+.verdict-possible,.verdict-wait{background:#ffe08a;color:#052536}
+.verdict-unlikely,.verdict-not_eligible,.verdict-too_late{background:#ffb4a6;color:#052536}
+.verdict-nothing{background:rgba(255,255,255,.85);color:#052536}
+.results .d-list{margin:0;padding-left:18px}.results .d-list li{margin:0 0 8px}.results .d-list li:last-child{margin-bottom:0}
+.draft-box{margin:18px 0 0}
+.draft-box[hidden]{display:none}
+.draft-label{margin:0 0 8px;font-weight:700;font-size:.9rem;color:#fff}
+.results .draft{margin:0 0 10px;padding:12px 14px;border-radius:12px;background:#fff;color:#052536;font-size:.9rem;line-height:1.5;overflow-wrap:anywhere;user-select:all}
+.copy-status{margin:8px 0 0;font-size:.82rem;color:#b9dbe4}.copy-status:empty{display:none}
+.results-note a{color:#04d9eb}
+.checklist li{margin:0 0 8px}
+.sources-list li{margin:0 0 10px;overflow-wrap:anywhere}
