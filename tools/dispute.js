@@ -11,6 +11,12 @@
  *   15100654  Automated lead credits: credits usually within 30 days, "job type not serviced" and
  *             "geo not serviced" no longer credited, no credits for health care, tax specialists or EMEA.
  *   11444751  Leads can only be disputed within 30 days.
+ * Re-checked 2026-11-12 (QA), adding:
+ *   17326057  Google Ads Help, lead quality for pay-per-lead campaigns: solicitation, wrong numbers and
+ *             callers who contact again within 15 days are named as invalid leads; manual disputes are
+ *             no longer supported; feedback goes through "Rate this lead".
+ * The 15-day rule (7195435) runs from the customer's last interaction: follow-ups aren't charged again
+ * "provided there is interaction within 15 days", and a new lead starts only after 15 days with no activity.
  *
  * Input: { leadType, chargeStatus, region, reason, daysAgo: 0-365, charge: >= 0 } plus optional
  *        { leadDate: 'YYYY-MM-DD', details: string } for the draft text.
@@ -23,6 +29,14 @@
   var WINDOW_DAYS = 30;     // 11444751 and 15100654
   var REPEAT_DAYS = 15;     // 7195435
   var DETAILS_MAX = 300;
+
+  /* Help pages behind each rule, by id. */
+  var SOURCES = {
+    '7195435': 'https://support.google.com/localservices/answer/7195435?hl=en',
+    '15100654': 'https://support.google.com/localservices/answer/15100654?hl=en',
+    '11444751': 'https://support.google.com/localservices/answer/11444751?hl=en',
+    '17326057': 'https://support.google.com/google-ads/answer/17326057?hl=en'
+  };
 
   var LEAD_TYPES = { call: 'Phone call', message: 'Message', booking: 'Booking request' };
   var STATUSES = { charged: 'Charged', inreview: 'In review', notcharged: 'Not charged', credited: 'Credited' };
@@ -44,17 +58,17 @@
     spam: { label: 'Spam, robocall or bot', verdict: 'strong', source: '7195435',
       why: 'Google says its systems filter invalid activity such as spam and credit low-quality leads. A spam lead that still shows as charged is the clearest case there is.',
       text: 'Spam or robocall, not a real customer. There was no service request.' },
-    duplicate: { label: 'Same customer again within 15 days (same number or email)', verdict: 'strong', source: '7195435',
-      why: 'Google says follow-up calls or messages from the same phone number or email within 15 days of a charged lead aren’t charged again.',
-      text: 'Duplicate lead. This customer already contacted us from the same phone number or email within the last 15 days, and that earlier lead was charged.' },
+    duplicate: { label: 'Same customer again, less than 15 days after their last contact (same number or email)', verdict: 'strong', source: '7195435',
+      why: 'Google says that once a lead is charged, follow-up calls or messages from the same phone number or email aren’t charged again, as long as there has been contact within the last 15 days.',
+      text: 'Duplicate lead. This customer already contacted us from the same phone number or email within the last 15 days, and an earlier lead from them was charged.' },
     missedcall: { label: 'Missed call that shouldn’t be charged (under 20 seconds, outside hours, or hung up at the phone menu)', verdict: 'strong', source: '7195435',
       why: 'Google only charges a missed call when it comes in during Business Profile hours (and the ad schedule, if set) and the caller stays on more than 20 seconds. With a phone menu, the 20 seconds start at the first key press.',
       text: 'Missed call that doesn’t meet the charged-call rules: the caller hung up within 20 seconds, called outside our business hours, or hung up at our phone menu without pressing a key.' },
-    solicitation: { label: 'Sales pitch, vendor or job seeker', verdict: 'possible', source: '7195435',
-      why: 'This isn’t a customer asking for service, so it’s a low-quality lead. Google’s current help pages don’t name solicitation as a credit reason, so there’s no promise.',
+    solicitation: { label: 'Sales pitch, vendor or job seeker', verdict: 'strong', source: '17326057',
+      why: 'Google’s help page for LSA leads in Google Ads names solicitation as an invalid lead that shouldn’t be charged. A charged sales pitch is worth rating.',
       text: 'Solicitation, not a customer. The caller was selling a product or service to us and did not request any work.' },
-    wrongnumber: { label: 'Wrong number, or looking for a different business', verdict: 'possible', source: '7195435',
-      why: 'Google pays out on leads related to the business. A caller trying to reach someone else isn’t one, but Google’s current pages don’t name wrong numbers as a credit reason.',
+    wrongnumber: { label: 'Wrong number, or looking for a different business', verdict: 'strong', source: '17326057',
+      why: 'Google’s help page for LSA leads in Google Ads names wrong numbers as invalid leads that shouldn’t be charged. A charged wrong number is worth rating.',
       text: 'Wrong number. The customer was trying to reach a different business and did not want our services.' },
     other: { label: 'Something else that isn’t a real lead', verdict: 'possible', source: '7195435',
       why: 'Google credits leads its systems decide are invalid or low quality. Say exactly what happened in the details box.',
@@ -65,7 +79,7 @@
     outsidearea: { label: 'Outside the client’s service area', verdict: 'unlikely', source: '15100654',
       why: 'Google says it no longer credits “geo not serviced” leads. Tighten the service areas in the account settings instead.',
       text: 'The customer is outside our service area. Please send fewer leads from this location.' },
-    repeat: { label: 'Same customer again, but after 15 days or from a new number', verdict: 'unlikely', source: '7195435',
+    repeat: { label: 'Same customer again, but after 15 or more days with no contact, or from a new number', verdict: 'unlikely', source: '7195435',
       why: 'Google says that after 15 days with no activity, a new call or message from the same customer is a new lead and is charged if it meets the valid-lead rules.',
       text: 'Repeat contact from an existing customer.' },
     nobooking: { label: 'Real customer, but they didn’t book (price shopping, no answer back)', verdict: 'unlikely', source: '7195435',
@@ -194,13 +208,15 @@
     out.draft = draftText(input, r);
     var summary = {
       strong: 'This matches a rule Google publishes for leads it doesn’t charge or credits.',
-      possible: 'This isn’t a real lead for the client, but Google doesn’t name it as a credit reason. Flag it and see.',
+      possible: 'This may not be a real lead for the client, but Google doesn’t name it as a credit reason. Flag it and see.',
       unlikely: 'Google’s current rules say this kind of lead isn’t credited.'
     }[verdict];
-    return done(verdict, summary, verdict === 'unlikely' && r.source === '15100654' ? ['15100654'] : [r.source, '15100654']);
+    var srcs = verdict === 'unlikely' && r.source === '15100654' ? ['15100654'] : [r.source, '15100654'];
+    if (r.source === '17326057') srcs = ['17326057', '7195435', '15100654'];
+    return done(verdict, summary, srcs);
   }
 
-  var api = { REASONS: REASONS, LEAD_TYPES: LEAD_TYPES, STATUSES: STATUSES, REGIONS: REGIONS, VERDICTS: VERDICTS,
+  var api = { SOURCES: SOURCES, REASONS: REASONS, LEAD_TYPES: LEAD_TYPES, STATUSES: STATUSES, REGIONS: REGIONS, VERDICTS: VERDICTS,
               WINDOW_DAYS: WINDOW_DAYS, REPEAT_DAYS: REPEAT_DAYS, assess: assess, daysBetween: daysBetween, cleanDetails: cleanDetails };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.LSADispute = api;

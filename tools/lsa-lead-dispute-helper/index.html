@@ -63,7 +63,7 @@
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
       },
-      "datePublished": "2026-11-11"
+      "datePublished": "2026-11-12"
     },
     {
       "@type": "FAQPage",
@@ -74,7 +74,7 @@
           "name": "Can you still dispute a Google Local Services Ads lead?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Google now credits most bad leads automatically and asks advertisers to rate each lead with the feedback form. An older Google page still describes disputes in the US and Canada, so check what the account shows. Either way, Google only accepts disputes within 30 days."
+            "text": "Mostly no. Google now reassesses charged leads, credits low-quality ones automatically, and asks advertisers to rate leads with the “Rate this lead” survey. For accounts in Google Ads, Google says manual lead disputes are no longer supported. An older Local Services page still describes disputes in the US and Canada, so check what the account shows, and act within 30 days."
           }
         },
         {
@@ -82,7 +82,7 @@
           "name": "Which LSA leads does Google credit?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Google says it filters spam and duplicate contacts and credits low-quality leads automatically. Repeat contact from the same number or email within 15 days isn’t charged again. It no longer credits leads for job types or areas the business doesn’t serve."
+            "text": "Google says it filters spam and duplicate contacts and credits low-quality leads automatically, and its Google Ads help names solicitation and wrong numbers as invalid too. Follow-ups from the same number or email aren’t charged again while there’s been contact in the last 15 days. It no longer credits leads for job types or areas the business doesn’t serve."
           }
         },
         {
@@ -155,7 +155,7 @@
 <div class="field wide"><p class="q-label" id="chargeStatus-label">Charge status on the Leads page</p><div class="choices" role="radiogroup" aria-labelledby="chargeStatus-label"><label><input type="radio" name="chargeStatus" value="charged" checked> Charged</label><label><input type="radio" name="chargeStatus" value="inreview"> In review</label><label><input type="radio" name="chargeStatus" value="notcharged"> Not charged</label><label><input type="radio" name="chargeStatus" value="credited"> Credited</label></div></div>
 </div></fieldset>
 <fieldset><legend>2. What happened</legend><div class="fields">
-<div class="field wide"><p class="q-label" id="reason-label">Pick the closest match</p><div class="choices" role="radiogroup" aria-labelledby="reason-label"><label><input type="radio" name="reason" value="spam" checked> Spam, robocall or bot</label><label><input type="radio" name="reason" value="duplicate"> Same customer again within 15 days (same number or email)</label><label><input type="radio" name="reason" value="missedcall"> Missed call that shouldn’t be charged (under 20 seconds, outside hours, or hung up at the phone menu)</label><label><input type="radio" name="reason" value="solicitation"> Sales pitch, vendor or job seeker</label><label><input type="radio" name="reason" value="wrongnumber"> Wrong number, or looking for a different business</label><label><input type="radio" name="reason" value="wrongservice"> Wanted a job type the client doesn’t offer</label><label><input type="radio" name="reason" value="outsidearea"> Outside the client’s service area</label><label><input type="radio" name="reason" value="repeat"> Same customer again, but after 15 days or from a new number</label><label><input type="radio" name="reason" value="nobooking"> Real customer, but they didn’t book</label><label><input type="radio" name="reason" value="other"> Something else that isn’t a real lead</label></div></div>
+<div class="field wide"><p class="q-label" id="reason-label">Pick the closest match</p><div class="choices" role="radiogroup" aria-labelledby="reason-label"><label><input type="radio" name="reason" value="spam" checked> Spam, robocall or bot</label><label><input type="radio" name="reason" value="duplicate"> Same customer again, less than 15 days after their last contact (same number or email)</label><label><input type="radio" name="reason" value="missedcall"> Missed call that shouldn’t be charged (under 20 seconds, outside hours, or hung up at the phone menu)</label><label><input type="radio" name="reason" value="solicitation"> Sales pitch, vendor or job seeker</label><label><input type="radio" name="reason" value="wrongnumber"> Wrong number, or looking for a different business</label><label><input type="radio" name="reason" value="wrongservice"> Wanted a job type the client doesn’t offer</label><label><input type="radio" name="reason" value="outsidearea"> Outside the client’s service area</label><label><input type="radio" name="reason" value="repeat"> Same customer again, but after 15 or more days with no contact, or from a new number</label><label><input type="radio" name="reason" value="nobooking"> Real customer, but they didn’t book</label><label><input type="radio" name="reason" value="other"> Something else that isn’t a real lead</label></div></div>
 <div class="field wide"><label for="leadNotes">Details for the feedback <span class="optional">(optional)</span></label><textarea id="leadNotes" rows="3" maxlength="300" aria-describedby="leadNotes-hint" placeholder="e.g. Recorded message about business loans, no service request"></textarea><p class="hint" id="leadNotes-hint">Added to the text below. Leave out the customer’s name and number. It isn’t saved or put in the share link.</p></div>
 </div></fieldset>
 <fieldset><legend>3. The client’s account</legend><div class="fields">
@@ -178,7 +178,7 @@
           <p class="copy-status" id="d-copy-status" aria-live="polite"></p>
         </div>
         <p class="results-note" id="d-sources"></p>
-        <p class="results-note">Google decides every credit. This is LSA Command’s reading of Google’s published rules, checked 2026-11-11.</p>
+        <p class="results-note">Google decides every credit. This is LSA Command’s reading of Google’s published rules, checked 2026-11-12.</p>
         <p class="results-cta">Want these numbers from a real client account? <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="results_panel">Book a 30-min call</a></p>
       </section>
     </div>
@@ -186,23 +186,23 @@
       <div class="article-body">
 <h2 id="how-it-works">How the check works</h2>
 <p>The helper runs the same checks, in the same order, that decide whether a credit is even possible. It stops at the first one that settles it.</p>
-<table class="weights-table">
+<table class="weights-table rules-table">
 <thead><tr><th scope="col">Check</th><th scope="col">If…</th><th scope="col">Result</th></tr></thead>
 <tbody>
 <tr><td>1. Charge status</td><td>Not charged, or already credited</td><td>Nothing to dispute</td></tr>
 <tr><td>2. Account</td><td>Health care, tax specialist, or Europe, the Middle East or Africa</td><td>Credits aren’t available</td></tr>
 <tr><td>3. In review</td><td>The lead shows “In review”</td><td>Wait: Google is already deciding</td></tr>
 <tr><td>4. Age</td><td>More than 30 days old</td><td>Past the window</td></tr>
-<tr><td>5. Reason</td><td>Spam, a repeat within 15 days, or a missed call outside the charged-call rules</td><td>Good case for a credit</td></tr>
-<tr><td></td><td>Sales pitch, wrong number, or something else that isn’t a real lead</td><td>Worth flagging, no promise</td></tr>
-<tr><td></td><td>Job type or area the client doesn’t serve, a repeat after 15 days, or a real customer who didn’t book</td><td>Google says it doesn’t credit this</td></tr>
+<tr><td>5. Reason</td><td>Spam, a sales pitch, a wrong number, a repeat within 15 days of the last contact, or a missed call outside the charged-call rules</td><td>Good case for a credit</td></tr>
+<tr><td></td><td>Something else that isn’t a real lead</td><td>Worth flagging, no promise</td></tr>
+<tr><td></td><td>Job type or area the client doesn’t serve, a repeat after 15 days with no contact, or a real customer who didn’t book</td><td>Google says it doesn’t credit this</td></tr>
 </tbody>
 </table>
-<p>“Good case” means the lead matches a rule Google publishes. “Worth flagging” means it isn’t a real lead for the client, but Google’s pages don’t name that reason. Either way, Google decides.</p>
+<p>“Good case” means the lead matches a rule Google publishes. “Worth flagging” means it may not be a real lead for the client, but Google’s pages don’t name that reason. Either way, Google decides.</p>
 
 <h2 id="where-to-paste">Where to paste the text</h2>
 <ul>
-<li><strong>Accounts already in Google Ads:</strong> open the Leads page (Goals, then Conversions, then Leads), open the lead, and use the lead feedback form. <span class="source">Source: <a href="https://support.google.com/google-ads/answer/17213585">Google Ads Help 17213585</a>.</span></li>
+<li><strong>Accounts already in Google Ads:</strong> open the Leads page (Goals, then Conversions, then Leads), select the lead and complete the “Rate this lead” survey. <span class="source">Sources: <a href="https://support.google.com/google-ads/answer/17213585">Google Ads Help 17213585</a>, <a href="https://support.google.com/google-ads/answer/17326057?hl=en">Google Ads Help 17326057</a>.</span></li>
 <li><strong>Accounts still in the Local Services Ads dashboard:</strong> open the menu, choose Leads, open the lead and choose “Rate this lead”. <span class="source">Source: <a href="https://support.google.com/localservices/answer/15100654?hl=en">About automated lead credits</a>.</span></li>
 <li>Google is bringing accounts into Google Ads in phases through 2027, so one agency can have clients in both places.</li>
 </ul>
@@ -213,7 +213,7 @@
 <li><strong>Filter last week’s leads to “Charged”.</strong> Leads that are Not charged need nothing.</li>
 <li><strong>Check last week’s flagged leads.</strong> Note which ones changed to “Credited” and which are still “In review”.</li>
 <li><strong>Listen to short and missed calls.</strong> A missed call is charged only in Business Profile hours (and the ad schedule) when the caller stays on more than 20 seconds. Anything else shouldn’t be charged.</li>
-<li><strong>Look for repeat contacts.</strong> Same number or email within 15 days of a charged lead shouldn’t be charged again.</li>
+<li><strong>Look for repeat contacts.</strong> Once a lead is charged, follow-ups from the same number or email shouldn’t be charged again while there’s been contact in the last 15 days.</li>
 <li><strong>Rate every lead, good and bad.</strong> Feedback is how Google learns what to send, and it can earn a bonus credit.</li>
 <li><strong>Flag spam, sales pitches and wrong numbers</strong> with a short, specific reason. The helper above drafts it.</li>
 <li><strong>Go oldest first.</strong> Anything three weeks old or more gets rated today.</li>
@@ -222,29 +222,31 @@
 <li><strong>Log credits for the client report.</strong> The original charge stays on the invoice; the credit goes to the account balance.</li>
 <li><strong>Skip credit work where it doesn’t apply.</strong> For health care, tax and EMEA clients, put the time into targeting instead.</li>
 </ol>
-<p class="source">Sources: <a href="https://support.google.com/localservices/answer/7195435?hl=en">How leads work</a>, <a href="https://support.google.com/localservices/answer/15100654?hl=en">About automated lead credits</a>, <a href="https://support.google.com/localservices/answer/11444751?hl=en">30-day limit</a>.</p>
+<p class="source">Sources: <a href="https://support.google.com/localservices/answer/7195435?hl=en">How leads work</a>, <a href="https://support.google.com/localservices/answer/15100654?hl=en">About automated lead credits</a>, <a href="https://support.google.com/localservices/answer/11444751?hl=en">30-day limit</a>, <a href="https://support.google.com/google-ads/answer/17326057?hl=en">lead quality in Google Ads</a>.</p>
 
 <h2 id="unclear">What Google’s pages don’t make clear</h2>
 <ul>
-<li><strong>Whether a separate “dispute” button still exists.</strong> Google’s newer pages describe automatic credits plus the feedback survey, and the “How to dispute charges” help link now opens the automated credits page. An older Google page still says you can dispute a lead and get it credited in the US and Canada. We treat the feedback form as the way in. If an account still shows a dispute option, use the same text there.</li>
-<li><strong>Sales pitches and wrong numbers.</strong> Google’s current pages name spam and duplicates, not solicitation or wrong numbers. That’s why those come back as “worth flagging” rather than “good case”.</li>
+<li><strong>Whether a separate “dispute” button still exists in the LSA dashboard.</strong> For accounts in Google Ads, Google says manual lead disputes are no longer supported and points to “Rate this lead”. For the LSA dashboard, the newer pages describe automatic credits plus the feedback survey, and the “How to dispute charges” help link now opens the automated credits page, but an older Google page still says you can dispute a lead and get it credited in the US and Canada. We treat the feedback form as the way in. If an account still shows a dispute option, use the same text there.</li>
+<li><strong>Sales pitches and wrong numbers.</strong> Google’s Google Ads help page names solicitation and wrong numbers as invalid leads, but the Local Services Help pages only name spam and duplicates. We treat both as a good case either way.</li>
+<li><strong>Out-of-area leads after the move.</strong> The LSA credits page says “geo not serviced” leads are no longer credited, while the Google Ads page says out-of-area activity is adjusted automatically on the backend. Fixing the service area is still the reliable fix.</li>
 <li><strong>After 30 days.</strong> Google says disputes are accepted within 30 days and automatic credits usually land within 30 days. It doesn’t say whether feedback after that can still earn a credit.</li>
 <li><strong>Region wording.</strong> One Google page says no credits in EMEA, another says no automatic credits in EEA countries. Outside the US and Canada, check the account itself.</li>
 <li><strong>How much comes back.</strong> Google doesn’t publish whether credits are always the full lead charge.</li>
 </ul>
 
-<h2 id="sources">Sources / last checked 2026-11-11</h2>
+<h2 id="sources">Sources / last checked 2026-11-12</h2>
 <ul class="sources-list">
-<li><a href="https://support.google.com/localservices/answer/7195435?hl=en">How leads work (Local Services Help)</a>. What counts as a valid, charged lead for calls, messages, voicemails and bookings. Spam and duplicate contacts are filtered, and low-quality leads are credited automatically. The 20-second missed-call rule, the phone-menu rule and the ad schedule. Repeat contact from the same number or email within 15 days isn’t charged again. Feedback goes through the lead’s feedback survey, and Google “may also occasionally credit” leads reported there. Booking leads are US and Canada only.</li>
+<li><a href="https://support.google.com/localservices/answer/7195435?hl=en">How leads work (Local Services Help)</a>. What counts as a valid, charged lead for calls, messages, voicemails and bookings. Spam and duplicate contacts are filtered, and low-quality leads are credited automatically. The 20-second missed-call rule, the phone-menu rule and the ad schedule. Once a lead is charged, follow-ups from the same number or email aren’t charged again while there’s been contact within the last 15 days; after 15 days with no activity, the next contact is a new lead. Feedback goes through the lead’s feedback survey, and Google “may also occasionally credit” leads reported there. Booking leads are US and Canada only.</li>
 <li><a href="https://support.google.com/localservices/answer/15100654?hl=en">About automated Local Services Ads lead credits</a>. Charged leads are reassessed and may be credited automatically, usually within 30 days. The original charge still appears on the invoice. “Job type not serviced” and “geo not serviced” leads are no longer credited. No credits for health care, tax specialists or EMEA advertisers. Leaving feedback can earn a bonus credit. The charge statuses are Not charged, Charged, In review and Credited.</li>
 <li><a href="https://support.google.com/localservices/answer/11444751?hl=en">Lead disputes: the 30-day limit</a>. Leads can only be disputed within 30 days.</li>
 <li><a href="https://support.google.com/localservices/answer/11444536?hl=en">Lead dispute policy: introduction</a>. An older Google page that still says you can dispute a lead and that a successful dispute is credited (US and Canada only), with no disputes for health care. It conflicts with the newer pages: see “What Google’s pages don’t make clear”.</li>
 <li><a href="https://support.google.com/localservices/answer/7435486?hl=en">How to dispute charges</a>. This Local Services Help link now redirects to the automated lead credits page above.</li>
-<li><a href="https://support.google.com/google-ads/answer/17213585">Local Services Ads transition to Performance Max campaigns with pay-per-lead goals (Google Ads Help)</a>. Google is bringing Local Services Ads accounts into Google Ads in phases: select US home-service trades from August 2026, broader groups in late 2026, and the rest, including non-US accounts, in 2027. There, the Leads page (Goals, then Conversions, then Leads) keeps the charge status and the lead feedback form.</li>
+<li><a href="https://support.google.com/google-ads/answer/17213585">Local Services Ads transition to Performance Max campaigns with pay-per-lead goals (Google Ads Help)</a>. Google is bringing Local Services Ads accounts into Google Ads in phases: select US home-service trades from August 2026, broader groups in late 2026, and the rest, including non-US accounts, in 2027. There, leads are on the Leads page (Goals, then Conversions, then Leads), and manual lead disputes are no longer supported.</li>
+<li><a href="https://support.google.com/google-ads/answer/17326057?hl=en">Lead quality and budgets for campaigns with pay-per-lead goals (Google Ads Help)</a>. Google names solicitation, wrong numbers and callers who contact again within 15 days as invalid leads that are filtered out so you’re not charged. Manual disputes are no longer supported: select the lead on the Leads page and complete the “Rate this lead” survey, which starts an automated evaluation that can show up as a reimbursement in the Charge Status column. Out-of-area or low-quality activity is adjusted automatically on the backend.</li>
 </ul>
 <p>Google changes these rules from time to time. If the account shows something different from this page, go by the account.</p>
 <h2 id="faq">Frequently asked questions</h2>
-<div class="faq"><details><summary>Can you still dispute a Google Local Services Ads lead?</summary><p>Google now credits most bad leads automatically and asks advertisers to rate each lead with the feedback form. An older Google page still describes disputes in the US and Canada, so check what the account shows. Either way, Google only accepts disputes within 30 days.</p></details><details><summary>Which LSA leads does Google credit?</summary><p>Google says it filters spam and duplicate contacts and credits low-quality leads automatically. Repeat contact from the same number or email within 15 days isn’t charged again. It no longer credits leads for job types or areas the business doesn’t serve. See <a href="https://support.google.com/localservices/answer/15100654?hl=en">About automated lead credits</a>.</p></details><details><summary>Does a lead credit remove the charge from the invoice?</summary><p>No. Google says the original lead charge still appears on the invoice, and the credit is applied to the account balance, usually within 30 days.</p></details><details><summary>Does this tool send anything to Google?</summary><p>No. It runs in your browser and only drafts the text. You paste it into the lead’s feedback form yourself. Nothing you type is stored, and the details box is never put in the share link.</p></details></div>
+<div class="faq"><details><summary>Can you still dispute a Google Local Services Ads lead?</summary><p>Mostly no. Google now reassesses charged leads, credits low-quality ones automatically, and asks advertisers to rate leads with the “Rate this lead” survey. For accounts in Google Ads, Google says manual lead disputes are no longer supported. An older Local Services page still describes disputes in the US and Canada, so check what the account shows, and act within 30 days.</p></details><details><summary>Which LSA leads does Google credit?</summary><p>Google says it filters spam and duplicate contacts and credits low-quality leads automatically, and its Google Ads help names solicitation and wrong numbers as invalid too. Follow-ups from the same number or email aren’t charged again while there’s been contact in the last 15 days. It no longer credits leads for job types or areas the business doesn’t serve. See <a href="https://support.google.com/localservices/answer/15100654?hl=en">About automated lead credits</a>.</p></details><details><summary>Does a lead credit remove the charge from the invoice?</summary><p>No. Google says the original lead charge still appears on the invoice, and the credit is applied to the account balance, usually within 30 days.</p></details><details><summary>Does this tool send anything to Google?</summary><p>No. It runs in your browser and only drafts the text. You paste it into the lead’s feedback form yourself. Nothing you type is stored, and the details box is never put in the share link.</p></details></div>
 <section class="cta-box" id="book"><h2>Stop checking bad leads one at a time.</h2><p>Book a 30-min call with Ryan and bring one client’s last 30 days of leads. We’ll go through the charged ones together, flag the ones worth feedback, and show you how agencies use LSA Command to review and rate every lead across their whole client book.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="cta_box">Book a 30-min call</a></section>
 <aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/tools/lsa-account-health-grader/">LSA account health grader</a></li><li><a href="/tools/lsa-missed-call-calculator/">LSA missed-call cost calculator</a></li><li><a href="/lsa-lead-disputes/">Lead disputes and credits</a></li><li><a href="/lsa-service-area/">Service area targeting</a></li></ul></aside>
       </div>
@@ -305,7 +307,7 @@
       sourcesEl.textContent = 'Google rules: ';
       r.sources.forEach(function (id, i) {
         var a = document.createElement('a');
-        a.href = 'https://support.google.com/localservices/answer/' + id + '?hl=en';
+        a.href = D.SOURCES[id] || ('https://support.google.com/localservices/answer/' + id + '?hl=en');
         a.textContent = 'help page ' + id;
         if (i) sourcesEl.appendChild(document.createTextNode(', '));
         sourcesEl.appendChild(a);
