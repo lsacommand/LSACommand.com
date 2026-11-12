@@ -104,3 +104,7 @@ button.button{cursor:pointer;font-family:inherit}
 .results-note a{color:#04d9eb}
 .checklist li{margin:0 0 8px}
 .sources-list li{margin:0 0 10px;overflow-wrap:anywhere}
+/* 5 tool cards in a 2-column grid: the last card spans the full row instead of sitting alone. */
+@media(min-width:601px){.tool-grid>:last-child:nth-child(odd){grid-column:1/-1}}
+/* The dispute helper reuses the grader table, but its 2nd column is prose: let it wrap (the grader nowrap pushed it to 980px at 375px). */
+.rules-table td:nth-child(2){white-space:normal;font-weight:400}
