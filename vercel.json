@@ -1,9 +1,20 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/setup.html",
+      "destination": "/setup",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/affiliate/signup",
       "destination": "/affiliate/signup/index.html"
+    },
+    {
+      "source": "/setup",
+      "destination": "/setup.html"
     }
   ]
 }
