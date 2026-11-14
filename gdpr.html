@@ -21,8 +21,8 @@
     <title>GDPR | LSA Command</title>
     <link rel="canonical" href="https://lsacommand.com/gdpr.html">
     <meta name="description" content="GDPR information for LSA Command, describing how we handle personal data for European visitors.">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="shortcut icon" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,19 +66,19 @@ fpr("click");
 
 <body class="theme-light overflow-x-hidden selection:bg-electric selection:text-midnight">
     <header class="fixed top-0 w-full z-50 glass border-b border-white/5">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="h-14 w-auto relative flex items-center">
-                    <img src="lsa-command-logo.svg" alt="LSA Command Logo" class="h-full w-auto object-contain">
-                </div>
-                <div class="leading-none hidden sm:block">
-                    <p class="font-black uppercase tracking-tight text-lg">LSA Command</p>
-                    <p class="text-neon text-[10px] font-black uppercase tracking-[0.24em]">Speed-to-Lead AI</p>
-                </div>
-            </div>
-            <a href="sms:+15618613238" class="hidden sm:inline-flex bg-neon text-midnight font-bold px-6 py-2 rounded-full hover:scale-105 transition-transform duration-300">
-                Text Us
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
+            <a href="/" aria-label="LSA Command home" class="flex items-center shrink-0">
+                <img src="/lsa-command-logo.svg" alt="LSA Command" class="h-14 w-auto object-contain" width="720" height="240">
             </a>
+            <nav class="flex items-center gap-4 lg:gap-6 text-sm font-bold" aria-label="Main navigation">
+                <a href="/agencies/" class="hidden sm:inline hover:underline">Agencies</a>
+                <a href="/lsa-notes-and-notifications/" class="hidden xl:inline hover:underline">Notes and notifications</a>
+                <a href="/pricing/" class="hover:underline">Pricing</a>
+                <a href="/case-studies/" class="hidden md:inline hover:underline">Case studies</a>
+                <a href="/industries/" class="hidden lg:inline hover:underline">Industries</a>
+                <a href="/blog/" class="hidden lg:inline hover:underline">Blog</a>
+                <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book" class="inline-flex whitespace-nowrap bg-neon text-midnight font-bold px-5 py-2 rounded-full hover:scale-105 transition-transform duration-300">Book an LSA audit</a>
+            </nav>
         </div>
     </header>
 
@@ -128,16 +128,27 @@ fpr("click");
 
     <footer class="py-12 border-t border-white/5 text-center text-gray-500 text-sm">
         <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-center gap-4 mb-6">
-                <a href="privacy-policy.html" class="text-sm text-neon hover:underline">Privacy Policy</a>
-                <a href="terms-of-service.html" class="text-sm text-neon hover:underline">Terms of Service</a>
-                <a href="cookie-policy.html" class="text-sm text-neon hover:underline">Cookie Policy</a>
-                <a href="gdpr.html" class="text-sm text-neon hover:underline">GDPR</a>
-                <a href="hipaa-compliance.html" class="text-sm text-neon hover:underline">HIPAA Compliance</a>
-            </div>
+            <nav aria-label="Footer navigation" class="flex flex-wrap justify-center gap-4 mb-6">
+                <a href="/agencies/" class="text-sm text-neon hover:underline">For agencies</a>
+                <a href="/pricing/" class="text-sm text-neon hover:underline">Pricing</a>
+                <a href="/what-you-get/" class="text-sm text-neon hover:underline">What you get</a>
+                <a href="/lsa-notes-and-notifications/" class="text-sm text-neon hover:underline">Notes and notifications</a>
+                <a href="/case-studies/" class="text-sm text-neon hover:underline">Case studies</a>
+                <a href="/industries/" class="text-sm text-neon hover:underline">Industries</a>
+                <a href="/blog/" class="text-sm text-neon hover:underline">Blog</a>
+                <a href="/setup/" class="text-sm text-neon hover:underline">Setup guide</a>
+                <a href="/support.html" class="text-sm text-neon hover:underline">Support</a>
+                <a href="https://ryan.diyai.ai/30-min-discovery-call" class="text-sm text-neon hover:underline" data-cta="footer-book">Book an LSA audit</a>
+                <a href="/privacy-policy.html" class="text-sm text-neon hover:underline">Privacy Policy</a>
+                <a href="/terms-of-service.html" class="text-sm text-neon hover:underline">Terms of Service</a>
+                <a href="/cookie-policy.html" class="text-sm text-neon hover:underline">Cookie Policy</a>
+                <a href="/gdpr.html" class="text-sm text-neon hover:underline">GDPR</a>
+                <a href="/hipaa-compliance.html" class="text-sm text-neon hover:underline">HIPAA Compliance</a>
+            </nav>
+            <p class="mb-6 font-bold">Call or text <a href="tel:+15618613238" data-cta="footer-call" class="text-neon underline">561-861-3238</a></p>
             <div class="flex items-center justify-center space-x-2 mb-8">
                 <div class="h-16 w-auto relative opacity-90">
-                    <img src="lsa-command-logo.svg" alt="LSA Command Logo" class="h-full w-auto object-contain">
+                    <img src="/lsa-command-logo.svg" alt="LSA Command" class="h-full w-auto object-contain" width="720" height="240" loading="lazy" decoding="async">
                 </div>
             </div>
             <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
