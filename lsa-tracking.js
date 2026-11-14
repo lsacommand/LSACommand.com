@@ -7,10 +7,11 @@
  *   - book_meeting_click fires here, once per click, for any booking link.
  *   - book_meeting fires on /booked/ (the calendar's after-booking redirect), not here.
  *   - /discovery is the off-site short link (YouTube, email); it fires its own book_meeting_click.
+ *   - /book is a plain redirect to the calendar (vercel.json) for print and voice; on-site CTAs do not use it.
  *
  * Events sent:
- *   generate_lead       – a visitor taps a text (sms:) or call (tel:) link. params: method, cta_location
- *   book_meeting_click  – a visitor clicks any "book a call" link.            params: cta_location
+ *   generate_lead       : a visitor taps a text (sms:) or call (tel:) link. params: method, cta_location
+ *   book_meeting_click  : a visitor clicks any "book a call" link.            params: cta_location
  *   (both also send link_location with the same value, for reports built on the earlier name)
  *
  * Booking links to the external calendar also carry the visit's first-touch UTMs (when the
@@ -21,7 +22,7 @@
 (function () {
   'use strict';
 
-  var BOOKING_PATTERN = /30-min-discovery-call|^\/discovery\/?$|lsacommand\.com\/discovery\/?$/;
+  var BOOKING_PATTERN = /30-min-discovery-call|^\/(discovery|book)\/?$|lsacommand\.com\/(discovery|book)\/?$/;
   var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
   var STORE_KEY = 'lsa-first-touch';
 
