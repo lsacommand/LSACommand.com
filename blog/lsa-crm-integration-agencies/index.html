@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) — LSA Command -->
+    <!-- Google tag (gtag.js): LSA Command -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -162,7 +162,7 @@ fpr("click");
 <p>A retry should not create another opportunity or send another welcome message.</p>
 <p>Ask for a controlled demonstration in which the same source event is processed twice. The expected result is one intended record in the client system, with enough activity history to explain the retry. Then test a genuinely new inquiry from the same contact so the duplicate safeguard does not suppress legitimate work.</p>
 <p>Deduplicate a repeated delivery, not every later event associated with that lead. Google documents that one lead can have several conversations. A later message or status change must remain visible even when its lead identifier is already known. <a href="https://developers.google.com/google-ads/api/docs/campaigns/local-service-campaigns">See the lead-to-conversation relationship</a>.</p>
-<p><strong>Synthetic example—not a product demonstration:</strong> A demonstration business receives an inquiry that matches an existing contact and creates one opportunity under the agency’s agreed rules. Replaying the same event should not create a second opportunity or send another welcome message. A later message on that inquiry should appear as new activity. If the same person submits a new inquiry for a different job, preserve it rather than suppressing it because the phone number matches. Whether it needs another opportunity depends on the client’s agreed workflow.</p>
+<p><strong>Synthetic example, not a product demonstration:</strong> A demonstration business receives an inquiry that matches an existing contact and creates one opportunity under the agency’s agreed rules. Replaying the same event should not create a second opportunity or send another welcome message. A later message on that inquiry should appear as new activity. If the same person submits a new inquiry for a different job, preserve it rather than suppressing it because the phone number matches. Whether it needs another opportunity depends on the client’s agreed workflow.</p>
 <p>Decide how conflicting updates are handled. If an account manager corrects a pipeline stage, should a later synchronization overwrite it? Which timestamp and source determine the current value? Your team should be able to inspect the answer rather than reconstruct it from several inboxes.</p>
 <p>Revenue needs the same discipline. Assign a stable job or opportunity identifier, distinguish an estimate from actual revenue, and specify whether your report uses booked, invoiced or collected amounts. Do not add the same job value once from the client system and again from a second imported record. Leave revenue unavailable when it has not been supplied; zero is a different statement.</p>
 <p>For the reporting side of this process, use our <a href="https://lsacommand.com/blog/lsa-reporting-software-agencies/">guide to evaluating Local Services Ads reporting software for agencies</a>.</p>
@@ -174,7 +174,7 @@ fpr("click");
 <h2 id="test-the-handoff-before-adding-more-clients">Test the handoff before adding more clients</h2>
 <p>Use a supported test environment or authorized records, rather than creating fake consumer leads through live ads. Ask the person who will own the account to walk through these checks:</p>
 <ol>
-<li>A supported new lead reaches the correct client's system and responsible person. Using authorized synthetic demo records, open the resulting record and any shared output as the intended client role—not an agency administrator—and confirm only permitted data and actions are available. Include an unrelated demo record in the check; a filtered-looking screen alone is not proof of restricted access.</li>
+<li>A supported new lead reaches the correct client's system and responsible person. Using authorized synthetic demo records, open the resulting record and any shared output as the intended client role (not an agency administrator) and confirm only permitted data and actions are available. Include an unrelated demo record in the check; a filtered-looking screen alone is not proof of restricted access.</li>
 <li>Reprocessing the same event does not create a duplicate opportunity or reply.</li>
 <li>A later message on the same lead is retained, and a genuinely new inquiry from an existing contact remains visible as new work.</li>
 <li>An outcome correction is retained and appears in the agreed destination.</li>
