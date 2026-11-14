@@ -47,6 +47,16 @@
       "source": "/review-ai-sms-example.jpg",
       "destination": "/review-request-sms-example.svg",
       "permanent": true
+    },
+    {
+      "source": "/book",
+      "destination": "https://ryan.diyai.ai/30-min-discovery-call",
+      "permanent": false
+    },
+    {
+      "source": "/book/",
+      "destination": "https://ryan.diyai.ai/30-min-discovery-call",
+      "permanent": false
     }
   ]
 }
