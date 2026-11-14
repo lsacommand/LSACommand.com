@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) — LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer onload="window.__lsaTracking=true"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSA Missed-Call Cost Calculator (20-Second Rule) | LSA Command</title>
+  <meta name="description" content="Free calculator: what missed Google Local Services Ads calls cost a client each month in charged leads and lost jobs under Google’s 20-second missed-call rule.">
+  <link rel="canonical" href="https://lsacommand.com/tools/lsa-missed-call-calculator/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="LSA Missed-Call Cost Calculator (20-Second Rule) | LSA Command">
+  <meta property="og:description" content="Free calculator: what missed Google Local Services Ads calls cost a client each month in charged leads and lost jobs under Google’s 20-second missed-call rule.">
+  <meta property="og:url" content="https://lsacommand.com/tools/lsa-missed-call-calculator/">
+  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LSA Missed-Call Cost Calculator (20-Second Rule) | LSA Command">
+  <meta name="twitter:description" content="Free calculator: what missed Google Local Services Ads calls cost a client each month in charged leads and lost jobs under Google’s 20-second missed-call rule.">
+  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <link rel="stylesheet" href="/tools/tools.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://lsacommand.com/tools/lsa-missed-call-calculator/#tool",
+      "name": "LSA missed-call cost calculator",
+      "url": "https://lsacommand.com/tools/lsa-missed-call-calculator/",
+      "description": "Free calculator: what missed Google Local Services Ads calls cost a client each month in charged leads and lost jobs under Google’s 20-second missed-call rule.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-11-02"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/tools/lsa-missed-call-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Google charge for missed calls on Local Services Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in some cases. A missed call is charged when it arrives during the hours on the Business Profile (and inside the ad schedule, if one is set) and the caller stays on the line for more than 20 seconds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a call that goes to voicemail count as missed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google counts a call that reaches voicemail or an automated greeting as connected, so it can be charged after 20 seconds whether or not the caller leaves a message. Voicemail is not a safe overflow for LSA calls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find missed-call charges on a client’s bill?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pull every charged phone lead for the last full month. Flag recordings with no conversation (ringing or the voicemail greeting) and charges at times nobody was on the phones, then match them against the client’s own call log."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Free tools",
+          "item": "https://lsacommand.com/tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "LSA missed-call cost calculator",
+          "item": "https://lsacommand.com/tools/lsa-missed-call-calculator/"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="header">Book a 30-min call</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Free tools</a></li><li aria-current="page">LSA missed-call cost calculator</li></ol></nav>
+    <header class="article-header">
+      <p class="eyebrow">Free tool for agencies</p>
+      <h1>LSA missed-call cost calculator</h1>
+      <p class="lede">Google can now charge for a Local Services Ads call nobody answers. Enter one client’s numbers to see what unanswered calls cost each month, in ad spend and in jobs that never got booked.</p>
+    </header>
+    <div class="tool-layout">
+      <form class="calc" id="calc" novalidate aria-label="LSA missed-call cost calculator inputs">
+          <fieldset><legend>The calls <small>One client, one month. The starting numbers are an example, not a benchmark.</small></legend><div class="fields">
+<div class="field"><label for="calls">LSA phone leads per month <span class="sr-only">(calls)</span></label><div class="input-wrap"><input id="calls" name="calls" type="number" inputmode="decimal" min="0" step="any" value="100" aria-describedby="calls-hint"><span class="unit post" aria-hidden="true">calls</span></div><p class="hint" id="calls-hint">Calls only. Message leads aren’t affected by the missed-call rule.</p></div>
+<div class="field"><label for="answerRate">Answer rate <span class="sr-only">(percent)</span></label><div class="input-wrap"><input id="answerRate" name="answerRate" type="number" inputmode="decimal" min="0" max="100" step="any" value="75" aria-describedby="answerRate-hint"><span class="unit post" aria-hidden="true">%</span></div><p class="hint" id="answerRate-hint">Share of those calls someone actually picked up. Take it from the client’s call log, not the LSA dashboard.</p></div>
+<div class="field"><label for="chargedShare">Missed calls Google charges <span class="sr-only">(percent)</span></label><div class="input-wrap"><input id="chargedShare" name="chargedShare" type="number" inputmode="decimal" min="0" max="100" step="any" value="100" aria-describedby="chargedShare-hint"><span class="unit post" aria-hidden="true">%</span></div><p class="hint" id="chargedShare-hint">Start at 100% if missed calls roll to voicemail during business hours. Lower it to match the client’s bill.</p></div>
+</div></fieldset>
+<fieldset><legend>The money</legend><div class="fields">
+<div class="field"><label for="cpl">Average cost per lead <span class="sr-only">(dollars)</span></label><div class="input-wrap"><span class="unit pre" aria-hidden="true">$</span><input id="cpl" name="cpl" type="number" inputmode="decimal" min="0" step="any" value="60" aria-describedby="cpl-hint"></div><p class="hint" id="cpl-hint">From the client’s account. Google doesn’t publish lead prices.</p></div>
+<div class="field"><label for="closeRate">Close rate <span class="sr-only">(percent)</span></label><div class="input-wrap"><input id="closeRate" name="closeRate" type="number" inputmode="decimal" min="0" max="100" step="any" value="40" aria-describedby="closeRate-hint"><span class="unit post" aria-hidden="true">%</span></div><p class="hint" id="closeRate-hint">Share of answered leads that become booked jobs.</p></div>
+<div class="field"><label for="jobValue">Average job value <span class="sr-only">(dollars)</span></label><div class="input-wrap"><span class="unit pre" aria-hidden="true">$</span><input id="jobValue" name="jobValue" type="number" inputmode="decimal" min="0" step="any" value="400" aria-describedby="jobValue-hint"></div><p class="hint" id="jobValue-hint">Revenue from one booked job.</p></div>
+<div class="field"><label for="recoveredShare">Missed callers you still book <span class="sr-only">(percent)</span></label><div class="input-wrap"><input id="recoveredShare" name="recoveredShare" type="number" inputmode="decimal" min="0" max="100" step="any" value="0" aria-describedby="recoveredShare-hint"><span class="unit post" aria-hidden="true">%</span></div><p class="hint" id="recoveredShare-hint">If the client calls missed callers back, the share they still win. 0 is the worst case.</p></div>
+</div></fieldset>
+          <p class="error-note" role="alert">Check the highlighted box: it needs a number in range.</p>
+          <div class="calc-actions"><button type="button" class="button" data-share>Copy link with these numbers</button><button type="reset" class="button ghost" data-reset>Reset to example</button><p data-status aria-live="polite"></p></div>
+      </form>
+      <section class="results" aria-labelledby="results-title" aria-live="polite">
+        <h2 id="results-title">What missed calls cost</h2>
+        <p class="headline-label">Ad spend on calls nobody answered</p>
+        <p class="headline" id="mc-wasted">$1,500</p>
+        <p class="headline-sub"><span id="mc-wasted-year">$18,000</span> a year</p>
+        <dl>
+          <div><dt>Missed calls a month</dt><dd id="mc-missed">25</dd></div>
+          <div><dt>Missed calls Google charges</dt><dd id="mc-charged">25</dd></div>
+          <div><dt>Booked jobs lost a month</dt><dd id="mc-lost-jobs">10</dd></div>
+          <div><dt>Revenue at risk a month</dt><dd id="mc-revenue">$4,000</dd></div>
+          <div><dt>Revenue at risk a year</dt><dd id="mc-revenue-year">$48,000</dd></div>
+        </dl>
+        <p class="callout" id="mc-uplift"></p>
+        <p class="results-cta">Want these numbers from a real client account? <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="results_panel">Book a 30-min call</a></p>
+      </section>
+    </div>
+    <div class="tool-notes">
+      <div class="article-body">
+<h2 id="how-to-read">How to read this</h2>
+<ul>
+<li><strong>The big number is cash already spent.</strong> It’s what the client paid Google for calls that reached nobody. That’s the part of the bill an agency can fix this month, by changing hours and call routing rather than bids.</li>
+<li><strong>Revenue at risk is an upper bound.</strong> It assumes every missed caller would have booked at the client’s normal close rate. Some would have hired a competitor anyway, and some call back. Use “Missed callers you still book” if the client returns calls.</li>
+<li><strong>Don’t add the two together.</strong> Wasted spend is money out. Revenue at risk is gross revenue, not profit.</li>
+<li><strong>The “10 more of every 100 calls” line</strong> shows what a realistic improvement is worth, which is usually an easier conversation with a client than the worst case.</li>
+</ul>
+<h2 id="the-rule">The billing rule behind the math</h2>
+<p>Under Google’s lead rules, a missed call is a charged lead when it comes in during the hours on the client’s Business Profile (and inside the ad schedule, if one is set) and the caller stays on the line for more than 20 seconds. A call that reaches voicemail or an automated greeting counts as connected, so it can be charged after 20 seconds whether or not the caller leaves a message. With a phone menu, the 20 seconds start at the first key press. The same phone number isn’t charged again within 15 days. <span class="source">Source: <a href="https://support.google.com/localservices/answer/7195435?hl=en">Google Local Services Help, how leads work</a>.</span></p>
+<h2 id="assumptions">Assumptions</h2>
+<ul>
+<li>Every charged missed call costs the average cost per lead you enter. Individual lead prices vary, so the result is an average, not an invoice line.</li>
+<li>Repeat callers: because a number isn’t charged twice inside 15 days, a client with many repeat missed callers has fewer charges than missed calls. Lower “Missed calls Google charges” to match.</li>
+<li>Missed calls outside Business Profile hours or the ad schedule aren’t charged under this rule. They still cost jobs, so they stay in the revenue line.</li>
+<li>Nothing you type leaves your browser. “Copy link” puts the numbers in the part of the link after the #, which isn’t sent to any server.</li>
+</ul>
+<h2 id="what-to-fix">What to fix first</h2>
+<ol>
+<li>Make the Business Profile hours match the hours someone is actually on the phones.</li>
+<li>Set the ad schedule to the hours the client can cover.</li>
+<li>Send unanswered calls to something that answers before the 20-second mark, and stop using voicemail as the overflow. <a href="/lsa-ai-call-answering/">LSA Command’s AI call answering</a> picks up when the client’s team doesn’t.</li>
+<li>Rate every lead and track credits for spam and invalid ones. See <a href="/lsa-lead-disputes/">lead disputes and credits</a>.</li>
+</ol>
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq"><details><summary>Does Google charge for missed calls on Local Services Ads?</summary><p>Yes, in some cases. A missed call is charged when it arrives during the hours on the Business Profile (and inside the ad schedule, if one is set) and the caller stays on the line for more than 20 seconds.</p></details><details><summary>Does a call that goes to voicemail count as missed?</summary><p>Google counts a call that reaches voicemail or an automated greeting as connected, so it can be charged after 20 seconds whether or not the caller leaves a message. Voicemail is not a safe overflow for LSA calls.</p></details><details><summary>How do I find missed-call charges on a client’s bill?</summary><p>Pull every charged phone lead for the last full month. Flag recordings with no conversation (ringing or the voicemail greeting) and charges at times nobody was on the phones, then match them against the client’s own call log.</p></details></div>
+<section class="cta-box" id="book"><h2>Find the missed calls on a real bill.</h2><p>Book a 30-min call and bring one client’s LSA account. We’ll go through last month’s charged calls together, find the ones nobody answered, and show you how agencies use LSA Command to answer them across a whole client book.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="cta_box">Book a 30-min call</a></section>
+<aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/tools/lsa-agency-margin-calculator/">Agency LSA margin calculator</a></li><li><a href="/tools/lsa-budget-calculator/">LSA budget calculator</a></li><li><a href="/lsa-ai-call-answering/">AI call answering for LSA</a></li><li><a href="/blog/google-local-services-ads-cost/">How much Google Local Services Ads cost</a></li></ul></aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Free tools"><a href="/tools/lsa-missed-call-calculator/">Missed-call cost calculator</a><a href="/tools/lsa-agency-margin-calculator/">Agency LSA margin calculator</a><a href="/tools/lsa-budget-calculator/">LSA budget calculator</a></nav>
+    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Service Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+  <script src="/tools/calc.js"></script>
+  <script src="/tools/tools.js"></script>
+  <script>
+(function () {
+  var T = window.LSATools, C = window.LSACalc;
+  var ids = ['mc-wasted', 'mc-wasted-year', 'mc-missed', 'mc-charged', 'mc-lost-jobs', 'mc-revenue', 'mc-revenue-year'];
+  T.mount({
+    form: document.getElementById('calc'),
+    tool: 'missed_call_cost',
+    compute: function (v) {
+      var up = document.getElementById('mc-uplift');
+      if (!v) { ids.forEach(function (id) { T.set(id, '—'); }); up.textContent = 'Fix the highlighted input to see results.'; return; }
+      var r = C.missedCall(v);
+      T.set('mc-wasted', T.money(r.wastedSpend));
+      T.set('mc-wasted-year', T.money(r.wastedSpendYear));
+      T.set('mc-missed', T.num(r.missed, 1));
+      T.set('mc-charged', T.num(r.charged, 1));
+      T.set('mc-lost-jobs', T.num(r.lostJobs, 1));
+      T.set('mc-revenue', T.money(r.revenueAtRisk));
+      T.set('mc-revenue-year', T.money(r.revenueAtRiskYear));
+      if (r.upliftRate === null) {
+        up.textContent = 'Every call is answered, so nothing is lost to missed calls. Double-check that the answer rate comes from the client’s call log.';
+      } else {
+        up.innerHTML = 'Answering <strong>' + T.num(r.upliftRate) + '%</strong> of calls instead of ' + T.num(v.answerRate, 1) +
+          '% would cut charged missed calls by about <strong>' + T.money(r.upliftSpend) + ' a month</strong> and put about <strong>' +
+          T.money(r.upliftRevenue) + ' a month</strong> of jobs back in play.';
+      }
+    }
+  });
+})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) — LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer onload="window.__lsaTracking=true"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agency LSA Margin Calculator: Manual vs. Automated | LSA Command</title>
+  <meta name="description" content="Free calculator for agencies: what managing Google Local Services Ads earns per client once lead review, disputes and reporting hours are counted, with and without automation.">
+  <link rel="canonical" href="https://lsacommand.com/tools/lsa-agency-margin-calculator/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="Agency LSA Margin Calculator: Manual vs. Automated | LSA Command">
+  <meta property="og:description" content="Free calculator for agencies: what managing Google Local Services Ads earns per client once lead review, disputes and reporting hours are counted, with and without automation.">
+  <meta property="og:url" content="https://lsacommand.com/tools/lsa-agency-margin-calculator/">
+  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agency LSA Margin Calculator: Manual vs. Automated | LSA Command">
+  <meta name="twitter:description" content="Free calculator for agencies: what managing Google Local Services Ads earns per client once lead review, disputes and reporting hours are counted, with and without automation.">
+  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <link rel="stylesheet" href="/tools/tools.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://lsacommand.com/tools/lsa-agency-margin-calculator/#tool",
+      "name": "Agency LSA margin calculator",
+      "url": "https://lsacommand.com/tools/lsa-agency-margin-calculator/",
+      "description": "Free calculator for agencies: what managing Google Local Services Ads earns per client once lead review, disputes and reporting hours are counted, with and without automation.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-11-02"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/tools/lsa-agency-margin-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many hours does LSA management take per client?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends mostly on lead volume. Reviewing and rating leads by hand scales with every call and message, while disputes and reporting are closer to a fixed monthly cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should an agency charge for LSA management?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start from your cost to serve. A simple floor is (hours per month × loaded hourly cost + tools per client) ÷ (1 − target margin)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does LSA Command cost agencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$200 per month per client, with every feature included and no setup fee. LSA Command is sold only through marketing agencies."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Free tools",
+          "item": "https://lsacommand.com/tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Agency LSA margin calculator",
+          "item": "https://lsacommand.com/tools/lsa-agency-margin-calculator/"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="header">Book a 30-min call</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/tools/">Free tools</a></li><li aria-current="page">Agency LSA margin calculator</li></ol></nav>
+    <header class="article-header">
+      <p class="eyebrow">Free tool for agencies</p>
+      <h1>Agency LSA margin calculator</h1>
+      <p class="lede">See what LSA management really earns once you count the hours spent reviewing leads, chasing credits and building reports, and whether automating that work at $200 per client pays for itself.</p>
+    </header>
+    <div class="tool-layout">
+      <form class="calc" id="calc" novalidate aria-label="Agency LSA margin calculator inputs">
+          <fieldset><legend>Your client book <small>The starting numbers are an example, not a benchmark.</small></legend><div class="fields">
+<div class="field"><label for="clients">LSA clients <span class="sr-only">(clients)</span></label><div class="input-wrap"><input id="clients" name="clients" type="number" inputmode="decimal" min="0" step="1" value="10"><span class="unit post" aria-hidden="true">clients</span></div></div>
+<div class="field"><label for="fee">Your management fee per client <span class="sr-only">(dollars)</span></label><div class="input-wrap"><span class="unit pre" aria-hidden="true">$</span><input id="fee" name="fee" type="number" inputmode="decimal" min="0" step="any" value="500" aria-describedby="fee-hint"><span class="unit post" aria-hidden="true">/mo</span></div><p class="hint" id="fee-hint">Per month, not counting ad spend.</p></div>
+<div class="field"><label for="leadsPerClient">Leads per client per month <span class="sr-only">(leads)</span></label><div class="input-wrap"><input id="leadsPerClient" name="leadsPerClient" type="number" inputmode="decimal" min="0" step="any" value="40" aria-describedby="leadsPerClient-hint"><span class="unit post" aria-hidden="true">leads</span></div><p class="hint" id="leadsPerClient-hint">Calls and messages together.</p></div>
+<div class="field"><label for="hourlyCost">Loaded hourly cost <span class="sr-only">(dollars)</span></label><div class="input-wrap"><span class="unit pre" aria-hidden="true">$</span><input id="hourlyCost" name="hourlyCost" type="number" inputmode="decimal" min="0" step="any" value="35" aria-describedby="hourlyCost-hint"><span class="unit post" aria-hidden="true">/hr</span></div><p class="hint" id="hourlyCost-hint">What an hour of the person doing this work costs you, with taxes and overhead.</p></div>
+<div class="field"><label for="targetMargin">Target margin <span class="sr-only">(percent)</span></label><div class="input-wrap"><input id="targetMargin" name="targetMargin" type="number" inputmode="decimal" min="0" max="99" step="any" value="50" aria-describedby="targetMargin-hint"><span class="unit post" aria-hidden="true">%</span></div><p class="hint" id="targetMargin-hint">Used for the minimum-fee line.</p></div>
+</div></fieldset>
+<fieldset><legend>Time per client today <small>Done by hand.</small></legend><div class="fields">
+<div class="field"><label for="minPerLeadManual">Review and rate each lead <span class="sr-only">(min/lead)</span></label><div class="input-wrap"><input id="minPerLeadManual" name="minPerLeadManual" type="number" inputmode="decimal" min="0" step="any" value="8" aria-describedby="minPerLeadManual-hint"><span class="unit post" aria-hidden="true">min/lead</span></div><p class="hint" id="minPerLeadManual-hint">Listening to the call and filling in Google’s lead feedback survey. Our own hours-saved model uses about 3 minutes per call plus 5 per survey.</p></div>
+<div class="field"><label for="disputeHrsManual">Disputes and credits <span class="sr-only">(hrs/mo)</span></label><div class="input-wrap"><input id="disputeHrsManual" name="disputeHrsManual" type="number" inputmode="decimal" min="0" step="any" value="1" aria-describedby="disputeHrsManual-hint"><span class="unit post" aria-hidden="true">hrs/mo</span></div><p class="hint" id="disputeHrsManual-hint">Finding invalid leads and tracking credits.</p></div>
+<div class="field"><label for="reportHrsManual">Client reporting <span class="sr-only">(hrs/mo)</span></label><div class="input-wrap"><input id="reportHrsManual" name="reportHrsManual" type="number" inputmode="decimal" min="0" step="any" value="2" aria-describedby="reportHrsManual-hint"><span class="unit post" aria-hidden="true">hrs/mo</span></div><p class="hint" id="reportHrsManual-hint">Pulling numbers and building the monthly report.</p></div>
+</div></fieldset>
+<fieldset><legend>Time per client with LSA Command <small>Placeholders, not measured results. Change them to what you’d expect.</small></legend><div class="fields">
+<div class="field"><label for="minPerLeadAuto">Spot-check each lead <span class="sr-only">(min/lead)</span></label><div class="input-wrap"><input id="minPerLeadAuto" name="minPerLeadAuto" type="number" inputmode="decimal" min="0" step="any" value="1" aria-describedby="minPerLeadAuto-hint"><span class="unit post" aria-hidden="true">min/lead</span></div><p class="hint" id="minPerLeadAuto-hint">Leads arrive already noted and rated.</p></div>
+<div class="field"><label for="disputeHrsAuto">Disputes and credits <span class="sr-only">(hrs/mo)</span></label><div class="input-wrap"><input id="disputeHrsAuto" name="disputeHrsAuto" type="number" inputmode="decimal" min="0" step="any" value="0.25" aria-describedby="disputeHrsAuto-hint"><span class="unit post" aria-hidden="true">hrs/mo</span></div><p class="hint" id="disputeHrsAuto-hint">Reviewing flagged leads.</p></div>
+<div class="field"><label for="reportHrsAuto">Client reporting <span class="sr-only">(hrs/mo)</span></label><div class="input-wrap"><input id="reportHrsAuto" name="reportHrsAuto" type="number" inputmode="decimal" min="0" step="any" value="0.5" aria-describedby="reportHrsAuto-hint"><span class="unit post" aria-hidden="true">hrs/mo</span></div><p class="hint" id="reportHrsAuto-hint">Reviewing and sending the monthly report.</p></div>
+</div>
+<p class="fixed-cost" style="margin-top:16px"><strong>LSA Command:</strong> $200 per client per month, our published agency price. Every feature included, no setup fee.</p></fieldset>
+          <p class="error-note" role="alert">Check the highlighted box: it needs a number in range.</p>
+          <div class="calc-actions"><button type="button" class="button" data-share>Copy link with these numbers</button><button type="reset" class="button ghost" data-reset>Reset to example</button><p data-status aria-live="polite"></p></div>
+      </form>
+      <section class="results" aria-labelledby="results-title" aria-live="polite">
+        <h2 id="results-title">Your LSA margin</h2>
+        <p class="headline-label">Monthly margin change with LSA Command</p>
+        <p class="headline" id="am-net">+$421</p>
+        <p class="headline-sub"><span id="am-net-year">+$5,050</span> a year, labor and tools only</p>
+        <table class="compare-table">
+          <thead><tr><th scope="col"><span class="sr-only">Line</span></th><th scope="col">Manual</th><th scope="col">With LSA Command</th></tr></thead>
+          <tbody>
+            <tr><td>Fee revenue</td><td id="am-rev-m">$5,000</td><td id="am-rev-a">$5,000</td></tr>
+            <tr><td>LSA hours a month</td><td id="am-hrs-m">83.3</td><td id="am-hrs-a">14.2</td></tr>
+            <tr><td>Labor cost</td><td id="am-lab-m">$2,917</td><td id="am-lab-a">$496</td></tr>
+            <tr><td>LSA Command</td><td>—</td><td id="am-tool">$2,000</td></tr>
+            <tr><td>Margin</td><td id="am-mar-m">$2,083</td><td id="am-mar-a">$2,504</td></tr>
+            <tr><td>Margin %</td><td id="am-pct-m">41.7%</td><td id="am-pct-a">50.1%</td></tr>
+            <tr><td>Minimum fee per client</td><td id="am-floor-m">$583</td><td id="am-floor-a">$499</td></tr>
+          </tbody>
+        </table>
+        <p class="callout" id="am-verdict"></p>
+        <p class="callout" id="am-hours"></p>
+        <p class="results-cta">Want these numbers from a real client account? <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="results_panel">Book a 30-min call</a></p>
+      </section>
+    </div>
+    <div class="tool-notes">
+      <div class="article-body">
+<h2 id="how-to-read">How to read this</h2>
+<ul>
+<li><strong>Margin here is narrow on purpose.</strong> It’s your management fee minus the LSA work this page counts: lead review and rating, disputes and credits, and reporting, plus LSA Command where it applies. Ad spend, onboarding, client calls and your other overhead aren’t in it.</li>
+<li><strong>Break-even is the honest test.</strong> LSA Command costs $200 per client, so on labor alone it pays for itself only when it saves at least $200 ÷ your hourly cost in hours per client each month. Below that, your manual process is cheaper, and the calculator says so.</li>
+<li><strong>Lead volume drives almost everything.</strong> Review time scales with leads, so low-volume clients rarely justify automation on labor alone, and high-volume clients usually do.</li>
+<li><strong>Freed hours are only worth money if you use them</strong>, for more clients on the same team or fewer contractor hours.</li>
+<li><strong>The minimum fee line</strong> is the floor from our pricing method: (hours × loaded hourly cost + tools per client) ÷ (1 − target margin). Pricing below it loses money at your real hours.</li>
+</ul>
+<h2 id="not-counted">What the labor math leaves out</h2>
+<p>Some of what clients pay an agency for doesn’t fit in an hour count: calls answered when the client’s team doesn’t pick up, instant lead alerts, notes on every lead, review requests, and blocked robocalls. Missed calls also cost the client money directly; the <a href="/tools/lsa-missed-call-calculator/">missed-call cost calculator</a> puts a number on that. If your result is close to break-even, those are what decide it, and they’re worth weighing against client churn.</p>
+<h2 id="assumptions">Assumptions</h2>
+<ul>
+<li>Every client has the same lead count and the same time per task. Use averages across your book.</li>
+<li>The “with LSA Command” times are placeholders for you to change. We haven’t measured them across agencies, so we don’t present them as results.</li>
+<li>Full-time equivalent uses 160 working hours a month.</li>
+<li>Nothing you type leaves your browser. “Copy link” puts the numbers in the part of the link after the #, which isn’t sent to any server.</li>
+</ul>
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq"><details><summary>How many hours does LSA management take per client?</summary><p>It depends mostly on lead volume. Reviewing and rating leads by hand scales with every call and message, while disputes and reporting are closer to a fixed monthly cost. Enter your own times above to see the total for your book.</p></details><details><summary>What should an agency charge for LSA management?</summary><p>Start from your cost to serve. A simple floor is (hours per month × loaded hourly cost + tools per client) ÷ (1 − target margin). The calculator shows that floor for both the manual and the automated setup.</p></details><details><summary>What does LSA Command cost agencies?</summary><p>$200 per month per client, with every feature included and no setup fee. LSA Command is sold only through marketing agencies.</p></details></div>
+<section class="cta-box" id="book"><h2>Check the math on your own client book.</h2><p>Book a 30-min call with Ryan. Bring your client count and how your team handles lead review today, and we’ll walk through what LSA Command automates for each client at $200 a month, and what it doesn’t.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="cta_box">Book a 30-min call</a></section>
+<aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/tools/lsa-missed-call-calculator/">LSA missed-call cost calculator</a></li><li><a href="/tools/lsa-budget-calculator/">LSA budget calculator</a></li><li><a href="/blog/lsa-reporting-software-agencies/">LSA reporting software for agencies</a></li><li><a href="/blog/multi-account-lsa-software-agencies/">Managing LSA across many client accounts</a></li></ul></aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Free tools"><a href="/tools/lsa-missed-call-calculator/">Missed-call cost calculator</a><a href="/tools/lsa-agency-margin-calculator/">Agency LSA margin calculator</a><a href="/tools/lsa-budget-calculator/">LSA budget calculator</a></nav>
+    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Service Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+  <script src="/tools/calc.js"></script>
+  <script src="/tools/tools.js"></script>
+  <script>
+(function () {
+  var T = window.LSATools, C = window.LSACalc;
+  var ids = ['am-net', 'am-net-year', 'am-rev-m', 'am-rev-a', 'am-hrs-m', 'am-hrs-a', 'am-lab-m', 'am-lab-a', 'am-tool', 'am-mar-m', 'am-mar-a', 'am-pct-m', 'am-pct-a', 'am-floor-m', 'am-floor-a'];
+  function pct(n) { return n == null ? '—' : T.num(n, 1) + '%'; }
+  T.mount({
+    form: document.getElementById('calc'),
+    tool: 'agency_margin',
+    extra: function (v) {
+      var c = v.clients;
+      return { clients_band: !isFinite(c) ? 'unknown' : c <= 5 ? '1-5' : c <= 15 ? '6-15' : c <= 40 ? '16-40' : '41+' };
+    },
+    compute: function (v) {
+      var verdict = document.getElementById('am-verdict'), hours = document.getElementById('am-hours'), net = document.getElementById('am-net');
+      if (!v) { ids.forEach(function (id) { T.set(id, '—'); }); verdict.textContent = 'Fix the highlighted input to see results.'; hours.textContent = ''; return; }
+      var r = C.agencyMargin(v);
+      T.set('am-net', T.signedMoney(r.netChange));
+      T.set('am-net-year', T.signedMoney(r.netChange * 12));
+      net.classList.toggle('negative', Math.round(r.netChange) < 0);
+      T.set('am-rev-m', T.money(r.revenue)); T.set('am-rev-a', T.money(r.revenue));
+      T.set('am-hrs-m', T.num(r.hrsManual, 1)); T.set('am-hrs-a', T.num(r.hrsAuto, 1));
+      T.set('am-lab-m', T.money(r.laborManual)); T.set('am-lab-a', T.money(r.laborAuto));
+      T.set('am-tool', T.money(r.tool));
+      T.set('am-mar-m', T.money(r.marginManual)); T.set('am-mar-a', T.money(r.marginAuto));
+      T.set('am-pct-m', pct(r.marginManualPct)); T.set('am-pct-a', pct(r.marginAutoPct));
+      T.set('am-floor-m', T.money(r.floorManual)); T.set('am-floor-a', T.money(r.floorAuto));
+      var be = r.breakEvenHrsPer == null ? null : T.num(r.breakEvenHrsPer, 1);
+      var saved = T.num(r.hoursSavedPer, 1);
+      verdict.classList.toggle('warn', Math.round(r.netChange) < 0);
+      if (be === null) {
+        verdict.textContent = 'Enter an hourly cost above $0 to see the break-even point.';
+      } else if (Math.round(r.netChange) >= 0) {
+        verdict.innerHTML = 'At $' + T.num(v.hourlyCost, 2) + '/hr, LSA Command pays for itself on labor alone once it saves <strong>' + be +
+          ' hours per client</strong> a month. These numbers save <strong>' + saved + '</strong>.';
+      } else {
+        verdict.innerHTML = 'On labor alone, your manual process is cheaper at these numbers. Automation saves <strong>' + saved +
+          ' hours per client</strong>; at $' + T.num(v.hourlyCost, 2) + '/hr it needs <strong>' + be + '</strong> to break even. The value has to come from what the labor math leaves out.';
+      }
+      hours.innerHTML = 'Hours freed: <strong>' + T.num(r.hoursSaved, 1) + ' a month</strong>, about ' + T.num(r.fteFreed * 100) + '% of one full-time person.';
+    }
+  });
+})();
+  </script>
+</body>
+</html>
