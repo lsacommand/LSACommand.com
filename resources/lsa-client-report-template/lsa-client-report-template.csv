@@ -1,9 +1,9 @@
-﻿LSA Client Report Template (lsacommand.com). The 'Sample' column is illustrative data for a fictional business.
+LSA Client Report Template (lsacommand.com). The 'Sample' column is illustrative data for a fictional business.
 Section,Metric,Where it lives in Google Ads,Sample (illustrative),This month,Last month (restated),Notes
 01 Leads received,Phone call leads,Goals › Conversions › Leads · Lead Type column,22,,,
 01 Leads received,Message leads,Goals › Conversions › Leads · Lead Type column,8,,,
 01 Leads received,Booking leads,Goals › Conversions › Leads · Lead Type column,1,,,
-01 Leads received,Total leads received,Goals › Conversions › Leads · Lead Type column,31,,,Matches the lead alerts the client saw
+01 Leads received,Total leads received,Goals › Conversions › Leads · Lead Type column,31,,,Matches the lead notifications the client saw
 02 Charged vs. credited,Charged,Leads page · Charge Status column,24,,,Same as Conversions on the Campaigns page
 02 Charged vs. credited,Credited,Leads page · Charge Status column,4,,,Google credited these back
 02 Charged vs. credited,In review,Leads page · Charge Status column,2,,,Can still change: see the status line
