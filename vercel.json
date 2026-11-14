@@ -1,20 +1,32 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
   "redirects": [
     {
-      "source": "/setup.html",
-      "destination": "/setup",
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.lsacommand.com"
+        }
+      ],
+      "destination": "https://lsacommand.com/:path",
       "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/affiliate/signup",
-      "destination": "/affiliate/signup/index.html"
     },
     {
-      "source": "/setup",
-      "destination": "/setup.html"
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/setup.html",
+      "destination": "/setup/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study-champion-pools.jpg",
+      "destination": "/case-study-champion-pools.svg",
+      "permanent": true
     }
   ]
 }
