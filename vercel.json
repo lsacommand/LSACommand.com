@@ -27,6 +27,21 @@
       "source": "/case-study-champion-pools.jpg",
       "destination": "/case-study-champion-pools.svg",
       "permanent": true
+    },
+    {
+      "source": "/lsa-report-detail.png",
+      "destination": "/lsa-report-detail-redacted.svg",
+      "permanent": true
+    },
+    {
+      "source": "/lsa-before.png",
+      "destination": "/lsa-before-redacted.svg",
+      "permanent": true
+    },
+    {
+      "source": "/lsa-after.png",
+      "destination": "/lsa-after-redacted.svg",
+      "permanent": true
     }
   ]
 }
