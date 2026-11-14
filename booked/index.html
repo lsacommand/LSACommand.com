@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+    <script>
+        // Booking confirmed: the calendar tool redirects here after a visitor books.
+        // Fire book_meeting once per browser session so a refresh does not double count.
+        (function () {
+            var key = 'lsa-book-meeting-sent';
+            try { if (window.sessionStorage.getItem(key)) return; window.sessionStorage.setItem(key, '1'); } catch (_) {}
+            gtag('event', 'book_meeting', { method: 'discovery_call' });
+        })();
+    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're booked | LSA Command</title>
+  <meta name="description" content="Your LSA Command walkthrough is booked.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="canonical" href="https://lsacommand.com/booked/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>
+    .booked{max-width:720px;padding:56px 0 24px}
+    .booked h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;margin:8px 0 14px}
+    .check{display:inline-flex;width:56px;height:56px;border-radius:50%;align-items:center;justify-content:center;background:#e5f7fb;border:1px solid #bfebf1;color:var(--teal);font-size:1.6rem;font-weight:800}
+    .prep{padding-left:1.2rem}
+    .prep li{margin:0 0 10px}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">For Agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section class="booked" id="booked">
+      <span class="check" aria-hidden="true">✓</span>
+      <p class="eyebrow">Walkthrough booked</p>
+      <h1>You're booked. Check your inbox for the invite.</h1>
+      <p class="lede">The calendar invite and meeting link are on their way to the email you used. To get the most out of the 30 minutes, have these ready:</p>
+      <ol class="prep">
+        <li><strong>One LSA account to look at</strong>, yours or a client's. You can share your screen; no passwords needed.</li>
+        <li><strong>Roughly how many LSA accounts you run</strong>, and which CRM your leads go into.</li>
+        <li><strong>The one thing that bugs you most</strong> about LSA right now: missed calls, junk leads, ranking, or reporting.</li>
+      </ol>
+      <p>Need to reschedule or add someone? Use the link in your calendar invite, or text <a href="sms:+19897124370" data-cta="booked-text">989-712-4370</a>.</p>
+      <section class="cta-box">
+        <h2>While you wait</h2>
+        <p>See how LSA Command answers every call inside 30 seconds and verifies every message reply.</p>
+        <a class="button" href="/agencies/" data-cta="booked-agencies">See the agency setup</a>
+      </section>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For Agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+</body>
+</html>

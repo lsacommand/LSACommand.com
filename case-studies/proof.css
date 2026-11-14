@@ -1,0 +1,92 @@
+/* Proof / case-study components. Loaded after /blog/blog.css on /case-studies/ pages only. */
+.proof-hero{padding-bottom:32px}
+.proof-hero .lede{max-width:860px}
+.proof-hero .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:28px}
+.proof-hero .hero-actions .note{font-size:.88rem;color:var(--muted)}
+
+.stat-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:8px 0 14px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 22px 20px;box-shadow:0 10px 32px rgba(7,36,58,.04)}
+.stat-label{text-transform:uppercase;letter-spacing:.13em;font-size:.7rem;font-weight:800;color:var(--muted);margin:0 0 10px}
+.stat-move{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 10px;margin:0;font-family:Outfit,Inter,sans-serif;line-height:1.1}
+.stat-move .from{font-size:1.35rem;font-weight:700;color:#7a8e9b}
+.stat-move .arrow{font-size:1.1rem;color:#7a8e9b}
+.stat-move .to{font-size:2.3rem;font-weight:900;color:var(--ink);letter-spacing:-.03em}
+.stat-delta{display:inline-block;margin:12px 0 0;font-size:.82rem;font-weight:800;color:#005f6d;background:#e3f8fb;border:1px solid #bfebf1;border-radius:999px;padding:3px 11px}
+.stat-when{font-size:.78rem;color:var(--muted);margin:10px 0 0;line-height:1.45}
+.fine{font-size:.82rem;color:var(--muted);line-height:1.55}
+
+.section-block{margin:56px 0 0}
+.section-block>h2{margin-top:0}
+.section-intro{color:var(--muted);max-width:780px}
+
+.change-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;list-style:none;padding:0;margin:0}
+.change-list li{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin:0}
+.change-list .num{display:block;font-family:Outfit,Inter,sans-serif;font-weight:900;color:var(--teal);font-size:.95rem;letter-spacing:.08em;margin-bottom:6px}
+.change-list h3{font-size:1.15rem;margin:0 0 8px;line-height:1.3}
+.change-list p{margin:0;color:var(--muted);font-size:.97rem}
+
+.case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.case-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 32px rgba(7,36,58,.04)}
+.case-card img{display:block;width:100%;height:170px;object-fit:cover;object-position:left top;border-bottom:1px solid var(--line)}
+.case-card .body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.case-card h3{font-size:1.3rem;margin:0 0 6px;line-height:1.25}
+.case-card h3 a{color:var(--ink);text-decoration:none}
+.case-card h3 a:hover{color:var(--teal);text-decoration:underline}
+.case-card .tag{margin-bottom:8px}
+.mini-stats{list-style:none;padding:0;margin:14px 0 18px;display:grid;gap:8px}
+.mini-stats li{display:flex;justify-content:space-between;gap:12px;font-size:.9rem;border-bottom:1px dashed var(--line);padding-bottom:7px;margin:0}
+.mini-stats li span:first-child{color:var(--muted)}
+.mini-stats li strong{white-space:nowrap}
+.case-card .read-link{margin-top:auto}
+
+.playbook{counter-reset:step;list-style:none;padding:0;margin:0}
+.playbook>li{position:relative;padding:0 0 22px 58px;margin:0}
+.playbook>li:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:12px;background:#052536;color:#04d9eb;font-family:Outfit,Inter,sans-serif;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.playbook h3{margin:6px 0 6px;font-size:1.15rem}
+.playbook p{margin:0;color:var(--muted)}
+
+.bars{margin:0 0 1.5rem;padding:0;list-style:none}
+.bars li{display:grid;grid-template-columns:92px minmax(0,1fr) 44px;align-items:center;gap:12px;margin:0 0 9px;font-size:.88rem}
+.bars .bar-track{background:#eef6f9;border-radius:6px;height:22px;overflow:hidden}
+.bars .bar{display:block;height:100%;background:#007b8d;border-radius:6px}
+.bars .bar.partial{background:repeating-linear-gradient(135deg,#007b8d 0 6px,#2d9aa9 6px 12px)}
+.bars .val{font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+.bars .mon{color:var(--muted)}
+.table-wrap{overflow-x:auto;margin:0 0 1rem}
+.compare td.num,.compare th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.compare tr.after td,.compare tr.after th{background:#f1fbfc;font-weight:700}
+
+.case-figure{margin:0 0 28px}
+.case-figure img{display:block;width:100%;max-height:420px;object-fit:cover;object-position:left top;border-radius:16px;border:1px solid var(--line);background:#fff}
+.case-figure figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+
+.method{background:#f6fbff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:28px 0 0;font-size:.93rem}
+.method h2,.method h3{font-size:1.1rem;margin:0 0 10px}
+.method dl{margin:0}
+.method dt{font-weight:800;margin-top:10px}
+.method dd{margin:2px 0 0;color:var(--muted)}
+
+.agency-cta{margin:56px 0 0;padding:36px;border-radius:26px;background:#052536;color:#e8fbff;display:flex;gap:28px;align-items:center;justify-content:space-between;box-shadow:0 20px 60px rgba(7,36,58,.18)}
+.agency-cta h2{color:#fff;margin:0 0 10px;font-size:1.65rem}
+.agency-cta p{margin:0;color:#b9dbe4;max-width:620px}
+.agency-cta .button{flex-shrink:0}
+
+/* Pending-approval scaffolding: never in the sitemap, always noindex (enforced by scripts/check-proof-approval.mjs) */
+.pending-banner{background:#fff4e5;border:2px solid #d97706;color:#7a3e00;border-radius:16px;padding:18px 20px;margin:0 0 28px;font-weight:700}
+.pending{display:inline-block;background:#fff4e5;border:1px dashed #d97706;color:#7a3e00;border-radius:8px;padding:1px 8px;font-weight:700;font-size:.9em}
+
+@media(max-width:900px){
+  .case-grid{grid-template-columns:1fr 1fr}
+  .agency-cta{display:block}
+  .agency-cta .button{margin-top:20px}
+}
+@media(max-width:600px){
+  .stat-strip,.change-list,.case-grid{grid-template-columns:1fr}
+  .stat-move .to{font-size:2rem}
+  .bars li{grid-template-columns:78px minmax(0,1fr) 38px;gap:8px;font-size:.82rem}
+  .compare th,.compare td{padding:8px 8px}
+  .compare th[scope=row]{white-space:nowrap}
+  .playbook>li{padding-left:52px}
+  .agency-cta{padding:26px 22px}
+  .section-block{margin-top:40px}
+}

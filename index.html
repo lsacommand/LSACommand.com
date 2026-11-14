@@ -2,22 +2,25 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) — LSA Command -->
+    <!-- Google tag (gtag.js): LSA Command -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-CSQW3SMTL4', {
-            page_location: window.location.origin + window.location.pathname,
-            page_referrer: document.referrer.split(/[?#]/)[0]
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
         });
     </script>
+    <script src="/lsa-tracking.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LSA Command | Google Local Services Ads Software & AI Answering</title>
     <meta name="description"
-        content="Google Local Services Ads software for contractors: AI answers every LSA call and message, disputes bad leads, targets your service area, and gets more reviews. Call or text 989-712-4370.">
+        content="Google Local Services Ads software for marketing agencies. AI answers every client call, writes notes into every LSA lead, notifies your clients instantly and proves ROI. $200/month per client. Call or text 989-712-4370.">
     <link rel="canonical" href="https://lsacommand.com/">
     <script type="application/ld+json">
 {
@@ -46,7 +49,7 @@
             "name": "LSA Command",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
-            "description": "Google Local Services Ads software: AI call and message answering, instant lead alerts, lead feedback and credit tracking, service area targeting, and review generation.",
+            "description": "Google Local Services Ads software: AI call and message answering, instant lead notifications, lead feedback and credit tracking, service area targeting, and review generation.",
             "url": "https://lsacommand.com/",
             "publisher": {
                 "@id": "https://lsacommand.com/#organization"
@@ -71,7 +74,7 @@
                     "name": "What is LSA Command?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "LSA Command is software for Google Local Services Ads. It answers every LSA call and message with AI, sends you instant lead alerts with recordings and transcripts, rates every lead back to Google, flags bad leads for credit, manages your service area, and gets you more reviews."
+                        "text": "LSA Command is Google Local Services Ads software for marketing agencies. For every client it answers LSA calls and messages with AI, writes notes into every lead, texts and emails the client the moment a lead comes in, fills out Google's lead survey, grades every call, flags bad leads for credit, manages the service area, and gets more reviews."
                     }
                 },
                 {
@@ -79,7 +82,7 @@
                     "name": "How do I rank higher in Google Local Services Ads?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Google ranks LSA advertisers on proximity, review score and count, responsiveness to calls and messages, business hours, and complaints. Responsiveness is usually the fastest to improve: answer every call and message quickly."
+                        "text": "Google ranks Local Services Ads in an auction that weighs your bid, how likely your ad is to get a lead (including your responsiveness to calls and messages), and profile quality: rating, number of reviews, response time, photos, and verification checks. Responsiveness is usually the fastest to improve: answer every call and message quickly."
                     }
                 },
                 {
@@ -108,10 +111,18 @@
                 },
                 {
                     "@type": "Question",
-                    "name": "Which businesses use LSA Command?",
+                    "name": "Who can buy LSA Command?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Contractors and home service businesses that run Google Local Services Ads, including HVAC companies, plumbers, roofers, electricians, and pool contractors, plus agencies that manage LSA for clients."
+                        "text": "LSA Command works only with marketing agencies. Agencies run it for their home-service clients, including HVAC companies, plumbers, roofers, electricians and pool contractors. We do not sell directly to businesses. If you own a business, ask your marketing agency about LSA Command."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How much does LSA Command cost?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "LSA Command costs $200 per month per client. Every feature is included. We confirm setup and billing with your agency before any client goes live."
                     }
                 }
             ]
@@ -126,19 +137,19 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lsacommand.com/">
     <meta property="og:title" content="LSA Command | Speed-to-Lead for Google Local Services Ads">
-    <meta property="og:description" content="Improve Google Local Services lead response, lead quality, review follow-up, service-area targeting, and refund tracking. Call or text 989-712-4370.">
+    <meta property="og:description" content="Google LSA software built for marketing agencies: AI call answering, lead notes, instant client notifications, lead rating and ROI for every client. $200/month per client.">
     <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
     <meta property="og:image:secure_url" content="https://lsacommand.com/preview-stats.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="LSA Command case study proof showing 300% more LSA leads, 100% response rate, and 70% quality lift.">
+    <meta property="og:image:alt" content="LSA Command case study proof showing 4.5x monthly LSA leads, 100% response rate, and 70% quality lift.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://lsacommand.com/">
     <meta property="twitter:title" content="LSA Command | Speed-to-Lead for Google Local Services Ads">
     <meta property="twitter:description"
-        content="Improve Google Local Services lead response, lead quality, review follow-up, service-area targeting, and refund tracking. Call or text 989-712-4370.">
+        content="Google LSA software built for marketing agencies: AI call answering, lead notes, instant client notifications, lead rating and ROI for every client. $200/month per client.">
     <meta property="twitter:image" content="https://lsacommand.com/preview-stats.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -368,12 +379,14 @@ fpr("click");
                     <p class="text-neon text-[10px] font-black uppercase tracking-[0.24em]">Speed-to-Lead AI</p>
                 </div>
             </div>
-            <nav class="flex items-center gap-5 sm:gap-7" aria-label="Main navigation">
-                <a href="#explore" class="hidden md:inline font-bold hover:text-neon transition-colors">Features</a>
-                <a href="/blog/" class="font-bold hover:text-neon transition-colors">Blog</a>
-                <a href="sms:+19897124370"
-                    class="hidden sm:inline-flex bg-neon text-midnight font-bold px-6 py-2 rounded-full hover:scale-105 transition-transform duration-300 neon-glow">
-                    Text Us
+            <nav class="flex items-center gap-4 sm:gap-7" aria-label="Main navigation">
+                <a href="#explore" class="hidden lg:inline font-bold hover:text-neon transition-colors">Features</a>
+                <a href="/agencies/" data-cta="nav-agencies" class="whitespace-nowrap font-bold hover:text-neon transition-colors">For Agencies</a>
+                <a href="#pricing" data-cta="nav-pricing" class="whitespace-nowrap font-bold hover:text-neon transition-colors">Pricing</a>
+                <a href="/blog/" class="hidden sm:inline whitespace-nowrap font-bold hover:text-neon transition-colors">Blog</a>
+                <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book"
+                    class="hidden sm:inline-flex whitespace-nowrap bg-neon text-midnight font-bold px-6 py-2 rounded-full hover:scale-105 transition-transform duration-300 neon-glow">
+                    Book a Call
                 </a>
             </nav>
         </div>
@@ -386,22 +399,39 @@ fpr("click");
                 <div class="space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
                     <div
                         class="inline-block px-4 py-1.5 rounded-full bg-electric/10 border border-electric/20 text-electric text-sm font-bold tracking-widest uppercase">
-                        The 4-R Framework for Google LSA
+                        For Marketing Agencies Only
                     </div>
-                    <h1 class="text-5xl lg:text-7xl font-black leading-tight">
-                        Google Local Services Ads Software That Captures Every Lead.
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight">
+                        Google Local Services Ads Software for Agencies.
                     </h1>
                     <p class="text-xl text-gray-400 max-w-xl">
-                        LSA Command combines faster response, smarter service-area control, review follow-up, and refund
-                        tracking so contractors can turn more Google Local Services leads into booked jobs.
+                        Run LSA Command for every client. It answers every call, writes notes into every lead, texts
+                        your clients the second a lead comes in, rates every lead to Google, and proves the ROI, all
+                        under your brand.
+                    </p>
+                    <p class="text-base text-gray-300 max-w-xl">
+                        <strong class="text-white">We work only with marketing agencies.</strong> Own a business?
+                        Ask your agency about LSA Command.
                     </p>
                     <div
-                        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                        <a href="sms:+19897124370"
+                        class="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="hero-book"
                             class="px-8 py-4 bg-neon text-midnight font-black text-lg rounded-xl hover:translate-y-[-2px] hover:shadow-xl transition-all duration-300">
+                            Book a 30-Min Walkthrough
+                        </a>
+                        <a href="sms:+19897124370" data-cta="hero-text"
+                            class="px-8 py-4 border border-electric/30 text-electric font-black text-lg rounded-xl hover:translate-y-[-2px] transition-all duration-300">
                             Text 989-712-4370
                         </a>
+                        <a href="#pricing" data-cta="hero-pricing"
+                            class="px-8 py-4 border border-white/20 text-white font-black text-lg rounded-xl hover:border-neon hover:text-neon transition-colors duration-300">
+                            Agency pricing: $200/month per client
+                        </a>
                     </div>
+                    <a href="/agencies/" data-cta="hero-agencies"
+                        class="inline-flex items-center gap-2 text-base font-bold text-electric hover:underline">
+                        Run LSA for multiple clients? See the agency setup <span aria-hidden="true">&rarr;</span>
+                    </a>
                 </div>
                 <div class="w-full max-w-xl mx-auto lg:max-w-none">
                     <div class="flex items-center justify-between px-2 mb-3">
@@ -429,7 +459,7 @@ fpr("click");
                     <div class="relative glass rounded-3xl border border-neon/30 shadow-[0_0_50px_rgba(0,245,212,0.12)] overflow-hidden">
                         <div class="px-6 py-3 border-b border-white/10 bg-white/5 flex items-center justify-between flex-wrap gap-2">
                             <p class="text-[10px] font-black tracking-[0.25em] text-neon uppercase">Watch It Work</p>
-                            <span class="text-[10px] font-bold tracking-widest uppercase text-gray-400">100% answered calls &#183; junk leads refunded</span>
+                            <span class="text-[10px] font-bold tracking-widest uppercase text-gray-400">100% answered calls &#183; junk leads flagged for credit</span>
                         </div>
                         <div class="relative aspect-video bg-midnight">
                             <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/x37kCXXeqX0" title="The AI That Answers 100% of Your Google LSA Calls (And Refunds Your Junk Leads)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}a{display:block;height:100%;position:relative}img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:92px;height:92px;border-radius:50%;background:rgba(5,5,5,.68);border:2px solid #00F5D4;color:#00F5D4;font:34px/88px sans-serif;text-align:center;padding-left:6px;box-shadow:0 0 40px rgba(0,245,212,.35)}</style><a href='https://www.youtube.com/embed/x37kCXXeqX0?autoplay=1'><img src='https://i.ytimg.com/vi/x37kCXXeqX0/maxresdefault.jpg' alt='Play the demo video'><span>&#9654;</span></a>"></iframe>
@@ -448,29 +478,29 @@ fpr("click");
                         The Whole System · At A Glance
                     </div>
                     <h2 class="text-4xl lg:text-5xl font-black mb-4">Everything LSA Command Does For <span class="text-neon">Your Google LSA</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto">Every lever that makes Google rank you higher and turns paid leads into booked jobs — all running on autopilot. Tap any card to see how it works.</p>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Every lever that makes Google rank you higher and turns paid leads into booked jobs, all running on autopilot. Tap any card to see how it works.</p>
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
                     <a href="#call-flow" class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 hover:scale-[1.02] transition-transform">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Call Flow: Humans First, AI Always</strong>Calls ring your team first — AI catches the rest in 15 seconds, so 100% are answered inside Google's 30-second bar.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Call Flow: Humans First, AI Always</strong>Calls ring your team first. AI catches the rest at 15 seconds, before the 20-second mark where Google starts charging for missed calls.</span>
                     </a>
                     <a href="#lead-alerts" class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 hover:scale-[1.02] transition-transform">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Instant Text + Email Lead Alerts</strong>Caller's number, recording, AI summary &amp; full transcript — the second a lead comes in.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Instant Text + Email Lead Notifications</strong>Caller's number, recording, AI summary &amp; full transcript, the second a lead comes in.</span>
                     </a>
                     <a href="#response-rate" class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 hover:scale-[1.02] transition-transform">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">100% Of Message Leads Answered</strong>Our API watchdog catches the 10&ndash;15% of replies Google silently drops.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">100% Of Message Leads Answered</strong>In the accounts we monitor, 10&ndash;15% of replies sent over SMS never land in the LSA thread. Our API watchdog catches them.</span>
                     </a>
                     <a href="#always-open" class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 hover:scale-[1.02] transition-transform">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Open 24 Hours Ranking Boost</strong>AI answers nights, weekends and holidays — qualifying you for round-the-clock visibility.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Open 24 Hours Ranking Boost</strong>AI answers nights, weekends and holidays, qualifying you for round-the-clock visibility.</span>
                     </a>
                     <a href="#robocalls" class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 hover:scale-[1.02] transition-transform">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">All Robo-Calls Blocked</strong>A three-layer defense kills spam before your phone rings — every block counted.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">All Robo-Calls Blocked</strong>A three-layer defense kills spam before your phone rings, and every block is counted.</span>
                     </a>
                     <div class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3">
                         <span class="text-neon font-black mt-0.5">✓</span>
@@ -482,33 +512,33 @@ fpr("click");
                     </a>
                     <a href="#refunds" class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 hover:scale-[1.02] transition-transform">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Automatic Refunds On Bad Leads</strong>Spam, wrong-number and out-of-area disputes filed for you — money back on autopilot.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Bad Leads Flagged For Credit</strong>Every lead reviewed and rated back to Google, spam and invalid leads flagged for credit, and every credit tracked.</span>
                     </a>
                     <a href="#reviews" class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 hover:scale-[1.02] transition-transform">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Reviews Gathered — And Answered</strong>AI review outreach after every job, plus we respond to reviews on your behalf.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Reviews Gathered And Answered</strong>AI review outreach after every job, plus we respond to reviews on your behalf.</span>
                     </a>
                     <div class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">LSA Photos Posted &amp; Optimized</strong>Fresh, enhanced photos pushed to your profile — another ranking signal handled for you.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">LSA Photos Posted &amp; Optimized</strong>Fresh, enhanced photos pushed to your profile: another ranking signal handled for you.</span>
                     </div>
                     <a href="#in-action" class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 hover:scale-[1.02] transition-transform">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Google Trained On Lead Quality</strong>Every lead rated 1&ndash;5 back to Google — so it sends more of the leads you actually want.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Google Trained On Lead Quality</strong>Every lead rated 1&ndash;5 back to Google, so it sends more of the leads you actually want.</span>
                     </a>
                     <a href="#roi" class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 hover:scale-[1.02] transition-transform">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Every Result Counted, Not Estimated</strong>Hours saved, robocalls blocked, messages recovered — exact numbers in your dashboard.</span>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">Every Result Counted, Not Estimated</strong>Hours saved, robocalls blocked, messages recovered: exact numbers in your dashboard.</span>
                     </a>
-                    <div class="glass rounded-2xl p-5 border border-white/10 flex items-start gap-3 sm:col-span-2 lg:col-span-3">
+                    <a href="/agencies/" data-cta="features-agencies" class="glass rounded-2xl p-5 border border-neon/40 flex items-start gap-3 sm:col-span-2 lg:col-span-3 hover:border-neon transition-colors">
                         <span class="text-neon font-black mt-0.5">✓</span>
-                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">White-Label Ready For Agencies</strong>Run the whole system under your own brand — we transfer leads to you and your clients.</span>
-                    </div>
+                        <span class="text-sm text-gray-400 leading-snug"><strong class="text-white block mb-0.5">White-Label Ready For Agencies &rarr;</strong>Run the whole system under your own brand across every client account. We transfer leads to you and your clients. See the agency setup.</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-midnight border-y border-white/5 relative overflow-hidden">
+        <section id="case-studies" class="py-24 bg-midnight border-y border-white/5 relative overflow-hidden">
             <div class="absolute inset-0 bg-electric/5 blur-[120px] rounded-full"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-4xl mx-auto text-center mb-14">
@@ -524,15 +554,15 @@ fpr("click");
                     <article class="glass rounded-3xl border border-white/10 overflow-hidden shadow-2xl flex flex-col">
                         <a href="https://docs.google.com/document/d/1oiHa0bOLg2-HS7zcypuf0qeuzTmqkL1SoduUR7UJ3Do/edit?usp=sharing"
                             class="block bg-white">
-                            <img src="case-study-advantage-pools.jpg" alt="Advantage Pools case study showing 300% lead volume growth and 75% lead quality increase"
+                            <img src="case-study-advantage-pools.jpg" alt="Advantage Pools case study showing 3.3x monthly lead growth and 75% lead quality increase"
                                 class="w-full h-64 object-cover object-left-top" width="1600" height="893" loading="lazy" decoding="async">
                         </a>
                         <div class="p-7 flex flex-col flex-1">
                             <h3 class="text-2xl font-black mb-3">Advantage Pools</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-6">Moved from critical response weakness to perfect under-30-second response performance while growing lead volume by 300%.</p>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">Moved from critical response weakness to every call answered within 30 seconds while growing monthly leads 3.3x.</p>
                             <div class="grid grid-cols-2 gap-3 mb-6">
                                 <div class="bg-white/5 rounded-xl p-4 border border-white/10">
-                                    <p class="text-3xl font-black text-neon">300%</p>
+                                    <p class="text-3xl font-black text-neon">3.3x</p>
                                     <p class="text-xs text-gray-500 uppercase font-bold">Lead Volume</p>
                                 </div>
                                 <div class="bg-white/5 rounded-xl p-4 border border-white/10">
@@ -548,8 +578,8 @@ fpr("click");
                     <article class="glass rounded-3xl border border-neon/30 overflow-hidden shadow-[0_0_45px_rgba(0,245,212,0.12)] flex flex-col lg:-mt-6">
                         <a href="https://docs.google.com/document/d/19Q8YL1xDalC5sGQdCeKbW2695Oj55VSaOB2KVXQU-EE/edit?usp=sharing"
                             class="block bg-white">
-                            <img src="case-study-champion-pools.jpg" alt="Champion Pools case study showing LSA Command and Convertly growth engine"
-                                class="w-full h-64 object-cover object-top" width="1100" height="1971" loading="lazy" decoding="async">
+                            <img src="case-study-champion-pools.svg" alt="Champion Pools case study showing lead volume, lead quality and response rate growth"
+                                class="w-full h-64 object-cover object-top" width="1100" height="1401" loading="lazy" decoding="async">
                         </a>
                         <div class="p-7 flex flex-col flex-1">
                             <h3 class="text-2xl font-black mb-3">Champion Pools</h3>
@@ -577,10 +607,10 @@ fpr("click");
                         </a>
                         <div class="p-7 flex flex-col flex-1">
                             <h3 class="text-2xl font-black mb-3">Edgewater Pools</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-6">Prioritized under-30-second response speed and saw major improvements in lead volume and quality.</p>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">Prioritized answering calls within 30 seconds and saw major improvements in lead volume and quality.</p>
                             <div class="grid grid-cols-2 gap-3 mb-6">
                                 <div class="bg-white/5 rounded-xl p-4 border border-white/10">
-                                    <p class="text-3xl font-black text-neon">300%</p>
+                                    <p class="text-3xl font-black text-neon">4.5x</p>
                                     <p class="text-xs text-gray-500 uppercase font-bold">Lead Surge</p>
                                 </div>
                                 <div class="bg-white/5 rounded-xl p-4 border border-white/10">
@@ -593,6 +623,10 @@ fpr("click");
                         </div>
                     </article>
                 </div>
+                <p class="text-center mt-12">
+                    <a href="/case-studies/"
+                        class="inline-block px-8 py-4 rounded-full border border-neon/40 text-neon font-black uppercase tracking-widest text-sm hover:bg-neon/10 transition-colors">Agency owners: see the month-by-month data &amp; playbook &rarr;</a>
+                </p>
             </div>
         </section>
 
@@ -602,15 +636,15 @@ fpr("click");
                 <div class="text-center mb-16">
                     <h2 class="text-4xl lg:text-5xl font-black mb-4">The 4 R's of <span class="text-neon">Google LSA Ranking</span>
                     </h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-lg">Google ranks local businesses based on four
-                        specific metrics. If you aren't optimizing all four, you're invisible.</p>
+                    <p class="text-gray-400 max-w-2xl mx-auto text-lg">Google's LSA auction weighs your bid, how likely you are to get
+                        the lead, and your profile quality, including reviews and responsiveness. These are the four levers we work for every client.</p>
                 </div>
                 <div class="grid md:grid-cols-4 gap-6">
                     <div class="glass p-8 rounded-2xl border-b-4 border-b-neon">
                         <div class="text-5xl font-black text-white/10 mb-4 tracking-tighter">01.</div>
                         <h3 class="text-2xl font-black mb-3">REVIEWS</h3>
-                        <p class="text-gray-400 text-sm">Automated "Review Hunter" calls and texts ensure every happy
-                            customer leaves a 5-star footprint the moment you leave the job site.</p>
+                        <p class="text-gray-400 text-sm">Automated "Review Hunter" calls and texts ask every customer
+                            for a Google review right after you leave the job site.</p>
                     </div>
                     <div class="glass p-8 rounded-2xl border-b-4 border-b-neon">
                         <div class="text-5xl font-black text-white/10 mb-4 tracking-tighter">02.</div>
@@ -621,20 +655,20 @@ fpr("click");
                     <div class="glass p-8 rounded-2xl border-b-4 border-b-neon">
                         <div class="text-5xl font-black text-white/10 mb-4 tracking-tighter">03.</div>
                         <h3 class="text-2xl font-black mb-3">RESPONSE</h3>
-                        <p class="text-gray-400 text-sm">The "30-Second Strike" system guarantees a 100% response rate.
-                            If your intake team is busy, our AI takes over instantly to book the lead.</p>
+                        <p class="text-gray-400 text-sm">The "30-Second Strike" system backs up your team on every call.
+                            If your intake team is busy, our AI picks up and works to book the lead, because Google says missed calls can hurt your responsiveness.</p>
                     </div>
                     <div class="glass p-8 rounded-2xl border-b-4 border-b-neon">
                         <div class="text-5xl font-black text-white/10 mb-4 tracking-tighter">04.</div>
                         <h3 class="text-2xl font-black mb-3">REFUNDS</h3>
-                        <p class="text-gray-400 text-sm">The "Refund Engine" automatically identifies bad leads and
-                            submits disputes, putting up to 10% of your ad spend back in your pocket.</p>
+                        <p class="text-gray-400 text-sm">The "Refund Engine" reviews every lead, rates it back to Google,
+                            flags the spam and invalid leads that qualify for a credit, and tracks every dollar credited.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Instant Lead Alerts (Text + Email) Section -->
+        <!-- Instant Lead Notifications (Text + Email) Section -->
         <section id="lead-alerts" class="py-24 relative overflow-hidden bg-space/20 border-t border-white/5">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
@@ -643,12 +677,12 @@ fpr("click");
                             Never Miss Another Lead
                         </div>
                         <h2 class="text-4xl lg:text-5xl font-black leading-tight">
-                            Instant <span class="text-neon">LSA Lead Alerts</span> by Text + Email
+                            Instant <span class="text-neon">LSA Lead Notifications</span> by Text + Email
                         </h2>
                         <p class="text-xl text-gray-400">
-                            Google decides winners on speed to lead — but since Google shut down the LSA mobile app
-                            in January 2025, its only alert for a phone lead is an email. No text message. No call
-                            recording. No summary. No transcript. And email is a leaky channel — industry benchmarks
+                            Google decides winners on speed to lead, but since Google shut down the LSA mobile app
+                            in January 2025, its only notification for a phone lead is an email. No text message. No call
+                            recording. No summary. No transcript. And email is a leaky channel: industry benchmarks
                             show roughly <strong>1 in 6 legitimate emails never reaches the inbox</strong>. LSA
                             Command texts <strong>and</strong> emails you the second every lead comes in, so you
                             call back in minutes already knowing exactly what the customer wants.
@@ -662,7 +696,7 @@ fpr("click");
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-white mb-1">Text + Email. The Same Second.</h3>
-                                    <p class="text-gray-400 text-sm">Every call, message, and web-chat lead fires an SMS and an email to you (and anyone on your team) the moment it happens — not hours later, not never.</p>
+                                    <p class="text-gray-400 text-sm">Every call, message, and web-chat lead fires an SMS and an email to you (and anyone on your team) the moment it happens. Not hours later, not never.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -707,21 +741,21 @@ fpr("click");
                             </div>
                         </div>
 
-                        <p class="text-sm text-gray-400 italic">In the LSA accounts we audit, 10–15% of paid leads routinely show <span class="text-white font-bold">no owner response at all</span> — usually because the only alert was an email nobody saw.</p>
+                        <p class="text-sm text-gray-400 italic">In the LSA accounts we audit, 10–15% of paid leads routinely show <span class="text-white font-bold">no owner response at all</span>, usually because the only notification was an email nobody saw.</p>
 
                         <div class="glass rounded-2xl overflow-hidden border border-white/10">
                             <div class="grid sm:grid-cols-2">
                                 <div class="p-6 border-b sm:border-b-0 sm:border-r border-white/10">
-                                    <p class="text-xs font-black tracking-widest text-gray-500 uppercase mb-4">Google's Default Alert</p>
+                                    <p class="text-xs font-black tracking-widest text-gray-500 uppercase mb-4">Google's Default Notification</p>
                                     <ul class="space-y-2.5 text-sm text-gray-400">
-                                        <li class="flex items-start gap-2"><span class="text-red-500 font-black">✕</span> Phone leads: email only — no text</li>
-                                        <li class="flex items-start gap-2"><span class="text-red-500 font-black">✕</span> App alerts gone (app retired Jan 2025)</li>
+                                        <li class="flex items-start gap-2"><span class="text-red-500 font-black">✕</span> Phone leads: email only, no text</li>
+                                        <li class="flex items-start gap-2"><span class="text-red-500 font-black">✕</span> App notifications gone (app retired Jan 2025)</li>
                                         <li class="flex items-start gap-2"><span class="text-red-500 font-black">✕</span> No call recording</li>
                                         <li class="flex items-start gap-2"><span class="text-red-500 font-black">✕</span> No summary, no transcript</li>
                                     </ul>
                                 </div>
                                 <div class="p-6 bg-neon/5">
-                                    <p class="text-xs font-black tracking-widest text-neon uppercase mb-4">LSA Command Alert</p>
+                                    <p class="text-xs font-black tracking-widest text-neon uppercase mb-4">LSA Command Notification</p>
                                     <ul class="space-y-2.5 text-sm text-gray-300">
                                         <li class="flex items-start gap-2"><span class="text-neon font-black">✓</span> Instant text + email</li>
                                         <li class="flex items-start gap-2"><span class="text-neon font-black">✓</span> Caller's number + recording</li>
@@ -737,11 +771,11 @@ fpr("click");
                         <div class="absolute -inset-4 bg-neon/20 blur-3xl opacity-20 rounded-full group-hover:opacity-40 transition duration-700"></div>
                         <div class="relative glass rounded-3xl border border-neon/30 shadow-[0_0_50px_rgba(0,245,212,0.12)] overflow-hidden">
                             <div class="px-6 py-4 border-b border-white/10 bg-white/5 flex items-center justify-between flex-wrap gap-2">
-                                <p class="text-[10px] font-black tracking-[0.25em] text-neon uppercase">An Example LSA Command Alert</p>
+                                <p class="text-[10px] font-black tracking-[0.25em] text-neon uppercase">An Example LSA Command Notification</p>
                                 <span class="inline-block px-3 py-1 rounded-full bg-neon/10 border border-neon/20 text-electric text-[10px] font-bold tracking-widest uppercase">Everything, Instantly</span>
                             </div>
                             <div class="nc-frame" data-nat-h="1466">
-                                <iframe title="Illustrative LSA Command lead alert email — synthetic details" srcdoc="&lt;!DOCTYPE html&gt;
+                                <iframe title="Illustrative LSA Command lead notification email (synthetic details)" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;
   html, body { margin: 0; padding: 0; }
   body { background: #3b4149; width: 860px; }
@@ -775,7 +809,7 @@ fpr("click");
   &lt;div class=&quot;mast&quot;&gt;Example Agency&lt;/div&gt;
   &lt;div class=&quot;body&quot;&gt;
     &lt;p&gt;Hello Example Pool Services,&lt;/p&gt;
-    &lt;p&gt;This illustrative lead alert uses synthetic details only.&lt;/p&gt;
+    &lt;p&gt;This illustrative lead notification uses synthetic details only.&lt;/p&gt;
     &lt;p&gt;A sample customer asked about scheduling a pool consultation.&lt;/p&gt;
     &lt;p&gt;&lt;a&gt;Conversation: https://example.com/conversations/sample-lead&lt;/a&gt;&lt;/p&gt;
     &lt;p&gt;&lt;b&gt;Lead Type:&lt;/b&gt; Phone call (sample)&lt;/p&gt;
@@ -794,7 +828,7 @@ fpr("click");
     &lt;p&gt;&lt;b&gt;AI Agent:&lt;/b&gt; You are welcome. Have a great day!&lt;/p&gt;
     &lt;p style=&quot;margin-top:40px&quot;&gt;Sincerely,&lt;br&gt;Example Agency team&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;foot&quot;&gt;Illustrative example — all customer and agency details are synthetic.&lt;/div&gt;
+  &lt;div class=&quot;foot&quot;&gt;Illustrative example. All customer and agency details are synthetic.&lt;/div&gt;
 &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"
                                     style="width:860px;height:1466px;border:0;transform-origin:top left;display:block;pointer-events:none"
                                     scrolling="no"></iframe>
@@ -803,14 +837,14 @@ fpr("click");
                         <ul class="mt-5 space-y-3">
                             <li class="flex items-start space-x-3">
                                 <span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span>
-                                <span class="text-gray-400"><strong class="text-white">Customer's phone number — with the extension</strong> Google assigns on message leads. Tap it and call them back.</span>
+                                <span class="text-gray-400"><strong class="text-white">Customer's phone number, with the extension</strong> Google assigns on message leads. Tap it and call them back.</span>
                             </li>
                             <li class="flex items-start space-x-3">
                                 <span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span>
                                 <span class="text-gray-400"><strong class="text-white">One-click takeover link</strong> to jump into the live conversation yourself.</span>
                             </li>
                         </ul>
-                        <p class="mt-3 text-xs text-gray-500">Illustrative email example — all names, contact details, and conversation identifiers are synthetic. Branding is illustrative.</p>
+                        <p class="mt-3 text-xs text-gray-500">Illustrative email example. All names, contact details, and conversation identifiers are synthetic. Branding is illustrative.</p>
                     </div>
                 </div>
 
@@ -818,11 +852,11 @@ fpr("click");
                     <div class="grid lg:grid-cols-2 gap-10 items-center">
                         <div class="relative glass rounded-3xl border border-white/10 overflow-hidden">
                             <div class="px-6 py-4 border-b border-white/10 bg-white/5 flex items-center justify-between flex-wrap gap-2">
-                                <p class="text-[10px] font-black tracking-[0.25em] text-gray-400 uppercase">Google's Default Alert · Illustrative Email</p>
+                                <p class="text-[10px] font-black tracking-[0.25em] text-gray-400 uppercase">Google's Default Notification · Illustrative Email</p>
                                 <span class="inline-block px-3 py-1 rounded-full bg-red-600/10 border border-red-600/20 text-red-500 text-[10px] font-bold tracking-widest uppercase">No Number To Call Back</span>
                             </div>
                             <div class="nc-frame bg-white" data-nat-h="1051">
-                                <iframe title="Illustrative Google LSA notification email — synthetic details" srcdoc="&lt;!doctype html&gt;
+                                <iframe title="Illustrative Google LSA notification email (synthetic details)" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -957,7 +991,7 @@ fpr("click");
                         </div>
                         <div class="space-y-6">
                             <h3 class="text-3xl lg:text-4xl font-black leading-tight">Google Tells You A Lead Called. <span class="text-neon">We Tell You Everything.</span></h3>
-                            <p class="text-gray-400 text-lg">This illustrative version of Google's alert uses synthetic recipient and account details: <em>"A potential customer called you."</em> <strong class="text-white">No customer phone number — literally nothing to call back.</strong> Compare it to the LSA Command alert above and the gap is the whole ballgame.</p>
+                            <p class="text-gray-400 text-lg">This illustrative version of Google's notification uses synthetic recipient and account details: <em>"A potential customer called you."</em> <strong class="text-white">No customer phone number. Literally nothing to call back.</strong> Compare it to the LSA Command notification above and the gap is the whole ballgame.</p>
                             <ul class="space-y-3">
                                 <li class="flex items-start space-x-3">
                                     <span class="text-red-500 w-6 h-6 rounded-full bg-red-600/10 flex items-center justify-center flex-shrink-0">✕</span>
@@ -969,7 +1003,7 @@ fpr("click");
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <span class="text-red-500 w-6 h-6 rounded-full bg-red-600/10 flex items-center justify-center flex-shrink-0">✕</span>
-                                    <span class="text-gray-400">One "View Details" button — log in and dig while the lead goes cold.</span>
+                                    <span class="text-gray-400">One "View Details" button. Log in and dig while the lead goes cold.</span>
                                 </li>
                             </ul>
                         </div>
@@ -1000,9 +1034,9 @@ fpr("click");
                         </div>
                         <h3 class="text-3xl lg:text-4xl font-black leading-tight mb-4">Robo-Calls? <span class="text-neon">They Never Reach You.</span></h3>
                         <p class="text-gray-400 max-w-3xl mx-auto">
-                            The flip side of alerting you on every real lead is protecting you from the fake ones.
+                            The flip side of notifying you about every real lead is protecting you from the fake ones.
                             One client's line was getting hammered daily with "your business isn't verified on Google"
-                            robocall scams — so we built a three-layer kill system that runs on every incoming call.
+                            robocall scams, so we built a three-layer kill system that runs on every incoming call.
                         </p>
                     </div>
 
@@ -1014,7 +1048,7 @@ fpr("click");
                             </div>
                             <p class="text-gray-400 text-sm leading-relaxed">
                                 The instant a call hits your line, it's screened against the Nomorobo database of known
-                                robocallers — built into our Twilio layer. 90%+ of spam is killed before your phone
+                                robocallers, built into our Twilio layer. 90%+ of spam is killed before your phone
                                 ever rings.
                             </p>
                         </div>
@@ -1025,8 +1059,8 @@ fpr("click");
                             </div>
                             <p class="text-gray-400 text-sm leading-relaxed">
                                 Anything that slips through gets answered by the AI. Pre-recorded messages, robotic
-                                voices, "press 9" prompts — flagged as spam on the spot. No notification fires. The
-                                call is logged in your dashboard tagged <span class="text-red-500 font-bold">ROBOCALL BLOCKED</span> —
+                                voices, "press 9" prompts are all flagged as spam on the spot. No notification fires. The
+                                call is logged in your dashboard tagged <span class="text-red-500 font-bold">ROBOCALL BLOCKED</span>,
                                 off your line and out of your lead count.
                             </p>
                         </div>
@@ -1036,7 +1070,7 @@ fpr("click");
                                 <h4 class="text-lg font-bold text-white">It Learns Every New Trick</h4>
                             </div>
                             <p class="text-gray-400 text-sm leading-relaxed">
-                                Every new spam pattern the AI hears becomes a new blocking rule — a trick works once,
+                                Every new spam pattern the AI hears becomes a new blocking rule. A trick works once,
                                 then it's blocked for every client, forever. The filter gets stronger with every call
                                 across the whole network.
                             </p>
@@ -1046,7 +1080,7 @@ fpr("click");
                     <div class="mt-8 grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
                         <div class="glass rounded-2xl p-5 text-center border border-white/10">
                             <p class="text-3xl font-black text-neon">41</p>
-                            <p class="text-xs text-gray-400 mt-1 leading-snug">robocalls blocked for one pool company — while its old, unprotected number kept ringing with spam</p>
+                            <p class="text-xs text-gray-400 mt-1 leading-snug">robocalls blocked for one pool company, while its old, unprotected number kept ringing with spam</p>
                         </div>
                         <div class="glass rounded-2xl p-5 text-center border border-white/10">
                             <p class="text-3xl font-black text-neon">14</p>
@@ -1071,11 +1105,11 @@ fpr("click");
                             AI Answering for <span class="text-neon">Google LSA Calls</span>
                         </h2>
                         <p class="text-xl text-gray-400">
-                            Customers want a human — and Google wants the call answered fast. Call Flow gives you both.
+                            Customers want a human, and Google wants the call answered fast. Call Flow gives you both.
                             Every incoming call rings your team first. If no human picks up within <strong>15
-                            seconds</strong> — busy, on a roof, after hours — the AI answers instantly. Either way,
-                            every single call is answered inside Google's <strong>30-second window</strong>, your
-                            response rate stays at 100%, and your ranking climbs.
+                            seconds</strong> (busy, on a roof, after hours), the AI answers instantly. Either way,
+                            every call is answered inside <strong>30 seconds</strong>, which protects the
+                            responsiveness signal Google uses in ranking.
                         </p>
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
@@ -1086,7 +1120,7 @@ fpr("click");
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-white mb-1">Your Team Gets First Shot</h3>
-                                    <p class="text-gray-400 text-sm">Every call rings your phones for the first 15 seconds. When a human answers, it's business as usual — the AI never gets in the way of a live conversation.</p>
+                                    <p class="text-gray-400 text-sm">Every call rings your phones for the first 15 seconds. When a human answers, it's business as usual. The AI never gets in the way of a live conversation.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -1096,8 +1130,8 @@ fpr("click");
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-white mb-1">AI Catches Everything Else — Instantly</h3>
-                                    <p class="text-gray-400 text-sm">No human available? The AI picks up on the spot — qualifies the caller, books the job, and fires your text + email alert with the recording, summary, and transcript. No voicemail. Ever.</p>
+                                    <h3 class="text-xl font-bold text-white mb-1">AI Catches Everything Else, Instantly</h3>
+                                    <p class="text-gray-400 text-sm">No human available? The AI picks up on the spot, qualifies the caller, books the job, and fires your text + email notification with the recording, summary, and transcript. No voicemail. Ever.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -1108,8 +1142,8 @@ fpr("click");
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-white mb-1">Google Sees 100% Answered — And Ranks You For It</h3>
-                                    <p class="text-gray-400 text-sm">Responsiveness is an LSA ranking factor — Google itself says missed calls hurt it. With every call answered in under 30 seconds, your response metric stays flawless and your ad climbs the stack.</p>
+                                    <h3 class="text-xl font-bold text-white mb-1">Every Call Answered, Responsiveness Protected</h3>
+                                    <p class="text-gray-400 text-sm">Responsiveness is an LSA ranking factor, and Google itself says missed calls hurt it. With Call Flow, every call is answered within 30 seconds.</p>
                                 </div>
                             </div>
                         </div>
@@ -1125,23 +1159,23 @@ fpr("click");
                             <div class="space-y-5">
                                 <div class="flex items-start gap-4">
                                     <span class="text-[11px] font-black text-gray-500 bg-white/5 border border-white/10 rounded-md px-2 py-1 whitespace-nowrap mt-0.5">0:00</span>
-                                    <p class="text-sm text-gray-300 leading-snug"><strong class="text-white">Call comes in.</strong> It rings your team's phones first — humans get priority.</p>
+                                    <p class="text-sm text-gray-300 leading-snug"><strong class="text-white">Call comes in.</strong> It rings your team's phones first, so humans get priority.</p>
                                 </div>
                                 <div class="flex items-start gap-4">
                                     <span class="text-[11px] font-black text-gray-500 bg-white/5 border border-white/10 rounded-md px-2 py-1 whitespace-nowrap mt-0.5">0:07</span>
-                                    <p class="text-sm text-gray-300 leading-snug"><strong class="text-white">Human answers?</strong> Perfect — normal call, AI stands down.</p>
+                                    <p class="text-sm text-gray-300 leading-snug"><strong class="text-white">Human answers?</strong> Perfect. Normal call, AI stands down.</p>
                                 </div>
                                 <div class="flex items-start gap-4">
                                     <span class="text-[11px] font-black text-electric bg-neon/10 border border-neon/20 rounded-md px-2 py-1 whitespace-nowrap mt-0.5">0:15</span>
-                                    <p class="text-sm text-gray-300 leading-snug"><strong class="text-white">No pickup? AI answers instantly.</strong> It qualifies the caller, books the job, and alerts you by text + email.</p>
+                                    <p class="text-sm text-gray-300 leading-snug"><strong class="text-white">No pickup? AI answers instantly.</strong> It qualifies the caller, books the job, and notifies you by text + email.</p>
                                 </div>
                                 <div class="flex items-start gap-4">
-                                    <span class="text-[11px] font-black text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 rounded-md px-2 py-1 whitespace-nowrap mt-0.5">0:30</span>
-                                    <p class="text-sm text-gray-300 leading-snug"><strong class="text-white">Google's clock: ANSWERED ✓</strong> Response rate 100% — inside the 30-second bar, every time.</p>
+                                    <span class="text-[11px] font-black text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 rounded-md px-2 py-1 whitespace-nowrap mt-0.5">0:20</span>
+                                    <p class="text-sm text-gray-300 leading-snug"><strong class="text-white">Google's 20-second mark: ANSWERED ✓</strong> The call was picked up, so it doesn't count as a missed call against your responsiveness.</p>
                                 </div>
                             </div>
                             <div class="mt-8 p-4 rounded-2xl bg-neon/5 border border-neon/20 text-center">
-                                <p class="text-sm text-gray-300 font-bold">Missed calls drag your LSA ranking down. With Call Flow, there are none.</p>
+                                <p class="text-sm text-gray-300 font-bold">Google says missed calls can hurt your responsiveness. With Call Flow, the AI picks up whatever your team misses.</p>
                             </div>
                         </div>
                     </div>
@@ -1161,12 +1195,12 @@ fpr("click");
                         </h2>
                         <p class="text-xl text-gray-400">
                             The dirty secret of LSA message leads: replies travel back to Google over SMS. Your phone
-                            — or any generic AI agent — sees <em>"delivered."</em> But <strong>10&ndash;15% of the time the reply
+                            (or any generic AI agent) sees <em>"delivered."</em> But in the accounts we monitor, <strong>10&ndash;15% of the time the reply
                             never lands in the LSA thread</strong> and never reaches the customer. It happens to human replies
                             and off-the-shelf AI bots alike, and the only way to even see it is to log into LSA and open
-                            the lead — so nobody ever knows. LSA Command is built on the LSA API: it watches the actual
+                            the lead, so nobody ever knows. LSA Command is built on the LSA API: it watches the actual
                             lead thread after every reply, and if your response hasn't landed within minutes, it
-                            force-pushes it through the API — a true <strong>100% response rate</strong>.
+                            force-pushes it through the API for a true <strong>100% response rate</strong>.
                         </p>
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
@@ -1177,7 +1211,7 @@ fpr("click");
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-white mb-1">Zero Dropped Leads</h3>
-                                    <p class="text-gray-400 text-sm">"Delivered" doesn't mean delivered. Google's SMS bridge silently drops replies before they reach the LSA thread. Our watchdog checks the actual thread after every response — if it isn't there within minutes, the API hard-injects it. Every recovered message shows in your dashboard as an exact count, not an estimate.</p>
+                                    <p class="text-gray-400 text-sm">"Delivered" doesn't mean delivered. Replies sent over SMS can fail to reach the LSA thread. Our watchdog checks the actual thread after every response. If it isn't there within minutes, the API hard-injects it. Every recovered message shows in your dashboard as an exact count, not an estimate.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -1188,7 +1222,7 @@ fpr("click");
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-white mb-1">Preserve Your "Replies in Minutes" Badge</h3>
-                                    <p class="text-gray-400 text-sm">A 90% response rate versus a 100% rate can drop your ad rank overnight. We programmatically enforce a flawless score so you never lose the Google Local Services buy-box.</p>
+                                    <p class="text-gray-400 text-sm">Google says responsiveness affects LSA ranking. We verify every reply through the LSA API so no message lead goes unanswered.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -1199,8 +1233,8 @@ fpr("click");
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-white mb-1">Why Every Other AI Agent Misses 10&ndash;15%</h3>
-                                    <p class="text-gray-400 text-sm">A generic AI agent bolted onto LSA replies over SMS and trusts the "delivered" receipt — it has no view inside the LSA thread, so it never knows the reply vanished. Catching these takes API-level delivery verification, which only exists in a system built for LSA from the ground up. Ours backs you up even if you answer messages yourself.</p>
+                                    <h3 class="text-xl font-bold text-white mb-1">Why SMS-Only AI Agents Miss Replies</h3>
+                                    <p class="text-gray-400 text-sm">A generic AI agent bolted onto LSA replies over SMS and trusts the "delivered" receipt. It has no view inside the LSA thread, so it never knows the reply vanished. Catching these takes API-level delivery verification, which only exists in a system built for LSA from the ground up. Ours backs you up even if you answer messages yourself.</p>
                                 </div>
                             </div>
                         </div>
@@ -1217,13 +1251,10 @@ fpr("click");
                                 Ranking.
                             </h2>
                             <p class="text-xl text-gray-400 max-w-xl">
-                                Google LSA rankings are driven by <strong>Response Velocity</strong>. If you don't
-                                respond to a lead in under 30 seconds, you lose the job—and your ranking.
+                                Calls answered within 30 seconds. Messages answered instantly. Google says
+                                responsiveness to calls and messages affects LSA ranking.
                             </p>
                             <div class="p-8 rounded-3xl bg-white/5 border border-white/10">
-                                <p class="text-gray-300 font-bold mb-4 italic">"We handle 100% of your inbound voice and
-                                    text leads instantly with autonomous AI, ensuring your business stays at the top of
-                                    Google the old-fashioned way: by being the fastest."</p>
                                 <div
                                     class="flex items-center gap-2 text-neon text-xs font-black uppercase tracking-widest">
                                     <span class="w-8 h-0.5 bg-red-600"></span>
@@ -1246,8 +1277,8 @@ fpr("click");
                                 <div class="space-y-6">
                                     <div class="space-y-2">
                                         <div class="flex justify-between text-xs font-bold uppercase text-gray-500">
-                                            <span>Competitor Average</span>
-                                            <span>15m+</span>
+                                            <span>Calls answered</span>
+                                            <span>Within 30 seconds</span>
                                         </div>
                                         <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
                                             <div class="h-full bg-gray-600" style="width: 85%"></div>
@@ -1256,8 +1287,8 @@ fpr("click");
                                     <div class="space-y-2">
                                         <div
                                             class="flex justify-between text-xs font-bold uppercase text-red-500 italic">
-                                            <span>LSA Command AI Strike</span>
-                                            <span>&lt; 30s</span>
+                                            <span>Messages answered</span>
+                                            <span>Instantly</span>
                                         </div>
                                         <div class="w-full bg-red-600/20 h-2 rounded-full overflow-hidden">
                                             <div class="h-full bg-red-600 shadow-[0_0_15px_rgba(220,38,38,0.5)]"
@@ -1267,7 +1298,7 @@ fpr("click");
                                 </div>
                                 <p
                                     class="mt-8 text-center text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">
-                                    Speed = Ad Rank Dominance</p>
+                                    Google says responsiveness affects ranking</p>
                             </div>
                         </div>
                     </div>
@@ -1279,10 +1310,11 @@ fpr("click");
         <section id="refunds" class="py-24 bg-midnight relative overflow-hidden">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl lg:text-5xl font-black mb-4">Automated <span class="text-neon">LSA Lead Disputes</span> &amp; Refunds</h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto">Our AI monitors every call, identifies unqualified leads,
-                        and automatically clawbacks your ad spend. We optimize Lead Quality so you only pay for
-                        customers.</p>
+                    <h2 class="text-4xl lg:text-5xl font-black mb-4">Automated <span class="text-neon">LSA Lead Credits</span> &amp; Quality Ratings</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Our AI reviews every call, rates every lead back to Google, and
+                        flags spam and invalid leads that qualify for a credit, then tracks what Google actually credits.
+                        Google no longer credits out-of-area or wrong-job-type leads, so we tighten your service area and
+                        job types to stop paying for them in the first place.</p>
                 </div>
 
                 <div class="max-w-5xl mx-auto relative group">
@@ -1530,9 +1562,9 @@ fpr("click");
                         <div class="p-8 space-y-5">
                             <div class="inline-block px-4 py-1.5 rounded-full bg-neon/10 border border-neon/20 text-electric text-xs font-bold tracking-widest uppercase">New &#183; Service Area Heatmap Grid</div>
                             <h3 class="text-2xl lg:text-3xl font-black leading-tight">Your Real LSA Rank, Pinned On <span class="text-neon">Every City You Serve.</span></h3>
-                            <p class="text-gray-400 text-sm">Stop wondering what &ldquo;ranking well&rdquo; actually means. The Rank Tracker drops a numbered pin on every city in your service area with your live Local Services position at that spot &mdash; tracked on your main keyword, so you see exactly what customers see.</p>
-                            <ul class="space-y-3"><li class="flex items-start space-x-3"><span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span><span class="text-gray-400 text-sm"><strong class="text-white">A numbered pin for every city, county, and zip you serve</strong> — strong zones and weak ones, at a glance.</span></li><li class="flex items-start space-x-3"><span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span><span class="text-gray-400 text-sm"><strong class="text-white">Swept monthly across your whole service area</strong>, tracked weekly at your home base.</span></li><li class="flex items-start space-x-3"><span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span><span class="text-gray-400 text-sm"><strong class="text-white">Rank-over-time charts</strong> prove the climb as your response rate and reviews improve.</span></li><li class="flex items-start space-x-3"><span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span><span class="text-gray-400 text-sm"><strong class="text-white">On every account</strong> — objective proof of exactly where you stand, right in your Command Center dashboard.</span></li></ul>
-                            <p class="text-xs text-gray-500">City pins today &mdash; custom zip codes and wider service areas are rolling out now. Every radius change stays logged and correlated with lead volume, so you see what each expansion actually produced.</p>
+                            <p class="text-gray-400 text-sm">Stop wondering what &ldquo;ranking well&rdquo; actually means. The Rank Tracker drops a numbered pin on every city in your service area with your live Local Services position at that spot, tracked on your main keyword, so you see exactly what customers see.</p>
+                            <ul class="space-y-3"><li class="flex items-start space-x-3"><span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span><span class="text-gray-400 text-sm"><strong class="text-white">A numbered pin for every city you serve</strong>: strong zones and weak ones, at a glance.</span></li><li class="flex items-start space-x-3"><span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span><span class="text-gray-400 text-sm"><strong class="text-white">Swept monthly across your whole service area</strong>, tracked weekly at your home base.</span></li><li class="flex items-start space-x-3"><span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span><span class="text-gray-400 text-sm"><strong class="text-white">Rank-over-time charts</strong> prove the climb as your response rate and reviews improve.</span></li><li class="flex items-start space-x-3"><span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center flex-shrink-0">✔</span><span class="text-gray-400 text-sm"><strong class="text-white">On every account</strong>: objective proof of exactly where you stand, right in your Command Center dashboard.</span></li></ul>
+                            <p class="text-xs text-gray-500">City pins today. Custom zip codes and wider service areas are rolling out now. Every radius change stays logged and correlated with lead volume, so you see what each expansion actually produced.</p>
                         </div>
                         <div class="relative bg-[#0b1322] border-t lg:border-t-0 lg:border-l border-white/10 min-h-[420px]"><svg class="absolute inset-0 w-full h-full" viewBox="0 0 600 540" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Service Area Heatmap Grid: your live LSA rank pinned on every city around your main location"><rect width="600" height="540" fill="#0b1322"/><rect x="512" width="88" height="540" fill="rgba(0,214,235,0.12)"/><rect x="472" y="150" width="16" height="390" rx="8" fill="rgba(0,214,235,0.10)"/><ellipse cx="120" cy="120" rx="95" ry="62" fill="rgba(0,245,150,0.045)"/><ellipse cx="70" cy="430" rx="85" ry="70" fill="rgba(0,245,150,0.04)"/><line x1="100" y1="0" x2="100" y2="540" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="170" y1="0" x2="170" y2="540" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="240" y1="0" x2="240" y2="540" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="310" y1="0" x2="310" y2="540" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="445" y1="0" x2="445" y2="540" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="0" y1="90" x2="600" y2="90" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="0" y1="160" x2="600" y2="160" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="0" y1="230" x2="600" y2="230" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="0" y1="300" x2="600" y2="300" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="0" y1="370" x2="600" y2="370" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="0" y1="440" x2="600" y2="440" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="0" y1="500" x2="600" y2="500" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/><line x1="380" y1="0" x2="380" y2="540" stroke="rgba(255,255,255,0.10)" stroke-width="3"/><path d="M290 0 L252 540" stroke="rgba(255,255,255,0.10)" stroke-width="3" fill="none"/><line x1="0" y1="330" x2="600" y2="330" stroke="rgba(255,255,255,0.10)" stroke-width="3"/><circle cx="400" cy="310" r="128" fill="rgba(0,245,212,0.03)" stroke="rgba(255,255,255,0.25)" stroke-dasharray="6 6" stroke-width="1.5"/><g><path d="M328 70 L342 70 L335 86 Z" fill="#43c06b"/><circle cx="335" cy="62" r="13.5" fill="#43c06b"/><text x="335" y="66" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Inter,sans-serif">#3</text><text x="335" y="102" text-anchor="middle" font-size="10.5" fill="#8fa8c0" font-family="Inter,sans-serif">Palm Beach Gardens</text></g><g><path d="M401 176 L415 176 L408 192 Z" fill="#23a455"/><circle cx="408" cy="168" r="13.5" fill="#23a455"/><text x="408" y="172" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Inter,sans-serif">#2</text><text x="408" y="208" text-anchor="middle" font-size="10.5" fill="#8fa8c0" font-family="Inter,sans-serif">Riviera Beach</text></g><g><path d="M55 233 L69 233 L62 249 Z" fill="#0d7a3f"/><circle cx="62" cy="225" r="13.5" fill="#0d7a3f"/><text x="62" y="229" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Inter,sans-serif">#1</text><text x="62" y="265" text-anchor="middle" font-size="10.5" fill="#8fa8c0" font-family="Inter,sans-serif">Westlake</text></g><g><path d="M151 300 L165 300 L158 316 Z" fill="#23a455"/><circle cx="158" cy="292" r="13.5" fill="#23a455"/><text x="158" y="296" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Inter,sans-serif">#2</text><text x="158" y="332" text-anchor="middle" font-size="10.5" fill="#8fa8c0" font-family="Inter,sans-serif">Royal Palm Beach</text></g><g><path d="M105 406 L119 406 L112 422 Z" fill="#23a455"/><circle cx="112" cy="398" r="13.5" fill="#23a455"/><text x="112" y="402" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Inter,sans-serif">#2</text><text x="112" y="438" text-anchor="middle" font-size="10.5" fill="#8fa8c0" font-family="Inter,sans-serif">Wellington</text></g><g><path d="M245 446 L259 446 L252 462 Z" fill="#23a455"/><circle cx="252" cy="438" r="13.5" fill="#23a455"/><text x="252" y="442" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Inter,sans-serif">#2</text><text x="252" y="478" text-anchor="middle" font-size="10.5" fill="#8fa8c0" font-family="Inter,sans-serif">Greenacres</text></g><g><path d="M361 440 L375 440 L368 456 Z" fill="#23a455"/><circle cx="368" cy="432" r="13.5" fill="#23a455"/><text x="368" y="436" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Inter,sans-serif">#2</text><text x="368" y="472" text-anchor="middle" font-size="10.5" fill="#8fa8c0" font-family="Inter,sans-serif">Lake Worth Beach</text></g><g><path d="M421 506 L435 506 L428 522 Z" fill="#23a455"/><circle cx="428" cy="498" r="13.5" fill="#23a455"/><text x="428" y="502" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Inter,sans-serif">#2</text><text x="428" y="538" text-anchor="middle" font-size="10.5" fill="#8fa8c0" font-family="Inter,sans-serif">Lantana</text></g><polygon points="412,286 431,297 431,319 412,330 393,319 393,297" fill="#0b1f33" stroke="#00F5D4" stroke-width="2.5"/><text x="412" y="312" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Inter,sans-serif">#2</text><text x="412" y="350" text-anchor="middle" font-size="11" font-weight="700" fill="#d9ecff" font-family="Inter,sans-serif">West Palm Beach &#183; Main HQ</text></svg><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0b1322] via-[#0b1322]/60 to-transparent p-4 flex items-center gap-5 text-[10px] uppercase tracking-widest font-bold"><span class="text-neon">&#11041; Main HQ</span><span class="text-gray-400">Pin # = your live LSA rank at that spot</span></div>
                         </div>
@@ -1554,8 +1586,7 @@ fpr("click");
                         </h2>
                         <p class="text-xl text-gray-400">
                             By using our AI Agents to handle 100% of your calls and messages, you can list your business
-                            as <strong>Open 24 Hours</strong>. This unlocks a massive Google LSA boost that competitors
-                            can't match.
+                            as <strong>Open 24 Hours</strong>.
                         </p>
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
@@ -1567,10 +1598,10 @@ fpr("click");
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-white mb-1">+20% Lead Increase</h3>
-                                    <p class="text-gray-400 text-sm">Being "Open Now" while others are "Closed" gives
-                                        you primary placement. Most businesses see a 20% surge in total lead volume just
-                                        by updating their hours.</p>
+                                    <h3 class="text-xl font-bold text-white mb-1">Open When Competitors Are Closed</h3>
+                                    <p class="text-gray-400 text-sm">With AI answering nights, weekends and holidays,
+                                        the business can list 24-hour availability and show up for searches when other
+                                        listings are closed.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -1583,9 +1614,8 @@ fpr("click");
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-white mb-1">"Replies in Minutes" Badge</h3>
-                                    <p class="text-gray-400 text-sm">Our sub-30s response time training forces Google to
-                                        display the <strong>"Typically replies in minutes"</strong> badge, doubling your
-                                        trust and click-through rate.</p>
+                                    <p class="text-gray-400 text-sm">Instant message replies help the business earn
+                                        Google's <strong>"Typically replies in minutes"</strong> badge.</p>
                                 </div>
                             </div>
                         </div>
@@ -1748,9 +1778,9 @@ fpr("click");
                         <p class="text-xl font-bold text-gray-400 mb-10 italic">"This isn't just a dashboard update.
                             It's the difference between a <span class="text-red-500 line-through decoration-2">missed
                                 opportunity</span> and a <span class="text-emerald-400">booked job</span>."</p>
-                        <a href="sms:+19897124370"
+                        <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="mid-book"
                             class="group relative inline-flex items-center gap-3 px-10 py-5 bg-neon text-midnight font-black rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_10px_40px_rgba(0,245,212,0.3)]">
-                            <span class="relative z-10 uppercase tracking-widest text-sm text-center">Text Us About LSA Command</span>
+                            <span class="relative z-10 uppercase tracking-widest text-sm text-center">See It On Your Account: Book 30 Min</span>
                             <svg class="w-6 h-6 relative z-10 transition-transform group-hover:translate-x-1"
                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke-width="3" stroke-linecap="round"
@@ -1797,7 +1827,7 @@ fpr("click");
                                 3.18 AVG</span>
                             <span
                                 class="absolute sm:-right-4 -right-2 top-0 sm:text-[10px] text-[6px] font-bold text-emerald-400 bg-midnight px-2 py-0.5 rounded border border-emerald-400/20 whitespace-nowrap">COMMAND
-                                ACTIVE: ~4.00 AVG</span>
+                                ACTIVE: 3.85+ AVG</span>
                         </div>
                     </div>
                 </div>
@@ -1810,11 +1840,10 @@ fpr("click");
                                 <span class="text-neon mx-4">→</span>
                                 <span class="text-white">3.85+</span>
                             </div>
-                            <p class="text-gray-400 font-bold uppercase tracking-widest text-sm">Nearly a full point
-                                increase in lead quality</p>
-                            <p class="text-xs text-gray-500 max-w-md mx-auto leading-relaxed">By filtering out
-                                unqualified traffic and automating high-intent booking, your account "Health" resets,
-                                forcing Google to send you higher quality calls.</p>
+                            <p class="text-gray-400 font-bold uppercase tracking-widest text-sm">Average lead quality
+                                on one client account</p>
+                            <p class="text-xs text-gray-500 max-w-md mx-auto leading-relaxed">Rating every lead back
+                                to Google tells it which leads the business wants.</p>
                         </div>
                     </div>
                 </div>
@@ -1834,9 +1863,9 @@ fpr("click");
                     </div>
                     <h2 class="text-4xl lg:text-5xl font-black mb-5">Your Complete <span class="text-neon">LSA Lead Performance Report</span></h2>
                     <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
-                        LSA Command generates a full report on every single lead — grading your <strong class="text-white">AI agent</strong>, your
+                        LSA Command generates a full report on every single lead, grading your <strong class="text-white">AI agent</strong>, your
                         <strong class="text-white">human intake team</strong>, the <strong class="text-white">quality of each lead</strong>, and
-                        the <strong class="text-white">Google survey rating</strong> left by the caller. One report. Four dimensions of performance. Zero guesswork.
+                        the <strong class="text-white">Google lead survey rating</strong> submitted for each lead. One report. Four dimensions of performance. Zero guesswork.
                     </p>
                 </div>
 
@@ -1855,7 +1884,7 @@ fpr("click");
                     <div class="glass rounded-2xl px-6 py-5 text-center min-w-[148px]">
                         <div class="text-2xl mb-2">🎯</div>
                         <div class="text-sm font-black text-emerald-400 mb-1">Lead Quality</div>
-                        <div class="text-xs text-gray-400 leading-snug">High-value vs.<br>dispute-worthy flagged</div>
+                        <div class="text-xs text-gray-400 leading-snug">High-value leads identified,<br>dispute-worthy flagged</div>
                     </div>
                     <div class="glass rounded-2xl px-6 py-5 text-center min-w-[148px]">
                         <div class="text-2xl mb-2">⭐</div>
@@ -1875,14 +1904,14 @@ fpr("click");
                     <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 bg-white/5 p-1">
                         <img
                             src="lsa-report-detail.png"
-                            alt="LSA Command AI Lead Intelligence Report — per-lead AI performance scores, charge status, and Google LSA ratings"
+                            alt="LSA Command AI Lead Intelligence Report: per-lead AI performance scores, charge status, and Google LSA ratings"
                             class="w-full rounded-[1.5rem] block"
                          width="3426" height="1714" loading="lazy" decoding="async">
                     </div>
                     <!-- Caption badge -->
                     <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-midnight border border-neon/30 text-neon text-xs font-bold uppercase tracking-widest px-5 py-2 rounded-full shadow-xl whitespace-nowrap">
                         <span class="w-2 h-2 bg-neon rounded-full animate-pulse"></span>
-                        Live Lead Intelligence Report — AI · Human · Lead Quality · Google Survey
+                        Live Lead Intelligence Report: AI · Human · Lead Quality · Google Survey
                     </div>
                 </div>
 
@@ -1896,17 +1925,17 @@ fpr("click");
                     <div class="glass rounded-2xl p-6 space-y-3 hover:border-purple-400/30 transition-colors border border-transparent">
                         <div class="text-2xl">🧑‍💼</div>
                         <h3 class="font-bold text-purple-400 text-base">Human Intake Performance</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">When a human handles or assists with a lead, their performance is graded too — so you can coach your team with real data.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">When a human handles or assists with a lead, their performance is graded too, so you can coach your team with real data.</p>
                     </div>
                     <div class="glass rounded-2xl p-6 space-y-3 hover:border-emerald-400/30 transition-colors border border-transparent">
                         <div class="text-2xl">🎯</div>
                         <h3 class="font-bold text-emerald-400 text-base">Lead Quality Scoring</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Each lead is classified for quality — from high-value booked jobs to unqualified calls worth disputing for a refund.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Each lead is classified for quality, from high-value booked jobs to unqualified calls worth disputing for a refund.</p>
                     </div>
                     <div class="glass rounded-2xl p-6 space-y-3 hover:border-yellow-400/30 transition-colors border border-transparent">
                         <div class="text-2xl">⭐</div>
                         <h3 class="font-bold text-yellow-400 text-base">Google Survey Rating</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Google's own caller satisfaction survey rating is pulled into every lead row, so your LSA health score is always visible.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">The rating submitted on Google's lead survey is shown on every lead row.</p>
                     </div>
                 </div>
             </div>
@@ -1927,9 +1956,9 @@ fpr("click");
                         </h2>
                         <p class="text-xl text-gray-400">
                             LSA Command can follow up with real customers by outbound phone call or text, learn how the
-                            job went, help them say it clearly, and send the exact Google Business Profile link while
-                            the conversation is still warm. And when reviews land, we answer every one on your
-                            behalf — a fast, professional reply under your business name, another signal Google
+                            job went, and send the client's Local Services Ads review link while
+                            the conversation is still warm, so every customer can review you in their own words. And when reviews land, we answer every one on your
+                            behalf: a fast, professional reply under your business name, another signal Google
                             rewards.
                         </p>
 
@@ -1949,8 +1978,8 @@ fpr("click");
                                         <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-black mb-2">Suggested Review</h3>
-                                <p class="text-gray-400 text-sm">Based on the conversation, the AI drafts a review the customer can use or edit.</p>
+                                <h3 class="text-xl font-black mb-2">Review Request + Reminder</h3>
+                                <p class="text-gray-400 text-sm">Every customer gets a direct link to review you in their own words, plus one polite reminder.</p>
                             </div>
                             <div class="glass p-6 rounded-2xl border border-white/10">
                                 <div class="w-11 h-11 rounded-xl bg-neon/10 text-neon flex items-center justify-center mb-4">
@@ -1959,7 +1988,7 @@ fpr("click");
                                     </svg>
                                 </div>
                                 <h3 class="text-xl font-black mb-2">Text While Talking</h3>
-                                <p class="text-gray-400 text-sm">The suggested review and Google Business Profile link are sent during the live interaction.</p>
+                                <p class="text-gray-400 text-sm">The Local Services Ads review link is sent during the live conversation, while it's top of mind.</p>
                             </div>
                             <div class="glass p-6 rounded-2xl border border-red-500/20">
                                 <div class="w-11 h-11 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center mb-4">
@@ -1968,7 +1997,7 @@ fpr("click");
                                     </svg>
                                 </div>
                                 <h3 class="text-xl font-black mb-2">Owner Rescue Handoff</h3>
-                                <p class="text-gray-400 text-sm">If someone had a bad experience, the conversation routes to the owner for personal recovery.</p>
+                                <p class="text-gray-400 text-sm">If someone had a bad experience, the owner also gets a heads-up to call them personally.</p>
                             </div>
                         </div>
                     </div>
@@ -1998,20 +2027,20 @@ fpr("click");
                                 <div class="bg-white rounded-2xl p-5 border border-white/10 shadow-xl">
                                     <div class="flex items-center gap-3 mb-3">
                                         <span class="h-9 w-9 rounded-full bg-neon/20 text-neon flex items-center justify-center font-black">2</span>
-                                        <p class="font-black">AI creates the review draft</p>
+                                        <p class="font-black">Customer gets the review link</p>
                                     </div>
                                     <div class="rounded-xl bg-electric/5 border border-electric/10 p-4 text-sm text-gray-400 italic">
-                                        "Great communication, showed up on time, and fixed the pool issue quickly. Highly recommend."
+                                        "Thanks for choosing us! If you have a minute, you can share your experience on Google here."
                                     </div>
                                 </div>
 
                                 <div class="bg-white rounded-2xl p-5 border border-white/10 shadow-xl">
                                     <div class="flex items-center gap-3 mb-3">
                                         <span class="h-9 w-9 rounded-full bg-neon/20 text-neon flex items-center justify-center font-black">3</span>
-                                        <p class="font-black">Text sends the review and Google link</p>
+                                        <p class="font-black">One friendly reminder</p>
                                     </div>
                                     <div class="rounded-2xl bg-neon text-midnight p-4 font-bold text-sm">
-                                        Here is a review you can use or edit. Tap here to post it on Google.
+                                        Just a quick reminder: your Google review link is here whenever you have a moment.
                                     </div>
                                 </div>
 
@@ -2020,44 +2049,53 @@ fpr("click");
                                         <span class="h-9 w-9 rounded-full bg-red-500 text-white flex items-center justify-center font-black">!</span>
                                         <p class="font-black text-red-500">Bad experience detected</p>
                                     </div>
-                                    <p class="text-gray-400 text-sm">The owner gets the call so the customer can be heard, helped, and recovered before frustration becomes public.</p>
+                                    <p class="text-gray-400 text-sm">The owner also gets a heads-up to call, so the customer is heard and helped. Everyone still gets the review link.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="relative mt-8 max-w-sm mx-auto lg:max-w-md">
-                            <div
-                                class="absolute -inset-4 bg-electric/10 blur-2xl opacity-50 rounded-[2rem]"></div>
-                            <div
-                                class="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-white">
-                                <img src="review-ai-sms-example.jpg"
-                                    alt="Example text message showing a Google review link and an AI-generated suggested review"
-                                    class="w-full block" width="760" height="1040" loading="lazy" decoding="async">
-
-                                <div
-                                    class="absolute left-[4.5%] top-[33.5%] w-[70%] h-[19%] rounded-2xl border-4 border-neon shadow-[0_0_25px_rgba(0,245,212,0.55)] pointer-events-none">
-                                    <div
-                                        class="absolute -top-8 left-2 bg-neon text-midnight text-[10px] sm:text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg whitespace-nowrap">
-                                        Google Review Link
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="absolute left-[4.5%] top-[65%] w-[70%] h-[29%] rounded-2xl border-4 border-neon shadow-[0_0_25px_rgba(0,245,212,0.55)] pointer-events-none">
-                                    <div
-                                        class="absolute -top-8 left-2 bg-neon text-midnight text-[10px] sm:text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg whitespace-nowrap">
-                                        AI-Suggested Review
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="mt-4 text-center text-sm text-gray-400 font-bold">
-                                The customer gets the review link and a ready-to-use draft while the experience is still fresh.
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+            <!-- Agency Pricing -->
+            <section id="pricing" class="py-24 relative overflow-hidden border-t border-white/5 scroll-mt-24">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <p class="text-electric text-sm font-bold tracking-widest uppercase mb-4">Agency Pricing</p>
+                        <h2 class="text-4xl lg:text-5xl font-black mb-4">One Price Per Client. <span class="text-neon">Everything Included.</span></h2>
+                        <p class="text-xl text-gray-400">LSA Command is sold only to marketing agencies. You run it for your clients, under your brand.</p>
+                    </div>
+                    <div class="grid lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] gap-10 max-w-6xl mx-auto items-start">
+                        <div class="glass rounded-3xl border border-neon/30 p-10 text-center shadow-[0_0_50px_rgba(0,245,212,0.1)]">
+                            <p class="text-sm font-bold uppercase tracking-widest text-gray-400">Per client, per month</p>
+                            <p class="text-7xl font-black text-neon mt-4">$200</p>
+                            <p class="text-gray-400 mt-4">No setup fee. We confirm your setup and billing together before any client goes live.</p>
+                            <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="pricing-book"
+                                class="mt-8 inline-flex bg-neon text-midnight font-black px-8 py-4 rounded-xl text-lg hover:scale-105 transition-transform">
+                                Book a 30-Min Walkthrough
+                            </a>
+                            <p class="text-gray-400 mt-4">Rather talk now? Call or text <a href="sms:+19897124370" data-cta="pricing-text" class="text-neon font-bold hover:underline">989-712-4370</a></p>
+                            <p class="text-sm text-gray-500 mt-6">Own a business? We don't sell directly to businesses. Ask your marketing agency about LSA Command.</p>
+                        </div>
+                        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-5 text-base">
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">AI call answering.</strong> <span class="text-gray-400">Calls ring your client's team first. AI answers at 15 seconds, so none go unanswered.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">Instant client notifications.</strong> <span class="text-gray-400">Text and email the second a lead arrives, with number, recording, summary and transcript.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">Notes in every lead.</strong> <span class="text-gray-400">What the caller wanted, address and phone, written into the lead in LSA.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">Google surveys done.</strong> <span class="text-gray-400">Every lead rated 1&ndash;5 and Google's survey filled in for the owner.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">Every call graded.</strong> <span class="text-gray-400">AI scores the human intake team and the AI agent on every call.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">High- and low-value leads.</strong> <span class="text-gray-400">Each lead marked by value, with ROI from the CRM or LSA Command.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">CRM integrations.</strong> <span class="text-gray-400">Leads and outcomes flow into the CRM your clients already use.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">Message leads answered.</strong> <span class="text-gray-400">Our API watchdog re-sends replies that never land in the LSA thread.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">Robocalls blocked.</strong> <span class="text-gray-400">Spam is stopped before it reaches your client's phone.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">Reviews, refunds, radius.</strong> <span class="text-gray-400">Review outreach and replies, bad-lead credits, and service-area targeting.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">Rank tracker.</strong> <span class="text-gray-400">Your client's live LSA rank pinned on every city they serve.</span></span></li>
+                            <li class="flex gap-3"><span class="text-neon mt-1">&#10003;</span><span><strong class="text-white">White-label.</strong> <span class="text-gray-400">Run it under your agency's brand. You keep the client relationship.</span></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             <!-- Risk Reversal (Satisfaction Guarantee) -->
             <section class="py-24 bg-space/20">
@@ -2082,7 +2120,7 @@ fpr("click");
                             days, we will give you a full refund. No questions asked.
                         </p>
                         <div class="pt-6">
-                            <p class="font-bold text-neon text-xl uppercase tracking-widest">— Ryan Steinolfson, Founder
+                            <p class="font-bold text-neon text-xl uppercase tracking-widest">Ryan Steinolfson, Founder
                             </p>
                         </div>
                     </div>
@@ -2137,11 +2175,11 @@ fpr("click");
                     <div class="space-y-4">
                     <details class="glass rounded-2xl border border-white/10 p-6">
                         <summary class="cursor-pointer text-lg font-bold">What is LSA Command?</summary>
-                        <p class="text-gray-400 mt-4">LSA Command is software for Google Local Services Ads. It answers every LSA call and message with AI, sends you instant lead alerts with recordings and transcripts, rates every lead back to Google, flags bad leads for credit, manages your service area, and gets you more reviews.</p>
+                        <p class="text-gray-400 mt-4">LSA Command is Google Local Services Ads software for marketing agencies. For every client it answers LSA calls and messages with AI, writes notes into every lead, texts and emails the client the moment a lead comes in, fills out Google's lead survey, grades every call, flags bad leads for credit, manages the service area, and gets more reviews.</p>
                     </details>
                     <details class="glass rounded-2xl border border-white/10 p-6">
                         <summary class="cursor-pointer text-lg font-bold">How do I rank higher in Google Local Services Ads?</summary>
-                        <p class="text-gray-400 mt-4">Google ranks LSA advertisers on proximity, review score and count, responsiveness to calls and messages, business hours, and complaints. Responsiveness is usually the fastest to improve: answer every call and message quickly. <a href="/blog/how-to-rank-higher-google-local-services-ads/" class="text-neon font-bold hover:underline">Learn more →</a></p>
+                        <p class="text-gray-400 mt-4">Google ranks Local Services Ads in an auction that weighs your bid, how likely your ad is to get a lead (including your responsiveness to calls and messages), and profile quality: rating, number of reviews, response time, photos, and verification checks. Responsiveness is usually the fastest to improve: answer every call and message quickly. <a href="/blog/how-to-rank-higher-google-local-services-ads/" class="text-neon font-bold hover:underline">Learn more →</a></p>
                     </details>
                     <details class="glass rounded-2xl border border-white/10 p-6">
                         <summary class="cursor-pointer text-lg font-bold">Does missing calls hurt my Google LSA ranking?</summary>
@@ -2156,8 +2194,12 @@ fpr("click");
                         <p class="text-gray-400 mt-4">Google is moving LSA into Google Ads as a Performance Max campaign type. You still pay per lead and still show on Search and Maps, but bidding, budgets, and missed-call billing are changing. <a href="/blog/google-local-services-ads-performance-max/" class="text-neon font-bold hover:underline">Learn more →</a></p>
                     </details>
                     <details class="glass rounded-2xl border border-white/10 p-6">
-                        <summary class="cursor-pointer text-lg font-bold">Which businesses use LSA Command?</summary>
-                        <p class="text-gray-400 mt-4">Contractors and home service businesses that run Google Local Services Ads, including HVAC companies, plumbers, roofers, electricians, and pool contractors, plus agencies that manage LSA for clients.</p>
+                        <summary class="cursor-pointer text-lg font-bold">Who can buy LSA Command?</summary>
+                        <p class="text-gray-400 mt-4">LSA Command works only with marketing agencies. Agencies run it for their home-service clients, including HVAC companies, plumbers, roofers, electricians and pool contractors. We do not sell directly to businesses. If you own a business, ask your marketing agency about LSA Command.</p>
+                    </details>
+                    <details class="glass rounded-2xl border border-white/10 p-6">
+                        <summary class="cursor-pointer text-lg font-bold">How much does LSA Command cost?</summary>
+                        <p class="text-gray-400 mt-4">$200 per month per client, with every feature included. We confirm setup and billing with your agency before any client goes live. <a href="#pricing" class="text-neon font-bold hover:underline">See what's included →</a></p>
                     </details>
                     </div>
                 </div>
@@ -2169,12 +2211,12 @@ fpr("click");
                 <div class="container mx-auto px-6 relative z-10">
                     <div class="flex flex-col lg:flex-row items-center gap-16">
                         <div class="lg:w-1/2 space-y-6">
-                            <h2 class="text-4xl lg:text-6xl font-black">Ready to <span class="text-neon">Fix Your LSA Lead Response?</span></h2>
-                            <p class="text-xl text-gray-400">Call or text us and we will talk through your Google Local Services response flow, service-area setup, and refund opportunities.</p>
+                            <h2 class="text-4xl lg:text-6xl font-black">Run LSA Command <span class="text-neon">for Your Clients</span></h2>
+                            <p class="text-xl text-gray-400">Agencies: book a 30-minute walkthrough with Ryan. Bring one client's LSA account and we will walk through your client accounts, setup and billing. We work only with agencies, so business owners should ask their marketing agency.</p>
                             <ul class="space-y-4">
                                 <li class="flex items-center space-x-3">
                                     <span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center">✔</span>
-                                    <span class="text-lg">Response workflow and intake review</span>
+                                    <span class="text-lg">Client account and intake review</span>
                                 </li>
                                 <li class="flex items-center space-x-3">
                                     <span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center">✔</span>
@@ -2182,7 +2224,7 @@ fpr("click");
                                 </li>
                                 <li class="flex items-center space-x-3">
                                     <span class="text-neon w-6 h-6 rounded-full bg-neon/10 flex items-center justify-center">✔</span>
-                                    <span class="text-lg">Refund tracking and lead quality audit</span>
+                                    <span class="text-lg">White-label setup and $200/month per client billing</span>
                                 </li>
                             </ul>
                         </div>
@@ -2191,16 +2233,18 @@ fpr("click");
                                 <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-red-600 text-white font-black uppercase tracking-widest text-xs px-6 py-2 rounded-full shadow-xl">
                                     DIRECT RESPONSE
                                 </div>
-                                <h3 class="text-3xl font-black text-center mb-3 mt-4">Text LSA Command</h3>
-                                <a href="sms:+19897124370" class="text-center text-5xl font-black text-neon tracking-tight hover:text-white transition-colors">989-712-4370</a>
-                                <p class="text-center text-gray-400 mt-5 mb-8">No form. No waiting. Reach us directly and we will help you decide the next best move.</p>
+                                <h3 class="text-3xl font-black text-center mb-3 mt-4">Book a 30-Min Walkthrough</h3>
+                                <p class="text-center text-gray-400 mb-6">Pick a time on Ryan's calendar. 30 minutes, on a live LSA account, no passwords needed.</p>
+                                <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book" class="block bg-neon text-midnight font-black py-5 rounded-xl text-xl text-center hover:scale-105 transition-transform uppercase tracking-widest mb-6">Pick a Time</a>
+                                <p class="text-center text-gray-400 mb-3">Rather talk now? Call or text</p>
+                                <a href="sms:+19897124370" data-cta="footer-text-number" class="text-center text-4xl font-black text-neon tracking-tight hover:text-white transition-colors mb-6">989-712-4370</a>
 
                                 <div class="grid sm:grid-cols-2 gap-4">
-                                    <a href="tel:+19897124370"
-                                        class="bg-neon text-midnight font-black py-4 rounded-xl text-lg text-center hover:scale-105 transition-transform uppercase tracking-widest">
+                                    <a href="tel:+19897124370" data-cta="footer-call"
+                                        class="bg-white text-midnight font-black py-4 rounded-xl text-lg text-center hover:scale-105 transition-transform uppercase tracking-widest">
                                         Call Now
                                     </a>
-                                    <a href="sms:+19897124370"
+                                    <a href="sms:+19897124370" data-cta="footer-text"
                                         class="bg-white text-midnight font-black py-4 rounded-xl text-lg text-center hover:scale-105 transition-transform uppercase tracking-widest">
                                         Text Us
                                     </a>
@@ -2215,6 +2259,8 @@ fpr("click");
     <footer class="py-12 border-t border-white/5 text-center text-gray-500 text-sm">
         <div class="container mx-auto px-6">
             <div class="flex flex-wrap justify-center gap-4 mb-6">
+                <a href="/agencies/" class="text-sm text-neon hover:underline">For Agencies</a>
+                <a href="#pricing" class="text-sm text-neon hover:underline">Agency Pricing</a>
                 <a href="/blog/" class="text-sm text-neon hover:underline">Blog</a>
                 <a href="/lsa-ai-call-answering/" class="text-sm text-neon hover:underline">AI Call Answering</a>
                 <a href="/lsa-message-leads/" class="text-sm text-neon hover:underline">Message Lead Response</a>
@@ -2239,14 +2285,17 @@ fpr("click");
                         class="h-full w-auto object-contain" width="720" height="240" loading="lazy" decoding="async">
                 </div>
             </div>
-            <p>© 2026 LSA Command. All rights reserved. Google and Google Local Service Ads are trademarks of Google
+            <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google
                 LLC. We are not affiliated with Google.</p>
         </div>
     </footer>
     <!-- Sticky Mobile CTA -->
-    <div class="fixed bottom-0 left-0 w-full z-50 glass border-t border-white/10 p-4 lg:hidden animate-pulse-slow">
-        <a href="sms:+19897124370" class="block w-full text-center bg-neon text-midnight font-black py-4 rounded-xl shadow-[0_0_20px_rgba(0,245,212,0.4)] uppercase tracking-widest text-sm">
-            Text 989-712-4370
+    <div class="fixed bottom-0 left-0 w-full z-50 glass border-t border-white/10 p-3 lg:hidden grid grid-cols-[1fr_auto] gap-3">
+        <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="sticky-book" class="block text-center bg-neon text-midnight font-black py-4 rounded-xl shadow-[0_0_20px_rgba(0,245,212,0.4)] uppercase tracking-widest text-sm">
+            Book a 30-Min Call
+        </a>
+        <a href="sms:+19897124370" data-cta="sticky-text" class="block text-center bg-white text-midnight border border-white/10 font-black py-4 px-5 rounded-xl uppercase tracking-widest text-sm">
+            Text Us
         </a>
     </div>
 </body>

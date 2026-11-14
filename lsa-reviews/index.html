@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) — LSA Command -->
+    <!-- Google tag (gtag.js): LSA Command -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-CSQW3SMTL4', {
-            page_location: window.location.origin + window.location.pathname,
-            page_referrer: document.referrer.split(/[?#]/)[0]
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
         });
     </script>
+    <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Get More Google LSA Reviews Automatically | LSA Command</title>
-  <meta name="description" content="Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, helps customers write the review, and answers every review for you.">
+  <meta name="description" content="Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, asks every customer for a review, and answers every review for you.">
   <link rel="canonical" href="https://lsacommand.com/lsa-reviews/">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LSA Command">
   <meta property="og:title" content="How to Get More Google LSA Reviews Automatically | LSA Command">
-  <meta property="og:description" content="Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, helps customers write the review, and answers every review for you.">
+  <meta property="og:description" content="Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, asks every customer for a review, and answers every review for you.">
   <meta property="og:url" content="https://lsacommand.com/lsa-reviews/">
   <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to Get More Google LSA Reviews Automatically | LSA Command">
-  <meta name="twitter:description" content="Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, helps customers write the review, and answers every review for you.">
+  <meta name="twitter:description" content="Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, asks every customer for a review, and answers every review for you.">
   <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +51,7 @@
       "url": "https://lsacommand.com/lsa-reviews/",
       "name": "Get More Google LSA Reviews, Automatically",
       "headline": "Get More Google LSA Reviews, Automatically",
-      "description": "Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, helps customers write the review, and answers every review for you.",
+      "description": "Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, asks every customer for a review, and answers every review for you.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
@@ -57,7 +60,7 @@
     {
       "@type": "VideoObject",
       "name": "LSA Command automated Google LSA review generation",
-      "description": "Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, helps customers write the review, and answers every review for you.",
+      "description": "Reviews are a Google Local Services Ads ranking factor. LSA Command follows up after every job by call or text, asks every customer for a review, and answers every review for you.",
       "thumbnailUrl": "https://lsacommand.com/preview-stats.png",
       "uploadDate": "2026-10-30",
       "duration": "PT12S",
@@ -73,15 +76,15 @@
           "name": "Do reviews affect Google LSA ranking?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Google lists review score and the number of reviews among the factors that affect Local Services Ads ranking."
+            "text": "Yes. Google counts your rating and number of reviews toward profile quality, one of the factors in the Local Services Ads auction alongside your bid and how likely your ad is to get a lead."
           }
         },
         {
           "@type": "Question",
-          "name": "Is it OK for the AI to suggest review text?",
+          "name": "What does Google allow when asking for reviews?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The AI drafts a review based on what the customer actually said, and the customer decides whether to post it, edit it, or write their own."
+            "text": "Google encourages sharing your review link with customers and replying to reviews. Its policy prohibits offering incentives for reviews, discouraging negative reviews, asking only happy customers, and requesting that specific content be included in a review."
           }
         },
         {
@@ -89,7 +92,7 @@
           "name": "What happens if a customer is unhappy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The conversation is routed to the owner so the problem can be fixed personally."
+            "text": "The owner gets the conversation so the problem can be fixed personally. The customer still gets the same review link as everyone else."
           }
         }
       ]
@@ -125,7 +128,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/#pricing">Pricing</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -134,7 +137,7 @@ fpr("click");
       <header class="article-header">
         <p class="eyebrow">Review generation</p>
         <h1>Get More Google LSA Reviews, Automatically</h1>
-        <p class="lede">LSA Command follows up after every job by call or text, helps customers write a review while the job is fresh, sends your Google link, and answers every review for you.</p>
+        <p class="lede">LSA Command follows up after every job by call or text, asks every customer for a review while the job is fresh, sends your Google review link, and answers every review for you.</p>
         
       </header>
       <div class="article-layout">
@@ -144,22 +147,23 @@ fpr("click");
           <div class="approved-copy">
 <h2 id="why-reviews-matter-so-much-in-lsa">Why reviews matter so much in LSA</h2>
 
-<p>Your review rating and review count are among the main things Google uses to rank Local Services Ads, alongside proximity, responsiveness, and business hours. They’re also what homeowners compare first when three providers show up side by side.</p>
+<p>Google ranks Local Services Ads in an auction. Your rating and number of reviews count toward profile quality, one of the factors Google weighs alongside your bid and how likely your ad is to get a lead (<a href="https://support.google.com/localservices/answer/7527305">Google: About ad rankings</a>). Google recommends at least 5 reviews, and some business types need 5 before their ad can show (<a href="https://support.google.com/localservices/answer/12492201">Google: Improve your Local Services Ads performance</a>). Reviews are also what homeowners compare first when three providers show up side by side.</p>
 <p>Most contractors know this and still don’t ask consistently. The crew forgets, the office is busy, and a generic review-request blast gets ignored.</p>
 <h2 id="a-real-conversation-not-a-review-blast">A real conversation, not a review blast</h2>
 
 <ol>
 <li><strong>AI follows up after the job</strong> by phone call or text and asks how it went, like a good office manager would.</li>
-<li><strong>It drafts the review with the customer.</strong> Based on what they said, the AI suggests a review they can post as-is or edit.</li>
-<li><strong>It sends the link while they’re still engaged.</strong> The suggested review and your Google review link arrive by text during the conversation.</li>
-<li><strong>Unhappy customers go to the owner.</strong> If someone had a bad experience, the conversation is routed to you for a personal fix before it turns into a public review.</li>
+<!-- Policy copy (Google Maps UGC policy, contributionpolicy/answer/7400114). Confirm with Alex before publishing: the review flow asks every customer, sends the link to unhappy customers too, and does not suggest review text. -->
+<li><strong>It asks every customer, not just the happy ones.</strong> Google’s review policy doesn’t allow asking only satisfied customers, so every finished job gets the same request.</li>
+<li><strong>It sends the link while they’re still engaged.</strong> Your Google review link arrives by text during the conversation, and the customer writes the review in their own words.</li>
+<li><strong>Unhappy customers also reach the owner.</strong> If someone had a bad experience, you get the conversation so you can fix it personally. Google doesn’t allow discouraging negative reviews, so they get the same review link as everyone else.</li>
 </ol>
 <h2 id="every-review-answered-for-you">Every review answered for you</h2>
 
-<p>When reviews come in, LSA Command replies to each one under your business name with a quick, professional response. That shows future customers you’re paying attention and keeps your profile active.</p>
+<p>When reviews come in, LSA Command replies to each one under your business name with a quick, professional response. That shows future customers you’re paying attention, and replying to reviews is one of <a href="https://support.google.com/business/answer/3474122">Google’s own best practices</a>.</p>
 <h2 id="faq">Frequently asked questions</h2>
-<div class="faq"><details><summary>Do reviews affect Google LSA ranking?</summary><p>Yes. Google lists review score and the number of reviews among the factors that affect Local Services Ads ranking.</p></details><details><summary>Is it OK for the AI to suggest review text?</summary><p>The AI drafts a review based on what the customer actually said, and the customer decides whether to post it, edit it, or write their own.</p></details><details><summary>What happens if a customer is unhappy?</summary><p>The conversation is routed to the owner so the problem can be fixed personally.</p></details></div>
-<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
+<div class="faq"><details><summary>Do reviews affect Google LSA ranking?</summary><p>Yes. Google counts your rating and number of reviews toward profile quality, one of the factors in the Local Services Ads auction alongside your bid and how likely your ad is to get a lead.</p></details><details><summary>What does Google allow when asking for reviews?</summary><p>Google encourages sharing your review link with customers and replying to reviews. Its policy prohibits offering incentives for reviews, discouraging negative reviews, asking only happy customers, and requesting that specific content be included in a review.</p></details><details><summary>What happens if a customer is unhappy?</summary><p>The owner gets the conversation so the problem can be fixed personally. The customer still gets the same review link as everyone else.</p></details></div>
+<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><p><strong>LSA Command is sold only through marketing agencies</strong>, at $200 per month per client. Own a business? Ask your agency about it. <a href="/#pricing">See agency pricing</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
           </div>
         </div>
       </div>
@@ -168,8 +172,8 @@ fpr("click");
   <footer class="site-footer"><div class="container">
     <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
-    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Service Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>
 </html>

@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) — LSA Command -->
+    <!-- Google tag (gtag.js): LSA Command -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-CSQW3SMTL4', {
-            page_location: window.location.origin + window.location.pathname,
-            page_referrer: document.referrer.split(/[?#]/)[0]
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
         });
     </script>
+    <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Respond to Google LSA Message Leads | LSA Command</title>
@@ -153,7 +156,7 @@ fpr("click");
 <h2 id="the-problem-nobody-sees-replies-that-never-arrive">The problem nobody sees: replies that never arrive</h2>
 
 <p>LSA message replies travel back to Google over SMS. Your phone shows them as delivered, but in the accounts we audit, <strong>10–15% never land in the LSA thread</strong>. The customer never sees them and assumes you ignored them. The only way to catch this is to check each lead thread.</p>
-<p>LSA Command <a href="/lsa-message-leads/">replies in under 30 seconds and verifies every reply through the LSA API</a>, re-sending any that drop, whether the AI or your team wrote it.</p>
+<p>LSA Command <a href="/lsa-message-leads/">replies instantly and verifies every reply through the LSA API</a>, re-sending any that drop, whether the AI or your team wrote it.</p>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>How fast should I reply to an LSA message lead?</summary><p>Within minutes. Homeowners message several providers at once, and responsiveness is an LSA ranking factor.</p></details><details><summary>Why didn’t my customer get my LSA message reply?</summary><p>Replies travel back to Google over SMS, and a share of them never reach the LSA thread even when your phone shows them as delivered. Check the thread in LSA, or use a tool that verifies delivery through the LSA API.</p></details></div>
 <section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/blog/lsa-lead-notifications/">How to get Google LSA lead notifications</a></li></ul></aside>
@@ -165,8 +168,8 @@ fpr("click");
   <footer class="site-footer"><div class="container">
     <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
-    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Service Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>
 </html>

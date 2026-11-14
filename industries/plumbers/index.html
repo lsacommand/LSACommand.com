@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) — LSA Command -->
+    <!-- Google tag (gtag.js): LSA Command -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-CSQW3SMTL4', {
-            page_location: window.location.origin + window.location.pathname,
-            page_referrer: document.referrer.split(/[?#]/)[0]
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
         });
     </script>
+    <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google Local Services Ads for Plumbers | LSA Command</title>
@@ -81,7 +84,7 @@
           "name": "Can LSA Command tell an emergency plumbing call from a routine one?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The AI qualifies every caller and captures the problem, address, and urgency. Your alert includes a short summary, so you can see right away whether it’s a burst pipe or a quote request. Hot leads can be warm-transferred to your phone while the caller is still on the line."
+            "text": "The AI qualifies every caller and captures the problem, address, and urgency. Your notification includes a short summary, so you can see right away whether it’s a burst pipe or a quote request. Hot leads can be warm-transferred to your phone while the caller is still on the line."
           }
         },
         {
@@ -125,7 +128,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/#pricing">Pricing</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -134,7 +137,7 @@ fpr("click");
       <header class="article-header">
         <p class="eyebrow">LSA for plumbers</p>
         <h1>Google Local Services Ads for Plumbers</h1>
-        <p class="lede">Burst pipes and backed-up drains don’t wait for business hours. LSA Command answers every plumbing lead in under 30 seconds and puts the caller’s details in your hand before you call back.</p>
+        <p class="lede">Burst pipes and backed-up drains don’t wait for business hours. LSA Command answers every plumbing call within 30 seconds, replies to message leads instantly, and puts the caller’s details in your hand before you call back.</p>
         
       </header>
       <div class="article-layout">
@@ -151,18 +154,18 @@ fpr("click");
 <p>LSA Command handles the LSA leads for emergency leak repair, drain cleaning, water heater repair and replacement, sewer line work, and fixture installs. You get the same system on every lead:</p>
 
 <ul>
-<li><a href="/lsa-ai-call-answering/"><strong>AI call answering</strong></a>: your team rings first, and AI picks up at 15 seconds so every call is answered inside Google’s 30-second window.</li>
-<li><a href="/lsa-message-leads/"><strong>Message lead response</strong></a>: replies in under 30 seconds, verified through the LSA API so none silently drop.</li>
+<li><a href="/lsa-ai-call-answering/"><strong>AI call answering</strong></a>: your team rings first, and AI picks up at 15 seconds, before the 20-second mark where Google starts charging for missed calls.</li>
+<li><a href="/lsa-message-leads/"><strong>Message lead response</strong></a>: replies instantly, verified through the LSA API so none silently drop.</li>
 <li><a href="/lsa-lead-disputes/"><strong>Lead feedback and credits</strong></a>: every lead scored and rated back to Google; spam and invalid leads flagged for credit.</li>
 <li><a href="/lsa-service-area/"><strong>Service area targeting</strong></a>: the exact cities and zip codes you want, pushed to LSA in seconds, with your live rank on each one.</li>
 <li><a href="/lsa-reviews/"><strong>Review generation</strong></a>: AI follow-up after every job and a reply to every review.</li>
 </ul>
 <h2 id="what-you-get-on-every-lead">What you get on every lead</h2>
 
-<p>Within seconds of every call or message, you get a text and an email with the customer’s number, the call recording, a short AI summary, and the full transcript. Google’s own alert for a phone lead is just an email. You call back already knowing what the job is.</p>
+<p>Within seconds of every call or message, you get a text and an email with the customer’s number, the call recording, a short AI summary, and the full transcript. Google’s own notification for a phone lead is just an email. You call back already knowing what the job is.</p>
 <h2 id="faq">Frequently asked questions</h2>
-<div class="faq"><details><summary>Are Google Local Services Ads worth it for plumbers?</summary><p>LSA puts plumbers at the very top of Google with the Google Verified badge, and you pay per lead instead of per click. It pays off when you answer every lead fast, rate leads back to Google, and keep your service area tight. Those are the areas LSA Command handles.</p></details><details><summary>Can LSA Command tell an emergency plumbing call from a routine one?</summary><p>The AI qualifies every caller and captures the problem, address, and urgency. Your alert includes a short summary, so you can see right away whether it’s a burst pipe or a quote request. Hot leads can be warm-transferred to your phone while the caller is still on the line.</p></details><details><summary>Is LSA changing in 2026?</summary><p>Yes. Google is moving Local Services Ads into Google Ads as a Performance Max campaign type. <a href="/blog/google-local-services-ads-performance-max/">Read what contractors should do now</a>.</p></details></div>
-<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/roofers/">Roofers</a></li><li><a href="/industries/electricians/">Electricians</a></li><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a></li></ul></aside>
+<div class="faq"><details><summary>Are Google Local Services Ads worth it for plumbers?</summary><p>LSA puts plumbers at the very top of Google with the Google Verified badge, and you pay per lead instead of per click. It pays off when you answer every lead fast, rate leads back to Google, and keep your service area tight. Those are the areas LSA Command handles.</p></details><details><summary>Can LSA Command tell an emergency plumbing call from a routine one?</summary><p>The AI qualifies every caller and captures the problem, address, and urgency. Your notification includes a short summary, so you can see right away whether it’s a burst pipe or a quote request. Hot leads can be warm-transferred to your phone while the caller is still on the line.</p></details><details><summary>Is LSA changing in 2026?</summary><p>Yes. Google is moving Local Services Ads into Google Ads as a Performance Max campaign type. <a href="/blog/google-local-services-ads-performance-max/">Read what contractors should do now</a>.</p></details></div>
+<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><p><strong>LSA Command is sold only through marketing agencies</strong>, at $200 per month per client. Own a business? Ask your agency about it. <a href="/#pricing">See agency pricing</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/roofers/">Roofers</a></li><li><a href="/industries/electricians/">Electricians</a></li><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a></li></ul></aside>
           </div>
         </div>
       </div>
@@ -171,8 +174,8 @@ fpr("click");
   <footer class="site-footer"><div class="container">
     <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
-    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Service Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>
 </html>

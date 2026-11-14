@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) — LSA Command -->
+    <!-- Google tag (gtag.js): LSA Command -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-CSQW3SMTL4', {
-            page_location: window.location.origin + window.location.pathname,
-            page_referrer: document.referrer.split(/[?#]/)[0]
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
         });
     </script>
+    <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How Much Do Google Local Services Ads Cost? (2026 Guide) | LSA Command</title>
@@ -153,9 +156,9 @@ fpr("click");
 <p>Google doesn’t publish a price list. Lead cost depends on your trade, your location, the type of job, the lead type, and how many other businesses are competing in your area. As LSA moves into Performance Max, bidding shifts to a campaign-level target cost per lead. <a href="/blog/google-local-services-ads-performance-max/">See what’s changing</a>.</p>
 <h2 id="what-recent-benchmarks-show">What recent benchmarks show</h2>
 
-<p>Industry studies put the average home-services LSA lead somewhere around <strong>$50–$65</strong> in 2026. One study of roughly 1,000 home-services businesses reported about $63 per unique lead. Trade ranges reported by agencies look roughly like this:</p>
+<p>Industry studies put the average home-services LSA lead somewhere around <strong>$50–$65</strong> in 2026. Trade ranges reported by agencies look roughly like this:</p>
 <ul>
-<li><strong>Plumbing:</strong> often among the priciest of the everyday trades, around $35–$70 per lead</li>
+<li><strong>Plumbing:</strong> around $35–$70 per lead</li>
 <li><strong>HVAC:</strong> around $30–$70 per lead</li>
 <li><strong>Electrical:</strong> around $40–$75 per lead</li>
 <li><strong>Roofing and remodeling:</strong> much higher, often in the hundreds per lead</li>
@@ -181,8 +184,8 @@ fpr("click");
   <footer class="site-footer"><div class="container">
     <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
-    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Service Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>
 </html>

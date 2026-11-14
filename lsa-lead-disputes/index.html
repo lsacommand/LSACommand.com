@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) — LSA Command -->
+    <!-- Google tag (gtag.js): LSA Command -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-CSQW3SMTL4', {
-            page_location: window.location.origin + window.location.pathname,
-            page_referrer: document.referrer.split(/[?#]/)[0]
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
         });
     </script>
+    <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Dispute Google LSA Leads &amp; Get Credits | LSA Command</title>
@@ -133,7 +136,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/#pricing">Pricing</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -172,7 +175,7 @@ fpr("click");
 <p>Credits fix past charges; a tighter setup prevents future ones. LSA Command pairs lead feedback with <a href="/lsa-service-area/">service area targeting</a>, so you stop showing up in zip codes and job types you don’t serve.</p>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>Can I still dispute a Google LSA lead manually?</summary><p>Google has moved most lead disputes to an automated credit system and asks advertisers to rate leads through lead feedback. Check your account’s current options, since Google has changed this process several times.</p></details><details><summary>Which LSA leads qualify for a credit?</summary><p>Generally spam, robocalls, and other invalid leads under Google’s policy. Google’s current guidance says it no longer credits “job type not serviced” or “geo not serviced” leads, so a poor-fit lead isn’t always refundable.</p></details><details><summary>How does LSA Command know which leads are bad?</summary><p>The AI reviews every call recording and message, scores lead quality from 1 to 5, and flags leads that match Google’s credit rules.</p></details><details><summary>Will LSA Command show credits that Google hasn’t approved?</summary><p>No. Credits are tracked separately from our assessment and from submitted feedback. A credit appears as recovered only once Google records it.</p></details></div>
-<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-service-area/">Service area targeting</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
+<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><p><strong>LSA Command is sold only through marketing agencies</strong>, at $200 per month per client. Own a business? Ask your agency about it. <a href="/#pricing">See agency pricing</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-service-area/">Service area targeting</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
           </div>
         </div>
       </div>
@@ -181,8 +184,8 @@ fpr("click");
   <footer class="site-footer"><div class="container">
     <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
-    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Service Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>
 </html>

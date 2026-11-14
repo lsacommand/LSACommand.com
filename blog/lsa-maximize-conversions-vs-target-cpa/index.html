@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSA Bidding: Maximize Conversions or Target CPA? | LSA Command</title>
+  <meta name="description" content="Manual LSA bids are gone in Google Ads. Google’s 15-leads-a-month rule for Target CPA, five settings that move cost per lead, and cost per booked job.">
+  <link rel="canonical" href="https://lsacommand.com/blog/lsa-maximize-conversions-vs-target-cpa/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="LSA Bidding: Maximize Conversions or Target CPA? | LSA Command">
+  <meta property="og:description" content="Manual LSA bids are gone in Google Ads. Google’s 15-leads-a-month rule for Target CPA, five settings that move cost per lead, and cost per booked job.">
+  <meta property="og:url" content="https://lsacommand.com/blog/lsa-maximize-conversions-vs-target-cpa/">
+  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LSA Bidding: Maximize Conversions or Target CPA? | LSA Command">
+  <meta name="twitter:description" content="Manual LSA bids are gone in Google Ads. Google’s 15-leads-a-month rule for Target CPA, five settings that move cost per lead, and cost per booked job.">
+  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>.table-wrap{overflow-x:auto;margin:1.25rem 0}.table-wrap .compare{margin:0}.video iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:16px;display:block;background:#050505}.article-body h3{margin:1.6rem 0 .4rem;font-size:1.15rem}mark.needs-confirm{background:#fff3cd;padding:0 .2em;border-radius:4px}</style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lsacommand.com/blog/lsa-maximize-conversions-vs-target-cpa/#main",
+      "url": "https://lsacommand.com/blog/lsa-maximize-conversions-vs-target-cpa/",
+      "name": "LSA Bidding After Performance Max: Maximize Conversions or Target CPA?",
+      "headline": "LSA Bidding After Performance Max: Maximize Conversions or Target CPA?",
+      "description": "Manual LSA bids are gone in Google Ads. Google’s 15-leads-a-month rule for Target CPA, five settings that move cost per lead, and cost per booked job.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-11-09",
+      "dateModified": "2026-11-09",
+      "author": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "keywords": "lsa bidding, maximize conversions vs target cpa, local service ads target cpa, lsa cost per lead, local services ads cost per lead, local service ads in performance max, google lsa max bid",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/lsa-maximize-conversions-vs-target-cpa/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/lsa-maximize-conversions-vs-target-cpa/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I still set a max cost per lead on Google Local Services Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not after migration. Google says manual bidding, such as setting a maximum cost per lead, is no longer supported in Google Ads. Campaigns default to Maximize Conversions, with Target CPA as the alternative."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I use Target CPA for Local Services Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google’s guidance is to set a Target CPA only if the campaign consistently gets more than 15 leads a month and your cost per lead is higher than you’d like, and it warns that Target CPA may restrict ad delivery and lead volume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Target CPA a maximum cost per lead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It’s an average Google aims for, not a cap, so individual leads can cost more or less than the target."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a Google LSA lead cost in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google doesn’t publish an average. SearchLight Digital’s February 2026 benchmark of 888 home-service contractors put the blended cost per lead at $53. Google says prices vary by location, job type, lead type and bidding strategy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I keep separate bids for different LSA job categories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use separate campaigns. Google merges category targets in one campaign into a single campaign-level Target CPA, and suggests separate campaigns per category if you want separate bidding."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "LSA Bidding After Performance Max: Maximize Conversions or Target CPA?",
+          "item": "https://lsacommand.com/blog/lsa-maximize-conversions-vs-target-cpa/"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book a walkthrough</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">LSA bidding: Maximize Conversions or Target CPA</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">LSA updates</p>
+        <h1>LSA Bidding After Performance Max: Maximize Conversions or Target CPA?</h1>
+        <p class="lede">After your Local Services Ads account moves into Google Ads, the max cost per lead is gone. Here’s how to choose between Maximize Conversions and Target CPA with Google’s own rule, the five settings that usually move cost more than any bid, and how to judge it all on cost per booked job.</p>
+        <p class="article-meta">By <a href="/" rel="author">LSA Command</a> <span aria-hidden="true">·</span> <time datetime="2026-11-09">November 9, 2026</time> <span aria-hidden="true">·</span> 8 min read</p>
+      </header>
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#what-a-lead-costs">What an LSA lead costs</a></li><li><a href="#what-changed">What changed in bidding</a></li><li><a href="#decision">Maximize Conversions or Target CPA</a></li><li><a href="#five-settings">Five settings that move cost</a></li><li><a href="#cost-per-booked-job">Cost per booked job</a></li><li><a href="#agencies">For agencies: rolling it out</a></li><li><a href="#where-lsa-command-fits">Where LSA Command fits</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
+        <div class="article-body">
+          <div class="approved-copy">
+<p>Once a Local Services Ads account moves into Google Ads, the max cost per lead is gone. You can’t set it anymore. Every account starts on Maximize Conversions, and the one alternative, Target CPA, can quietly cut lead volume if you switch to it too early.</p>
+<p>This guide covers how to choose between the two using Google’s own rule, the five campaign settings that usually move cost more than any bid, and why cost per booked job is the number to judge it on. If you’re an agency, there’s a section on rolling the decision out across a client book.</p>
+<!-- To embed after the video is live: replace the marker below with <figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="LSA Bidding After Performance Max: Maximize Conversions or Target CPA?" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><figcaption>Watch: Maximize Conversions or Target CPA for Local Services Ads</figcaption></figure> and add VideoObject schema. -->
+<!-- YOUTUBE_EMBED: video-4 -->
+<h2 id="what-a-lead-costs">What an LSA lead costs right now</h2>
+<p>Google doesn’t publish an average cost per lead. The most detailed public benchmark we’ve found is from SearchLight Digital: tracking $6.72 million in LSA spend across 888 home-service contractors and 126,650 leads in February 2026, it put the blended cost per lead at $53, with trades ranging from about $39 to $71. <a href="https://searchlightdigital.io/google-local-service-ads-cost-per-lead/">Source: SearchLight Digital</a> Treat that as a reference point, not a target. It’s one vendor’s sample of home-service contractors in one month.</p>
+<p>Your own number depends on things Google lists itself: “Lead prices may vary depending on your location, job type, lead type, or bidding strategy.” <a href="https://support.google.com/google-ads/answer/18550592?hl=en">Source: Google Ads Help</a> And your position in the results is “determined dynamically in local auctions based on your bid, responsiveness, and profile quality.” <a href="https://support.google.com/google-ads/answer/17326561?hl=en">Source: Google Ads Help</a> So your settings and your phones move the price, not just your bid. For the wider cost picture, see <a href="/blog/google-local-services-ads-cost/">how much Google Local Services Ads cost</a>.</p><h2 id="what-changed">What changed in LSA bidding</h2>
+<p>In the old LSA dashboard you could bid manually and set a maximum cost per lead. After migration, Google says: “Manual bidding (such as setting a maximum cost-per-lead) is no longer supported in Google Ads.” <a href="https://support.google.com/google-ads/answer/17213585?hl=en">Source: Google Ads Help</a></p>
+<ul>
+<li><strong>Maximize Conversions is the default.</strong> Google describes it as an automated strategy “that uses Google AI to set bids dynamically, helping you get the most leads possible within your daily budget.”</li>
+<li><strong>Target CPA is the other option.</strong> Here it means a target cost per lead. It’s an average Google aims for, not a cap, so some leads will cost more and some less.</li>
+<li><strong>Category targets were merged.</strong> If you had different targets for different job categories in one campaign, Google calculates one campaign-level Target CPA and applies it to all of them.</li>
+<li><strong>Budgets are a daily average.</strong> Monthly spend won’t exceed the daily average times 30.4, and after you reach your monthly max, Google says your ad won’t appear for the rest of the month unless you adjust the budget.</li>
+</ul>
+<p>The budget conversion is covered in the <a href="/blog/lsa-performance-max-migration-agencies/">agency migration playbook</a>, and our <a href="/blog/local-services-ads-budget-bidding/">LSA budget and bidding guide</a> goes deeper on setting a client’s spend.</p>
+<h2 id="decision">The decision: Maximize Conversions or Target CPA</h2>
+<p>Google gives a specific rule, and we agree with it: “Only set a Target CPA after campaign creation if your campaign is consistently receiving more than 15 leads per month and your cost-per-lead (CPL) is higher than you would like. Be aware that changing to Target CPA may restrict your ad delivery, limiting your local reach and lead volume.” <a href="https://support.google.com/google-ads/answer/17326561?hl=en">Source: Google Ads Help</a></p>
+<p>Turned into a decision:</p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">Situation</th><th scope="col">What to do</th></tr></thead>
+<tbody>
+<tr><td>Fewer than 15 leads a month</td><td>Stay on Maximize Conversions. With that little data, a target mostly loses you auctions. To spend less, lower the budget instead of squeezing the lead price.</td></tr>
+<tr><td>More than 15 a month, lead price is fine</td><td>Leave bidding alone and work on the five settings below.</td></tr>
+<tr><td>More than 15 a month, lead price too high</td><td>Try Target CPA, set near what you pay today, not what you wish you paid. Watch lead volume for two to three weeks before lowering it. If volume falls off a cliff, the target is too tight.</td></tr>
+<tr><td>Job types with very different values</td><td>One target can’t fit both. Google’s answer is separate campaigns per category, each with its own target. New pay-per-lead campaigns are still created at g.co/localservices, not inside Google Ads.</td></tr>
+</tbody></table></div>
+<h2 id="five-settings">Five settings that move your real cost per lead</h2>
+<p>Bidding is one lever. These five usually matter more, and they’re all in campaign settings.</p>
+<h3>1. Service types</h3>
+<p>Google says your ad “will only appear in local searches for the business category and the specific services you select.” <a href="https://support.google.com/google-ads/answer/17325051?hl=en">Source: Google Ads Help</a> If you’re paying for jobs you don’t want, like small repairs when you want installs, turn those service types off. It’s cheaper than any bid change.</p>
+<h3>2. Service area</h3>
+<p>Google’s guidance is not to set service areas more than two hours’ drive from the business, because slow response times can hurt your ranking. Inside that limit it suggests going broad, a whole county rather than single postal codes. Cut the areas you’d never drive to and keep the rest wide. More in our <a href="/lsa-service-area/">service area targeting guide</a>.</p>
+<h3>3. Hours and ad schedule</h3>
+<p>Your ad schedule can run all the time, follow a custom schedule, or sync to your Business Profile hours. Remember the missed-call rule: an unanswered business-hours call where the caller stays on the line more than 20 seconds can be charged, and if your ad schedule differs from your business hours, Google only charges when the call lands inside both. If nobody answers at 6 p.m., don’t advertise at 6 p.m., or put something on the phone that answers. Details in <a href="/blog/lsa-missed-call-charges/">Google now charges for missed calls</a>.</p>
+<h3>4. Message and booking leads</h3>
+<p>Google says message leads “typically cost less than phone leads,” though not always, and recommends opting in only if you can respond within 24 hours. Aim for minutes, not a day. A cheaper lead you don’t answer isn’t cheap. See <a href="/blog/respond-to-google-lsa-message-leads/">how to respond to LSA message leads</a>.</p>
+<h3>5. Direct Business Search</h3>
+<p>Per Google, this shows your ad for searches of your business name and screens out returning customers, so you’re only charged for new leads. Decide it per business. For some it protects the brand name from competitors. For others, people searching your name would have called anyway.</p>
+<h2 id="cost-per-booked-job">Measure cost per booked job, not cost per lead</h2>
+<p>The number that matters is what a booked job costs. Here’s a simple example. <strong>This is an illustration, not a real account:</strong></p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">ILLUSTRATION</th><th scope="col">Before</th><th scope="col">After faster answering</th></tr></thead>
+<tbody>
+<tr><td>Leads × price</td><td>30 × $60 = $1,800</td><td>30 × $60 = $1,800</td></tr>
+<tr><td>Jobs booked</td><td>12</td><td>15</td></tr>
+<tr><td>Cost per booked job</td><td>$150</td><td>$120 (20% lower)</td></tr>
+</tbody></table></div>
+<p>Same leads, same spend, and the booked job got 20% cheaper without touching the bid.</p>
+<p>Two habits help Google learn which leads are worth paying for. On the Leads page, mark leads “Booked” or “Completed”; Google says updating statuses helps its automated systems optimize your campaign. And rate leads with the survey on the Leads page. Google assesses lead quality over 30 days and automatically credits leads it finds poor quality, duplicate or invalid. <a href="https://support.google.com/google-ads/answer/18550592?hl=en">Source: Google Ads Help</a> If junk leads are the real problem, start with <a href="/blog/bad-google-lsa-leads/">why you’re getting bad LSA leads</a>.</p>
+<h2 id="agencies">For agencies: rolling this out across a client book</h2>
+<p>Don’t set this client by client from memory. Make it a rule:</p>
+<ol>
+<li>Pull every client’s leads per month for the last 90 days.</li>
+<li>Under 15 a month: Maximize Conversions, and the conversation is about budget and response, not the lead price.</li>
+<li>Over 15 with a cost problem: Target CPA near today’s number, a dated note in your tracker, and a check two weeks later.</li>
+<li>Mixed job values: flag the client for a campaign split.</li>
+</ol>
+<p>Track it in one row per client: client, leads per month (90-day average), strategy, target, date set, review date. Then send each client one sentence before they ask: “Google removed the manual bid; here’s what we set and why.” It saves a lot of phone calls. For the rest of the weekly routine across clients, see <a href="/blog/lsa-multiple-clients-performance-max-agencies/">managing LSA for multiple clients after Performance Max</a>.</p>
+<h2 id="where-lsa-command-fits">Where LSA Command fits</h2>
+<p>The biggest cost lever on this page isn’t a bid. It’s whether the lead gets answered. LSA Command is built for that: calls ring the team first and AI answers at 15 seconds, message leads get an instant reply, robocalls are blocked, and every lead is rated back to Google. For agencies it runs under your brand. See <a href="/agencies/">LSA Command for agencies</a> or <a href="/lsa-ai-call-answering/">AI call answering for LSA</a>.</p>
+<p>If you run LSA for clients, book a 30-minute call with Ryan and bring the last 90 days of leads for one account. We’ll tell you which bidding strategy fits and which of these five settings to fix first.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq"><details><summary>Can I still set a max cost per lead on Google Local Services Ads?</summary><p>Not after migration. Google says manual bidding, such as setting a maximum cost per lead, is no longer supported in Google Ads. Campaigns default to Maximize Conversions, with Target CPA as the alternative.</p></details><details><summary>When should I use Target CPA for Local Services Ads?</summary><p>Google’s guidance is to set a Target CPA only if the campaign consistently gets more than 15 leads a month and your cost per lead is higher than you’d like, and it warns that Target CPA may restrict ad delivery and lead volume.</p></details><details><summary>Is Target CPA a maximum cost per lead?</summary><p>No. It’s an average Google aims for, not a cap, so individual leads can cost more or less than the target.</p></details><details><summary>What does a Google LSA lead cost in 2026?</summary><p>Google doesn’t publish an average. SearchLight Digital’s February 2026 benchmark of 888 home-service contractors put the blended cost per lead at $53. Google says prices vary by location, job type, lead type and bidding strategy.</p></details><details><summary>How do I keep separate bids for different LSA job categories?</summary><p>Use separate campaigns. Google merges category targets in one campaign into a single campaign-level Target CPA, and suggests separate campaigns per category if you want separate bidding.</p></details></div>
+<section class="cta-box"><h2>Setting bids for client LSA accounts? Let’s look at one together.</h2><p>Book a 30-minute call with Ryan and bring 90 days of leads from one client account. We’ll tell you which bidding strategy fits, which of the five settings to fix first, and how agencies cut cost per booked job by answering every lead. Prefer the phone? Call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/agencies/">LSA Command for agencies</a></li><li><a href="/blog/lsa-multiple-clients-performance-max-agencies/">Managing LSA for multiple clients after Performance Max</a></li><li><a href="/blog/google-local-services-ads-cost/">How much Google Local Services Ads cost</a></li></ul></aside>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+</body>
+</html>

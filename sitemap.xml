@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://lsacommand.com/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://lsacommand.com/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://lsacommand.com/setup/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://lsacommand.com/agencies/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://lsacommand.com/lsa-ai-call-answering/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lsacommand.com/lsa-message-leads/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lsacommand.com/lsa-lead-disputes/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lsacommand.com/lsa-service-area/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lsacommand.com/lsa-reviews/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://lsacommand.com/resources/lsa-client-report-template/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://lsacommand.com/industries/hvac/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lsacommand.com/industries/plumbers/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lsacommand.com/industries/roofers/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lsacommand.com/industries/electricians/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lsacommand.com/industries/pool-contractors/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://lsacommand.com/blog/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://lsacommand.com/case-studies/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/case-studies/advantage-pools/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/case-studies/champion-pools/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/case-studies/edgewater-pools/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://lsacommand.com/blog/google-local-services-ads-performance-max/</loc><lastmod>2026-08-27</lastmod></url>
   <url><loc>https://lsacommand.com/blog/how-to-rank-higher-google-local-services-ads/</loc><lastmod>2026-04-27</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-budget-bidding/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-optimization-checklist/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/google-local-services-ads-for-lawyers/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://lsacommand.com/blog/google-local-services-ads-cost/</loc><lastmod>2026-10-28</lastmod></url>
-  <url><loc>https://lsacommand.com/blog/google-verified-badge/</loc><lastmod>2026-06-25</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/google-verified-badge/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-not-eligible-verification/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://lsacommand.com/blog/local-services-ads-vs-google-ads/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://lsacommand.com/blog/lsa-lead-notifications/</loc><lastmod>2026-03-26</lastmod></url>
   <url><loc>https://lsacommand.com/blog/bad-google-lsa-leads/</loc><lastmod>2026-07-28</lastmod></url>
@@ -23,10 +34,32 @@
   <url><loc>https://lsacommand.com/blog/lsa-reporting-software-agencies/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://lsacommand.com/blog/multi-account-lsa-software-agencies/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://lsacommand.com/blog/lsa-crm-integration-agencies/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-not-showing/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-background-check-verification/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-manager-account/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/lsa-missed-call-charges/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/lsa-performance-max-migration-agencies/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/white-label-local-services-ads-agencies/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-management-pricing/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/lsa-multiple-clients-performance-max-agencies/</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/lsa-maximize-conversions-vs-target-cpa/</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-categories/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-api/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/google-local-services-ads-support/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/how-to-set-up-google-local-services-ads/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/are-google-local-services-ads-worth-it/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/how-to-pause-google-local-services-ads/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-partner-program/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/google-local-services-ads-billing/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/google-local-services-ads-real-estate-agents/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/lsa-lead-disputes-agencies/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/lsa-vs-google-ads-for-agencies/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://lsacommand.com/blog/local-services-ads-multiple-locations/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://lsacommand.com/support.html</loc></url>
   <url><loc>https://lsacommand.com/privacy-policy.html</loc></url>
   <url><loc>https://lsacommand.com/terms-of-service.html</loc></url>
   <url><loc>https://lsacommand.com/cookie-policy.html</loc></url>
   <url><loc>https://lsacommand.com/gdpr.html</loc></url>
   <url><loc>https://lsacommand.com/hipaa-compliance.html</loc></url>
+  <url><loc>https://lsacommand.com/resources/lsa-pmax-migration-checklist/</loc><lastmod>2026-11-02</lastmod></url>
 </urlset>

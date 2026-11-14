@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) — LSA Command -->
+    <!-- Google tag (gtag.js): LSA Command -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-CSQW3SMTL4', {
-            page_location: window.location.origin + window.location.pathname,
-            page_referrer: document.referrer.split(/[?#]/)[0]
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
         });
     </script>
+    <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Answering Service for Google Local Services Ads | LSA Command</title>
-  <meta name="description" content="Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and alert you with the recording, summary, and transcript.">
+  <meta name="description" content="Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and notify you with the recording, summary, and transcript.">
   <link rel="canonical" href="https://lsacommand.com/lsa-ai-call-answering/">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LSA Command">
   <meta property="og:title" content="AI Answering Service for Google Local Services Ads | LSA Command">
-  <meta property="og:description" content="Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and alert you with the recording, summary, and transcript.">
+  <meta property="og:description" content="Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and notify you with the recording, summary, and transcript.">
   <meta property="og:url" content="https://lsacommand.com/lsa-ai-call-answering/">
   <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI Answering Service for Google Local Services Ads | LSA Command">
-  <meta name="twitter:description" content="Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and alert you with the recording, summary, and transcript.">
+  <meta name="twitter:description" content="Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and notify you with the recording, summary, and transcript.">
   <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +51,7 @@
       "url": "https://lsacommand.com/lsa-ai-call-answering/",
       "name": "AI Answering Service for Google Local Services Ads",
       "headline": "AI Answering Service for Google Local Services Ads",
-      "description": "Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and alert you with the recording, summary, and transcript.",
+      "description": "Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and notify you with the recording, summary, and transcript.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
@@ -57,7 +60,7 @@
     {
       "@type": "VideoObject",
       "name": "LSA Command AI call answering for Google Local Services Ads",
-      "description": "Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and alert you with the recording, summary, and transcript.",
+      "description": "Answer 100% of your Google LSA calls. Your team rings first, and AI picks up at 15 seconds to qualify, book, and notify you with the recording, summary, and transcript.",
       "thumbnailUrl": "https://lsacommand.com/preview-stats.png",
       "uploadDate": "2026-10-30",
       "duration": "PT12S",
@@ -133,7 +136,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/#pricing">Pricing</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -142,7 +145,7 @@ fpr("click");
       <header class="article-header">
         <p class="eyebrow">AI call answering</p>
         <h1>AI Answering Service for Google Local Services Ads</h1>
-        <p class="lede">Your team rings first. If nobody picks up in 15 seconds, AI answers, qualifies the caller, and texts you the recording, summary, and transcript, so every paid LSA call is answered inside Google’s 30-second window.</p>
+        <p class="lede">Your team rings first. If nobody picks up in 15 seconds, AI answers, qualifies the caller, and texts you the recording, summary, and transcript, so no paid LSA call rings out unanswered.</p>
         
       </header>
       <div class="article-layout">
@@ -154,14 +157,14 @@ fpr("click");
 
 <p>Every Google Local Services Ads call is a lead you paid for. When nobody picks up, you lose that customer, and you also hurt the <strong>responsiveness</strong> signal Google uses to rank LSA advertisers. Google says plainly that missed calls can hurt responsiveness.</p>
 <p>Contractors miss calls for normal reasons: the crew is on a roof, the office is on another line, or it’s 9 PM on a Sunday. A generic answering service or voicemail doesn’t fix the ranking problem. It also doesn’t give you what you need to call the customer back quickly.</p>
-<p>The stakes are going up. As LSA moves into Google Ads, industry reports say a missed call during your business hours can now be charged as a lead if the caller stays on the line long enough. Read our guide to <a href="/blog/google-local-services-ads-performance-max/">LSA’s move into Performance Max</a> for details.</p>
+<p>The stakes are going up. As LSA moves into Google Ads, Google says a missed call during business hours can be charged as a lead if the caller stays on the line for more than 20 seconds. Read our guide to <a href="/blog/google-local-services-ads-performance-max/">LSA’s move into Performance Max</a> for details.</p>
 <h2 id="how-lsa-command-answers-every-call-humans-first-ai-always">How LSA Command answers every call: humans first, AI always</h2>
 
 <ol>
 <li><strong>0–15 seconds: your team gets first shot.</strong> Every LSA call rings your phones first. If someone answers, it’s a normal call and the AI stays out of the way.</li>
 <li><strong>At 15 seconds: AI picks up.</strong> If nobody answers (busy, on a job, after hours), the LSA Command AI answers on the spot. It qualifies the caller, captures the job details, and books the job or warm-transfers a hot lead to your phone while the caller is still on the line.</li>
-<li><strong>Inside 30 seconds: Google sees the call answered.</strong> Every call is answered inside Google’s 30-second window, so your response rate stays at 100%.</li>
-<li><strong>Instantly: you get the full picture.</strong> A text and an email hit your phone with the caller’s number, the call recording, a five-second AI summary, and the full transcript. Google’s own alert for a phone lead is just an email with no recording or transcript.</li>
+<li><strong>Before 20 seconds: Google sees the call answered.</strong> Since October 1, 2026, Google charges for a missed call when the caller stays on the line more than 20 seconds. An AI pickup at 15 seconds means you pay for a conversation, not a missed call.</li>
+<li><strong>Instantly: you get the full picture.</strong> A text and an email hit your phone with the caller’s number, the call recording, a five-second AI summary, and the full transcript. Google’s own notification for a phone lead is just an email with no recording or transcript.</li>
 </ol>
 <h2 id="robocalls-never-reach-your-phone">Robocalls never reach your phone</h2>
 
@@ -171,7 +174,7 @@ fpr("click");
 <p>Because every call and message is answered, you can list your business as <strong>Open 24 Hours</strong> in LSA. Being “open now” when competitors are closed earns you placement at nights, on weekends and on holidays. Those are often the searches where homeowners have an urgent problem and will book whoever answers.</p>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>Will the AI answer calls my team could have taken?</summary><p>No. Every call rings your team first for 15 seconds. The AI only answers when no one picks up.</p></details><details><summary>Does answering every call improve my Google LSA ranking?</summary><p>Responsiveness is one of the factors Google uses to rank Local Services Ads, and Google says missed calls can hurt it. Answering every call within 30 seconds protects that signal. Ranking also depends on proximity, reviews, and business hours, so no tool can promise a specific position.</p></details><details><summary>What do I receive after the AI handles a call?</summary><p>A text and an email with the caller’s number, the call recording, an AI summary, and the full transcript, so you can call back already knowing what the customer needs.</p></details><details><summary>Can the AI transfer a hot lead to me?</summary><p>Yes. Qualified callers can be warm-transferred straight to your phone while they’re still on the line.</p></details></div>
-<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a></li><li><a href="/lsa-service-area/">Service area targeting</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
+<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><p><strong>LSA Command is sold only through marketing agencies</strong>, at $200 per month per client. Own a business? Ask your agency about it. <a href="/#pricing">See agency pricing</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a></li><li><a href="/lsa-service-area/">Service area targeting</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
           </div>
         </div>
       </div>
@@ -180,8 +183,8 @@ fpr("click");
   <footer class="site-footer"><div class="container">
     <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
-    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Service Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>
 </html>

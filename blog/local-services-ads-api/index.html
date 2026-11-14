@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Local Services Ads API: An Agency Guide (2026) | LSA Command</title>
+  <meta name="description" content="What the Google Ads API can read and change for Local Services Ads: leads, call and message history, lead ratings, budgets and bidding, plus the Performance Max changes that break old LSA reports.">
+  <link rel="canonical" href="https://lsacommand.com/blog/local-services-ads-api/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="Google Local Services Ads API: An Agency Guide (2026) | LSA Command">
+  <meta property="og:description" content="What the Google Ads API can read and change for Local Services Ads: leads, call and message history, lead ratings, budgets and bidding, plus the Performance Max changes that break old LSA reports.">
+  <meta property="og:url" content="https://lsacommand.com/blog/local-services-ads-api/">
+  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta property="article:published_time" content="2026-11-01">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Google Local Services Ads API: An Agency Guide (2026) | LSA Command">
+  <meta name="twitter:description" content="What the Google Ads API can read and change for Local Services Ads: leads, call and message history, lead ratings, budgets and bidding, plus the Performance Max changes that break old LSA reports.">
+  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>.table-wrap{overflow-x:auto;margin:1.25rem 0}.table-wrap .compare{margin:0}.article-body h3{margin:1.6rem 0 .4rem;font-size:1.15rem}mark.needs-confirm{background:#fff3cd;padding:0 .2em;border-radius:4px}.agency-callout{margin:0 0 1.75rem}.agency-callout p{margin:0 0 .75rem}.agency-callout .button{margin-top:.25rem}.article-body pre.code{overflow-x:auto;max-width:100%;background:#0f172a;color:#e2e8f0;padding:1rem;border-radius:8px;font-size:.85rem;line-height:1.5;margin:1.25rem 0}.article-body pre.code code{background:none;color:inherit;padding:0}.article-body code{overflow-wrap:anywhere}</style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lsacommand.com/blog/local-services-ads-api/#main",
+      "url": "https://lsacommand.com/blog/local-services-ads-api/",
+      "name": "The Google Local Services Ads API: What Agencies Can Automate in 2026",
+      "headline": "The Google Local Services Ads API: What Agencies Can Automate in 2026",
+      "description": "What the Google Ads API can read and change for Local Services Ads: leads, call and message history, lead ratings, budgets and bidding, plus the Performance Max changes that break old LSA reports.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "author": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "keywords": "local services ads api, google local services ads api, lsa api, local services lead api, provideleadfeedback, local_services_lead, google ads api local services",
+      "image": "https://lsacommand.com/preview-stats.png",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/local-services-ads-api/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/local-services-ads-api/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there an API for Google Local Services Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LSA leads, lead conversations, verification records and campaign settings are available through the Google Ads API. An older, separate Local Services API also offers account and lead reports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you rate or dispute LSA leads through the API?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can rate them. The ProvideLeadFeedback method submits the lead survey, and the response tells you whether a bonus credit was issued. Google now issues most credits automatically, so rating every lead is the part to automate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I pull call recordings from the Local Services Ads API?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The lead conversation resource includes a recording URL, but opening it requires a Google login with at least read-only access to the client account. After migration, Google stores recordings for up to 30 days, so archive the ones you need."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did my LSA report stop showing leads after migration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Migrated LSA campaigns are Performance Max campaigns with local services enabled, not the old Local Services campaign type. Reports that filter on the old channel type will miss them. Query leads through the local_services_lead resource and use its campaign field instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a developer token for the Google Ads API?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not anymore. Google says developer tokens were sunset on September 9, 2026. Access levels are now managed per Google Cloud project, starting with Test access and moving up to Explorer, Basic or Standard."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Google Local Services Ads API: What Agencies Can Automate in 2026",
+          "item": "https://lsacommand.com/blog/local-services-ads-api/"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book a walkthrough</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Local Services Ads API</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">Agency guides</p>
+        <h1>The Google Local Services Ads API: What Agencies Can Automate in 2026</h1>
+        <p class="lede">If you manage Local Services Ads for more than a handful of clients, you’ll eventually want the data out of Google’s interface and into your own reports and notifications. Here’s what the Google Ads API actually exposes for LSA in 2026, what it won’t do, and the Performance Max change that quietly breaks reporting built the old way.</p>
+        <p class="article-meta">By <a href="/" rel="author">LSA Command</a> <span aria-hidden="true">·</span> <time datetime="2026-11-01">November 1, 2026</time> <span aria-hidden="true">·</span> 9 min read</p>
+      </header>
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#which-api">Which API, exactly</a></li><li><a href="#what-you-can-read">What you can read</a></li><li><a href="#what-you-can-change">What you can change</a></li><li><a href="#limitations">What the API can’t do</a></li><li><a href="#performance-max-change">The Performance Max change that breaks old reports</a></li><li><a href="#getting-access">Getting API access</a></li><li><a href="#build-or-buy">Build it, or use a tool built on it</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
+        <div class="article-body">
+          <div class="approved-copy">
+<p>Most agencies hit the same wall with Local Services Ads (LSA). One client is easy to watch in Google’s interface. Fifteen clients means fifteen logins, fifteen lead lists to rate, and a monthly report built by copy and paste.</p>
+<p>The Google Ads API is how you get past that wall, and it does more for LSA than most agencies realise. It also has gaps that matter, and the move to Performance Max changed how LSA data shows up in it. This guide is for agency owners deciding whether to build on the API, and for the developer they’ll hand it to. Everything below comes from Google’s Google Ads API documentation, last updated October 30, 2026, unless we say otherwise. <a href="https://developers.google.com/google-ads/api/docs/campaigns/local-service-campaigns">Source: Google Ads API documentation</a></p>
+<aside class="related agency-callout" aria-label="For agencies"><p class="eyebrow">For agency owners</p><p>Don’t want to build it? LSA Command rates every lead back to Google, answers calls and messages, and reports across your whole client book under your agency’s brand.</p><a class="button" href="/agencies/">See how agencies run LSA Command</a></aside>
+<h2 id="which-api">Which API, exactly</h2>
+<p>“The LSA API” can mean two things:</p>
+<ul><li><strong>The Google Ads API.</strong> This is where Google is putting its LSA development. LSA campaigns, leads and lead conversations are exposed as resources you query alongside the rest of a Google Ads account, and the newest LSA changes (Performance Max campaigns, coupon leads) are documented here.</li><li><strong>The older Local Services API</strong> (<code>localservices.googleapis.com</code>), which offers account-level and detailed lead reports for linked LSA accounts. Some older reporting tools still run on it. Google’s client library documentation marks at least one of its lead ID fields as deprecated in favour of the Google Ads lead ID.</li></ul>
+<p>If you’re starting something new, start with the Google Ads API. The rest of this guide is about that one.</p>
+<h2 id="what-you-can-read">What you can read</h2>
+<p>Google exposes four read-only LSA resources. They only return data if the client account has an LSA campaign (standard or Performance Max).</p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">Resource</th><th scope="col">What it gives you</th><th scope="col">Agency use</th></tr></thead>
+<tbody>
+<tr><td><code>local_services_lead</code></td><td>Lead type, category and service, contact details, status, creation time, whether the lead was charged, credit details, any note, and whether feedback was submitted</td><td>Lead counts, charged vs. credited, unrated leads per client</td></tr>
+<tr><td><code>local_services_lead_conversation</code></td><td>Every call and message on a lead: channel, who spoke (advertiser or consumer), time, call duration, recording URL, message text</td><td>Answer-rate and response-time reporting, call review</td></tr>
+<tr><td><code>local_services_verification_artifact</code></td><td>Business-level verification requests: licenses, insurance, background checks, registration, status and rejection reasons</td><td>Catch an expiring license or rejected insurance certificate before ads pause</td></tr>
+<tr><td><code>local_services_employee</code></td><td>Employee profile data the advertiser uploaded</td><td>Keep field-staff records in sync</td></tr>
+</tbody></table></div>
+<p>A starting query for a monthly lead report looks like this. You query it with <code>GoogleAdsService.Search</code> for each client account:</p>
+<pre class="code"><code>SELECT local_services_lead.id,
+       local_services_lead.lead_type,
+       local_services_lead.lead_status,
+       local_services_lead.lead_charged,
+       local_services_lead.lead_feedback_submitted,
+       local_services_lead.creation_date_time,
+       local_services_lead.campaign
+FROM local_services_lead
+WHERE local_services_lead.creation_date_time &gt; &#x27;2026-10-01 00:00:00&#x27;</code></pre>
+<p>Lead and conversation times come back in the client account’s time zone, which matters when you compare clients across states.</p>
+<h2 id="what-you-can-change">What you can change</h2>
+<p>The API isn’t read-only. For LSA you can also:</p>
+<ul><li><strong>Rate leads.</strong> <code>LocalServicesLeadService.ProvideLeadFeedback</code> submits lead feedback, the same kind of survey behind “Rate this lead” in the interface: a survey answer plus a satisfied or dissatisfied reason, with a free-text comment required when the reason is “other.” The response tells you whether a bonus credit was issued or rejected, and Google says an issued bonus credit becomes usable in about two months.</li><li><strong>Add to a lead’s conversation history</strong> with <code>AppendLeadConversation</code>.</li><li><strong>Change campaign status and budget.</strong></li><li><strong>Set bidding</strong> on standard LSA campaigns: manual cost per lead by category, or Maximize Conversions.</li><li><strong>Set ad schedules, location targeting and service types.</strong></li><li><strong>Check eligibility.</strong> <code>LocalServicesEligibilityService.CheckLocalServicesEligibility</code> takes a customer ID and a Business Profile listing ID.</li></ul>
+<p>Lead rating is the one agencies should care about most. Google reassesses charged leads and issues credits automatically when it later judges a lead low quality, and it asks advertisers to rate leads so it can send better-matched ones. <a href="https://support.google.com/localservices/answer/15100654?hl=en">Source: Google Local Services Help</a> Across a client book, “rate every lead” is a job a person won’t do consistently and a script will. The <code>lead_feedback_submitted</code> field gives you the to-do list.</p>
+<h2 id="limitations">What the API can’t do</h2>
+<p>Plan around these before you promise a client anything:</p>
+<ul><li><strong>No creating or removing standard LSA campaigns.</strong> New pay-per-lead accounts still start through Google’s LSA sign-up. Ad groups, ads and most criteria inside standard LSA campaigns can’t be created, changed or read.</li><li><strong>No health care leads.</strong> Google says leads in health care categories aren’t available through the API. Dental, chiropractic and other health care clients need another reporting method. Our <a href="/blog/local-services-ads-categories/">LSA categories guide</a> lists which categories that covers.</li><li><strong>Contact details disappear on wiped-out leads.</strong> When a lead’s status is <code>WIPED_OUT</code>, its contact details come back empty.</li><li><strong>Email moved out.</strong> From API version 25, the lead contact email field was removed; a phone number extension field is available instead.</li><li><strong>Call recordings need a signed-in user.</strong> Opening a recording URL requires a Google login with at least read-only access to the client account, so you can’t just paste the link into a client report.</li><li><strong>Pull conversations per lead.</strong> Google warns that requesting all conversations at once can be slow, and recommends filtering by lead.</li></ul>
+<h2 id="performance-max-change">The Performance Max change that breaks old reports</h2>
+<p>Google is moving LSA into Google Ads as Performance Max campaigns with pay-per-lead goals, in waves through 2027. <a href="https://support.google.com/google-ads/answer/17213585?hl=en">Source: Google Ads Help</a> In the API, that’s a different campaign type.</p>
+<ul><li><strong>Standard LSA campaigns</strong> have the channel type <code>LOCAL_SERVICES</code>.</li><li><strong>Migrated campaigns</strong> are <code>PERFORMANCE_MAX</code> campaigns with <code>pmax_campaign_settings.local_services_enabled</code> set to true.</li></ul>
+<p>Any report, dashboard or notification that finds LSA campaigns by filtering on <code>advertising_channel_type = &#x27;LOCAL_SERVICES&#x27;</code> will miss every client that has migrated. Leads still come through <code>local_services_lead</code> for both types, and Google’s documentation shows how to separate them with the lead’s <code>campaign</code> field.</p>
+<p>The version timeline matters if you maintain code:</p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">API version</th><th scope="col">Local Services Performance Max support</th></tr></thead>
+<tbody>
+<tr><td>v24 and v25</td><td>Read and update existing LSA Performance Max campaigns created in the interface (allowlisted accounts)</td></tr>
+<tr><td>v26</td><td>Create new LSA Performance Max campaigns through the API (US only), using a linked Business Profile location; coupon leads supported</td></tr>
+</tbody></table></div>
+<p>Two migration side effects also land on whoever owns the data:</p>
+<ul><li><strong>History doesn’t move.</strong> Google says past performance reports (impressions, clicks, spend and ad-level data) won’t carry over into Google Ads, though past leads, message history and recordings do move to the new Leads page.</li><li><strong>Recordings expire.</strong> After migration, Google stores call recordings and sensitive conversation history for up to 30 days. <a href="https://support.google.com/google-ads/answer/17325352?hl=en">Source: Google Ads Help</a> If call review or dispute evidence matters to your clients, archive recordings on a schedule.</li></ul>
+<p>Our <a href="/blog/lsa-performance-max-migration-agencies/">agency migration playbook</a> covers the non-technical side of the move.</p>
+<h2 id="getting-access">Getting API access</h2>
+<p>Access changed in 2026. Google says developer tokens were sunset on September 9, 2026, and API access levels are now managed per Google Cloud project. <a href="https://developers.google.com/google-ads/api/docs/api-policy/access-levels">Source: Google Ads API access levels</a></p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">Access level</th><th scope="col">Can reach</th><th scope="col">Daily operations</th></tr></thead>
+<tbody>
+<tr><td>Test</td><td>Test accounts only</td><td>15,000</td></tr>
+<tr><td>Explorer</td><td>Test and production accounts</td><td>2,880 on production accounts</td></tr>
+<tr><td>Basic</td><td>Test and production accounts</td><td>15,000</td></tr>
+<tr><td>Standard</td><td>Test and production accounts</td><td>Unlimited</td></tr>
+</tbody></table></div>
+<p>Enabling the Google Ads API on a Cloud project grants Test access, and Google says it may upgrade a project to Explorer automatically after you apply. Calls need the <code>adwords</code> OAuth scope and a Google login that can reach the client accounts, which for an agency means your <a href="/blog/local-services-ads-manager-account/">manager account</a>.</p>
+<p>Check Google’s current quota rules against your plan before you build: daily lead pulls, per-lead conversation queries and lead ratings across a large client book all count, and frequent polling or bulk backfills are what push a project past Explorer.</p>
+<h2 id="build-or-buy">Build it, or use a tool built on it</h2>
+<p>Building on the API makes sense if you have a developer on staff, want LSA data inside a reporting stack you already run, and are ready to maintain it through the migration and Google’s regular version releases.</p>
+<p>What usually goes wrong with in-house builds:</p>
+<ul><li>Reports filtered on the old channel type go quiet as clients migrate, and nobody notices for a month.</li><li>Lead rating gets built, then breaks on a version change, and leads go unrated.</li><li>The API tells you a call was missed. It doesn’t answer the call. The business still needs someone, or something, to pick up.</li></ul>
+<p>That last point is why we built LSA Command the way we did. The data is only useful if the lead gets answered. For every client account, calls ring the client’s team first and AI picks up at 15 seconds, message leads get answered, robocalls get blocked, every lead is rated back to Google, and you and the client get an instant notification for every lead.</p>
+<p>If you’re comparing tools, our guides to <a href="/blog/lsa-reporting-software-agencies/">LSA reporting software</a> and <a href="/blog/lsa-crm-integration-agencies/">connecting LSA to client management software</a> give you the questions to ask. Add one: “Does it find leads on migrated Performance Max accounts?”</p>
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq"><details><summary>Is there an API for Google Local Services Ads?</summary><p>Yes. LSA leads, lead conversations, verification records and campaign settings are available through the Google Ads API. An older, separate Local Services API also offers account and lead reports.</p></details><details><summary>Can you rate or dispute LSA leads through the API?</summary><p>You can rate them. The ProvideLeadFeedback method submits the lead survey, and the response tells you whether a bonus credit was issued. Google now issues most credits automatically, so rating every lead is the part to automate.</p></details><details><summary>Can I pull call recordings from the Local Services Ads API?</summary><p>The lead conversation resource includes a recording URL, but opening it requires a Google login with at least read-only access to the client account. After migration, Google stores recordings for up to 30 days, so archive the ones you need.</p></details><details><summary>Why did my LSA report stop showing leads after migration?</summary><p>Migrated LSA campaigns are Performance Max campaigns with local services enabled, not the old Local Services campaign type. Reports that filter on the old channel type will miss them. Query leads through the local_services_lead resource and use its campaign field instead.</p></details><details><summary>Do I need a developer token for the Google Ads API?</summary><p>Not anymore. Google says developer tokens were sunset on September 9, 2026. Access levels are now managed per Google Cloud project, starting with Test access and moving up to Explorer, Basic or Standard.</p></details></div>
+<section class="cta-box"><h2>Want a second set of eyes on a client’s LSA account?</h2><p>Book a 30-minute call with Ryan and bring one client’s Local Services Ads account. We’ll show you where leads are slipping and how agencies run LSA Command across their clients under their own brand. Prefer the phone? Call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/blog/lsa-reporting-software-agencies/">How to choose LSA reporting software</a></li><li><a href="/blog/lsa-crm-integration-agencies/">Connect LSA to client management software</a></li><li><a href="/agencies/">LSA Command for agencies</a></li></ul></aside>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+</body>
+</html>
