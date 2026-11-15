@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSA Budget &amp; Bidding: Maximize Leads vs. Max Per Lead | LSA Command</title>
+  <meta name="description" content="How Google Local Services Ads budgets really work: weekly budget vs. monthly max, the three bid modes, a simple budget estimate, and what changes in Google Ads.">
+  <link rel="canonical" href="https://lsacommand.com/blog/local-services-ads-budget-bidding/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="LSA Budget &amp; Bidding: Maximize Leads vs. Max Per Lead | LSA Command">
+  <meta property="og:description" content="How Google Local Services Ads budgets really work: weekly budget vs. monthly max, the three bid modes, a simple budget estimate, and what changes in Google Ads.">
+  <meta property="og:url" content="https://lsacommand.com/blog/local-services-ads-budget-bidding/">
+  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LSA Budget &amp; Bidding: Maximize Leads vs. Max Per Lead | LSA Command">
+  <meta name="twitter:description" content="How Google Local Services Ads budgets really work: weekly budget vs. monthly max, the three bid modes, a simple budget estimate, and what changes in Google Ads.">
+  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>.table-wrap{overflow-x:auto;margin:1.25rem 0}.table-wrap .compare{margin:0}.article-body h3{font-size:1.2rem;margin:1.75rem 0 .6rem;line-height:1.3}.cta-inline{margin:2rem 0;padding:18px 22px}.cta-inline p{margin:0;font-weight:600}</style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lsacommand.com/blog/local-services-ads-budget-bidding/#main",
+      "url": "https://lsacommand.com/blog/local-services-ads-budget-bidding/",
+      "name": "Google Local Services Ads Budget and Bidding: How to Set Both, and What Changes in Google Ads",
+      "headline": "Google Local Services Ads Budget and Bidding: How to Set Both, and What Changes in Google Ads",
+      "description": "How Google Local Services Ads budgets really work: weekly budget vs. monthly max, the three bid modes, a simple budget estimate, and what changes in Google Ads.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "author": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "keywords": "google local service ads budget, local service ads budget estimator, google lsa budget calculator, local services ads bidding, maximize leads vs max per lead, lsa target cost per lead",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/local-services-ads-budget-bidding/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/local-services-ads-budget-bidding/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much should I budget for Google Local Services Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google’s help center doesn’t set a minimum dollar amount. Work backward from the jobs you want per week, your booking rate and your expected cost per lead. If you use Maximize leads, Google recommends a budget that buys at least 10 leads a week."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Maximize leads better than Max per lead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google recommends Maximize leads, and it usually gets more leads for the budget. Max per lead gives tighter price control and suits limited capacity or tests, but it isn’t supported once an account moves into Google Ads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Local Services Ads spend more than my weekly budget?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in a given week. The weekly budget is an average. The hard limit is the monthly max, which is the average weekly budget × 30.4 ÷ 7, and Google says you will never exceed it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a Google Local Services Ads budget calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google doesn’t publish a lead price list. A practical estimate: leads needed per week (jobs wanted ÷ booking rate) × expected cost per lead. Replace the guesses with the account’s own data after a few weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my LSA budget when it moves to Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google divides the historical average weekly budget by 7 to set a daily average budget, and caps monthly spend at the daily average × 30.4. Manual max-per-lead bidding is no longer supported, and one campaign-level target applies across categories."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Local Services Ads Budget and Bidding: How to Set Both, and What Changes in Google Ads",
+          "item": "https://lsacommand.com/blog/local-services-ads-budget-bidding/"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book a call</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Google Local Services Ads Budget and Bidding: How to Set Both, and What Changes in Google Ads</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">Agency guides</p>
+        <h1>Google Local Services Ads Budget and Bidding: How to Set Both, and What Changes in Google Ads</h1>
+        <p class="lede">Most LSA budget questions are really two questions: how much should this client spend, and how much control do we keep over the price of a lead? Here’s how Google’s budget math works, which bid mode to use, and what the move into Google Ads takes away.</p>
+        <p class="article-meta">By <a href="/" rel="author">LSA Command</a> <span aria-hidden="true">·</span> <time datetime="2026-11-01">November 1, 2026</time> <span aria-hidden="true">·</span> 9 min read</p>
+      </header>
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#how-lsa-budgets-actually-work">How LSA budgets actually work</a></li><li><a href="#the-three-bid-modes">The three bid modes</a></li><li><a href="#maximize-leads-vs-max-per-lead">Maximize leads vs. max per lead: how we decide</a></li><li><a href="#how-to-estimate-a-client-budget">How to estimate a client’s LSA budget</a></li><li><a href="#why-more-budget-doesnt-always-mean-more-leads">Why more budget doesn’t always mean more leads</a></li><li><a href="#what-changes-in-google-ads">What changes when LSA moves into Google Ads</a></li><li><a href="#the-budget-checklist">The budget checklist we run before changing a client’s spend</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
+        <div class="article-body">
+          <div class="approved-copy">
+<p>When a client’s LSA lead volume dips, the first instinct is to raise the budget. Sometimes that’s the right call. More often the budget isn’t the constraint at all: the account hit its monthly max early, the bid mode is fighting the budget, or the leads are arriving and nobody is answering them. Budget is the easiest lever to pull and the easiest one to waste.</p>
+<p>Everything below comes from Google’s Local Services and Google Ads help centers unless we say otherwise. Where we use an example, the numbers are illustrative, not benchmarks.</p>
+<h2 id="how-lsa-budgets-actually-work">How LSA budgets actually work</h2>
+<p>You set an <strong>average weekly budget</strong>. Google treats it as a target, not a ceiling: in a busy week the account can spend more than the weekly number, and in a slow week it spends less. <a href="https://support.google.com/localservices/answer/7434558?hl=en">Source: Google, How to edit your budget</a></p>
+<p>The real ceiling is monthly. Google’s formula for the monthly max is <strong>average weekly budget × 30.4 ÷ 7</strong>, and Google says you will never exceed it. Once an account reaches its monthly max, the ad stops showing for the rest of the month unless the budget changes.</p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">Average weekly budget</th><th scope="col">Monthly max</th><th scope="col">Rough daily average</th></tr></thead>
+<tbody>
+<tr><td>$350</td><td>$1,520</td><td>$50</td></tr>
+<tr><td>$700</td><td>$3,040</td><td>$100</td></tr>
+<tr><td>$1,400</td><td>$6,080</td><td>$200</td></tr>
+</tbody></table></div>
+<p>Two things agencies get wrong here:</p>
+<ul><li><strong>A big week isn’t overspend.</strong> If a client sees $900 charged in a week against a $700 weekly budget, the system is working as designed. The number to watch is the monthly max.</li><li><strong>Hitting the monthly max looks like the ads broke.</strong> A client whose ads vanish in the last week of the month may simply have spent the month’s budget early. It’s one of the first checks in our <a href="/blog/local-services-ads-not-showing/">Local Services Ads not showing checklist</a>.</li></ul>
+<p>You can change the budget at any time, as often as you like, and the change applies to the remaining days of the month. Google’s own example: raise a $100 weekly budget to $140 on January 18 and $280 becomes available for the 14 days left.</p>
+<h2 id="the-three-bid-modes">The three bid modes</h2>
+<p>LSA bids aren’t per click or per keyword. A bid is the most you’d pay for a lead, and Google’s US help page lists three modes. <a href="https://support.google.com/localservices/answer/10125017?hl=en">Source: Google, How bidding works for Local Services Ads</a></p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">Bid mode</th><th scope="col">What it does</th><th scope="col">When we’d use it</th></tr></thead>
+<tbody>
+<tr><td>Maximize leads (automated)</td><td>Google sets the bid to get as many leads as the budget allows. Google recommends it and suggests a budget of at least 10 leads per week.</td><td>Enough budget, solid call and message answering, and room in the client’s schedule for more jobs.</td></tr>
+<tr><td>Target cost per lead (automated)</td><td>Google bids automatically toward a target you set, or the target it recommends.</td><td>The client has a real ceiling on what a lead is worth and enough volume for the target to work.</td></tr>
+<tr><td>Max per lead (manual)</td><td>You set the most you’ll pay for any single lead.</td><td>Tight capacity, a test in a new category, or a client who insists on a hard price. It’s also going away (see below).</td></tr>
+</tbody></table></div>
+<p>Google says it takes about <strong>two weeks</strong> for automated bidding to show accurate results while the model adjusts. Switching modes every few days means you never get a clean read on any of them.</p>
+<h2 id="maximize-leads-vs-max-per-lead">Maximize leads vs. max per lead: how we decide</h2>
+<p>Google’s best-practice page tells advertisers to choose Maximize leads over Max per lead. <a href="https://support.google.com/localservices/answer/12492201?hl=en">Source: Google, Improve your Local Services Ads performance</a> That’s a reasonable default. It’s also the setting that spends the full budget. The question for an agency isn’t which mode gets more leads. It’s whether this client can turn more leads into booked jobs.</p>
+<p>Maximize leads tends to work when:</p>
+<ul><li>The client answers nearly every call and replies to messages quickly.</li><li>The budget buys roughly 10 or more leads a week, Google’s own recommended minimum for this mode.</li><li>The client has capacity for more work this month.</li><li>You can see which leads became booked jobs, so you’re judging cost per booked job, not just cost per lead.</li></ul>
+<p>Max per lead tends to make sense when:</p>
+<ul><li>The client is close to capacity, and extra leads would just go unanswered.</li><li>You’re testing a new category or job type and want to cap the downside.</li><li>The budget is too small for automated bidding to learn anything useful.</li></ul>
+<p>The trap with a manual bid is setting it too low. If the bid is below what competitors are paying, the ad barely serves, the budget never gets spent, and the client decides LSA “doesn’t work for us.” On a manual account with very few leads, look at the bid before you touch the budget.</p>
+<h2 id="how-to-estimate-a-client-budget">How to estimate a client’s LSA budget</h2>
+<p>People search for a “local service ads budget estimator” or “budget calculator” because Google doesn’t publish a price list. Lead prices depend on the trade, the market, the job type and the competition. The honest estimator is four numbers you can get from the client:</p>
+<ol><li><strong>Jobs wanted per week</strong> from LSA.</li><li><strong>Booking rate:</strong> the share of LSA leads that become booked jobs. Use the client’s own history. If there isn’t any, start conservative.</li><li><strong>Expected cost per lead:</strong> from the account’s history, or for a new account, a conservative guess you’ll replace with real data after a few weeks. Our <a href="/blog/google-local-services-ads-cost/">LSA cost guide</a> collects published benchmarks by trade.</li><li><strong>Leads needed per week</strong> = jobs wanted ÷ booking rate.</li></ol>
+<p>Then: <strong>weekly budget ≈ leads needed per week × expected cost per lead.</strong></p>
+<p>Here’s an illustrative example. A client wants 6 booked jobs a week from LSA, books 40% of its LSA leads, and its leads have averaged $60. That’s 15 leads a week, so a weekly budget of about $900 (a monthly max of about $3,909). Fifteen leads a week also clears Google’s 10-lead minimum for Maximize leads.</p>
+<p>Now sanity-check it. Can the client’s team answer 15 leads a week, including the ones that land at lunch and after 5 p.m.? Is $150 per booked job ($900 ÷ 6) worth it for the jobs they do? And run the same math at a 25% booking rate: 6 jobs now needs 24 leads, and the budget jumps to $1,440 a week. That gap is why we fix answering before we raise budgets.</p>
+<div class="cta-box cta-inline"><p>Want a second set of eyes on a client’s budget math? <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-mid-book">Book a 30-min call with Ryan</a> and bring the account.</p></div>
+<h2 id="why-more-budget-doesnt-always-mean-more-leads">Why more budget doesn’t always mean more leads</h2>
+<p>Google’s ranking page lists the bid as one input. The others are the <strong>likelihood that a searcher becomes a lead</strong> (responsiveness, relevance, the lead types you’ve enabled, and the search context) and <strong>profile quality</strong>: rating, number of reviews, average response time, and the verification checks completed. Google also says higher-quality profiles may pay lower costs per lead. <a href="https://support.google.com/localservices/answer/7527305?hl=en">Source: Google, How ad ranking works</a></p>
+<p>In practice, budget amplifies whatever the account already is. A responsive account with strong reviews gets more out of every extra dollar. An account that misses calls gets more missed calls, and those now cost money: Google can charge a missed call during business hours if the caller stays on the line for more than 20 seconds, and a call that reaches voicemail or an automated greeting during business hours counts as connected. <a href="https://support.google.com/localservices/answer/7195435?hl=en">Source: Google, How leads work</a></p>
+<p>So before approving a budget increase, check four things: the answer rate and response time for calls and messages, whether message replies actually reached the customer, the client’s rating and review count against local competitors, and whether the job types and service area match the work the client wants. Our guides on <a href="/blog/how-to-rank-higher-google-local-services-ads/">LSA ranking</a> and <a href="/lsa-service-area/">service area targeting</a> go deeper on the last two.</p>
+<h2 id="what-changes-in-google-ads">What changes when LSA moves into Google Ads</h2>
+<p>Google is moving Local Services Ads into Google Ads as a Performance Max campaign with pay-per-lead goals. Its transition page spells out what happens to budgets and bids. <a href="https://support.google.com/google-ads/answer/17213585">Source: Google Ads Help, LSA transition</a></p>
+<ul><li><strong>Weekly becomes daily.</strong> The historical average weekly budget is divided by 7 to set a daily average budget, and monthly spend is capped at the daily average × 30.4. The monthly ceiling works out the same; the number the client sees doesn’t.</li><li><strong>Manual bidding ends.</strong> Google says manual bidding, such as setting a maximum cost per lead, is no longer supported in Google Ads.</li><li><strong>One target across categories.</strong> Industry-level target CPA is being deprecated, and a single campaign-level target is calculated and applied to all of the campaign’s vertical categories. To keep separate bidding rules per vertical, Google suggests creating separate campaigns for each vertical.</li><li><strong>Reports don’t come with you.</strong> Past performance reports such as impressions, clicks and weekly spend won’t carry over. Past leads, message history and call recordings do. Google recommends taking screenshots if you need the reports right away.</li><li><strong>Timing varies by account.</strong> Select home and storefront service advertisers started in August 2026. Service-area businesses and accounts with custom bidding or booking setups follow in late 2026, and non-US accounts and remaining categories in 2027. The account administrator gets an email 14 days before the move.</li></ul>
+<p>For agencies, that turns into four decisions to make before the notice arrives:</p>
+<ol><li><strong>Clients on Max per lead:</strong> decide what replaces that price control, whether a target cost per lead, a smaller budget, or tighter job types.</li><li><strong>Multi-trade clients</strong> (say, plumbing and HVAC with very different lead values): consider separate campaigns so one blended target doesn’t average them together.</li><li><strong>Client reporting:</strong> reset expectations from weekly spend to a daily average and a monthly cap.</li><li><strong>History:</strong> screenshot or export each client’s budget, bid and cost-per-lead history while you still can.</li></ol>
+<p>Our <a href="/blog/google-local-services-ads-performance-max/">Performance Max guide</a> covers the wider move, and the <a href="/blog/local-services-ads-manager-account/">manager account guide</a> covers keeping agency access in place through it.</p>
+<h2 id="the-budget-checklist">The budget checklist we run before changing a client’s spend</h2>
+<ol><li>Check whether the account hit its monthly max last month, and on what day.</li><li>Check the bid mode, and how long it’s been in that mode. Two weeks is the minimum before judging it.</li><li>Pull the answer rate and response time for calls and messages.</li><li>Work out the cost per booked job, not just the cost per lead.</li><li>Review job types and service area for work the client doesn’t want to pay for.</li><li>Rate every lead in Google’s lead feedback survey so Google learns which leads the client wants. Google no longer credits “job type not serviced” or “geo not serviced” leads, so settings matter more than disputes. <a href="https://support.google.com/localservices/answer/15100654">Source: Google, lead credits</a></li><li>If the Google Ads move is coming, document current settings and decide on any vertical splits.</li><li>Only then change the budget, and leave it alone for two weeks.</li></ol>
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq"><details><summary>How much should I budget for Google Local Services Ads?</summary><p>Google’s help center doesn’t set a minimum dollar amount. Work backward from the jobs you want per week, your booking rate and your expected cost per lead. If you use Maximize leads, Google recommends a budget that buys at least 10 leads a week.</p></details><details><summary>Is Maximize leads better than Max per lead?</summary><p>Google recommends Maximize leads, and it usually gets more leads for the budget. Max per lead gives tighter price control and suits limited capacity or tests, but it isn’t supported once an account moves into Google Ads.</p></details><details><summary>Can Local Services Ads spend more than my weekly budget?</summary><p>Yes, in a given week. The weekly budget is an average. The hard limit is the monthly max, which is the average weekly budget × 30.4 ÷ 7, and Google says you will never exceed it.</p></details><details><summary>Is there a Google Local Services Ads budget calculator?</summary><p>Google doesn’t publish a lead price list. A practical estimate: leads needed per week (jobs wanted ÷ booking rate) × expected cost per lead. Replace the guesses with the account’s own data after a few weeks.</p></details><details><summary>What happens to my LSA budget when it moves to Google Ads?</summary><p>Google divides the historical average weekly budget by 7 to set a daily average budget, and caps monthly spend at the daily average × 30.4. Manual max-per-lead bidding is no longer supported, and one campaign-level target applies across categories.</p></details></div>
+<section class="cta-box"><h2>Not sure a client’s budget is the problem?</h2><p>Book a 30-minute call with Ryan and bring one client’s LSA account. We’ll look at it together: monthly max pacing, bid mode, missed calls on the latest bill and leads nobody rated. Then we’ll show you how agencies run LSA Command across a whole client book under their own brand.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/blog/google-local-services-ads-cost/">How much Google Local Services Ads cost</a></li><li><a href="/blog/local-services-ads-optimization-checklist/">The LSA optimization checklist for agencies</a></li><li><a href="/blog/local-services-ads-not-showing/">Local Services Ads not showing? The fix-it checklist</a></li><li><a href="/agencies/">LSA Command for agencies</a></li></ul></aside>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+</body>
+</html>

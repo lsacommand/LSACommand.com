@@ -1,21 +1,47 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
   "redirects": [
     {
-      "source": "/discovery",
-      "destination": "https://ryan.diyai.ai/30-min-discovery-call",
-      "permanent": false
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.lsacommand.com"
+        }
+      ],
+      "destination": "https://lsacommand.com/:path",
+      "permanent": true
     },
     {
-      "source": "/discovery/",
-      "destination": "https://ryan.diyai.ai/30-min-discovery-call",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
     {
-      "source": "/affiliate/signup",
-      "destination": "/affiliate/signup/index.html"
+      "source": "/setup.html",
+      "destination": "/setup/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study-champion-pools.jpg",
+      "destination": "/case-study-champion-pools.svg",
+      "permanent": true
+    },
+    {
+      "source": "/lsa-report-detail.png",
+      "destination": "/lsa-report-detail-redacted.svg",
+      "permanent": true
+    },
+    {
+      "source": "/lsa-before.png",
+      "destination": "/lsa-before-redacted.svg",
+      "permanent": true
+    },
+    {
+      "source": "/lsa-after.png",
+      "destination": "/lsa-after-redacted.svg",
+      "permanent": true
     }
   ]
 }

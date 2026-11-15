@@ -1,0 +1,37 @@
+﻿LSA Client Report Template (lsacommand.com). The 'Sample' column is illustrative data for a fictional business.
+Section,Metric,Where it lives in Google Ads,Sample (illustrative),This month,Last month (restated),Notes
+01 Leads received,Phone call leads,Goals › Conversions › Leads · Lead Type column,22,,,
+01 Leads received,Message leads,Goals › Conversions › Leads · Lead Type column,8,,,
+01 Leads received,Booking leads,Goals › Conversions › Leads · Lead Type column,1,,,
+01 Leads received,Total leads received,Goals › Conversions › Leads · Lead Type column,31,,,Matches the lead alerts the client saw
+02 Charged vs. credited,Charged,Leads page · Charge Status column,24,,,Same as Conversions on the Campaigns page
+02 Charged vs. credited,Credited,Leads page · Charge Status column,4,,,Google credited these back
+02 Charged vs. credited,In review,Leads page · Charge Status column,2,,,Can still change: see the status line
+02 Charged vs. credited,Not charged,Leads page · Charge Status column,1,,,
+02 Charged vs. credited,Not charged so far,Leads page · Charge Status column,7,,,Credited + in review + not charged. In-review leads can still be charged
+03 Spend and cost per lead,Spend,"Campaigns page · Cost, Conversions, Cost / conv.","$1,560.00",,,
+03 Spend and cost per lead,Cost per charged lead,"Campaigns page · Cost, Conversions, Cost / conv.",$65.00,,,Spend ÷ charged leads (Cost / conv.)
+03 Spend and cost per lead,Cost per lead received,"Campaigns page · Cost, Conversions, Cost / conv.",$50.32,,,Spend ÷ all leads received
+04 What the leads asked for,Job type 1 (sample: Water heater repair),Leads page · Service Type column,9,,,
+04 What the leads asked for,Job type 2 (sample: Drain cleaning),Leads page · Service Type column,8,,,
+04 What the leads asked for,General category search (shown with an X),Leads page · Service Type column,6,,,
+04 What the leads asked for,Job type 4 (sample: Leak detection),Leads page · Service Type column,5,,,
+04 What the leads asked for,Job type 5 (sample: Toilet repair),Leads page · Service Type column,3,,,Low-value job for this client: review the service type
+05 Booked jobs,Leads marked Booked or Completed,Lead status (Booked / Completed) + the client’s job list,11,,,
+05 Booked jobs,Booking rate,Lead status (Booked / Completed) + the client’s job list,35%,,,Booked ÷ leads received
+05 Booked jobs,Cost per booked job,Lead status (Booked / Completed) + the client’s job list,$141.82,,,Spend ÷ booked jobs
+06 Calls answered,Call leads,"The client’s phone system, answering service or call recordings",22,,,
+06 Calls answered,Reached a person,"The client’s phone system, answering service or call recordings",17,,,
+06 Calls answered,"Missed (voicemail, no answer)","The client’s phone system, answering service or call recordings",5,,,4 of 5 after 5pm
+06 Calls answered,Answer rate,"The client’s phone system, answering service or call recordings",77%,,,The number the client controls
+07 Rating and reviews,Star rating,Google Business Profile (start vs. end of month),4.8 → 4.8,,,
+07 Rating and reviews,Review count,Google Business Profile (start vs. end of month),127 → 133,,,6 new this month
+08 Budget pacing,Average daily budget,Campaign budget (daily average) vs. Cost for the month,$60.00,,,
+08 Budget pacing,Monthly cap (daily × 30.4),Campaign budget (daily average) vs. Cost for the month,"$1,824.00",,,
+08 Budget pacing,Spent / % of cap,Campaign budget (daily average) vs. Cost for the month,"$1,560.00 / 86%",,,"Didn’t hit the monthly max, so ads ran all month"
+09 This month in one sentence,"What changed, and what we're doing about it",,"“5 call leads went to voicemail, mostly after 5pm, so from November 1 calls overflow to the answering service after 15 seconds.”",,,
+10 Next month's actions,"Action 1 (owner, by when)",,"Overflow after-hours calls to the answering service at 15 seconds (Agency + client, Nov 1)",,,
+10 Next month's actions,"Action 2 (owner, by when)",,"Review the Toilet repair service type with the owner (Agency, Nov 7)",,,
+10 Next month's actions,"Action 3 (owner, by when)",,"Mark every lead Booked or Completed weekly (Client office, Weekly)",,,
+Status,Provisional or final? Leads still in review?,Leads page · Charge Status,"Provisional, 2 in review",,,
+Status,Migrated to Performance Max on,,"Sep 15, 2026",,,

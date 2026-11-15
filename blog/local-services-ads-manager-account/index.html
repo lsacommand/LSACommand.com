@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSA Manager Account Setup for Agencies | LSA Command</title>
+  <meta name="description" content="How agencies link client Local Services Ads to a Google Ads manager account, set access levels, settle ownership and prep for the Google Ads move.">
+  <link rel="canonical" href="https://lsacommand.com/blog/local-services-ads-manager-account/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="LSA Manager Account Setup for Agencies | LSA Command">
+  <meta property="og:description" content="How agencies link client Local Services Ads to a Google Ads manager account, set access levels, settle ownership and prep for the Google Ads move.">
+  <meta property="og:url" content="https://lsacommand.com/blog/local-services-ads-manager-account/">
+  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LSA Manager Account Setup for Agencies | LSA Command">
+  <meta name="twitter:description" content="How agencies link client Local Services Ads to a Google Ads manager account, set access levels, settle ownership and prep for the Google Ads move.">
+  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>.table-wrap{overflow-x:auto;margin:1.25rem 0}.table-wrap .compare{margin:0}</style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lsacommand.com/blog/local-services-ads-manager-account/#main",
+      "url": "https://lsacommand.com/blog/local-services-ads-manager-account/",
+      "name": "How to Manage Client Local Services Ads From a Manager Account",
+      "headline": "How to Manage Client Local Services Ads From a Manager Account",
+      "description": "How agencies link client Local Services Ads to a Google Ads manager account, set access levels, settle ownership and prep for the Google Ads move.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "author": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "keywords": "local service ads manager account, google local service ads manager account, local services ads agency, manage local services ads for clients, link local services ads to mcc",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/local-services-ads-manager-account/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/local-services-ads-manager-account/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you link Local Services Ads to a Google Ads manager account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every LSA account has a Google Ads customer ID. Send a link request from your manager account (Sub-account settings › Link existing account), and the client accepts it from Admin › Access and security › Managers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I create the manager account inside Local Services Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Google says manager accounts for LSA are set up and edited in Google Ads, not in Local Services Ads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does linking a client’s LSA account give my agency ownership?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Linking gives your manager account access; ownership is a separate grant the client’s admin has to make. Agree on ownership, billing and what happens at offboarding in your contract."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which access level lets someone change the LSA budget?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only Administrative access can edit bidding and budget and manage users. Standard users can work leads and edit the profile but can’t change budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should agencies do before an LSA account migrates into Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Export each account’s reporting history, because it doesn’t carry over. Make sure Google’s migration notices reach your team, and recheck budgets and bid targets after the move."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Manage Client Local Services Ads From a Manager Account",
+          "item": "https://lsacommand.com/blog/local-services-ads-manager-account/"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book a walkthrough</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">How to Manage Client Local Services Ads From a Manager Account</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">Agency guides</p>
+        <h1>How to Manage Client Local Services Ads From a Manager Account</h1>
+        <p class="lede">Running LSA for clients out of a pile of separate logins works until about the fifth account. Here’s how to set up manager-account access properly, and what to settle with each client before Google moves LSA into Google Ads.</p>
+        <p class="article-meta">By <a href="/" rel="author">LSA Command</a> <span aria-hidden="true">·</span> <time datetime="2026-11-01">November 1, 2026</time> <span aria-hidden="true">·</span> 7 min read</p>
+      </header>
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#what-a-manager-account-is-and-isnt">What a manager account is (and isn’t)</a></li><li><a href="#how-to-link-a-clients-lsa-account">How to link a client’s LSA account</a></li><li><a href="#pick-the-right-access-level-for-each-person">Pick the right access level for each person</a></li><li><a href="#decide-who-owns-the-account-in-writing">Decide who owns the account, in writing</a></li><li><a href="#get-ready-for-the-move-into-google-ads">Get ready for the move into Google Ads</a></li><li><a href="#run-the-portfolio-not-just-the-accounts">Run the portfolio, not just the accounts</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
+        <div class="article-body">
+          <div class="approved-copy">
+<p>Most agencies start running Local Services Ads the same way: the client adds someone’s Gmail address to their account, and that person logs in and out of a dozen accounts. It works until a team member leaves, a client’s card is declined and nobody sees the notification, or two people change the same budget in the same week.</p>
+<p>A Google Ads manager account fixes most of that. It also matters more now, because Google is moving LSA into Google Ads, where manager accounts are already the standard way agencies work.</p>
+<h2 id="what-a-manager-account-is-and-isnt">What a manager account is (and isn’t)</h2>
+<p>A manager account, often still called an MCC, is a Google Ads account that lets you view and manage multiple Google Ads accounts from one sign-in. It’s a separate account you create, not an upgrade of an existing one. Google also caps the number of Google Ads accounts associated with a single email address at 20, and suggests a manager account if you manage more than that. <a href="https://support.google.com/google-ads/answer/6139186?hl=en">Source: Google Ads Help</a></p>
+<p>For LSA specifically, Google says manager accounts are set up and edited in Google Ads; they can’t be created or changed from inside Local Services Ads. Linking an LSA account to a manager account is also <strong>required for features like consolidated monthly billing</strong>. <a href="https://support.google.com/localservices/answer/7652468?hl=en">Source: Google Local Services Help</a></p>
+<p>What a manager link doesn’t do: it doesn’t make you the owner of the client’s account. Google treats ownership as a separate grant the client’s admin has to make. More on why that matters below.</p>
+<h2 id="how-to-link-a-clients-lsa-account">How to link a client’s LSA account</h2>
+<p>Linking needs two sides: a request from your manager account and an acceptance from the client’s account.</p>
+<ol><li><strong>Get the client’s customer ID.</strong> Every LSA account has a Google Ads customer ID, the 10-digit number shown in the account.</li><li><strong>Send the link request.</strong> In your manager account, go to Sub-account settings, click the plus button, choose <strong>Link existing account</strong>, enter the customer ID (one per line if you’re linking several), preview, then send. <a href="https://support.google.com/google-ads/answer/6139186?hl=en">Source: Google Ads Help</a></li><li><strong>Have the client accept.</strong> Users on the client account get an email invitation. They can also accept from <strong>Admin › Access and security › Managers</strong>, under the link request.</li><li><strong>Confirm.</strong> Once the client accepts, you get a confirmation email and the account appears under your manager account.</li></ol>
+<p>Google notes that linking an existing account doesn’t change its history or the original advertiser’s access, and the client can unlink at any time. Pending requests can be withdrawn from the Sent link requests view. <a href="https://support.google.com/google-ads/answer/7459601?hl=en">Source: Google Ads Help</a></p>
+<h2 id="pick-the-right-access-level-for-each-person">Pick the right access level for each person</h2>
+<p>LSA has five account access levels, and only one of them can change bids and budget. Per Google’s help center:</p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">Access level</th><th scope="col">What it allows</th></tr></thead>
+<tbody>
+<tr><td>Email-only</td><td>Receives reports and notification emails</td></tr>
+<tr><td>Billing-only</td><td>Views and edits billing information</td></tr>
+<tr><td>Read-only</td><td>Views leads, profile, settings and users; can reply to lead notification emails and messages</td></tr>
+<tr><td>Standard</td><td>Everything in Read-only plus billing, editing the business profile, replying to leads in the account and adding email-only users</td></tr>
+<tr><td>Administrative</td><td>Everything, including <strong>editing bidding and budget</strong> and managing users and access</td></tr>
+</tbody></table></div>
+<p>Users with administrative access to a manager account can manage any part of the linked account and its campaigns. <a href="https://support.google.com/localservices/answer/7652468?hl=en">Source: Google Local Services Help</a></p>
+<p>A sensible default for agencies:</p>
+<ul><li><strong>Your agency:</strong> administrative access through the manager account, so budget and bid changes go through you.</li><li><strong>The owner:</strong> administrative access on their own account. It’s their business.</li><li><strong>The client’s office or intake staff:</strong> Standard, so they can work leads but not budgets.</li><li><strong>The bookkeeper:</strong> Billing-only.</li><li><strong>Anyone who just needs the numbers:</strong> Email-only.</li></ul>
+<p>Billing access is controlled separately in the Google payments profile, so make sure someone on your team can see payment notifications. A declined card is one of the most common reasons an account quietly stops; see <a href="/blog/local-services-ads-not-showing/">Local Services Ads not showing</a>.</p>
+<h2 id="decide-who-owns-the-account-in-writing">Decide who owns the account, in writing</h2>
+<p>This is the conversation agencies avoid and then regret.</p>
+<p>Some agencies create and own the LSA account themselves. The argument: you built it, you optimized it, and the client can’t walk away with your work. Others insist the client owns the account and the payment profile, and the agency is a linked manager. The argument: it’s the client’s business identity, the verification is tied to the owner and their Business Profile, and the client trusts you more because they can leave.</p>
+<p>Either model can work. What doesn’t work is leaving it undecided. Put these in the contract:</p>
+<ul><li>Who owns the LSA account and the Google Ads account it lives in.</li><li>Whose payment method pays for leads, and who sees billing notifications.</li><li>What happens to access, reporting and history if the relationship ends.</li><li>Who is responsible for verification steps only the owner can complete. Our <a href="/blog/local-services-ads-background-check-verification/">verification checklist</a> lists them.</li></ul>
+<h2 id="get-ready-for-the-move-into-google-ads">Get ready for the move into Google Ads</h2>
+<p>Google is moving Local Services Ads into Google Ads as a Performance Max campaign type with a pay-per-lead goal. Search Engine Journal reported in July 2026 that the transition would begin in August with a limited group of US advertisers, with more US advertisers later in 2026 and remaining categories and non-US accounts in 2027. Accounts move in phases, and each account’s administrator is notified before that account moves. <a href="https://www.searchenginejournal.com/google-is-bringing-local-services-ads-into-google-ads/582816/">Source: Search Engine Journal</a></p>
+<p>For an agency with a portfolio, that means a rolling migration across your client list. Things reported so far that affect how you manage accounts: <a href="https://ppc.land/google-folds-local-services-ads-into-google-ads-cuts-historical-reports/">Source: PPC Land</a></p>
+<ul><li><strong>Notice goes to the account administrator</strong>, reportedly 14 days before the migration date, with a reminder and a confirmation. If the client is the only admin, you may not see it. Ask clients to forward anything from Google about LSA.</li><li><strong>Historical reporting doesn’t carry over.</strong> Past impressions, clicks, spend and ad-level breakdowns stay behind, and the old dashboard becomes unreachable. Export every client’s history before their date.</li><li><strong>Lead history does transfer</strong>, into the Leads page in Google Ads (Goals › Conversions › Leads).</li><li><strong>Manual max-per-lead bidding goes away</strong>, and separate targets by category merge into a single campaign-level target CPA. Clients with very different targets by trade may need separate campaigns.</li><li><strong>Weekly budgets become daily</strong>, with the monthly cap at the daily amount multiplied by 30.4.</li></ul>
+<p>Our <a href="/blog/google-local-services-ads-performance-max/">Performance Max migration guide</a> has the full checklist.</p>
+<h2 id="run-the-portfolio-not-just-the-accounts">Run the portfolio, not just the accounts</h2>
+<p>Once every client is linked under one manager account, a few habits keep the portfolio clean:</p>
+<ul><li><strong>Name accounts consistently</strong> so the right person changes the right account.</li><li><strong>Keep a migration tracker</strong> with each client’s notice date, export date and post-migration check.</li><li><strong>Review access every quarter.</strong> Remove former staff on both sides.</li><li><strong>Watch every account weekly</strong> for zero-impression weeks, verification requests and billing notifications.</li><li><strong>Report on outcomes, not just leads.</strong> A manager account shows spend and leads; it doesn’t tell the client which leads were answered, rated, credited or booked. Our guide to <a href="/blog/lsa-reporting-software-agencies/">LSA reporting software for agencies</a> covers what a useful report needs.</li></ul>
+<p>That last gap is where LSA Command fits. It connects to Google’s LSA API across a portfolio: instant notifications on every lead, every call answered, every lead rated back to Google, bad leads flagged for credit, and a report per client. It can run under your agency’s own brand. One pool contractor, <a href="https://docs.google.com/document/d/1oiHa0bOLg2-HS7zcypuf0qeuzTmqkL1SoduUR7UJ3Do/edit?usp=sharing">Advantage Pools</a>, grew monthly leads 3.3x after moving to calls answered within 30 seconds.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq"><details><summary>Can you link Local Services Ads to a Google Ads manager account?</summary><p>Yes. Every LSA account has a Google Ads customer ID. Send a link request from your manager account (Sub-account settings › Link existing account), and the client accepts it from Admin › Access and security › Managers.</p></details><details><summary>Do I create the manager account inside Local Services Ads?</summary><p>No. Google says manager accounts for LSA are set up and edited in Google Ads, not in Local Services Ads.</p></details><details><summary>Does linking a client’s LSA account give my agency ownership?</summary><p>No. Linking gives your manager account access; ownership is a separate grant the client’s admin has to make. Agree on ownership, billing and what happens at offboarding in your contract.</p></details><details><summary>Which access level lets someone change the LSA budget?</summary><p>Only Administrative access can edit bidding and budget and manage users. Standard users can work leads and edit the profile but can’t change budget.</p></details><details><summary>What should agencies do before an LSA account migrates into Google Ads?</summary><p>Export each account’s reporting history, because it doesn’t carry over. Make sure Google’s migration notices reach your team, and recheck budgets and bid targets after the move.</p></details></div>
+<section class="cta-box"><h2>Running LSA for clients? Let’s look at one account together.</h2><p>Book a 30-minute walkthrough and bring one client’s LSA account. We’ll show you where leads are slipping, what your client reports aren’t showing, and how agencies run LSA Command across a portfolio under their own brand. Prefer the phone? Call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-minute walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/blog/multi-account-lsa-software-agencies/">LSA software for multiple client accounts</a></li><li><a href="/blog/google-local-services-ads-performance-max/">LSA is moving to Performance Max</a></li><li><a href="/blog/lsa-reporting-software-agencies/">LSA reporting software for agencies</a></li></ul></aside>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+</body>
+</html>
