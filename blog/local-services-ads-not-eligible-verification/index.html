@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSA Not Eligible? The 30-Day Verification Deadline | LSA Command</title>
+  <meta name="description" content="New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the DBA name-mismatch fix, and who can verify a client.">
+  <link rel="canonical" href="https://lsacommand.com/blog/local-services-ads-not-eligible-verification/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="LSA Not Eligible? The 30-Day Verification Deadline | LSA Command">
+  <meta property="og:description" content="New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the DBA name-mismatch fix, and who can verify a client.">
+  <meta property="og:url" content="https://lsacommand.com/blog/local-services-ads-not-eligible-verification/">
+  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LSA Not Eligible? The 30-Day Verification Deadline | LSA Command">
+  <meta name="twitter:description" content="New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the DBA name-mismatch fix, and who can verify a client.">
+  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>.table-wrap{overflow-x:auto;margin:1.25rem 0}.table-wrap .compare{margin:0}.video iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:16px;display:block;background:#050505}.article-body h3{margin:1.6rem 0 .4rem;font-size:1.15rem}.article-body a{overflow-wrap:anywhere}mark.needs-confirm{background:#fff3cd;padding:0 .2em;border-radius:4px}</style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lsacommand.com/blog/local-services-ads-not-eligible-verification/#main",
+      "url": "https://lsacommand.com/blog/local-services-ads-not-eligible-verification/",
+      "name": "LSA Verification After Performance Max: The 30-Day Deadline and the Day-31 Shutoff",
+      "headline": "LSA Verification After Performance Max: The 30-Day Deadline and the Day-31 Shutoff",
+      "description": "New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the DBA name-mismatch fix, and who can verify a client.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-11-14",
+      "dateModified": "2026-11-14",
+      "author": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "keywords": "local services ads not eligible, lsa verification required, local services ads verification deadline, lsa 30 day grace period, eligible limited verification required soon, lsa dba name mismatch, lsa business representative verification, google verified badge",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/local-services-ads-not-eligible-verification/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/local-services-ads-not-eligible-verification/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does my Local Services Ads campaign say Not Eligible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually because verification wasn’t finished in time. Most new pay-per-lead campaigns can serve for a 30-day grace period while verification is completed. If the required checks aren’t done within 30 days, Google changes the campaign status to Not Eligible and blocks the ads until the tasks in the Advertiser Verification tab are completed and approved. A significant change to the business name or address on the Business Profile can also trigger it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does LSA verification review take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google says reviews of submitted verification documents typically take up to 7 business days, and DBA documents are reviewed manually within 48 hours. Applying for a new D-U-N-S number can take up to 30 days, so upload registration documents instead of waiting for one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do locksmiths and garage door companies get the 30-day grace period?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Google says locksmiths and garage door services must complete advanced verification, including business video verification, before their campaigns are allowed to serve."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my Business Profile name doesn’t match my legal business name?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upload a DBA (doing business as, or fictitious business name) document on the Advertiser Verification page. You don’t have to wait for the registration check to fail. Google reviews it manually within 48 hours and, if it’s accepted, approves the Business Registration check."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an agency complete LSA verification for a client?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only partly. The business representative check needs an email at the client’s own domain that matches its Dun & Bradstreet record, or a registration document plus an identity check. Business registration needs an organization payments profile, and Google’s Local Services help says the person completing the business checks must be an owner or manager on the Business Profile. Plan the owner into the process."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "LSA Verification After Performance Max: The 30-Day Deadline and the Day-31 Shutoff",
+          "item": "https://lsacommand.com/blog/local-services-ads-not-eligible-verification/"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book a walkthrough</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">LSA verification: the 30-day deadline</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">LSA updates</p>
+        <h1>LSA Verification After Performance Max: The 30-Day Deadline and the Day-31 Shutoff</h1>
+        <p class="lede">New Local Services Ads campaigns can start running before verification is finished. That’s great until day 31, when Google switches the campaign to Not Eligible and the ads stop. Here’s how the grace period works now that LSA lives in Google Ads, what each of the four statuses means, the name mismatch Google says commonly fails verification, and who on an agency team can actually finish each check.</p>
+        <p class="article-meta">By <a href="/" rel="author">LSA Command</a> <span aria-hidden="true">·</span> <time datetime="2026-11-14">November 14, 2026</time> <span aria-hidden="true">·</span> 8 min read</p>
+      </header>
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#what-google-checks">What Google checks now</a></li><li><a href="#grace-period">The 30-day grace period</a></li><li><a href="#four-statuses">The four campaign statuses</a></li><li><a href="#day-20">Why we submit by day 20</a></li><li><a href="#name-mismatch">The name mismatch (DBA fix)</a></li><li><a href="#who-can-verify">Who can verify a client</a></li><li><a href="#staying-eligible">Staying eligible</a></li><li><a href="#where-lsa-command-fits">Where LSA Command fits</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
+        <div class="article-body">
+          <div class="approved-copy">
+<p>When a client’s Local Services Ads account goes live, it’s tempting to treat verification as done. Under the new setup it often isn’t. For most home and storefront services, Google lets the ads serve while verification is still open, and then gives you a hard deadline.</p>
+<p>This guide is about that deadline. If you want the badge itself explained (what replaced Google Guaranteed and Google Screened), start with <a href="/blog/google-verified-badge/">the Google Verified badge</a>. If you want every document Google can ask for, category by category, use our <a href="/blog/local-services-ads-background-check-verification/">LSA background check and verification checklist</a>. This page covers the clock, the statuses and the agency handoffs that decide whether a new client’s ads keep running.</p>
+<!-- To embed after the video is live: replace the marker below with <figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="How to Get the Google Verified Badge for Local Services Ads (2026)" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><figcaption>Watch: how to get the Google Verified badge for Local Services Ads</figcaption></figure> and add VideoObject schema. -->
+<!-- YOUTUBE_EMBED: video-6 -->
+<h2 id="what-google-checks">What Google checks now</h2>
+<p>Google’s page on verification for pay-per-lead campaigns splits the work in two. <a href="https://support.google.com/google-ads/answer/18260066?hl=en">Source: Google Ads Help</a></p>
+<ul>
+<li><strong>Every business:</strong> a verified, active Google Business Profile, linked and maintained. Google calls the profile “the primary source of truth for your ad,” the place it pulls the legal name, address and hours from. If the profile isn’t verified, fix that before anything else.</li>
+<li><strong>Some businesses, depending on category and location:</strong> one or more extra checks. Google lists business registration (matched against public registries such as Dun &amp; Bradstreet, or proven with an uploaded document), business representative affiliation, license checks for professional services and healthcare, and advanced verification for locksmiths and garage door services.</li>
+</ul>
+<p>One timing trap before the clock even starts. If the business has no D-U-N-S number, Google’s Local Services help says the application “can take up to 30 days.” <a href="https://support.google.com/localservices/answer/6226575?hl=en">Source: Local Services Help</a> That’s the whole grace period. Don’t wait on it. Upload a registration document instead: Google accepts a state registration or incorporation certificate, an IRS letter such as a CP 575 confirming the EIN, a business credit report from Experian, Equifax or TransUnion, and a few others listed on its page.</p>
+<p>If a client migrated from the old LSA dashboard already verified, Google says the verified status and the badge transfer to Google Ads automatically, and insurance and license re-verification are no longer required. <a href="https://support.google.com/google-ads/answer/17213585?hl=en">Source: Google Ads Help</a> The deadline on this page matters most for new clients and new campaigns.</p>
+<h2 id="grace-period">The 30-day grace period</h2>
+<p>For standard home and storefront services that need extra checks, Google says “your ads can still begin serving immediately upon campaign creation, and you will have a 30-day grace period to complete them.” The clock runs from the day the campaign is activated. Then the warning, word for word: “Failure to do so will cause your campaign status to change to Not Eligible, and your ads will be automatically blocked from serving.” <a href="https://support.google.com/google-ads/answer/18260066?hl=en">Source: Google Ads Help</a></p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">Business type</th><th scope="col">Can ads run before checks are done?</th></tr></thead>
+<tbody>
+<tr><td>Standard home and storefront services</td><td>Yes, for 30 days from activation. Some storefront businesses need nothing beyond a verified Business Profile.</td></tr>
+<tr><td>Professional services and healthcare</td><td>They must also complete license checks for their vertical, on top of standard verification.</td></tr>
+<tr><td>Locksmiths and garage door services</td><td>No. Google says there’s no grace period: advanced verification, including business video verification, must be complete before the campaign can serve.</td></tr>
+</tbody></table></div>
+<p><strong>One inconsistency to know about.</strong> Google’s older Local Services help page still says advertisers who get accelerated verification have 14 days to complete additional steps. <a href="https://support.google.com/localservices/answer/6226575?hl=en">Source: Local Services Help</a> The Google Ads page for pay-per-lead campaigns says 30. Don’t argue with either page: the status card in the account shows the actual due date for that campaign, and that’s the date to plan around.</p>
+<h2 id="four-statuses">The four campaign statuses</h2>
+<p>Google shows verification health in the account’s status panel as one of four statuses. Learn them, because each one tells you exactly where a client stands.</p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">Status</th><th scope="col">Ads</th><th scope="col">What it means</th></tr></thead>
+<tbody>
+<tr><td>Eligible (Limited): Verification required soon</td><td>Running</td><td>Tasks haven’t been started, or a check failed. The status card shows the due date.</td></tr>
+<tr><td>Eligible (Limited): Verification checks pending</td><td>Running</td><td>Everything’s submitted and under review. Google says reviews typically take up to 7 business days.</td></tr>
+<tr><td>Not Eligible: Verification required</td><td>Blocked</td><td>The 30 days ran out. Finish the remaining tasks in the Advertiser Verification tab.</td></tr>
+<tr><td>Not Eligible: Pending review</td><td>Paused</td><td>Submitted after the deadline. Ads stay paused until Google approves (up to 7 business days), then resume automatically.</td></tr>
+</tbody></table></div>
+<p>Source for all four: <a href="https://support.google.com/google-ads/answer/18260066?hl=en">Google Ads Help, “Campaign statuses and compliance deadlines”</a>.</p>
+<h2 id="day-20">Why we treat day 20 as the real deadline</h2>
+<p>Seven business days of review is more than a week on the calendar, and a document can come back rejected. So we work backward from Google’s deadline:</p>
+<div class="table-wrap"><table class="compare">
+<thead><tr><th scope="col">Day</th><th scope="col">What should be true</th></tr></thead>
+<tbody>
+<tr><td>Day 0</td><td>Campaign live. Verification tasks open in the Advertiser Verification tab.</td></tr>
+<tr><td>Week 1</td><td>Verification call with the owner done; documents uploaded (see the checklist below).</td></tr>
+<tr><td>Day 20</td><td>Everything submitted. Our internal deadline (or 10 days before the due date on the status card, if that comes sooner).</td></tr>
+<tr><td>Days 20–30</td><td>Room for a full review of up to 7 business days, or one resubmission.</td></tr>
+<tr><td>Day 31</td><td>Google’s line. Anything unfinished means Not Eligible and blocked ads.</td></tr>
+</tbody></table></div>
+<p>The day-20 rule is our own working rule, not Google’s. It just keeps a slow review or a rejected document from turning into a client’s ads going dark.</p>
+<h2 id="name-mismatch">The name mismatch, and the DBA fix</h2>
+<p>Google calls out one failure by name: “A common reason for verification failure is a name mismatch” between the Business Profile and the legal registration. Its own example is a profile named “Peninsula Plumbing” with a legal registration of “A&amp;B Services, LLC.” The registration check fails. <a href="https://support.google.com/google-ads/answer/18260066?hl=en">Source: Google Ads Help</a></p>
+<p>The fix is a DBA document (doing business as, also called a fictitious business name filing) that links the trade name to the legal name. Two details make it worth doing early:</p>
+<ul>
+<li><strong>You don’t have to wait for the failure.</strong> Google says the upload option is on the Advertiser Verification page throughout the process, so you can submit it up front.</li>
+<li><strong>Watch the right check.</strong> Google reviews the DBA manually within 48 hours. There’s no separate DBA status in Google Ads; if it’s accepted, the Business Registration check flips to approved. If not, it stays Failed or Pending.</li>
+</ul>
+<p>For agencies, this belongs on the intake form: is the name on the client’s Google profile exactly the name on their registration? If not, get the DBA before the campaign goes live.</p>
+<h2 id="who-can-verify">Who on your team can actually verify a client</h2>
+<p>This is where agencies lose days. Three access rules decide who can finish the checks:</p>
+<ol>
+<li><strong>Business representative.</strong> Google’s quick path is an email address at the business. If it matches the domain on the business’s Dun &amp; Bradstreet record, Google sends a one-time code to that inbox. If it doesn’t match, the fallback is the registration document plus an identity verification check inside Google Ads. An account manager’s agency email won’t match a client’s domain, so the client has to be involved either way.</li>
+<li><strong>Payments profile.</strong> Google says the registration check needs an organization payments profile. Individual payments profiles can’t be used.</li>
+<li><strong>Business Profile access.</strong> Google’s Local Services help says the person completing the business checks “must also be a profile owner or manager,” even if someone else already verified the profile. <a href="https://support.google.com/localservices/answer/6226575?hl=en">Source: Local Services Help</a></li>
+</ol>
+<p>So don’t try to verify around the client. Book a short verification call during onboarding with the owner on the line, and collect this first:</p>
+<ol>
+<li>Legal name, exactly as registered</li>
+<li>DBA or fictitious business name filing, if the profile name differs</li>
+<li>Registration certificate or IRS EIN letter</li>
+<li>An email address at the business’s own domain</li>
+<li>The owner available for an ID check</li>
+<li>Your team added as a manager on the Business Profile</li>
+<li>An organization payments profile</li>
+<li>License or insurance details, if the category requires them</li>
+</ol>
+<p>The full category-by-category document list, including background checks and insurance certificates, is in our <a href="/blog/local-services-ads-background-check-verification/">verification checklist for agencies</a>. If you’re setting up several clients at once, pair this with <a href="/blog/lsa-multiple-clients-performance-max-agencies/">managing LSA for multiple clients after Performance Max</a>.</p><h2 id="staying-eligible">Staying eligible after launch</h2>
+<p>Verification isn’t one and done. Google says advertisers are regularly re-evaluated, and if a business’s risk level or details change, it asks for a follow-up review. Not completing it “may result in the loss of their badge, a pause on their ads, or account suspension.” <a href="https://support.google.com/google-ads/answer/18260066?hl=en">Source: Google Ads Help</a></p>
+<p>The most common trigger is a Business Profile edit. Google says a significant change to the business name or address sends the campaign to Not Eligible: Verification required while its team reviews the new details, typically within 24 to 48 hours. So route every profile change through one person and log it with a date.</p>
+<p>Then add one line to your weekly check for every client: open the campaign status. If it says anything other than Eligible, someone deals with it that day. If you get stuck, Google lists a dedicated support line for migrating LSA advertisers: <a href="tel:+18442050011">1-844-205-0011</a>, Monday to Friday, 9 a.m. to 8 p.m. Eastern. <a href="https://support.google.com/google-ads/answer/17213585?hl=en">Source: Google Ads Help</a></p>
+<h2 id="where-lsa-command-fits">Where LSA Command fits</h2>
+<p>Once a client is verified and live, the job is making sure every lead they pay for gets answered. That’s what LSA Command does for agencies, under your brand: calls ring the client’s team first and AI answers the ones nobody picks up within 30 seconds, message leads get an instant reply, robocalls are blocked, every lead is rated back to Google, and you get an instant text and email for every lead across your client book. See <a href="/agencies/">LSA Command for agencies</a>.</p><p>If you onboard LSA clients, book a 30-minute call with Ryan. We’ll go through your onboarding and verification steps and one client account together.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq"><details><summary>Why does my Local Services Ads campaign say Not Eligible?</summary><p>Usually because verification wasn’t finished in time. Most new pay-per-lead campaigns can serve for a 30-day grace period while verification is completed. If the required checks aren’t done within 30 days, Google changes the campaign status to Not Eligible and blocks the ads until the tasks in the Advertiser Verification tab are completed and approved. A significant change to the business name or address on the Business Profile can also trigger it.</p></details><details><summary>How long does LSA verification review take?</summary><p>Google says reviews of submitted verification documents typically take up to 7 business days, and DBA documents are reviewed manually within 48 hours. Applying for a new D-U-N-S number can take up to 30 days, so upload registration documents instead of waiting for one.</p></details><details><summary>Do locksmiths and garage door companies get the 30-day grace period?</summary><p>No. Google says locksmiths and garage door services must complete advanced verification, including business video verification, before their campaigns are allowed to serve.</p></details><details><summary>What if my Business Profile name doesn’t match my legal business name?</summary><p>Upload a DBA (doing business as, or fictitious business name) document on the Advertiser Verification page. You don’t have to wait for the registration check to fail. Google reviews it manually within 48 hours and, if it’s accepted, approves the Business Registration check.</p></details><details><summary>Can an agency complete LSA verification for a client?</summary><p>Only partly. The business representative check needs an email at the client’s own domain that matches its Dun &amp; Bradstreet record, or a registration document plus an identity check. Business registration needs an organization payments profile, and Google’s Local Services help says the person completing the business checks must be an owner or manager on the Business Profile. Plan the owner into the process.</p></details></div>
+<section class="cta-box"><h2>Onboarding LSA clients? Let’s check your verification steps together.</h2><p>Book a 30-minute call with Ryan. Bring your onboarding checklist and one client account, and we’ll walk through where verification usually stalls and how agencies keep every lead answered once a client is live. Prefer the phone? Call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/agencies/">LSA Command for agencies</a></li><li><a href="/blog/google-verified-badge/">Google Verified badge: what replaced Google Guaranteed</a></li><li><a href="/blog/local-services-ads-background-check-verification/">LSA background check and verification checklist</a></li><li><a href="/blog/lsa-multiple-clients-performance-max-agencies/">Managing LSA for multiple clients after Performance Max</a></li></ul></aside>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+</body>
+</html>
