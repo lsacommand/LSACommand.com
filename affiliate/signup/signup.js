@@ -12,36 +12,25 @@
       if (saved && saved.expires > Date.now() && valid(saved.token)) referral = saved.token;
     }
   } catch (_) { /* The current link still works if browser storage is disabled. */ }
-  document.getElementById('referral-note').hidden = !referral;
-  const form = document.getElementById('signup-form');
-  const error = document.getElementById('form-error');
-  const submit = document.getElementById('submit-button');
-  let busy = false;
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
-    if (busy || !form.reportValidity()) return;
-    busy = true; submit.disabled = true; submit.textContent = 'Creating your account…'; error.hidden = true;
-    const fields = new FormData(form);
-    const payload = { company_type: 'agency', affiliate_ref: referral };
-    ['first_name', 'last_name', 'company_name', 'email', 'phone'].forEach(name => { payload[name] = fields.get(name).trim(); });
-    payload.password = fields.get('password');
+  // Use the app's signup and authentication flow. Only referral attribution
+  // crosses origins; account credentials and session tokens stay in the app.
+  const destination = new URL('https://app.lsacommand.com/signup-agency');
+  if (referral) destination.searchParams.set('fpr', referral);
+  document.getElementById('continue-signup').href = destination.href;
+  let continued = false;
+  const continueSignup = () => {
+    if (continued) return;
+    continued = true;
+    window.location.replace(destination.href);
+  };
+  // Preserve click tracking without letting a blocked analytics script block signup.
+  const fallback = setTimeout(continueSignup, 1500);
+  if (typeof window.fpr === 'function') {
     try {
-      const response = await fetch('https://lsaapi.revulsab.com/register', {
-        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        credentials: 'omit', body: JSON.stringify(payload)
+      window.fpr('click', referral ? { ref_id: referral } : {}, () => {
+        clearTimeout(fallback);
+        continueSignup();
       });
-      const result = await response.json();
-      if (!response.ok || !result.success) {
-        const messages = result.errors ? Object.values(result.errors).flat().join(' ') : result.message;
-        throw new Error(messages || 'We couldn’t create your account. Please try again.');
-      }
-      // Never store or transfer the returned login token across domains.
-      form.reset(); form.hidden = true;
-      try { localStorage.removeItem(key); } catch (_) {}
-      const success = document.getElementById('signup-success'); success.hidden = false; success.focus();
-    } catch (failure) {
-      error.textContent = failure instanceof TypeError ? 'We couldn’t reach the signup service. Please try again. If you already submitted, try signing in before creating another account.' : failure.message;
-      error.hidden = false; error.focus();
-    } finally { busy = false; submit.disabled = false; submit.textContent = 'Create my account ↗'; }
-  });
+    } catch (_) { continueSignup(); }
+  } else { continueSignup(); }
 })();
