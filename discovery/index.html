@@ -29,7 +29,7 @@
             // An on-site link to /discovery was already counted by lsa-tracking.js on click; don't count it twice.
             var fromSite = document.referrer && new URL(document.referrer).hostname === window.location.hostname;
             if (fromSite) { go(); return; }
-            gtag('event', 'book_meeting_click', { cta_location: 'discovery-shortlink', link_location: 'discovery-shortlink', page_path: '/discovery', event_callback: go, event_timeout: 1200 });
+            gtag('event', 'discovery_redirect', { cta_location: 'discovery-shortlink', link_location: 'discovery-shortlink', page_path: '/discovery', event_callback: go, event_timeout: 1200 });
             setTimeout(go, 1500);
         })();
     </script>
