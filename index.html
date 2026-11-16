@@ -458,11 +458,6 @@ fpr("click");
                     </div>
                 </div>
 
-                <figure class="mt-12">
-                    <img src="/images/sample-lead-notes-detail.svg" class="shot" width="1400" height="967" loading="lazy" decoding="async"
-                        alt="Lead notes for one call with a High-value lead identified banner, call notes, a Google LSA rating, an intake performance score and an AI performance score (sample data)">
-                    <figcaption class="text-xs text-muted mt-3 text-center">Lead notes for one call, shown with sample data.</figcaption>
-                </figure>
             </div>
         </section>
 
@@ -555,7 +550,7 @@ fpr("click");
                   <section class="wyg-panel" id="wyg-panel-callflow" aria-labelledby="wyg-title-callflow">
                     <div class="wyg-text"><h3 id="wyg-title-callflow">The call flow, step by step</h3><p>Your team gets the first chance at every call, and the AI is the backup. Here is each step.</p><ol class="wyg-steps"><li>A customer taps Call on the client's Local Services Ad.</li><li>Your team's phone rings. Your team gets the first 10 to 15 seconds of the call.</li><li>If no one answers, the call transfers straight to the AI, so every call is answered within 30 seconds.</li><li>The AI books the appointment, transfers to your team when the caller needs a person, and sends the lead with call notes.</li></ol><p>You choose the routing in Call Flow Settings. For message leads, AI messaging responds instantly.</p></div>
                     <div class="wyg-media">
-                      <figure class="wyg-fig"><img src="/images/sample-call-flow-explained.svg" width="1600" height="815" loading="lazy" decoding="async" alt="How every LSA call is handled, in three steps: an LSA call comes in, the team's phone rings for the first 10 to 15 seconds, and if no one answers the AI agent picks up so the call is answered within 30 seconds. The AI then books the appointment, transfers to the team or takes notes. A note says message leads get an instant AI reply, day or night (sample data)"><figcaption>The call flow in three steps. Sample data.</figcaption></figure>
+                      <figure class="wyg-fig"><img src="/images/sample-call-flow-explained.svg" width="1600" height="838" loading="lazy" decoding="async" alt="How every LSA call is handled, in three steps: an LSA call comes in, the team's phone rings for the first 10 to 15 seconds, and if no one answers the AI agent picks up so the call is answered within 30 seconds. The AI then books the appointment, transfers to the team or takes notes. A note says message leads get an instant AI reply, day or night (sample data)"><figcaption>The call flow in three steps. Sample data.</figcaption></figure>
                       <figure class="wyg-fig"><img src="/images/sample-call-flow.svg" width="1500" height="1451" loading="lazy" decoding="async" alt="Call Flow Settings with five numbered steps explained: choose who answers first, the team's destination number, a call timeout of 10 seconds, Redirect to AI when no one answers, and business hours set to 24/7 (sample data)"><figcaption>The Call Flow Settings screen, with each setting explained. Sample data.</figcaption></figure>
                     </div>
                   </section>
@@ -748,14 +743,16 @@ fpr("click");
                 </div>
                 <div class="grid lg:grid-cols-2 gap-8 items-start">
                     <figure>
-                        <figcaption class="flex items-center justify-between mb-3"><span class="eyebrow !text-muted">Before: a raw lead in Google's LSA dashboard</span></figcaption>
-                        <img src="/lsa-before-redacted.svg" class="shot" width="933" height="1024" loading="lazy" decoding="async"
-                            alt="A Google Local Services Ads lead before LSA Command, with details redacted: no customer name, no notes and no rating.">
+                        <figcaption class="flex items-center justify-between mb-3"><span class="eyebrow">In Google Ads: notes on a Performance Max lead</span></figcaption>
+                        <img src="/images/pmax-lead-notes-redacted.svg" class="shot" width="1510" height="1072" loading="lazy" decoding="async"
+                            alt="A Google Ads Performance Max lead in the Lead Details view, with the notes LSA Command added in Additional Details and the message conversation beside them. Names, phone numbers and the address are hidden.">
+                        <figcaption class="text-xs text-muted mt-3">A real Performance Max lead. Names, numbers and the address are hidden.</figcaption>
                     </figure>
                     <figure>
-                        <figcaption class="flex items-center justify-between mb-3"><span class="eyebrow">After: the same kind of lead with LSA Command</span></figcaption>
-                        <img src="/lsa-after-redacted.svg" class="shot" width="968" height="954" loading="lazy" decoding="async"
-                            alt="A Google Local Services Ads lead after LSA Command, with details redacted: rating submitted, status updated, the service filled in and AI notes added.">
+                        <figcaption class="flex items-center justify-between mb-3"><span class="eyebrow">In the Google Ads leads report: notes on every lead</span></figcaption>
+                        <img src="/images/pmax-leads-report-redacted.svg" class="shot" width="1560" height="947" loading="lazy" decoding="async"
+                            alt="The Google Ads leads report with message leads and calls, each with notes from LSA Command in the notes column. Phone numbers, names, locations and campaign names are hidden.">
+                        <figcaption class="text-xs text-muted mt-3">The leads report your client already has. Identifiers are hidden.</figcaption>
                     </figure>
                 </div>
                 <div class="grid md:grid-cols-3 gap-5 mt-10">
@@ -768,7 +765,7 @@ fpr("click");
                         <p class="text-sm text-muted">The dashboard keeps three things separate: our assessment, the feedback that was submitted and the credit Google actually recorded. A credit counts only once Google records it.</p>
                     </div>
                     <div class="card p-6">
-                        <h3 class="text-lg font-black mb-2">Fewer bad leads to begin with</h3>
+                        <h3 class="text-lg font-black mb-2">Ratings that train Google</h3>
                         <p class="text-sm text-muted">Google no longer credits out-of-area or wrong-job-type leads, so the ratings you send back matter. They tell Google which leads the business actually wants.</p>
                     </div>
                 </div>
@@ -788,6 +785,34 @@ fpr("click");
                 </div>
                 <p class="text-xs text-muted mt-4 text-center">Counts from the LSA Command dashboard. Results depend on trade, market and lead mix. Google decides which leads are credited.</p>
                 <p class="mt-7 text-center"><a href="/lsa-lead-disputes/" class="font-bold text-teal underline underline-offset-4">How lead disputes and credits work now</a></p>
+            </div>
+        </section>
+
+        <!-- Proof of work report -->
+        <section id="proof-of-work" class="py-20 bg-[#eaf6fa] border-b border-line">
+            <div class="max-w-6xl mx-auto px-5 sm:px-6">
+                <div class="max-w-3xl mb-10">
+                    <p class="eyebrow mb-4">Proof of work</p>
+                    <h2 class="text-3xl lg:text-4xl font-black leading-tight">A proof-of-work report you can show every client</h2>
+                    <p class="text-lg text-muted mt-5">Every lead is answered and documented inside Google Ads, so your agency can show the client exactly what happened: notes on the lead, the lead survey submitted, the rating sent to Google and how fast the lead was answered. These are real leads with names, numbers and addresses hidden.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 items-start">
+                    <figure>
+                        <img src="/images/proof-pmax-lead-notes.svg" class="shot" width="1080" height="1350" loading="lazy" decoding="async"
+                            alt="Proof of work on a Performance Max lead: notes added to the lead automatically, the caller's callback number added, the caller's address captured from the conversation and the message lead answered in under a minute. Names, phone numbers and the street address are hidden.">
+                        <figcaption class="text-sm text-muted mt-3"><strong class="text-ink">On a Performance Max lead.</strong> Notes, callback number and address added, answered in under a minute.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/images/proof-pmax-lead-report.svg" class="shot" width="1080" height="1350" loading="lazy" decoding="async"
+                            alt="Proof of work in the Google Ads lead report: notes added to Performance Max and LSA leads, message leads answered, and calls answered and documented. Phone numbers, names, locations and business names are hidden.">
+                        <figcaption class="text-sm text-muted mt-3"><strong class="text-ink">In the lead report.</strong> Notes on message leads and calls, side by side.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/images/proof-lsa-lead-survey.svg" class="shot" width="1080" height="1350" loading="lazy" decoding="async"
+                            alt="Proof of work on a Google Local Services Ads lead: notes added to the lead automatically, the lead survey submitted, the message lead answered with same-day follow-ups and the rating submitted. Phone numbers and the business name are hidden.">
+                        <figcaption class="text-sm text-muted mt-3"><strong class="text-ink">On a Google LSA lead.</strong> Notes, survey and rating submitted, follow-ups sent the same day.</figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
 
@@ -1140,6 +1165,8 @@ fpr("click");
             <nav aria-label="Footer navigation" class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6">
                 <a href="/case-studies/" class="hover:text-teal hover:underline">Case studies</a>
                 <a href="/blog/" class="hover:text-teal hover:underline">Blog</a>
+                <a href="/tools/" class="hover:text-teal hover:underline">Free tools</a>
+                <a href="/resources/" class="hover:text-teal hover:underline">Resources</a>
                 <a href="/setup/" class="hover:text-teal hover:underline">Setup guide</a>
                 <a href="/support.html" class="hover:text-teal hover:underline">Support</a>
                 <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-nav-book" class="hover:text-teal hover:underline">Book an LSA audit</a>
