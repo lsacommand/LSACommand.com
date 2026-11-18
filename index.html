@@ -12,7 +12,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -92,7 +92,7 @@
             "mainEntity": [
                 {"@type": "Question", "name": "What is LSA Command?", "acceptedAnswer": {"@type": "Answer", "text": "LSA Command is Google Local Services Ads software for marketing agencies. It writes notes on every lead and adds them to Performance Max. For every client it also answers LSA calls within 30 seconds, replies to message leads instantly, sends text and email notifications, rates every lead back to Google, flags bad leads for credit and asks for reviews. Your agency gets one view of every client, and each client gets a dashboard."}},
                 {"@type": "Question", "name": "Does LSA Command work with accounts on Performance Max?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. LSA Command writes notes on every lead and adds them to Performance Max, for accounts on Google's Performance Max version of LSA."}},
-                {"@type": "Question", "name": "What is the LSA account audit?", "acceptedAnswer": {"@type": "Answer", "text": "It is what we do on your walkthrough. You bring one client's Google LSA account to a 30-minute walkthrough with Ryan, and we pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed."}},
+                {"@type": "Question", "name": "What is the LSA account audit?", "acceptedAnswer": {"@type": "Answer", "text": "It is what we do on your walkthrough. You bring one client's Google LSA account to a 30-minute walkthrough with our team, and we pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed."}},
                 {"@type": "Question", "name": "Who can buy LSA Command?", "acceptedAnswer": {"@type": "Answer", "text": "Marketing agencies only. Agencies run it for their home-service clients, including HVAC companies, plumbers, roofers, electricians and pool contractors. We do not sell directly to businesses. If you own a business, ask your marketing agency about LSA Command."}},
                 {"@type": "Question", "name": "How much does LSA Command cost?", "acceptedAnswer": {"@type": "Answer", "text": "$200 per month per client, with every feature included. Five clients is $1,000 per month and ten clients is $2,000 per month. We confirm setup and billing with your agency before any client goes live."}},
                 {"@type": "Question", "name": "Will the AI answer calls my client's team could have taken?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every call rings the client's team first for 10 to 15 seconds. Only if nobody picks up does the call transfer to the AI, which answers instantly. Either way the call is answered within 30 seconds."}},
@@ -373,7 +373,7 @@ fpr("click");
                 <a href="/case-studies/" class="hidden md:inline whitespace-nowrap hover:text-teal">Case studies</a>
                 <a href="/industries/" class="hidden lg:inline whitespace-nowrap hover:text-teal">Industries</a>
                 <a href="/blog/" class="hidden lg:inline whitespace-nowrap hover:text-teal">Blog</a>
-                <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book" class="btn btn-primary !py-2.5 !px-5 whitespace-nowrap">Book an LSA audit</a>
+                <a href="https://lsacommand.com/book/" data-cta="nav-book" class="btn btn-primary !py-2.5 !px-5 whitespace-nowrap">Book an LSA audit</a>
             </nav>
         </div>
     </header>
@@ -392,7 +392,7 @@ fpr("click");
                         view, a dashboard for each client, your brand on all of it.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8">
-                        <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="hero-book" class="btn btn-primary text-lg">Book a 30-minute walkthrough</a>
+                        <a href="https://lsacommand.com/book/" data-cta="hero-book" class="btn btn-primary text-lg">Book a 30-minute walkthrough</a>
                         <a href="/pricing/" data-cta="hero-pricing" class="btn btn-ghost text-lg">$200 per month per client</a>
                     </div>
                     <p class="text-sm text-muted mt-5">
@@ -410,7 +410,7 @@ fpr("click");
                             <li>Lead volume</li>
                         </ul>
                     </div>
-                    <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="hero-audit" class="btn btn-primary">Book your LSA account audit</a>
+                    <a href="https://lsacommand.com/book/" data-cta="hero-audit" class="btn btn-primary">Book your LSA account audit</a>
                 </div>
                 <figure class="max-w-6xl mx-auto mt-12">
                     <img src="/images/sample-dashboard-top.svg" class="shot" width="1600" height="528" loading="eager" fetchpriority="high" decoding="async"
@@ -501,7 +501,7 @@ fpr("click");
                   </div>
                   <section class="wyg-panel" id="wyg-panel-pmax" aria-labelledby="wyg-title-pmax">
                     <div class="wyg-text"><h3 id="wyg-title-pmax">Notes on every lead, added to Performance Max</h3><p>LSA Command writes notes on every lead and adds them to Performance Max. Each lead gets a summary of the call or message, a Google LSA rating and scores for how the AI and the intake team handled it. High-value leads identified. Adding notes to Performance Max applies to accounts on Google's Performance Max version of LSA.</p></div>
-                    <!-- PLACEHOLDER: Ryan to explain how notes are added in PMax and supply a mockup -->
+                    <!-- PLACEHOLDER: team to explain how notes are added in PMax and supply a mockup -->
                     <div class="wyg-media wyg-media-one">
                       <figure class="wyg-fig"><img src="/images/sample-lead-notes-detail.svg" width="1400" height="967" loading="lazy" decoding="async" alt="Lead notes for one call in the agency's dashboard: a High-value lead identified banner, call notes, a Google LSA rating, an intake performance score and an AI performance score (sample data)"><figcaption>Lead notes for one call, under the agency's logo. Sample data.</figcaption></figure>
                     </div>
@@ -890,7 +890,7 @@ fpr("click");
                 </div>
                 <div class="flex flex-col sm:flex-row gap-3 justify-center mt-10">
                     <a href="/agencies/" data-cta="home-agencies" class="btn btn-ghost">See how agencies run it</a>
-                    <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="mid-book" class="btn btn-primary">Book a 30-minute walkthrough</a>
+                    <a href="https://lsacommand.com/book/" data-cta="mid-book" class="btn btn-primary">Book a 30-minute walkthrough</a>
                 </div>
             </div>
         </section>
@@ -966,7 +966,7 @@ fpr("click");
                         <p class="text-muted mt-4">5 clients is $1,000 per month. 10 clients is $2,000 per month.</p>
                         <p class="text-muted mt-3">No setup fee. We confirm your setup and billing together before any client goes live.</p>
                         <p class="text-muted mt-3">Your walkthrough includes an LSA account audit of one client account.</p>
-                        <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="pricing-book" class="btn btn-primary text-lg mt-7 w-full sm:w-auto">Book a 30-minute walkthrough</a>
+                        <a href="https://lsacommand.com/book/" data-cta="pricing-book" class="btn btn-primary text-lg mt-7 w-full sm:w-auto">Book a 30-minute walkthrough</a>
                         <p class="mt-5"><a href="/pricing/" data-cta="home-pricing-page" class="font-bold text-teal underline underline-offset-4">Full pricing details and FAQ</a></p>
                     </div>
                     <div>
@@ -988,7 +988,6 @@ fpr("click");
                         <div class="card p-6 mt-8 bg-[#f1fbfc]">
                             <h3 class="text-xl font-black">100% satisfaction or your money back</h3>
                             <p class="text-muted mt-3">"If you are not completely satisfied with the results in the first 14 days, we will give you your money back. No questions asked."</p>
-                            <p class="font-bold mt-3">Ryan Steinolfson, Founder</p>
                         </div>
                     </div>
                 </div>
@@ -1010,7 +1009,7 @@ fpr("click");
                     </details>
                     <details class="card p-5">
                         <summary class="text-lg font-bold">What is the LSA account audit?</summary>
-                        <p class="text-muted mt-3">It is what we do on your walkthrough. You bring one client's Google LSA account to a 30-minute walkthrough with Ryan, and we pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed.</p>
+                        <p class="text-muted mt-3">It is what we do on your walkthrough. You bring one client's Google LSA account to a 30-minute walkthrough with our team, and we pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed.</p>
                     </details>
                     <details class="card p-5">
                         <summary class="text-lg font-bold">Who can buy LSA Command?</summary>
@@ -1119,7 +1118,7 @@ fpr("click");
                 <div>
                     <p class="eyebrow !text-aqua mb-4">LSA account audit on your walkthrough</p>
                     <h2 class="text-3xl lg:text-5xl font-black leading-tight">Bring one client's Google LSA account. We pull its numbers live.</h2>
-                    <p class="text-lg text-[#b9dbe4] mt-5">The walkthrough is 30 minutes with Ryan. You share your screen, so no passwords are needed.</p>
+                    <p class="text-lg text-[#b9dbe4] mt-5">The walkthrough is 30 minutes with our team. You share your screen, so no passwords are needed.</p>
                     <ul class="space-y-3 mt-6 text-[#e8fbff]">
                         <li class="flex gap-3"><span aria-hidden="true" class="text-aqua font-black">1</span><span>We pull the account's response rate, lead quality and lead volume live.</span></li>
                         <li class="flex gap-3"><span aria-hidden="true" class="text-aqua font-black">2</span><span>You see lead notes, notifications and the agency view. <a href="/what-you-get/" class="underline underline-offset-4">Preview them here</a>.</span></li>
@@ -1128,8 +1127,8 @@ fpr("click");
                 </div>
                 <div class="bg-white text-ink rounded-3xl p-8 text-center">
                     <h3 class="text-2xl font-black">Book your LSA account audit</h3>
-                    <p class="text-muted mt-2 mb-6">Pick a time on Ryan's calendar for a 30-minute walkthrough.</p>
-                    <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book" class="btn btn-primary text-lg w-full">Pick a time</a>
+                    <p class="text-muted mt-2 mb-6">Pick a time on our calendar for a 30-minute walkthrough.</p>
+                    <a href="https://lsacommand.com/book/" data-cta="footer-book" class="btn btn-primary text-lg w-full">Pick a time</a>
                     <p class="text-muted mt-6 mb-2">Rather talk now? Call or text</p>
                     <a href="sms:+19897124370" data-cta="footer-text-number" class="font-heading text-4xl font-black text-teal hover:underline">989-712-4370</a>
                     <div class="grid grid-cols-2 gap-3 mt-6">
@@ -1169,7 +1168,7 @@ fpr("click");
                 <a href="/resources/" class="hover:text-teal hover:underline">Resources</a>
                 <a href="/setup/" class="hover:text-teal hover:underline">Setup guide</a>
                 <a href="/support.html" class="hover:text-teal hover:underline">Support</a>
-                <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-nav-book" class="hover:text-teal hover:underline">Book an LSA audit</a>
+                <a href="https://lsacommand.com/book/" data-cta="footer-nav-book" class="hover:text-teal hover:underline">Book an LSA audit</a>
                 <a href="/privacy-policy.html" class="hover:text-teal hover:underline">Privacy Policy</a>
                 <a href="/terms-of-service.html" class="hover:text-teal hover:underline">Terms of Service</a>
                 <a href="/cookie-policy.html" class="hover:text-teal hover:underline">Cookie Policy</a>
@@ -1185,7 +1184,7 @@ fpr("click");
 
     <!-- Sticky mobile CTA -->
     <div class="fixed bottom-0 left-0 w-full z-50 bg-white/95 backdrop-blur border-t border-line p-3 lg:hidden grid grid-cols-[1fr_auto] gap-3">
-        <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="sticky-book" class="btn btn-primary !py-3 text-sm">Book your LSA account audit</a>
+        <a href="https://lsacommand.com/book/" data-cta="sticky-book" class="btn btn-primary !py-3 text-sm">Book your LSA account audit</a>
         <a href="sms:+19897124370" data-cta="sticky-text" class="btn btn-ghost !py-3 text-sm">Text us</a>
     </div>
 <script>
