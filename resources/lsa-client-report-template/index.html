@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -105,7 +105,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book an LSA audit</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -118,7 +118,7 @@
         <div class="download">
           <a class="button" href="lsa-client-report-template.pdf" download data-ga-event="template_download" data-ga-location="page_header" data-file="lsa-client-report-template.pdf">Download the PDF</a>
           <a class="button secondary" href="lsa-client-report-template.xlsx" download data-ga-event="template_download" data-ga-location="page_header" data-file="lsa-client-report-template.xlsx">Get the spreadsheet (Excel)</a>
-          <a class="button secondary" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="page-header-book">Book a 30-minute walkthrough</a>
+          <a class="button secondary" href="https://lsacommand.com/book/" data-cta="page-header-book">Book a 30-minute walkthrough</a>
           <span class="note">3-page PDF: a filled-in sample, a blank report and agency notes. The spreadsheet works in Excel and Google Sheets (or <a href="lsa-client-report-template.csv" download data-ga-event="template_download" data-ga-location="page_header" data-file="lsa-client-report-template.csv">grab the CSV</a>). No email required.</span>
         </div>
       </header>
@@ -162,7 +162,7 @@
 <p><b>Running 20 clients?</b> Keep one master sheet, one row per client, with the same numbers. Then read down the Answer rate column: clients whose calls aren’t reaching a person are the most likely to blame the ads and cancel, and the easiest conversation about fixing lead response.</p>
 <p>The spreadsheet has a Roster tab with these columns, and there’s a <a href="lsa-client-roster.csv" download data-ga-event="template_download" data-ga-location="roster" data-file="lsa-client-roster.csv">roster CSV</a> if you’d rather start from a blank sheet. For the tooling side, see <a href="/blog/lsa-reporting-software-agencies/">LSA reporting software for agencies</a>.</p>
 
-<section class="cta-box"><h2>Want a second set of eyes on one client’s report?</h2><p>Book a 30-minute walkthrough with Ryan. Bring last month’s LSA report for one client and we’ll rebuild it with you on the call using this template: charged vs. received leads, credits, cost per booked job and calls answered.</p><div class="actions"><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="resource-cta-book">Book a 30-minute walkthrough</a><a class="button secondary" href="lsa-client-report-template.pdf" download data-ga-event="template_download" data-ga-location="cta_box" data-file="lsa-client-report-template.pdf">Download the PDF</a></div></section>
+<section class="cta-box"><h2>Want a second set of eyes on one client’s report?</h2><p>Book a 30-minute walkthrough with our team. Bring last month’s LSA report for one client and we’ll rebuild it with you on the call using this template: charged vs. received leads, credits, cost per booked job and calls answered.</p><div class="actions"><a class="button" href="https://lsacommand.com/book/" data-cta="resource-cta-book">Book a 30-minute walkthrough</a><a class="button secondary" href="lsa-client-report-template.pdf" download data-ga-event="template_download" data-ga-location="cta_box" data-file="lsa-client-report-template.pdf">Download the PDF</a></div></section>
 <h2 id="sources">Sources</h2><p>Checked against Google’s help pages on November 1, 2026. Google edits these pages often, so re-check before acting.</p><ul><li><a href="https://support.google.com/google-ads/answer/17213585" rel="noopener">LSA transition to Performance Max campaigns with pay-per-lead goals</a></li><li><a href="https://support.google.com/google-ads/answer/18550592" rel="noopener">How leads work in Performance Max campaigns with pay-per-lead goals</a></li><li><a href="https://support.google.com/google-ads/answer/17325352" rel="noopener">About goals and leads for pay-per-lead goals</a></li></ul>
 <aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/resources/lsa-pmax-migration-checklist/">LSA → Performance Max migration checklist</a></li><li><a href="/blog/lsa-reporting-software-agencies/">LSA reporting software for agencies</a></li><li><a href="/blog/lsa-lead-notifications/">LSA lead notifications</a></li><li><a href="/lsa-lead-disputes/">Lead disputes and credits</a></li></ul></aside>
 <p class="article-meta">Educational content only. Google product features and policies change; verify current requirements in Google’s help center. Google and Google Local Services Ads are trademarks of Google LLC.</p>
@@ -174,7 +174,7 @@
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
