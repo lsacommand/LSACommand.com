@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -124,7 +124,7 @@
           "name": "What is the LSA account audit?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is what we do on your walkthrough. You bring one client's Google LSA account to a 30-minute walkthrough with Ryan, and we pull its response rate, lead quality and lead volume live."
+            "text": "It is what we do on your walkthrough. You bring one client's Google LSA account to a 30-minute walkthrough with our team, and we pull its response rate, lead quality and lead volume live."
           }
         },
         {
@@ -180,7 +180,7 @@
           "name": "We have a large client book or want to resell. Who do we talk to?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Book a 30-minute walkthrough with Ryan and we will walk you through the partner setup."
+            "text": "Book a 30-minute walkthrough with our team and we will walk you through the partner setup."
           }
         }
       ]
@@ -216,7 +216,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="pricing-header">Book an LSA audit</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="pricing-header">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -233,7 +233,7 @@ fpr("click");
           <p class="per">Per client, per month</p>
           <p class="price">$200</p>
           <p>Every feature included. No setup fee. We confirm your setup and billing together before any client goes live.</p>
-          <a class="button button-lg" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="pricing-card">Book a 30-minute walkthrough</a>
+          <a class="button button-lg" href="https://lsacommand.com/book/" data-cta="pricing-card">Book a 30-minute walkthrough</a>
           <p class="fine" style="margin:14px 0 0;font-size:.88rem;color:var(--muted)">Your walkthrough includes an <a href="#lsa-audit">LSA account audit</a> of one client account.</p>
           <p class="fine" style="margin:8px 0 0;font-size:.88rem;color:var(--muted)">Rather talk now? Call or text <a href="sms:+19897124370" data-cta="pricing-text">989-712-4370</a>.</p>
         </div>
@@ -291,7 +291,7 @@ fpr("click");
 
 <h2 id="lsa-audit">LSA account audit on your walkthrough</h2>
 <p>Before you spend anything, see where one client stands. On a 30-minute walkthrough you bring one client's Google LSA account and we pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed.</p>
-<p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="pricing-audit">Book your LSA account audit</a></p>
+<p><a class="button" href="https://lsacommand.com/book/" data-cta="pricing-audit">Book your LSA account audit</a></p>
 
 <h2 id="how-you-start">How you start</h2>
 <ol class="steps">
@@ -301,11 +301,11 @@ fpr("click");
 </ol>
 
 <h2 id="money-back">14-day money-back promise</h2>
-<div class="note-box"><p><strong>100% satisfaction or your money back.</strong> "If you are not completely satisfied with the results in the first 14 days, we will give you your money back. No questions asked."</p><p>Ryan Steinolfson, Founder</p></div>
+<div class="note-box"><p><strong>100% satisfaction or your money back.</strong> "If you are not completely satisfied with the results in the first 14 days, we will give you your money back. No questions asked."</p></div>
 
 <h2 id="faq">Pricing questions</h2>
-<div class="faq"><details><summary>How much does LSA Command cost?</summary><p>LSA Command costs $200 per month per client. Every feature is included.</p></details><details><summary>Is pricing per client or per agency?</summary><p>Per client. You pay $200 per month for each client account you run on LSA Command. Five clients is $1,000 per month and ten clients is $2,000 per month.</p></details><details><summary>Is there a setup fee?</summary><p>No. There is no setup fee.</p></details><details><summary>What is included in the price?</summary><p>Every feature: AI call answering, AI messaging for message leads, lead notes on every lead, added to Performance Max, text and email notifications, High-value leads identified, Google's 1 to 5 lead survey filled out, lead ratings back to Google, lead credit tracking, robocall screening, review generation, call grading, CRM integrations and white-label options.</p></details><details><summary>What is the LSA account audit?</summary><p>It is what we do on your walkthrough. You bring one client's Google LSA account to a 30-minute walkthrough with Ryan, and we pull its response rate, lead quality and lead volume live.</p></details><details><summary>Are lead notes added to Performance Max?</summary><p>Yes. LSA Command writes notes on every lead and adds them to Performance Max, for accounts on Google's Performance Max version of LSA. It is included in the price.</p></details><details><summary>Can we start with one client?</summary><p>Yes. Start with one client, see it working, and then roll it out to the rest of your book.</p></details><details><summary>Does creating an agency account turn anything on?</summary><p>No. Signing up does not activate phone numbers or live client services. Nothing goes live for a client until setup and billing have been confirmed with you.</p></details><details><summary>Does the price include what Google charges for leads?</summary><p>No. The price covers the LSA Command software. Google's charges for Local Services Ads leads are separate and stay between the advertiser and Google.</p></details><details><summary>What should we charge our clients?</summary><p>That is your call. You set your own service offering and your own client price. Our guide to <a href="/blog/local-services-ads-management-pricing/">pricing LSA management for clients</a> walks through the common models.</p></details><details><summary>Can a business owner buy LSA Command directly?</summary><p>No. LSA Command is sold only to marketing agencies. If you own a business, ask your marketing agency about LSA Command.</p></details><details><summary>We have a large client book or want to resell. Who do we talk to?</summary><p><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="pricing-faq-book">Book a 30-minute walkthrough</a> with Ryan and we will walk you through the partner setup.</p></details></div>
-<section class="cta-box"><h2>Get an LSA account audit on your walkthrough.</h2><p>Book a 30-minute walkthrough with Ryan and bring one client's Google LSA account. We pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed. Rather talk now? Call or text <a href="tel:+19897124370" data-cta="pricing-footer-call">989-712-4370</a>.</p><a class="button button-lg" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="pricing-footer">Book a 30-minute walkthrough</a></section>
+<div class="faq"><details><summary>How much does LSA Command cost?</summary><p>LSA Command costs $200 per month per client. Every feature is included.</p></details><details><summary>Is pricing per client or per agency?</summary><p>Per client. You pay $200 per month for each client account you run on LSA Command. Five clients is $1,000 per month and ten clients is $2,000 per month.</p></details><details><summary>Is there a setup fee?</summary><p>No. There is no setup fee.</p></details><details><summary>What is included in the price?</summary><p>Every feature: AI call answering, AI messaging for message leads, lead notes on every lead, added to Performance Max, text and email notifications, High-value leads identified, Google's 1 to 5 lead survey filled out, lead ratings back to Google, lead credit tracking, robocall screening, review generation, call grading, CRM integrations and white-label options.</p></details><details><summary>What is the LSA account audit?</summary><p>It is what we do on your walkthrough. You bring one client's Google LSA account to a 30-minute walkthrough with our team, and we pull its response rate, lead quality and lead volume live.</p></details><details><summary>Are lead notes added to Performance Max?</summary><p>Yes. LSA Command writes notes on every lead and adds them to Performance Max, for accounts on Google's Performance Max version of LSA. It is included in the price.</p></details><details><summary>Can we start with one client?</summary><p>Yes. Start with one client, see it working, and then roll it out to the rest of your book.</p></details><details><summary>Does creating an agency account turn anything on?</summary><p>No. Signing up does not activate phone numbers or live client services. Nothing goes live for a client until setup and billing have been confirmed with you.</p></details><details><summary>Does the price include what Google charges for leads?</summary><p>No. The price covers the LSA Command software. Google's charges for Local Services Ads leads are separate and stay between the advertiser and Google.</p></details><details><summary>What should we charge our clients?</summary><p>That is your call. You set your own service offering and your own client price. Our guide to <a href="/blog/local-services-ads-management-pricing/">pricing LSA management for clients</a> walks through the common models.</p></details><details><summary>Can a business owner buy LSA Command directly?</summary><p>No. LSA Command is sold only to marketing agencies. If you own a business, ask your marketing agency about LSA Command.</p></details><details><summary>We have a large client book or want to resell. Who do we talk to?</summary><p><a href="https://lsacommand.com/book/" data-cta="pricing-faq-book">Book a 30-minute walkthrough</a> with our team and we will walk you through the partner setup.</p></details></div>
+<section class="cta-box"><h2>Get an LSA account audit on your walkthrough.</h2><p>Book a 30-minute walkthrough with our team and bring one client's Google LSA account. We pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed. Rather talk now? Call or text <a href="tel:+19897124370" data-cta="pricing-footer-call">989-712-4370</a>.</p><a class="button button-lg" href="https://lsacommand.com/book/" data-cta="pricing-footer">Book a 30-minute walkthrough</a></section>
 <aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/what-you-get/">See exactly what you get</a></li><li><a href="/agencies/">How agencies run LSA Command</a></li><li><a href="/case-studies/">Case studies: Pool Contractor A, B and C</a></li><li><a href="/lsa-notes-and-notifications/">Notes and notifications</a></li><li><a href="/blog/local-services-ads-management-pricing/">How to price LSA management for clients</a></li></ul></aside>
           </div>
         </div>
@@ -315,7 +315,7 @@ fpr("click");
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>

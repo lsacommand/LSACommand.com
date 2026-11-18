@@ -2,12 +2,12 @@
  * LSA Command conversion tracking (GA4 G-CSQW3SMTL4).
  *
  * Shared booking convention for every page on the site:
- *   - Every on-site "book a call" CTA links straight to https://ryan.diyai.ai/30-min-discovery-call
+ *   - Every on-site "book a call" CTA links straight to https://lsacommand.com/book/
  *     and carries data-cta="<where-on-the-page>". Pages do NOT add their own onclick/listener for it.
  *   - book_meeting_click fires here, once per click, for any booking link.
  *   - book_meeting fires on /booked/ (the calendar's after-booking redirect), not here.
  *   - /discovery is the off-site short link (YouTube, email); it fires its own book_meeting_click.
- *   - /book is a plain redirect to the calendar (vercel.json) for print and voice; on-site CTAs do not use it.
+ *   - /book/ embeds the calendar and fires book_meeting when the calendar reports a completed booking.
  *
  * Events sent:
  *   generate_lead       : a visitor taps a text (sms:) or call (tel:) link. params: method, cta_location
@@ -22,7 +22,7 @@
 (function () {
   'use strict';
 
-  var BOOKING_PATTERN = /30-min-discovery-call|^\/(discovery|book)\/?$|lsacommand\.com\/(discovery|book)\/?$/;
+  var BOOKING_PATTERN = /^\/(discovery|book)\/?(\?|#|$)|lsacommand\.com\/(discovery|book)\/?(\?|#|$)/;
   var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
   var STORE_KEY = 'lsa-first-touch';
 
