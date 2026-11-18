@@ -49,6 +49,16 @@
     .table-wrap{overflow-x:auto;margin:1.25rem 0}
     .table-wrap .compare{margin:0}
 
+    .yt-facade{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#07243A}
+    .yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .yt-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .yt-play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .yt-play svg{width:96px;height:68px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));transition:transform .15s}
+    .yt-play:hover svg{transform:scale(1.08)}
+    .orig-case-study{margin:0 0 32px}
+    .orig-shot{margin:1rem auto 0;max-width:640px}
+    .orig-shot img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 12px 42px rgba(7,36,58,.1)}
+    .orig-shot figcaption{font-size:.85rem;color:var(--muted);margin-top:8px;text-align:center}
     .video-with-infographic{margin:0 0 32px}
     .video-with-infographic .video{margin:0 0 16px}
     .infographic{margin:0}
@@ -110,7 +120,7 @@
       "@id": "https://lsacommand.com/blog/google-local-services-ads-for-lawyers-case-study/#video",
       "name": "Google Local Services Ads for Lawyers: What Google's Law Firm Case Study Shows",
       "description": "What Google's 2022 Local Services Ads case study about a law firm reports (300 leads in one month, 30 cases per month, a 1,300% return on investment), why the plan included identifying phone-routing gaps, and how LSA Command answers 100% of calls within 30 seconds today. LSA Command was not part of the campaign in the case study.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/VIDEO_ID_PENDING/maxresdefault.jpg",
+      "thumbnailUrl": "https://lsacommand.com/blog/google-local-services-ads-for-lawyers-case-study/google-local-services-ads-for-lawyers-video-thumbnail.svg",
       "uploadDate": "2026-11-18T12:00:00-05:00",
       "url": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
       "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID_PENDING",
@@ -230,7 +240,7 @@
         <p class="article-meta"><span>By <a href="/author/lsa-command-team/" rel="author">the LSA Command Team</a></span> <span aria-hidden="true">·</span> <time datetime="2026-11-18">November 18, 2026</time> <span aria-hidden="true">·</span> 7 min read</p>
       </header>
       <div class="article-layout">
-        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li>
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li><li><a href="#google-original">Google's original case study</a></li>
 <li><a href="#case-study">What Google's law firm case study reports</a></li>
 <li><a href="#answer-every-call">Why answering every call matters for law firm Local Services Ads</a></li>
 <li><a href="#setup">A setup checklist for law firm Local Services Ads</a></li>
@@ -251,14 +261,26 @@
           <!-- TODO: replace VIDEO_ID_PENDING -->
           <div class="video-with-infographic">
 <figure class="video" id="watch">
-            <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_PENDING" title="Google Local Services Ads for Lawyers: What Google's Law Firm Case Study Shows" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="yt-facade" data-video-id="VIDEO_ID_PENDING">
+              <img src="google-local-services-ads-for-lawyers-video-thumbnail.svg" alt="Google Local Services Ads for lawyers case study video thumbnail with the LSA Command logo" width="1280" height="720" decoding="async" fetchpriority="high">
+              <button type="button" class="yt-play" aria-label="Play video: Google Local Services Ads for Lawyers: What Google's Law Firm Case Study Shows"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#00AFC6"/><path d="M45 24 27 14v20" fill="#fff"/></svg></button>
+            </div>
             <figcaption>Watch: Google Local Services Ads for Lawyers: What Google's Law Firm Case Study Shows.</figcaption>
           </figure>
           <figure class="infographic">
-            <a href="google-local-services-ads-for-lawyers-infographic.svg" target="_blank" rel="noopener"><img src="google-local-services-ads-for-lawyers-infographic.svg" alt="Google Local Services Ads for lawyers infographic: before and after from Google's 2022 law firm case study, ending at 300 leads in one month and 30 cases per month" width="1600" height="1100" loading="lazy" decoding="async"></a>
+            <a href="google-local-services-ads-for-lawyers-infographic.svg" target="_blank" rel="noopener"><img src="google-local-services-ads-for-lawyers-infographic.svg" alt="Google Local Services Ads for lawyers infographic: before and after from Google's 2022 law firm case study, ending at 300 leads in one month and 30 cases per month" width="1600" height="1100" decoding="async"></a>
             <figcaption>The before and after flow in Google's law firm case study (2022). The bottom band is separate: it shows how LSA Command covers the same gap today. LSA Command was not part of the campaign in the case study. Open the full-size image to read it.</figcaption>
           </figure>
           </div>
+
+          <section class="orig-case-study" id="google-original">
+            <h2>Google's original case study</h2>
+            <p>This is the one-page case study Google published in 2022. Every figure on this page comes from it. A photo and a quote on the original are blurred here.</p>
+            <figure class="orig-shot">
+              <a href="google-original-case-study.svg" target="_blank" rel="noopener"><img src="google-original-case-study.svg" alt="Google's original Local Services Ads case study one-pager for Howe Law: 300 leads in one month, 30 cases per month, 1,300% return on investment" width="1066" height="1718" decoding="async"></a>
+              <figcaption>Source: Google case study (2022). <a href="google-original-case-study.svg" target="_blank" rel="noopener">Open the full-size image</a>.</figcaption>
+            </figure>
+          </section>
 
           <h2 id="case-study">What Google's law firm case study reports</h2>
 
@@ -431,5 +453,8 @@
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
+<script>
+(function(){document.querySelectorAll('.yt-facade').forEach(function(f){var b=f.querySelector('.yt-play');if(!b)return;b.addEventListener('click',function(){var id=f.getAttribute('data-video-id');if(!id||id==='VIDEO_ID_PENDING')return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';i.title="Google Local Services Ads for Lawyers: What Google's Law Firm Case Study Shows";i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';i.setAttribute('allowfullscreen','');i.referrerPolicy='strict-origin-when-cross-origin';f.appendChild(i);b.remove();});});})();
+</script>
 </body>
 </html>
