@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -248,7 +248,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book an LSA audit</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -460,7 +460,7 @@
             <figcaption>A redacted leads report from Google Ads. It can include both Local Services Ads and Performance Max leads. Callouts mark notes added across leads, message leads answered, and calls answered and documented. Phone numbers are cut to the last 4 digits and extension, and client business names and personal details are blurred. This is a record of the work, not a score from Google.</figcaption>
           </figure>
 
-          <p><strong>Want to see this on one of your own client accounts?</strong> <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-mid-book">Book a 30-min call with Ryan</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
+          <p><strong>Want to see this on one of your own client accounts?</strong> <a href="https://lsacommand.com/book/" data-cta="article-mid-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
 
 
           <p>Since Google gives you no phone score to show a client, a documented lead list is the closest thing you have to proof of responsiveness. It shows which calls were answered, what was said, and what happened next.</p>
@@ -500,8 +500,8 @@
           </dl>
           <div class="cta-box" id="book">
             <h2 id="price-and-next-step">No lead left waiting on your clients&#x27; accounts</h2>
-            <p>See how 100% of calls answered within 30 seconds, instant AI messaging, and notes on every lead would work across your client roster. It is $200 per month per client with voice AI included, and setup usually takes one call. <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a>, or call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p>
-            <p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-footer-book">Book a 30-min call with Ryan</a> <a class="button button-secondary" href="tel:+19897124370" data-cta="article-footer-call">Call or text 989-712-4370</a></p>
+            <p>See how 100% of calls answered within 30 seconds, instant AI messaging, and notes on every lead would work across your client roster. It is $200 per month per client with voice AI included, and setup usually takes one call. <a href="https://lsacommand.com/book/" data-cta="article-cta-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p>
+            <p><a class="button" href="https://lsacommand.com/book/" data-cta="article-footer-book">Book a 30-min call with our team</a> <a class="button button-secondary" href="tel:+19897124370" data-cta="article-footer-call">Call or text 989-712-4370</a></p>
           </div>
           <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
 <ul>
@@ -518,7 +518,7 @@
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
