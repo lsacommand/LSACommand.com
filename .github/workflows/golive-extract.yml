@@ -1,0 +1,32 @@
+name: golive-extract
+on:
+  push:
+    branches: [golive-final-2026-11-18]
+    paths: ['.github/workflows/golive-extract.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: golive-final-2026-11-18
+      - name: Unpack go-live bundle
+        run: |
+          set -e
+          test -f _golive_bundle/golive.tgz.b64 || { echo "no bundle"; exit 0; }
+          base64 -d _golive_bundle/golive.tgz.b64 > /tmp/golive.tgz
+          echo "61ed37a15804b8ee4c009c184dc46b2f568d104f77426f55c767a07991a8d3ad  /tmp/golive.tgz" | sha256sum -c -
+          tar xzf /tmp/golive.tgz -C .
+          rm -f .golive-DELTA.txt
+          git rm -q --ignore-unmatch blog/google-lsa-phone-response-score/lsa-leads-report-calls-documented.svg local-service-ads/local-service-ads-call-answered-within-30-seconds.svg
+          git rm -rq _golive_bundle
+          git config user.name "LSA Command"
+          git config user.email "noreply@lsacommand.com"
+          git add -A -- . ':!.github'
+          git status --short | head -50
+          git diff --cached --quiet -- .github || true
+          git commit -m "Go-live: unpack Part A + booking patch + Part B"
+          git push origin HEAD:golive-final-2026-11-18
