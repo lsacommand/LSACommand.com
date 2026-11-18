@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -268,7 +268,7 @@
           "name": "How much does LSA Command cost, and how long does setup take?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "$200 per month per client, with voice AI included rather than sold as an add-on. Setup usually takes one call. Book a 30-min call with Ryan, or call or text 989-712-4370."
+            "text": "$200 per month per client, with voice AI included rather than sold as an add-on. Setup usually takes one call. Book a 30-min call with our team, or call or text 989-712-4370."
           }
         }
       ]
@@ -317,7 +317,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book an LSA audit</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -574,7 +574,7 @@
 </figure>
 
 <p>There is more detail on the <a href="/lsa-notes-and-notifications/">notes and notifications</a> page.</p>
-<p><strong>Want to see this on one of your own client accounts?</strong> <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-mid-book">Book a 30-min call with Ryan</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
+<p><strong>Want to see this on one of your own client accounts?</strong> <a href="https://lsacommand.com/book/" data-cta="article-mid-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
 
 
 <h2 id="notifications">Instant, agency-branded text and email notifications</h2>
@@ -670,9 +670,9 @@
 <details><summary>Do missed calls hurt Local Services Ads ranking?</summary><p>Google says they may. Its help page lists responsiveness to customer inquiries and requests as a factor and says missed calls may negatively affect it. It also names average response time as part of profile quality. Google does not publish how much weight these carry.</p></details>
 <details><summary>Does Google charge for a missed Local Services Ads call?</summary><p>It can. Google can bill a missed call during business hours as a lead if the customer stays on the line for more than 20 seconds. Our post on <a href="/blog/lsa-missed-call-charges/">LSA missed call charges</a> covers the details.</p></details>
 <details><summary>Does the AI answer every call before my client's team can?</summary><p>No. The client's team gets the first ring. Humans get the first 10 to 15 seconds, and the call transfers to the voice AI only if nobody has picked up. That is how 100% of calls are answered within 30 seconds. Message leads get an instant AI reply inside Google's LSA platform.</p></details>
-<details><summary>How much does LSA Command cost, and how long does setup take?</summary><p>$200 per month per client, with voice AI included rather than sold as an add-on. Setup usually takes one call. <a href="https://ryan.diyai.ai/30-min-discovery-call">Book a 30-min call with Ryan</a>, or call or text <a href="tel:+19897124370">989-712-4370</a>.</p></details>
+<details><summary>How much does LSA Command cost, and how long does setup take?</summary><p>$200 per month per client, with voice AI included rather than sold as an add-on. Setup usually takes one call. <a href="https://lsacommand.com/book/">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370">989-712-4370</a>.</p></details>
 </div>
-<section class="cta-box"><h2>Stop losing the calls your ads already earned</h2><p>See how LSA Command answers 100% of calls within 30 seconds, replies to message leads instantly, and writes notes onto every lead, all under your agency's brand for $200 per month per client. Book a 30-min call with Ryan, or call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul>
+<section class="cta-box"><h2>Stop losing the calls your ads already earned</h2><p>See how LSA Command answers 100% of calls within 30 seconds, replies to message leads instantly, and writes notes onto every lead, all under your agency's brand for $200 per month per client. Book a 30-min call with our team, or call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p><a class="button" href="https://lsacommand.com/book/" data-cta="article-cta-book">Book a 30-min call with our team</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul>
   <li><a href="/blog/lsa-missed-call-charges/">When Google charges for missed LSA calls</a></li>
   <li><a href="/blog/how-to-rank-higher-google-local-services-ads/">How to rank higher in Google Local Services Ads</a></li>
   <li><a href="/blog/google-local-services-ads-cost/">Google Local Services Ads cost</a></li>
@@ -689,7 +689,7 @@
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
