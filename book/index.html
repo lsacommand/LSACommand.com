@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0]
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+    <script>
+        // ===== BOOKING CALENDAR (LeadConnector / GoHighLevel) =====================================
+        // LSA_BOOKING_EMBED_URL: the calendar's widget URL. Swap this ONE line to change calendars.
+        // LSA_CALENDAR_READY: keep false until scripts/check_booking_calendar.py passes, i.e. the
+        // calendar shows LSA Command branding only (no personal name, photo, other brand, or other
+        // phone) and its confirmation redirect is https://lsacommand.com/booked/. While false, this
+        // page shows the call/text fallback instead of the calendar.
+        window.LSA_BOOKING_EMBED_URL = 'https://api.leadconnectorhq.com/widget/booking/P4Z0PkG4Jn47zv6Iq3lE';
+        window.LSA_CALENDAR_READY = false;
+        // ===========================================================================================
+        (function () {
+            var UTM = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+            var SENT_KEY = 'lsa-booking-sent';
+            function readJSON(k) { try { return JSON.parse(window.localStorage.getItem(k) || 'null'); } catch (_) { return null; } }
+
+            // 1. Attribution for this booking: URL params first, then what lsa-tracking.js saved.
+            var here = new URLSearchParams(window.location.search);
+            var first = readJSON('lsa-first-touch-v2');
+            if (first && first.ts && Date.now() - first.ts > 90 * 864e5) first = null;
+            var origin = readJSON('lsa-book-origin');
+            if (origin && origin.ts && Date.now() - origin.ts > 864e5) origin = null;
+            var attr = {
+                post_slug: here.get('post_slug') || (origin && origin.post_slug) || (document.referrer ? 'unknown_referrer' : 'direct'),
+                cta_position: here.get('cta_position') || (origin && origin.cta_position) || 'direct'
+            };
+            UTM.forEach(function (k) { var v = here.get(k) || (first && first[k]); if (v) attr[k] = String(v).slice(0, 100); });
+            window.lsaBookingAttribution = attr;
+
+            // 2. Put them on this page's URL: LeadConnector's form_embed.js hands the parent page's
+            //    query params to the calendar (fetch-query-params), which fills UTM attribution and
+            //    hidden fields (post_slug, cta_position) on the booking record. Also set on the iframe src.
+            try {
+                var u = new URL(window.location.href);
+                Object.keys(attr).forEach(function (k) { u.searchParams.set(k, attr[k]); });
+                window.history.replaceState(null, '', u.pathname + '?' + u.searchParams.toString() + u.hash);
+            } catch (_) {}
+    
+[... 8600 bytes from the middle of line 3 omitted (the full text is 3 lines, 14600 bytes). Full text: /cursor/stores/user/grok-bot/agents/55828cc8-e532-488f-b0c0-876ec0a32d35/assets/d71cd5bf0b6276330e59ee36b63eb2a081ca3e342295cf1bf9e3732d2fc52059.txt. To see more, run grep -o with a pattern or cut -b on that file with Shell; fetch only the part you need, in the same step as your next tool call if you can. ...]
+ust saw with what Google gives you today.</p>
+      <p><strong>$200 per month per client. Built for agencies only.</strong> You leave with what the audit found on that account, whether or not you go ahead.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+</body>
+</html>
