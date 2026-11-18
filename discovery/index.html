@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -19,7 +19,7 @@
         // Short link (YouTube descriptions, emails): count the visit in GA4, then go to the calendar.
         // UTMs on this link are passed through so the booking record keeps the campaign.
         (function () {
-            var target = new URL('https://ryan.diyai.ai/30-min-discovery-call');
+            var target = new URL('https://lsacommand.com/book/');
             var here = new URLSearchParams(window.location.search);
             ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
                 if (here.get(k)) target.searchParams.set(k, here.get(k));
@@ -35,11 +35,11 @@
     </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opening Ryan's calendar | LSA Command</title>
+  <title>Opening the booking calendar | LSA Command</title>
   <meta name="description" content="Opening the calendar to book a 30-minute LSA Command walkthrough.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <noscript><meta http-equiv="refresh" content="0;url=https://ryan.diyai.ai/30-min-discovery-call"></noscript>
+  <noscript><meta http-equiv="refresh" content="0;url=https://lsacommand.com/book/"></noscript>
   <style>
     body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,system-ui,sans-serif;background:#f6fbff;color:#0b1f33;text-align:center;padding:16px}
     a{color:#007b8d;font-weight:700}
@@ -47,8 +47,8 @@
 </head>
 <body>
   <main>
-    <p>Opening Ryan's calendar…</p>
-    <p><a href="https://ryan.diyai.ai/30-min-discovery-call">Continue to book a 30-minute walkthrough</a></p>
+    <p>Opening the booking calendar…</p>
+    <p><a href="https://lsacommand.com/book/">Continue to book a 30-minute walkthrough</a></p>
   </main>
 </body>
 </html>
