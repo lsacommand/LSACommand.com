@@ -10,8 +10,7 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -77,8 +76,8 @@
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
       },
-      "datePublished": "2026-11-17",
-      "dateModified": "2026-11-17",
+      "datePublished": "2026-11-09",
+      "dateModified": "2026-11-09",
       "author": {
         "@type": "Organization",
         "name": "LSA Command Team",
@@ -295,8 +294,11 @@
         <p class="eyebrow">Local Services Ads responsiveness</p>
         <h1>Google LSA Phone Response Score: Does It Exist, and What Does Google Measure?</h1>
         <p class="lede">Google has no published phone score for Local Services Ads, but it does describe how missed calls and response time factor into your ads. Here is Google's exact wording, what it means for your clients' accounts, and a 36-second film about a lead that got an answer.</p>
-        <p class="article-meta">By the LSA Command Team <span aria-hidden="true">·</span> <time datetime="2026-11-17">November 17, 2026</time> <span aria-hidden="true">·</span> 12 min read</p>
+        <p class="article-meta">By the LSA Command Team <span aria-hidden="true">·</span> <time datetime="2026-11-09">November 9, 2026</time> <span aria-hidden="true">·</span> 12 min read</p>
       </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=google-lsa-phone-response-score&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
       <div class="article-layout">
         <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li>
 <li><a href="#phone-response-score">Is there a Google LSA phone response score?</a></li>
@@ -487,7 +489,7 @@
 
           <p>Since Google gives you no phone score to show a client, a documented lead list is the closest thing you have to proof of responsiveness. It shows which calls were answered, what was said, and what happened next. LSA Command also sends a weekly lead summary and fills out Google's lead survey for every lead, so the record stays current without anyone on your team keeping it by hand.</p>
 
-          <p><strong>Run an agency? Get an LSA account audit of one client account.</strong> <a href="https://lsacommand.com/book/" data-cta="article-mid-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
+          <p><strong>Run an agency? Get an LSA account audit of one client account.</strong> <a href="https://lsacommand.com/book/" data-cta-position="mid" data-cta="article-mid-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
 
           <h2 id="booked-in-google">Booked calls are marked inside Google's LSA platform</h2>
 
@@ -542,7 +544,7 @@
             <!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
             <p class="offer"><strong>Black Friday offer:</strong> Get 5 client locations live on LSA Command by December 15, 2026, and the first month is free on every location you add before December 15. Ends December 15, 2026.</p>
             <!-- BLACK-FRIDAY-OFFER END -->
-            <p><a class="button" href="https://lsacommand.com/book/" data-cta="article-footer-book">Book a 30-min call with our team</a> <a class="button button-secondary" href="tel:+19897124370" data-cta="article-footer-call">Call or text 989-712-4370</a></p>
+            <p><a class="button" href="https://lsacommand.com/book/" data-cta-position="end" data-cta="article-footer-book">Book a 30-min call with our team</a> <a class="button button-secondary" href="tel:+19897124370" data-cta="article-footer-call">Call or text 989-712-4370</a></p>
           </div>
           <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
 <ul>
@@ -558,6 +560,13 @@
         </div>
       </div>
     </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> 
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<span class="book-sticky-offer">Black Friday: get 5 client locations live by December 15, 2026, and the first month is free on every location you add before then.</span><span class="book-sticky-offer-short">Black Friday: 5 client locations live by December 15, 2026. First month free on each one added before then.</span>
+<!-- BLACK-FRIDAY-OFFER END -->
+<span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=google-lsa-phone-response-score&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
   </main>
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>

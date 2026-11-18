@@ -10,8 +10,7 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -78,8 +77,8 @@
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
       },
-      "datePublished": "2026-11-17",
-      "dateModified": "2026-11-17",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
       "author": {
         "@type": "Organization",
         "name": "LSA Command Team",
@@ -289,8 +288,11 @@
         <p class="eyebrow">Google LSA guide</p>
         <h1>Google LSA Dashboard: Where to Find It, and What Agencies Add on Top</h1>
         <p class="lede">The Google LSA dashboard is the lead inbox inside your Local Services Ads account. Here is where to find it, what it does, and the agency layer that answers the leads in it, under your logo.</p>
-        <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-11-17">November 17, 2026</time> <span aria-hidden="true">·</span> 8 min read</p>
+        <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-11-05">November 5, 2026</time> <span aria-hidden="true">·</span> 8 min read</p>
       </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=google-lsa-dashboard&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
       <div class="article-layout">
         <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#google-lead-inbox">Where the Google LSA dashboard is, and what it does</a></li>
 <li><a href="#watch">Watch the video</a></li>
@@ -433,7 +435,7 @@
 
           <p>LSA Command also writes notes onto the lead inside Google LSA, so the record in Google's lead inbox carries the same context. The screenshot above shows that on a real message lead, with identifiers hidden. LSA Command also fills out the Google lead survey for every lead, blocks robocalls, and sends a weekly lead summary. Those are not in the 58-second video. See <a href="/what-you-get/">what you get</a>.</p>
 
-          <p><strong>Want to see this on one of your own client accounts?</strong> <a href="https://lsacommand.com/book/" data-cta="article-mid-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
+          <p><strong>Want to see this on one of your own client accounts?</strong> <a href="https://lsacommand.com/book/" data-cta-position="mid" data-cta="article-mid-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
 
           <h3 id="white-label">7. White-label: your agency's logo on the dashboard (0:38)</h3>
 
@@ -518,7 +520,7 @@
           <div class="cta-box" id="book">
             <h2 id="price-and-next-step">See the walkthrough on one of your own client accounts</h2>
             <p>Every Google LSA call answered within 30 seconds, message leads answered instantly by AI, and your agency&#x27;s logo on the dashboard, the emails, and the texts, for $200 per month per client with voice AI included and no setup fee. Across three pool contractors, leads answered in under 30 seconds rose from 28% to 100% (<a href="/case-studies/">case studies</a>). Built for agencies only. The call includes an LSA account audit of one client account.</p>
-            <p><a class="button" href="https://lsacommand.com/book/" data-cta="article-footer-book">Book a 30-min call with our team</a> <a class="button button-secondary" href="tel:+19897124370" data-cta="article-footer-call">Call or text 989-712-4370</a></p>
+            <p><a class="button" href="https://lsacommand.com/book/" data-cta-position="end" data-cta="article-footer-book">Book a 30-min call with our team</a> <a class="button button-secondary" href="tel:+19897124370" data-cta="article-footer-call">Call or text 989-712-4370</a></p>
           </div>
           <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
 <ul>
@@ -532,6 +534,13 @@
         </div>
       </div>
     </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> 
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<span class="book-sticky-offer">Black Friday: get 5 client locations live by December 15, 2026, and the first month is free on every location you add before then.</span><span class="book-sticky-offer-short">Black Friday: 5 client locations live by December 15, 2026. First month free on each one added before then.</span>
+<!-- BLACK-FRIDAY-OFFER END -->
+<span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=google-lsa-dashboard&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
   </main>
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>

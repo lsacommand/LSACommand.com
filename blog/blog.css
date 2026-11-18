@@ -44,3 +44,27 @@ h1,h2,h3,.guide-card h2{font-family:Outfit,Inter,sans-serif}.blog-hero{backgroun
 .wyg-full .wyg-fig-tall{max-width:620px}
 @media(max-width:800px){.wyg-panel{padding:18px}.wyg-media,.wyg-media.wyg-media-phone{grid-template-columns:minmax(0,1fr)}.wyg-fig-phone{max-width:300px;margin-inline:auto}.wyg-tabs button{font-size:.84rem;padding:9px 14px}}
 .author-box{margin-top:40px;padding:22px 24px;border:1px solid var(--line);border-radius:16px;background:#fbfeff}.author-box .eyebrow{margin:0 0 8px}.author-box p{margin:0}.author-box p+p{margin-top:0}
+/* LSA-BOOK-CTA CSS START (scripts/booking_cta.py blocks) */
+.book-cta{margin:28px 0;padding:18px 22px;border-radius:16px;background:#f2fafc;border:1px solid #bfebf1;border-left:5px solid #04bdce;font-size:1rem;line-height:1.6}
+.book-cta p{margin:0 0 10px}.book-cta p:last-child{margin-bottom:0}
+.book-cta-top{margin:0 0 36px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
+.book-cta-top .book-cta-copy{flex:1 1 420px}.book-cta-top .book-cta-copy p{margin:0 0 6px}.book-cta-eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:800;color:var(--teal)}
+.book-cta-top .button{white-space:nowrap}
+.book-cta-title{font-weight:800;font-size:1.15rem;color:var(--ink)}
+.book-cta-mid .button{margin-right:8px}
+.book-cta-alt{color:var(--muted);font-size:.92rem}
+.book-cta-proof{font-size:.95rem;color:#183e52}
+.book-cta-offer{padding:10px 14px;border-radius:12px;background:#fff7e0;border:1px solid #f2d68a}
+.book-cta-end .button{margin:8px 10px 0 0}
+.book-sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;justify-content:center;gap:10px 18px;padding:10px 52px 10px 16px;background:rgba(5,37,54,.97);color:#fff;box-shadow:0 -6px 24px rgba(5,37,54,.18);font-size:.95rem}
+.book-sticky[hidden]{display:none}
+.book-sticky-text{margin:0;line-height:1.4}
+.book-sticky-offer,.book-sticky-offer-short{color:#ffe7a3}.book-sticky-offer-short{display:none}.book-sticky-offer~.book-sticky-extra{display:none}
+.book-sticky .button{padding:9px 18px;white-space:nowrap}
+.book-sticky-close{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font-size:1.3rem;line-height:1;cursor:pointer}
+.book-sticky-close:focus-visible{outline:3px solid #04d9eb;outline-offset:2px}
+body.has-book-sticky{padding-bottom:72px}
+@media(max-width:600px){.book-sticky-extra,.book-sticky-offer,.book-sticky-offer-short{display:none!important}}
+@media(max-width:760px){.book-sticky{flex-wrap:wrap;justify-content:flex-start;gap:6px;padding:8px 52px 10px 14px;font-size:.84rem}.book-sticky-text{flex:1 1 100%}.book-sticky-text strong{font-weight:650}.book-sticky .button{flex:1 1 auto;padding:9px 14px}.book-sticky-offer{display:none!important}.book-sticky-offer-short{display:block;font-size:.78rem}.book-sticky-close{top:12px;transform:none}.book-cta-top{display:block}.book-cta-top .book-cta-copy{margin-bottom:10px}body.has-book-sticky{padding-bottom:110px}}
+@media print{.book-sticky{display:none!important}}
+/* LSA-BOOK-CTA CSS END */
