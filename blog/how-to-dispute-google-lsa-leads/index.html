@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -95,17 +95,9 @@
       "datePublished": "2026-11-17",
       "dateModified": "2026-11-17",
       "author": {
-        "@type": "Person",
-        "name": "Ryan Steinolfson",
-        "jobTitle": "Founder",
-        "url": "https://www.linkedin.com/in/ryansteinolfson",
-        "sameAs": ["https://www.linkedin.com/in/ryansteinolfson"],
-        "worksFor": {
-          "@type": "Organization",
-          "@id": "https://lsacommand.com/#organization",
-          "name": "LSA Command",
-          "url": "https://lsacommand.com/"
-        }
+        "@type": "Organization",
+        "name": "LSA Command Team",
+        "url": "https://lsacommand.com/"
       },
       "keywords": "how to dispute google lsa leads, google lsa lead disputes, lsa lead credits, rate this lead survey, local services ads charge status, lsa command",
       "image": [
@@ -379,7 +371,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book an LSA audit</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -389,7 +381,7 @@
         <p class="eyebrow">How-to guide</p>
         <h1>How to Dispute Google LSA Leads: The Steps That Still Work</h1>
         <p class="lede">Google says manual lead disputes are no longer supported. Here is what "disputing" a lead means now, and the exact steps to follow for one account or a whole client book.</p>
-        <p class="article-meta"><span>By <a href="https://www.linkedin.com/in/ryansteinolfson" rel="author">Ryan Steinolfson</a>, Founder of LSA Command</span> <span aria-hidden="true">·</span> <time datetime="2026-11-17">November 17, 2026</time> <span aria-hidden="true">·</span> 8 min read</p>
+        <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-11-17">November 17, 2026</time> <span aria-hidden="true">·</span> 8 min read</p>
       </header>
       <div class="article-layout">
         <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li>
@@ -496,7 +488,7 @@
             <li id="step-6"><strong>Fix the setting that let the lead in.</strong> If the lead was the wrong job or the wrong area, no credit is coming. Change the setting so that lead type stops arriving. The next section covers how.</li>
           </ol>
 
-          <p>For help working through a single lead, try the free <a href="/tools/lsa-lead-dispute-helper/">LSA lead dispute helper</a>. Want these steps handled on every lead for your clients? <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-steps-book">Book a 30-min call with Ryan</a>, or call or text <a href="tel:+19897124370" data-cta="article-steps-call">989-712-4370</a>.</p>
+          <p>For help working through a single lead, try the free <a href="/tools/lsa-lead-dispute-helper/">LSA lead dispute helper</a>. Want these steps handled on every lead for your clients? <a href="https://lsacommand.com/book/" data-cta="article-steps-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-steps-call">989-712-4370</a>.</p>
 
           <h2 id="fix-settings">Fix the settings that create bad leads</h2>
 
@@ -542,7 +534,7 @@
 
           <p>If you want this done on autopilot, that page is the next step. For the agency process itself, see <a href="/blog/lsa-lead-disputes-agencies/">running lead disputes and credit reporting across client accounts</a>.</p>
 
-          <p><strong>Want to see this on one of your own client accounts?</strong> <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-mid-book">Book a 30-min call with Ryan</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
+          <p><strong>Want to see this on one of your own client accounts?</strong> <a href="https://lsacommand.com/book/" data-cta="article-mid-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
 
           <h2 id="faq">Frequently asked questions</h2>
           <dl class="faq">
@@ -557,11 +549,11 @@
             <dt>Can my agency do this for every client?</dt>
             <dd>Yes. LSA Command reviews every call and message, fills out Google's lead survey on every lead, flags credit-eligible leads, and tracks credits in three columns: our assessment, feedback submitted, and credit recorded by Google. A credit only counts once Google records it. It is $200 per month per client with every feature included.</dd>
           </dl>
-          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p><strong>Ryan Steinolfson</strong> is the founder of LSA Command. LSA Command helps marketing agencies get 100% of their clients’ Google Local Services Ads calls answered within 30 seconds. <a href="https://www.linkedin.com/in/ryansteinolfson" rel="author noopener" target="_blank">Ryan on LinkedIn</a></p></aside>
+          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The <strong>LSA Command Team</strong> builds LSA Command, which helps marketing agencies get 100% of their clients’ Google Local Services Ads calls answered within 30 seconds, with lead notes and notifications on every lead.</p></aside>
           <div class="cta-box" id="book">
             <h2 id="price-and-next-step">Put lead feedback on autopilot</h2>
-            <p>Every lead rated back to Google, credit-eligible leads flagged, and 100% of calls answered within 30 seconds, for $200 per month per client. Voice AI and every feature are included, there is no setup fee, and setup usually takes one call. Google's lead charges are separate and are billed by Google to the advertiser. The call includes an LSA account audit of one client account. <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a>, or call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p>
-            <p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-footer-book">Book a 30-min call with Ryan</a> <a class="button button-secondary" href="tel:+19897124370" data-cta="article-footer-call">Call or text 989-712-4370</a></p>
+            <p>Every lead rated back to Google, credit-eligible leads flagged, and 100% of calls answered within 30 seconds, for $200 per month per client. Voice AI and every feature are included, there is no setup fee, and setup usually takes one call. Google's lead charges are separate and are billed by Google to the advertiser. The call includes an LSA account audit of one client account. <a href="https://lsacommand.com/book/" data-cta="article-cta-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p>
+            <p><a class="button" href="https://lsacommand.com/book/" data-cta="article-footer-book">Book a 30-min call with our team</a> <a class="button button-secondary" href="tel:+19897124370" data-cta="article-footer-call">Call or text 989-712-4370</a></p>
           </div>
           <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
 <ul>
@@ -579,7 +571,7 @@
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
