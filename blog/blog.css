@@ -44,3 +44,13 @@ h1,h2,h3,.guide-card h2{font-family:Outfit,Inter,sans-serif}.blog-hero{backgroun
 .wyg-full .wyg-fig-tall{max-width:620px}
 @media(max-width:800px){.wyg-panel{padding:18px}.wyg-media,.wyg-media.wyg-media-phone{grid-template-columns:minmax(0,1fr)}.wyg-fig-phone{max-width:300px;margin-inline:auto}.wyg-tabs button{font-size:.84rem;padding:9px 14px}}
 .author-box{margin-top:40px;padding:22px 24px;border:1px solid var(--line);border-radius:16px;background:#fbfeff}.author-box .eyebrow{margin:0 0 8px}.author-box p{margin:0}.author-box p+p{margin-top:0}
+/* Author byline, author box and team page (LSA Command Team) */
+.author-box{background:#edf9fa;border:1px solid var(--line);border-left:4px solid #04bdce;border-radius:0 16px 16px 0;padding:22px 24px;margin:40px 0 0}
+.author-box .eyebrow{margin:0 0 6px}.author-box p{margin:0;font-size:.98rem;line-height:1.6}.author-box p+p{margin-top:6px}
+.author-hero{padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:40px}
+.author-hero .lede{font-size:1.16rem;color:#183e52;max-width:760px;margin:18px 0 0}
+.author-page{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:36px 42px;font-size:1.0625rem;box-shadow:0 12px 42px rgba(7,36,58,.035)}
+.author-page section+section{margin-top:8px}
+.author-why{background:#f4fbfc;border:1px solid var(--line);border-left:4px solid #04bdce;border-radius:0 16px 16px 0;padding:8px 26px 14px;margin-bottom:24px}
+.author-posts{list-style:none;padding-left:0!important}.author-posts li{margin:0 0 12px}.author-posts time{display:block;color:var(--muted);font-size:.8125rem}
+@media (max-width:720px){.author-page{padding:26px 22px}}
