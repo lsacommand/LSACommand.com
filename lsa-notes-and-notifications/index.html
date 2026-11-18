@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -167,7 +167,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="notes-header">Book an LSA audit</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="notes-header">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -178,7 +178,7 @@ fpr("click");
         <h1>Lead notes on every Google LSA lead, added to Performance Max</h1>
         <p class="lede">LSA Command writes notes on every lead and adds them to Performance Max. Every call and message lead on every client account also gets a Google LSA rating and an AI performance score, and a text and an email go to the client, your agency, or both. High-value leads identified, so the best ones get called back first.</p>
         <div class="hero-cta">
-          <a class="button button-lg" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="notes-hero">Book a 30-minute walkthrough</a>
+          <a class="button button-lg" href="https://lsacommand.com/book/" data-cta="notes-hero">Book a 30-minute walkthrough</a>
           <p class="cta-note">Your walkthrough includes an LSA account audit: bring one client's Google LSA account and we pull its response rate, lead quality and lead volume live. $200 per month per client. <a href="/pricing/">See pricing</a>.</p>
         </div>
       </header>
@@ -206,7 +206,7 @@ fpr("click");
   </div>
   <section class="wyg-panel" id="wyg-panel-pmax" aria-labelledby="wyg-title-pmax">
     <div class="wyg-text"><h3 id="wyg-title-pmax">Notes on every lead, added to Performance Max</h3><p>LSA Command writes notes on every lead and adds them to Performance Max. Each lead gets a summary of the call or message, a Google LSA rating and scores for how the AI and the intake team handled it. High-value leads identified. Adding notes to Performance Max applies to accounts on Google's Performance Max version of LSA.</p></div>
-    <!-- PLACEHOLDER: Ryan to explain how notes are added in PMax and supply a mockup -->
+    <!-- PLACEHOLDER: team to explain how notes are added in PMax and supply a mockup -->
     <div class="wyg-media wyg-media-one">
       <figure class="wyg-fig"><img src="/images/sample-lead-notes-detail.svg" width="1400" height="967" loading="lazy" decoding="async" alt="Lead notes for one call in the agency's dashboard: a High-value lead identified banner, call notes, a Google LSA rating, an intake performance score and an AI performance score (sample data)"><figcaption>Lead notes for one call, under the agency's logo. Sample data.</figcaption></figure>
     </div>
@@ -335,7 +335,7 @@ fpr("click");
 
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>What is in the lead notes?</summary><p>Every lead gets an AI summary, the full transcript and the call recording, plus a Google LSA rating and an AI performance score.</p></details><details><summary>Are the notes added to Performance Max?</summary><p>Yes. LSA Command writes notes on every lead and adds them to Performance Max, for accounts on Google's Performance Max version of LSA.</p></details><details><summary>Who receives the notifications?</summary><p>Text and email notifications go to the client, the agency, or both. You decide who is on the list for each client.</p></details><details><summary>What does High-value leads identified mean?</summary><p>It is the label LSA Command puts on the best leads. It appears in the lead notes, in the lead list and in the dashboard summary, so the client's team knows which leads to call back first.</p></details><details><summary>Are notifications sent for message leads as well as calls?</summary><p>Yes. Calls and message leads both get lead notes and a text and email notification.</p></details><details><summary>Do robocalls trigger a notification?</summary><p>No. Calls flagged as robocalls are logged in the dashboard and do not send a notification.</p></details><details><summary>Does this replace Google&#x27;s own lead email?</summary><p>No. Google still sends its own email for a phone lead. LSA Command adds a text, a fuller email and lead notes, so the client does not have to log in to find out what the caller wanted.</p></details><details><summary>Can notifications carry our agency&#x27;s brand?</summary><p>Yes. LSA Command has white-label options, including sending email from a mailbox on your agency's domain. The <a href="/setup/">setup guide</a> shows how.</p></details><details><summary>How much does it cost?</summary><p>Notes and notifications are included in LSA Command at $200 per month per client. <a href="/pricing/">See pricing</a>.</p></details></div>
-<section class="cta-box"><h2>Get an LSA account audit on your walkthrough.</h2><p>Book a 30-minute walkthrough with Ryan and bring one client's Google LSA account. We pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed. Rather talk now? Call or text <a href="tel:+19897124370" data-cta="notes-footer-call">989-712-4370</a>.</p><p><strong>LSA Command is sold only to marketing agencies</strong>, at $200 per month per client. <a href="/pricing/">See pricing</a>.</p><a class="button button-lg" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="notes-footer">Book a 30-minute walkthrough</a></section>
+<section class="cta-box"><h2>Get an LSA account audit on your walkthrough.</h2><p>Book a 30-minute walkthrough with our team and bring one client's Google LSA account. We pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed. Rather talk now? Call or text <a href="tel:+19897124370" data-cta="notes-footer-call">989-712-4370</a>.</p><p><strong>LSA Command is sold only to marketing agencies</strong>, at $200 per month per client. <a href="/pricing/">See pricing</a>.</p><a class="button button-lg" href="https://lsacommand.com/book/" data-cta="notes-footer">Book a 30-minute walkthrough</a></section>
 <aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-lead-disputes/">Lead disputes and credits</a></li><li><a href="/agencies/">LSA Command for agencies</a></li><li><a href="/what-you-get/">See exactly what you get</a></li><li><a href="/blog/lsa-lead-notifications/">Guide: Google LSA lead notifications</a></li></ul></aside>
 <script>
 (function () {
@@ -386,7 +386,7 @@ fpr("click");
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
