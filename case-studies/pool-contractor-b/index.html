@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -128,7 +128,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="header">Book an LSA audit</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="header">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -138,7 +138,7 @@
         <p class="eyebrow">Case study &middot; Pool contractor &middot; Nov 2025 to Apr 2026</p>
         <h1>Pool Contractor B: 4x the LSA leads with a 100% under-30-second response rate</h1>
         <p class="lede">Pool Contractor B answered fewer than half of its LSA leads inside 30 seconds at the end of 2025. By April 2026 it answered all of them, and monthly lead volume was four times its December level.</p>
-        <div class="hero-actions"><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="case-hero">Book a 30-minute walkthrough</a><span class="note">See the same report for your clients.</span></div>
+        <div class="hero-actions"><a class="button" href="https://lsacommand.com/book/" data-cta="case-hero">Book a 30-minute walkthrough</a><span class="note">See the same report for your clients.</span></div>
       </header>
       <div class="article-layout">
         <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#results">The results</a></li><li><a href="#month-by-month">Month by month</a></li><li><a href="#what-changed">What changed</a></li><li><a href="#for-agencies">What agencies should take from it</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
@@ -191,9 +191,9 @@
           <p>The three numbers in this case study are the same ones LSA Command tracks for every client an agency runs on it. <a href="/case-studies/#agency-playbook">See the agency playbook</a>.</p>
 
           <h2 id="faq">Frequently asked questions</h2>
-          <div class="faq"><details><summary>What changed for Pool Contractor B?</summary><p>Response speed. In December 2025, 40% of its LSA leads were answered in under 30 seconds. By April 2026 it was 100%, and lead volume and lead quality rose over the same months.</p></details><details><summary>How much of the lead growth is seasonal?</summary><p>Some of it. December is a slow month for pool companies. Response rate and lead quality don't rise just because spring arrives, which is why we report all three numbers together.</p></details><details><summary>Can an agency get this report for its own clients?</summary><p>Yes. Agencies running LSA Command get the same monthly numbers for every client. <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="case-faq">Book a 30-minute walkthrough</a> and bring one client account.</p></details></div>
+          <div class="faq"><details><summary>What changed for Pool Contractor B?</summary><p>Response speed. In December 2025, 40% of its LSA leads were answered in under 30 seconds. By April 2026 it was 100%, and lead volume and lead quality rose over the same months.</p></details><details><summary>How much of the lead growth is seasonal?</summary><p>Some of it. December is a slow month for pool companies. Response rate and lead quality don't rise just because spring arrives, which is why we report all three numbers together.</p></details><details><summary>Can an agency get this report for its own clients?</summary><p>Yes. Agencies running LSA Command get the same monthly numbers for every client. <a href="https://lsacommand.com/book/" data-cta="case-faq">Book a 30-minute walkthrough</a> and bring one client account.</p></details></div>
 
-          <section class="cta-box"><h2>Get this report for every client.</h2><p>Book a 30-minute agency walkthrough with Ryan. Bring one client's LSA account and we'll pull its response rate, lead quality, and lead volume live.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="case-footer">Book a 30-minute walkthrough</a></section>
+          <section class="cta-box"><h2>Get this report for every client.</h2><p>Book a 30-minute agency walkthrough with our team. Bring one client's LSA account and we'll pull its response rate, lead quality, and lead volume live.</p><a class="button" href="https://lsacommand.com/book/" data-cta="case-footer">Book a 30-minute walkthrough</a></section>
           <aside class="related" aria-label="Related case studies"><p class="eyebrow">More case studies</p><ul><li><a href="/case-studies/pool-contractor-a/">Pool Contractor A case study</a></li><li><a href="/case-studies/pool-contractor-c/">Pool Contractor C case study</a></li><li><a href="/case-studies/">All case studies and the agency playbook</a></li></ul></aside>
         </div>
       </div>
@@ -203,7 +203,7 @@
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
