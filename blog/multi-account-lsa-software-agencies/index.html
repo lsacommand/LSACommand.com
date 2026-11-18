@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -54,7 +54,7 @@
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "en",
-      "author": {"@type": "Person", "name": "Ryan Steinolfson", "jobTitle": "Founder", "url": "https://www.linkedin.com/in/ryansteinolfson", "sameAs": ["https://www.linkedin.com/in/ryansteinolfson"], "worksFor": {"@type": "Organization", "@id": "https://lsacommand.com/#organization", "name": "LSA Command", "url": "https://lsacommand.com/"}},
+      "author": {"@type": "Organization", "name": "LSA Command Team", "url": "https://lsacommand.com/"},
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
       }
@@ -96,7 +96,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book an LSA audit</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -105,7 +105,7 @@ fpr("click");
       <header class="article-header">
         <p class="eyebrow">Agency buying guide</p>
         <h1 id="how-to-choose-lsa-software-for-multiple-client-accounts">How to Choose LSA Software for Multiple Client Accounts</h1>
-        <p class="article-meta"><span>By <a href="https://www.linkedin.com/in/ryansteinolfson" rel="author">Ryan Steinolfson</a>, Founder of LSA Command</span> <span aria-hidden="true">·</span> <time datetime="2026-10-26">October 26, 2026</time> <span aria-hidden="true">·</span> 5 min read</p>
+        <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-10-26">October 26, 2026</time> <span aria-hidden="true">·</span> 5 min read</p>
       </header>
       <div class="article-layout">
         <aside class="contents" aria-label="In this article"><p class="contents-label">In this article</p><nav aria-label="Table of contents"><ol><li><a href="#establish-a-clear-status-for-every-client-account">Establish a clear status for every client account</a></li>
@@ -154,10 +154,10 @@ fpr("click");
 <p>Keep three columns in your evaluation notes: available and demonstrated, available with conditions, and not available today. Put proposed features in the last column until they can be verified.</p>
 <p>Approve expansion when your acceptance criteria are met and the ongoing responsibilities are clear. If a required workflow remains unresolved, narrow the rollout rather than assuming the issue will disappear at scale.</p>
 <h2 id="evaluate-lsa-command-against-your-agency-workflow">Evaluate LSA Command against your agency workflow</h2>
-<p>Ready to assess your portfolio? <a href="https://ryan.diyai.ai/30-min-discovery-call">Book an LSA Command agency walkthrough</a>. Bring your client count, CRM, and the account structure for one representative client. Work through the handoff that is hardest to manage today, and confirm what the current setup process would require. Do not share passwords or unnecessary customer details.</p>
+<p>Ready to assess your portfolio? <a href="https://lsacommand.com/book/">Book an LSA Command agency walkthrough</a>. Bring your client count, CRM, and the account structure for one representative client. Work through the handoff that is hardest to manage today, and confirm what the current setup process would require. Do not share passwords or unnecessary customer details.</p>
 <p>Agree on who handles setup questions and ongoing issues; the <a href="https://lsacommand.com/support.html">LSA Command support page</a> is the place to send both. Make the decision against your checklist, with the same evidence standard you would use for any tool entrusted with client work.</p>
 </div>
-          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p><strong>Ryan Steinolfson</strong> is the founder of LSA Command. LSA Command helps marketing agencies get 100% of their clients’ Google Local Services Ads calls answered within 30 seconds. <a href="https://www.linkedin.com/in/ryansteinolfson" rel="author noopener" target="_blank">Ryan on LinkedIn</a></p></aside><aside class="related" aria-label="Related guide"><p class="eyebrow">Keep evaluating</p><a href="/blog/lsa-reporting-software-agencies/">How to Choose LSA Reporting Software for Agencies <span aria-hidden="true">→</span></a></aside>
+          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The <strong>LSA Command Team</strong> builds LSA Command, which helps marketing agencies get 100% of their clients’ Google Local Services Ads calls answered within 30 seconds, with lead notes and notifications on every lead.</p></aside><aside class="related" aria-label="Related guide"><p class="eyebrow">Keep evaluating</p><a href="/blog/lsa-reporting-software-agencies/">How to Choose LSA Reporting Software for Agencies <span aria-hidden="true">→</span></a></aside>
           <p class="back-link"><a href="/blog/">← All agency guides</a></p>
         </div>
       </div>
@@ -166,7 +166,7 @@ fpr("click");
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
