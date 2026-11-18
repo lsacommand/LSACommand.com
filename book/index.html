@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0],
+            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+    <script>
+        // ===== BOOKING CALENDAR: swap this ONE line to change the calendar on /book/ =====
+        // For a Google Calendar appointment schedule, paste its embed URL, e.g.
+        // 'https://calendar.google.com/calendar/appointments/schedules/XXXXXXXX?gv=true'
+        window.LSA_BOOKING_EMBED_URL = 'https://api.leadconnectorhq.com/widget/booking/P4Z0PkG4Jn47zv6Iq3lE';
+        // ===================================================================================
+        // book_meeting_click already fired on the CTA that brought the visitor here (lsa-tracking.js).
+        // This page passes UTMs (from this URL or the visit's first touch) to the calendar, and fires
+        // book_meeting once if the calendar frame reports a completed booking.
+        (function () {
+            var CAL = window.LSA_BOOKING_EMBED_URL;
+            var UTM = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+            function frameSrc() {
+                var url = new URL(CAL), here = new URLSearchParams(window.location.search), first = null;
+                try { first = JSON.parse(window.sessionStorage.getItem('lsa-first-touch') || 'null'); } catch (_) {}
+                UTM.forEach(function (k) { var v = here.get(k) || (first && first[k]); if (v) url.searchParams.set(k, String(v).slice(0, 100)); });
+                return url.toString();
+            }
+            function load() {
+                var frame = document.getElementById('lsa-booking-frame');
+                if (!frame || frame.getAttribute('src')) return;
+                frame.setAttribute('src', frameSrc());
+                // LeadConnector widgets need their resize helper; Google booking pages do not.
+                if (/leadconnectorhq\.com|msgsndr\.com/.test(CAL)) {
+                    var helper = document.createElement('script');
+                    helper.src = 'https://link.msgsndr.com/js/form_embed.js';
+                    document.body.appendChild(helper);
+                }
+            }
+            window.addEventListener('message', function (event) {
+                if (!/(^|\.)(leadconnectorhq\.com|msgsndr\.com|calendar\.google\.com)$/.test((event.origin || '').replace(/^https?:\/\//, ''))) return;
+                var text = '';
+                try { text = typeof event.data === 'string' ? event.data : JSON.stringify(event.data); } catch (_) { return; }
+                if (!/booking|appointment/i.test(text) || !/complete|success|booked|confirm/i.test(text)) return;
+                var key = 'lsa-book-meeting-sent';
+                try { if (window.sessionStorage.getItem(key)) return; window.sessionStorage.setItem(key, '1'); } catch (_) {}
+                if (typeof window.gtag === 'function') window.gtag('event', 'book_meeting', { method: 'discovery_call', page_path: '/book/' });
+            });
+            // Load the calendar once the page is ready.
+            if (document.readyState === 'complete') setTimeout(load, 300);
+            else window.addEventListener('load', function () { setTimeout(load, 300); });
+            setTimeout(load, 2500);
+        })();
+    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSA Command Demo, 30 min | Book a walkthrough</title>
+  <meta name="description" content="Book a 30-minute walkthrough with the LSA Command team. Bring one Google Local Services Ads account and we'll audit it live.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://lsacommand.com/book/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>
+    .book{max-width:1000px;padding:48px 0 24px}
+    .book h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;margin:8px 0 14px}
+    .book-points{padding-left:1.2rem;margin:0 0 24px}
+    .book-points li{margin:0 0 8px}
+    .book-frame{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+    .book-frame iframe{width:100%;height:1150px;border:0;display:block}
+    @media (max-width:720px){.book-frame iframe{height:1500px}}
+    .book-alt{margin-top:18px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section class="book" id="book">
+      <p class="eyebrow">30-minute walkthrough</p>
+      <h1>Book a walkthrough with our team.</h1>
+      <p class="lede">Pick a time below. Bring one Google Local Services Ads account, yours or a client's, and we'll audit it live while you share your screen. No passwords change hands.</p>
+      <ul class="book-points">
+        <li>See 100% of calls answered within 30 seconds, on a real call flow.</li>
+        <li>See the lead notes, how leads are added to Performance Max, and the notifications your clients get.</li>
+        <li>$200/month per client. You leave knowing the setup you'd need, whether or not you go ahead.</li>
+      </ul>
+      <div class="book-frame">
+        <iframe id="lsa-booking-frame" title="LSA Command Demo, 30 min" loading="eager"></iframe>
+      </div>
+      <noscript><p>The booking calendar needs JavaScript. Call or text <a href="tel:+19897124370">989-712-4370</a> and we will set up a time.</p></noscript>
+      <p class="book-alt">Prefer to talk first? Call or text <a href="tel:+19897124370" data-cta="book-call">989-712-4370</a>.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+</body>
+</html>
