@@ -1,0 +1,16 @@
+[
+  {
+    "publish_at": "2026-11-30T11:30:00-05:00",
+    "from": "_scheduled/local-services-ads-lead-inbox",
+    "to": "blog/local-services-ads-lead-inbox",
+    "sitemap": "/blog/local-services-ads-lead-inbox/",
+    "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/local-services-ads-lead-inbox/\">Local Services Ads Lead Inbox: Booked Calls Filled In for You</a></h3><p>How booked calls get filled in on each Google LSA lead, with the video and a step by step flowchart.</p><p class=\"card-meta\"><time datetime=\"2026-11-30\">November 30, 2026</time> \u00b7 7 min read</p></article>"
+  },
+  {
+    "publish_at": "2026-12-03T11:30:00-05:00",
+    "from": "_scheduled/google-local-services-ads-for-lawyers-case-study",
+    "to": "blog/google-local-services-ads-for-lawyers-case-study",
+    "sitemap": "/blog/google-local-services-ads-for-lawyers-case-study/",
+    "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/google-local-services-ads-for-lawyers-case-study/\">Google Local Services Ads for Lawyers: Google's 300-Lead Case Study</a></h3><p>Google's case study on a law firm: 300 leads in one month, 30 cases per month, and what it means for answering every call.</p><p class=\"card-meta\"><time datetime=\"2026-12-03\">December 3, 2026</time> \u00b7 8 min read</p></article>"
+  }
+]
