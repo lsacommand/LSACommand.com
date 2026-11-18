@@ -10,18 +10,35 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
     <script>
-        // Booking confirmed: the calendar tool redirects here after a visitor books.
-        // Fire book_meeting once per browser session so a refresh does not double count.
+        // Booking confirmed. Two ways to land here:
+        //  1. /book/ saw the calendar's msgsndr-booking-complete message, fired booking_complete +
+        //     generate_lead, and sent the visitor here with tracked=1.
+        //  2. The calendar's own confirmation redirect (set to https://lsacommand.com/booked/ in
+        //     LeadConnector). That can load this page inside the calendar iframe, so break out first.
+        // Either way, booking_complete + generate_lead fire at most once per 30 minutes.
         (function () {
-            var key = 'lsa-book-meeting-sent';
-            try { if (window.sessionStorage.getItem(key)) return; window.sessionStorage.setItem(key, '1'); } catch (_) {}
-            gtag('event', 'book_meeting', { method: 'discovery_call' });
+            if (window.top !== window.self) { try { window.top.location.replace(window.location.href); return; } catch (_) {} }
+            var KEY = 'lsa-booking-sent';
+            var last = null;
+            try { last = JSON.parse(window.localStorage.getItem(KEY) || 'null'); } catch (_) {}
+            if (last && Date.now() - last < 30 * 60 * 1000) return;
+            try { window.localStorage.setItem(KEY, JSON.stringify(Date.now())); } catch (_) {}
+            var q = new URLSearchParams(window.location.search), origin = null, first = null;
+            try { origin = JSON.parse(window.localStorage.getItem('lsa-book-origin') || 'null'); first = JSON.parse(window.localStorage.getItem('lsa-first-touch-v2') || 'null'); } catch (_) {}
+            var params = {
+                method: 'walkthrough_booking',
+                booking_source: 'booked_page',
+                post_slug: q.get('post_slug') || (origin && origin.post_slug) || 'unknown',
+                cta_position: q.get('cta_position') || (origin && origin.cta_position) || 'unknown'
+            };
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) { var v = q.get(k) || (first && first[k]); if (v) params[k] = String(v).slice(0, 100); });
+            gtag('event', 'booking_complete', params);
+            gtag('event', 'generate_lead', params);
         })();
     </script>
   <meta charset="UTF-8">
