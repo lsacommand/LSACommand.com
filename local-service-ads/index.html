@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
@@ -49,8 +49,11 @@
     .cta-mid,.cta-closing{margin:1.5rem 0;padding:18px 20px;border-radius:16px;background:#e5f7fb;border:1px solid #bfebf1}
     .cta-mid p,.cta-closing p{margin:0}
     .cta-closing p+p{margin-top:.7rem}
-    @media(max-width:900px){.article-layout{grid-template-columns:1fr}.contents{position:static}}
-  
+    .contents{max-height:calc(100vh - 48px);overflow:auto}
+    .article-body blockquote{margin:1.25rem 0;padding:14px 20px;border-left:4px solid #04bdce;background:#edf9fa;border-radius:0 12px 12px 0}
+    .article-body blockquote p{margin:0;font-weight:600}
+    @media(max-width:900px){.article-layout{grid-template-columns:1fr}.contents{position:static}.contents{max-height:none}}
+
     .video-with-infographic{margin:0 0 32px}
     .video-with-infographic .video{margin:0 0 16px}
     .infographic{margin:0}
@@ -71,22 +74,6 @@
       "logo": "https://lsacommand.com/lsa-command-logo.svg"
     },
     {
-      "@type": "Person",
-      "@id": "https://lsacommand.com/#ryan-steinolfson",
-      "name": "Ryan Steinolfson",
-      "jobTitle": "Founder",
-      "url": "https://www.linkedin.com/in/ryansteinolfson",
-      "sameAs": [
-        "https://www.linkedin.com/in/ryansteinolfson"
-      ],
-      "worksFor": {
-        "@id": "https://lsacommand.com/#organization",
-        "@type": "Organization",
-        "name": "LSA Command",
-        "url": "https://lsacommand.com/"
-      }
-    },
-    {
       "@type": "Article",
       "@id": "https://lsacommand.com/local-service-ads/#main",
       "url": "https://lsacommand.com/local-service-ads/",
@@ -100,12 +87,15 @@
       "datePublished": "2026-11-17",
       "dateModified": "2026-11-17",
       "author": {
-        "@id": "https://lsacommand.com/#ryan-steinolfson"
+        "@type": "Organization",
+        "name": "LSA Command Team",
+        "url": "https://lsacommand.com/"
       },
       "keywords": "local service ads, local services ads, google lsa, google local services ads, google verified, google guaranteed, lsa ads, local service ads management, lsa leads",
       "image": [
         { "@id": "https://lsacommand.com/local-service-ads/#infographic" },
-        "https://lsacommand.com/local-service-ads/local-service-ads-how-they-work.svg"
+        "https://lsacommand.com/local-service-ads/local-service-ads-how-they-work.svg",
+        { "@id": "https://lsacommand.com/local-service-ads/#booked-lead-summary" }
       ],
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -226,7 +216,7 @@
           "name": "How do local service ads work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A business confirms it is in an eligible category, completes Google's screening and verification, chooses its services and service area, and sets a weekly budget and bidding mode. Once live, the ad can show for matching local searches. The business pays for valid leads, and how well it responds is one of the things Google considers when ranking ads. See Google's help page about ad rankings."
+            "text": "A business confirms it is in an eligible category, completes Google's screening and verification, chooses its services and service area, and sets a weekly budget and bidding mode. Once live, the ad can show for matching local searches. The business pays for valid leads, and how well it responds is one of the things Google considers when ranking ads."
           }
         },
         {
@@ -306,13 +296,22 @@
           "name": "How much does LSA Command cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "LSA Command costs $200 per month per client. Voice AI is included, not an add-on. Setup usually takes one call. To see it on a client account, book a 30-minute discovery call or call or text 989-712-4370."
+            "text": "LSA Command costs $200 per month per client. Voice AI is included and there is no setup fee. Google's lead charges are separate and billed by Google. Setup usually takes one call. To see it on a client account, book a 30-min call with our team or call or text 989-712-4370."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LSA Command mark booked leads inside Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. When the AI books an appointment on a Google LSA call, LSA Command sets Lead Status to Booked, fills in Customer Name and Location, and writes the job and appointment into Additional Details, inside Google's own LSA platform."
           }
         }
       ]
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://lsacommand.com/local-service-ads/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -340,6 +339,17 @@
           "height": 1100,
           "encodingFormat": "image/svg+xml",
           "inLanguage": "en"
+    },
+    {
+          "@type": "ImageObject",
+          "@id": "https://lsacommand.com/local-service-ads/#booked-lead-summary",
+          "url": "https://lsacommand.com/images/lsa-lead-summary-booked-by-lsa-command.svg",
+          "contentUrl": "https://lsacommand.com/images/lsa-lead-summary-booked-by-lsa-command.svg",
+          "description": "Google LSA Lead Summary filled in by LSA Command: Lead Status set to Booked, and the job and appointment written into Additional Details, with customer name, phone, address and campaign ID hidden",
+          "width": 1280,
+          "height": 952,
+          "encodingFormat": "image/svg+xml",
+          "inLanguage": "en"
     }
   ]
 }</script>
@@ -349,7 +359,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book an LSA audit</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -358,24 +368,25 @@
       <header class="article-header">
         <p class="eyebrow">Local Service Ads</p>
         <h1>Local Service Ads: How They Work, What They Cost, and How Google Ranks Them</h1>
-        <p class="lede">A complete, current guide to local service ads, checked against Google's own documentation as of November 17, 2026. It covers how the ads work, what they cost, how Google ranks them, and how agencies get 100% of calls answered within 30 seconds.</p>
-        <p class="article-meta"><span>By <a href="https://www.linkedin.com/in/ryansteinolfson" rel="author">Ryan Steinolfson</a>, Founder of LSA Command</span> <span aria-hidden="true">·</span> <time datetime="2026-11-17">November 17, 2026</time> <span aria-hidden="true">·</span> <span>18 min read</span></p>
+        <p class="lede">A complete, current guide to local service ads, checked against Google's own documentation as of November 2026. It covers how the ads work, what they cost, how Google ranks them, and how agencies get 100% of calls answered within 30 seconds.</p>
+        <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-11-17">November 17, 2026</time> <span aria-hidden="true">·</span> <span>18 min read</span></p>
       </header>
       <div class="article-layout">
         <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol>
             <li><a href="#what-are-local-service-ads">What are local service ads?</a></li>
             <li><a href="#how-local-service-ads-work">How Local Services Ads work</a></li>
             <li><a href="#eligibility-and-categories">Eligibility, categories, and where the ads show</a></li>
-            <li><a href="#google-verified-badge">The Google Verified badge (formerly Google Guaranteed and Google Screened)</a></li>
-            <li><a href="#what-local-service-ads-cost">What Local Services Ads cost (pay-per-lead)</a></li>
+            <li><a href="#google-verified-badge">The Google Verified badge</a></li>
+            <li><a href="#what-local-service-ads-cost">What local service ads cost (pay-per-lead)</a></li>
             <li><a href="#lead-types">Lead types: calls, messages, and bookings</a></li>
-            <li><a href="#how-google-ranks-local-services-ads">How Google ranks Local Services Ads</a></li>
-            <li><a href="#lsa-vs-google-ads-vs-map-pack">Local Services Ads vs Google Search ads vs the local map pack</a></li>
-            <li><a href="#performance-max-migration">The move into Google Ads as Performance Max campaigns with pay-per-lead goals</a></li>
+            <li><a href="#how-google-ranks-local-services-ads">How Google ranks local service ads</a></li>
+            <li><a href="#lsa-vs-google-ads-vs-map-pack">LSA vs Search ads vs map pack</a></li>
+            <li><a href="#performance-max-migration">The move to Performance Max</a></li>
             <li><a href="#lead-quality-and-credits">Lead quality, feedback, and credits</a></li>
             <li><a href="#managing-lsa-for-agencies">Managing Local Services Ads for multiple clients</a></li>
             <li><a href="#when-a-lead-calls-and-nobody-answers">Why response speed decides what a lead is worth</a></li>
             <li><a href="#how-lsa-command-helps">How LSA Command helps</a></li>
+            <li><a href="#booked-in-google">Booked calls marked inside Google</a></li>
             <li><a href="#results-from-lsa-accounts">Results from Local Services Ads accounts</a></li>
             <li><a href="#industry-guides">Industry guides</a></li>
             <li><a href="#guides-in-this-hub">Guides in this hub</a></li>
@@ -436,12 +447,12 @@
 
 <p>Want the full walkthrough and transcript? Read <a href="/blog/local-service-ads-lead-calls-nobody-answers/">what happens when a lead calls and nobody answers</a>.</p>
 
-<p class="cta cta-mid"><strong>Managing Local Services Ads for clients?</strong> <a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-early-book">Book a 30-min call with Ryan</a>, or call or text <a href="tel:+19897124370" data-cta="article-early-call">989-712-4370</a>.</p>
+<p class="cta cta-mid"><strong>Managing Local Services Ads for clients?</strong> LSA Command gets 100% of calls answered within 30 seconds for $200 per month per client, voice AI included, no setup fee. Built for agencies only. The 30-min call includes an LSA account audit of one client account. <a class="button" href="https://lsacommand.com/book/" data-cta="article-early-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-early-call">989-712-4370</a>.</p>
 
 <h2 id="how-local-service-ads-work">How Local Services Ads work</h2>
 
 <figure class="hero-diagram">
-  <img src="local-service-ads-how-they-work.svg" alt="Diagram of how local service ads work: a Google search shows the ad, the customer calls, messages, or books, and the lead is either answered within 30 seconds or missed" width="1600" height="900">
+  <img src="local-service-ads-how-they-work.svg" alt="Diagram of how local service ads work: a Google search shows the ad, the customer calls, messages, or books, and the lead is either answered within 30 seconds or missed" width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>An illustrated overview, not a screenshot: a search triggers the ad, the customer calls, messages, or books, and the result depends on whether someone responds.</figcaption>
 </figure>
 
@@ -497,7 +508,7 @@
 
 <p>For clients, the practical point is this: the badge tells customers the business passed Google's checks. It is no longer a promise from Google to refund a job that goes badly. More detail is in our <a href="/blog/google-verified-badge/">Google Verified badge guide</a>.</p>
 
-<h2 id="what-local-service-ads-cost">What Local Services Ads cost (pay-per-lead)</h2>
+<h2 id="what-local-service-ads-cost">What local service ads cost (pay-per-lead)</h2>
 
 <p>You pay for valid leads, not clicks. There is no single price. <a href="https://support.google.com/localservices/answer/7195435">Google's page on how leads and charges work</a> says lead prices may vary by location, job type, lead type, and bidding mode.</p>
 
@@ -547,7 +558,7 @@
 
 <p>Message leads are easy to neglect because they do not ring. They still expect a fast reply. See <a href="/lsa-message-leads/">how LSA Command handles message leads</a>, <a href="/blog/respond-to-google-lsa-message-leads/">how to respond to Google LSA message leads</a>, and <a href="/blog/lsa-lead-notifications/">how LSA lead notifications work</a>.</p>
 
-<h2 id="how-google-ranks-local-services-ads">How Google ranks Local Services Ads</h2>
+<h2 id="how-google-ranks-local-services-ads">How Google ranks local service ads</h2>
 
 <p>Google does not publish a formula, but it does publish the inputs. According to <a href="https://support.google.com/localservices/answer/7527305">Google's ranking page</a>, rankings are based on an auction that takes into account your bid and your overall profile quality.</p>
 
@@ -584,7 +595,7 @@
   <li>Location matters as part of search context and through the service area you set. Google does not publish a separate distance score.</li>
 </ul>
 
-<p>Next steps: <a href="/blog/how-to-rank-higher-google-local-services-ads/">how to rank higher in Google Local Services Ads</a>, <a href="/lsa-reviews/">reviews</a>, <a href="/lsa-service-area/">service area settings</a>, <a href="/blog/local-services-ads-not-showing/">why ads are not showing</a>, and <a href="/blog/local-services-ads-multiple-locations/">running multiple locations</a>.</p>
+<p>Next steps: <a href="/blog/how-to-rank-higher-google-local-services-ads/">how to rank higher in Google Local Services Ads</a>, <a href="/blog/google-lsa-phone-response-score/">whether there is a Google LSA phone response score</a>, <a href="/lsa-reviews/">reviews</a>, <a href="/lsa-service-area/">service area settings</a>, <a href="/blog/local-services-ads-not-showing/">why ads are not showing</a>, and <a href="/blog/local-services-ads-multiple-locations/">running multiple locations</a>.</p>
 
 <h2 id="lsa-vs-google-ads-vs-map-pack">Local Services Ads vs Google Search ads vs the local map pack</h2>
 
@@ -594,7 +605,7 @@
   <table class="compare">
     <thead>
       <tr>
-        <th scope="col"></th>
+        <td></td>
         <th scope="col">Local Services Ads</th>
         <th scope="col">Google Search ads</th>
         <th scope="col">Local map pack</th>
@@ -644,7 +655,7 @@
 
 <p>Most home service businesses do best using these together, not choosing one. For the full comparison, read <a href="/blog/local-services-ads-vs-google-ads/">Local Services Ads vs Google Ads</a> or the agency version, <a href="/blog/lsa-vs-google-ads-for-agencies/">LSA vs Google Ads for agencies</a>.</p>
 
-<p class="cta cta-mid"><strong>Running Local Services Ads for clients?</strong> See how agencies get 100% of calls answered within 30 seconds. <a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-mid-book">Book a 30-min call with Ryan</a> or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
+<p class="cta cta-mid"><strong>Running Local Services Ads for clients?</strong> See how agencies get 100% of calls answered within 30 seconds. Across three pool contractors, leads answered in under 30 seconds rose from 28% to 100% (December 2025 to April 23, 2026). <a href="/case-studies/">See the case studies</a>. <a class="button" href="https://lsacommand.com/book/" data-cta="article-mid-book">Book a 30-min call with our team</a> or call or text <a href="tel:+19897124370" data-cta="article-mid-call">989-712-4370</a>.</p>
 
 <h2 id="performance-max-migration">The move into Google Ads as Performance Max campaigns with pay-per-lead goals</h2>
 
@@ -694,7 +705,7 @@
 
 <p>The honest summary: you can give Google consistent, accurate feedback on every lead. Whether a lead is credited is Google's decision. Any agency or tool that promises credits is promising something it does not control.</p>
 
-<p>Go deeper: <a href="/lsa-lead-disputes/">LSA lead disputes</a>, <a href="/blog/lsa-lead-disputes-agencies/">lead disputes for agencies</a>, <a href="/blog/bad-google-lsa-leads/">what to do about bad Google LSA leads</a>, and the <a href="/tools/lsa-lead-dispute-helper/">lead dispute helper</a>.</p>
+<p>Go deeper: <a href="/lsa-lead-disputes/">LSA lead disputes</a>, <a href="/blog/how-to-dispute-google-lsa-leads/">how to dispute Google LSA leads</a>, <a href="/blog/lsa-lead-disputes-agencies/">lead disputes for agencies</a>, <a href="/blog/bad-google-lsa-leads/">what to do about bad Google LSA leads</a>, and the <a href="/tools/lsa-lead-dispute-helper/">lead dispute helper</a>.</p>
 
 <h2 id="managing-lsa-for-agencies">Managing Local Services Ads for multiple clients</h2>
 
@@ -707,7 +718,7 @@
   <li><strong>Multi-account tooling.</strong> See what to look for in <a href="/blog/multi-account-lsa-software-agencies/">multi-account LSA software</a>.</li>
   <li><strong>White label.</strong> Clients should see your brand, not a vendor's. See <a href="/blog/white-label-local-services-ads-agencies/">white label Local Services Ads for agencies</a>.</li>
   <li><strong>Reporting.</strong> Clients want to know which leads were real and which became jobs. Compare <a href="/blog/lsa-reporting-software-agencies/">LSA reporting software</a> or start with the free <a href="/resources/lsa-client-report-template/">client report template</a>.</li>
-  <li><strong>CRM.</strong> Leads that stay inside Google's inbox get lost. See <a href="/blog/lsa-crm-integration-agencies/">LSA CRM integration</a>.</li>
+  <li><strong>CRM.</strong> Leads that stay inside Google's inbox get lost. See <a href="/blog/lsa-crm-integration-agencies/">LSA CRM integration</a> and <a href="/blog/google-lsa-dashboard/">the Google LSA dashboard and the agency layer on top</a>.</li>
   <li><strong>Multiple locations.</strong> Because only the highest ranking ad shows when locations overlap, <a href="/blog/local-services-ads-multiple-locations/">multi-location accounts</a> need planned service areas.</li>
   <li><strong>Pricing.</strong> See <a href="/blog/local-services-ads-management-pricing/">how agencies price LSA management</a>, and test your numbers in the <a href="/tools/lsa-agency-margin-calculator/">agency margin calculator</a>.</li>
 </ul>
@@ -716,7 +727,7 @@
 
 <h2 id="when-a-lead-calls-and-nobody-answers">Why response speed decides what a lead is worth</h2>
 
-<p>Agencies using LSA Command get 100% of calls answered within 30 seconds. That is the standard to hold in mind, because the usual alternative looks like this.</p>
+<p>Agencies using LSA Command get 100% of calls answered within 30 seconds. Here is what happens without that.</p>
 
 <p>A homeowner calls from the ad on a weeknight. The office is closed, or the crew is on a job. The call rings out to voicemail. The homeowner hangs up and taps the next ad.</p>
 
@@ -730,19 +741,13 @@
 
 <p>This is not rare. <a href="https://www.invoca.com/blog/how-much-missed-sales-calls-cost-home-services-businesses">Invoca found</a> that 27% of calls to home services businesses go unanswered. Separately, <a href="https://www.servicetitan.com/blog/google-lsa-billing-change">ServiceTitan reported</a> that in its data, 65.9% of abandoned LSA calls lasted at least 20 seconds.</p>
 
-<p>The <a href="#video">video near the top of this page</a> walks through the problem and the fix. Useful starting points:</p>
-
-<ul>
-  <li><a href="https://youtu.be/KE5q2W6j-ic?t=0">0:00</a> The call that disappears</li>
-  <li><a href="https://youtu.be/KE5q2W6j-ic?t=47">0:47</a> What Google says about responsiveness</li>
-  <li><a href="https://youtu.be/KE5q2W6j-ic?t=99">1:39</a> Every call answered, every message replied to</li>
-</ul>
+<p>The <a href="#video">video near the top of this page</a> walks through the problem and the fix.</p>
 
 <p>For the full story, read the companion post: <a href="/blog/local-service-ads-lead-calls-nobody-answers/">what happens when a Google LSA lead calls and nobody answers</a>. For the fix on its own, see <a href="/lsa-ai-call-answering/">LSA AI call answering</a>.</p>
 
 <h2 id="how-lsa-command-helps">How LSA Command helps</h2>
 
-<p>LSA Command is software for agencies that manage Local Services Ads. It works on every lead in every client account, under your agency's brand. Here is what it does, in the same order as the video.</p>
+<p>LSA Command is software for agencies that manage Local Services Ads. It works on every lead in every client account, under your agency's brand. Built for agencies only. We don't sell to business owners directly. Here is what it does, in the same order as the video.</p>
 
 <h3 id="lead-notes">1. Notes written onto the lead inside Google LSA</h3>
 
@@ -755,13 +760,13 @@
   <li>Their address</li>
 </ul>
 
-<p>The phone number matters more than it sounds. The number on an LSA lead is often a forwarding number with an extension, which clients tell us they cannot call back. LSA Command replaces it with the caller's real number. The address is pulled from the conversation and goes into the Google LSA notes and into the notification.</p>
+<p>The phone number matters more than it sounds. The number on an LSA lead is often a forwarding number with an extension, not the caller's own number. LSA Command replaces it with the caller's real number. The address is pulled from the conversation and goes into the Google LSA notes and into the notification.</p>
 
-<p>This is the feature agencies tell us matters most, and LSA Command is the only software we know of that does it.</p>
+<p>Your client opens the lead in Google and the context is already there.</p>
 
-<figure class="screenshot">
-  <img src="lsa-lead-notes-survey-landscape.svg" alt="Redacted Google Local Services Ads message lead for a tree service in Queen Creek, with callouts showing notes added to the lead automatically, survey submitted, message lead answered, and rating submitted" width="1600" height="900" loading="lazy">
-  <figcaption>A real Google Local Services Ads lead, redacted. This is a tree-service message lead, not a missed phone call. The city (Queen Creek) is visible. Names, business names, and most of the phone number are hidden. Callouts mark the notes added to the lead automatically, the submitted survey, the answered message, and the submitted rating.</figcaption>
+<figure class="shot">
+  <img src="/blog/local-services-ads-software-for-agencies/local-services-ads-software-for-agencies-lead-notes-notifications.svg" alt="Illustration of notes written on a sample LSA call lead with an AI summary and transcript, beside text and email notifications that carry the agency's logo and URL" width="1280" height="720" loading="lazy" decoding="async">
+  <figcaption>Notes on every lead, with an AI summary and the transcript, and the text and email notifications that follow under your agency's brand. Illustration with sample data, not an actual Google screen.</figcaption>
 </figure>
 
 <h3 id="branded-notifications">2. Instant, agency-branded text and email notifications</h3>
@@ -795,8 +800,8 @@
 <p>Robocalls are screened at the carrier level. The AI also catches recorded messages and robotic voices that slip through. Blocked calls are tagged and logged, and they do not trigger a notification.</p>
 
 <figure class="shot">
-  <img src="local-service-ads-robocall-blocking.svg" alt="Robocall blocking in a sample LSA Command lead log, with blocked calls tagged so they do not trigger a notification" width="1280" height="720" loading="lazy" decoding="async">
-  <figcaption>From the companion video: robocalls are tagged Blocked / Robocall and kept out of lead notifications. This frame is labeled sample data and uses 555 numbers.</figcaption>
+  <img src="/blog/local-services-ads-software-for-agencies/local-services-ads-software-for-agencies-google-survey-robocalls-blocked.svg" alt="Illustration of a 1 to 5 lead survey with rating 4 submitted and 14 of 14 surveys completed, beside a log of 12 robocalls blocked this week with every block logged" width="1280" height="720" loading="lazy" decoding="async">
+  <figcaption>A frame from our video on Local Services Ads software for agencies: the Google survey filled out on every lead, and every robocall block logged. Illustration with sample data, not an actual Google screen.</figcaption>
 </figure>
 
 
@@ -805,12 +810,11 @@
 <p>The client's team still gets the first ring. Humans get the first 10 to 15 seconds. If nobody has picked up, the call transfers to the voice AI, so 100% of calls are answered within 30 seconds.</p>
 
 <figure class="shot">
-  <img src="local-service-ads-call-answered-within-30-seconds.svg" alt="Diagram of how every local service ads call is handled: the team gets the first 10 to 15 seconds, then AI answers so 100% of calls are answered within 30 seconds" width="1280" height="720" loading="lazy" decoding="async">
-  <figcaption>How every call from the ad is handled. The client's team gets the first 10 to 15 seconds. If no one picks up, the AI answers so the call is answered within 30 seconds. Sample agency branding.</figcaption>
+  <img src="/blog/local-services-ads-software-for-agencies/local-services-ads-software-for-agencies-calls-answered-within-30-seconds.svg" alt="Step rail for a local service ads call: the call rings the client's team, no pickup so the AI answers, lead qualified, with a ring timer reading Answered within 30 seconds and an instant AI reply to a sample message lead" width="1280" height="720" loading="lazy" decoding="async">
+  <figcaption>A frame from our video on Local Services Ads software for agencies. The client's team gets the first 10 to 15 seconds. If no one picks up, the AI answers so the call is answered within 30 seconds. The message thread is sample data.</figcaption>
 </figure>
 
-
-
+<p>For message leads, AI messaging replies instantly, right inside Google's LSA platform.</p>
 
 <p>The AI is a safety net for after hours, busy days, and every moment nobody else can pick up. On a call, it can:</p>
 
@@ -821,20 +825,43 @@
   <li>Warm-transfer the caller to the team</li>
 </ul>
 
-<p>For message leads, AI messaging replies instantly, right inside Google's LSA platform.</p>
+<h3 id="booked-in-google">Booked calls marked inside Google's LSA platform</h3>
+
+<p>This step is not in the video. When the AI books an appointment on a Google LSA call, LSA Command's terminal bot fills out the Lead Summary directly inside Google's own LSA platform:</p>
+
+<ul>
+  <li><strong>Lead Status</strong> is set to Booked</li>
+  <li><strong>Customer Name</strong> and <strong>Location</strong> are filled in</li>
+  <li>The job and the appointment are written into <strong>Additional Details</strong></li>
+</ul>
+
+<p>No copy-pasting. Your client opens Google and the booking is already recorded. The fields are Google's own: Lead Status, Customer Name, Location, and Additional Details.</p>
+
+<figure class="shot">
+  <img src="/images/lsa-lead-summary-booked-by-lsa-command.svg" alt="Google LSA Lead Summary filled in by LSA Command: Lead Status set to Booked, and the job and appointment written into Additional Details, with customer name, phone, address and campaign ID hidden" width="1280" height="952" loading="lazy" decoding="async">
+  <figcaption>A Lead Summary inside Google's LSA platform, filled in by LSA Command after the AI booked the call. Personal details are hidden.</figcaption>
+</figure>
 
 <h3 id="price">8. Price and next step</h3>
 
-<p>LSA Command costs $200 per month per client. Voice AI is included, not an add-on. Setup usually takes one call. <a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-price-book">Book a 30-min call with Ryan</a>, or call or text <a href="tel:+19897124370" data-cta="article-price-call">989-712-4370</a>.</p>
+<p>LSA Command costs $200 per month per client. Voice AI is included and there is no setup fee. Google's lead charges are separate and billed by Google. Setup usually takes one call. <a class="button" href="https://lsacommand.com/book/" data-cta="article-price-book">Book a 30-min call with our team</a>, or call or text <a href="tel:+19897124370" data-cta="article-price-call">989-712-4370</a>.</p>
 
-<p>See the full feature list on <a href="/what-you-get/">what you get</a>, the details on <a href="/pricing/">pricing</a>, and anonymized examples in our <a href="/case-studies/">case studies</a>.</p>
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<div class="cta cta-mid">
+  <p><strong>Black Friday offer for agencies.</strong> Get 5 client locations live on LSA Command by December 15, 2026, and the first month is free on every location you add before December 15. Ends December 15, 2026. <a class="button" href="https://lsacommand.com/book/" data-cta="article-bf-book">Book a 30-min call with our team</a></p>
+</div>
+<!-- BLACK-FRIDAY-OFFER END -->
+
+<p>See the full feature list on <a href="/what-you-get/">what you get</a>, the details on <a href="/pricing/">pricing</a> and in <a href="/blog/lsa-command-pricing-explained/">LSA Command pricing explained</a>, and anonymized examples in our <a href="/case-studies/">case studies</a>.</p>
 
 
 <h2 id="results-from-lsa-accounts">Results from Local Services Ads accounts</h2>
 
-<p>These figures come from three published, anonymized pool-contractor case studies. Monthly lead volume is a full-month comparison, December 2025 to March 2026. The under-30-second response rates and lead quality scores run from December 2025 to April 23, 2026 (month to date). Pool demand is seasonal, and December is a slow month, so the volume change should be read alongside response rate and lead quality, which do not rise on their own in spring. These are the published tables as of April 23, 2026, not a current snapshot. The month-by-month numbers are in our <a href="/case-studies/">case studies</a>.</p>
+<p>Across three pool contractors, the average share of Local Services Ads leads answered in under 30 seconds went from 28% in December 2025 to 100% by April 23, 2026. Combined monthly leads went from 38 in December 2025 to 147 in March 2026, a 3.9x increase, and average lead quality went from 2.43 to 3.87, a 59% lift.</p>
 
-<p>Across the three accounts, combined monthly Local Services Ads leads went from 38 in December 2025 to 147 in March 2026, a 3.9x increase. Over the same stretch, the average share of leads answered in under 30 seconds went from 28% in December to 100% by April 23, 2026, and average lead quality went from 2.43 to 3.87, a 59% lift. Measured from November instead, combined leads still grew from 53 to 147, a 2.8x increase.</p>
+<p>Read the volume number with care. Pool demand is seasonal, and December is a slow month. Measured from November instead, combined leads still grew from 53 to 147, a 2.8x increase. Response rate and lead quality do not rise on their own in spring.</p>
+
+<p>These figures come from three published, anonymized case studies. Monthly lead volume is a full-month comparison, December 2025 to March 2026. Response rates and lead quality scores run from December 2025 to April 23, 2026 (month to date). They are the published tables as of April 23, 2026, not a current snapshot.</p>
 
 <div class="table-wrap">
   <table class="compare">
@@ -848,7 +875,7 @@
     </thead>
     <tbody>
       <tr>
-        <th scope="row">Three pool contractors, combined</th>
+        <th scope="row">Three pool contractors (response and quality averaged, leads combined)</th>
         <td>28% to 100%</td>
         <td>38 to 147 (3.9x)</td>
         <td>2.43 to 3.87 (59% lift)</td>
@@ -874,19 +901,13 @@
     </tbody>
   </table>
 </div>
-<p class="table-note">Under-30-second response and lead quality: December 2025 to April 23, 2026, month to date. Monthly leads: December 2025 to March 2026, the last full month in the tables. The 18% and 27% starting rates are the published, rounded December figures. One account also used a separate rapid lead-engagement tool, and its leads are included in the combined volume.</p>
-
-<ul>
-  <li>A Bay Area pool contractor went from answering 18% of its Local Services Ads leads in under 30 seconds in December 2025 to answering 100% by April 23, 2026. Monthly leads went from 17 in December to 56 in March, a 3.3x increase, and lead quality rose from 2.35 to 4.13, a 75% lift. In November, under-30-second response had been 4.17%. <a href="/case-studies/pool-contractor-a/">Read the case study</a>.</li>
-  <li>A pool and spa contractor went from answering 27% of its Local Services Ads leads in under 30 seconds in December 2025 to answering 100% by April 23, 2026. Monthly leads went from 11 in December to 49 in March, a 4.5x increase, and lead quality rose from 2.45 to 4.19, a 71% lift (about 70%, as the published case study puts it). In November it had answered one lead in five inside 30 seconds. <a href="/case-studies/pool-contractor-c/">Read the case study</a>.</li>
-  <li>LSA Command, used alongside rapid lead engagement, coincided with a move from 10 monthly leads in December 2025 to 42 in March 2026, and from a 40% under-30-second response rate to 100% by April 23, 2026, for one pool contractor. Lead quality rose from 2.50 to 3.30, a 32% lift. Because that account ran a separate rapid lead-engagement tool at the same time, the volume change cannot be credited to LSA Command alone. <a href="/case-studies/pool-contractor-b/">Read the case study</a>.</li>
-</ul>
+<p class="table-note">Under-30-second response and lead quality: December 2025 to April 23, 2026, month to date. Monthly leads: December 2025 to March 2026, the last full month in the tables. The 18% and 27% starting rates are the published, rounded December figures. One account also used a separate rapid lead-engagement tool, so its volume change cannot be credited to LSA Command alone, and its leads are included in the combined volume.</p>
 
 <p>See all three month-by-month tables on the <a href="/case-studies/">case studies</a> page.</p>
 
 <div class="cta cta-closing">
-  <p><strong>See it on one of your own client accounts.</strong> In 30 minutes, we will show you how every call gets answered within 30 seconds and what your clients would see under your brand.</p>
-  <p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a> or call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p>
+  <p><strong>See it on one of your own client accounts.</strong> The 30-min call includes an LSA account audit of one client account. We will show you how every call gets answered within 30 seconds and what your clients would see under your brand. Built for agencies only. We don't sell to business owners directly.</p>
+  <p><a class="button" href="https://lsacommand.com/book/" data-cta="article-cta-book">Book a 30-min call with our team</a> or call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p>
 </div>
 
 <h2 id="industry-guides">Industry guides</h2>
@@ -946,6 +967,7 @@
   <li><a href="/blog/respond-to-google-lsa-message-leads/">How to respond to message leads</a></li>
   <li><a href="/blog/lsa-lead-notifications/">How lead notifications work</a></li>
   <li><a href="/lsa-lead-disputes/">Lead disputes and feedback</a></li>
+  <li><a href="/blog/how-to-dispute-google-lsa-leads/">How to dispute Google LSA leads</a></li>
   <li><a href="/blog/lsa-lead-disputes-agencies/">Lead disputes for agencies</a></li>
   <li><a href="/blog/bad-google-lsa-leads/">What to do about bad leads</a></li>
   <li><a href="/blog/google-local-services-ads-support/">How to reach Google Local Services Ads support</a></li>
@@ -966,6 +988,8 @@
   <li><a href="/agencies/">LSA Command for agencies</a></li>
   <li><a href="/what-you-get/">What you get</a></li>
   <li><a href="/pricing/">Pricing</a></li>
+  <li><a href="/blog/lsa-command-pricing-explained/">LSA Command pricing explained</a></li>
+  <li><a href="/blog/local-services-ads-software-for-agencies/">Local Services Ads software for agencies</a></li>
   <li><a href="/blog/local-services-ads-manager-account/">Setting up a manager account</a></li>
   <li><a href="/blog/multi-account-lsa-software-agencies/">Multi-account LSA software</a></li>
   <li><a href="/blog/white-label-local-services-ads-agencies/">White label Local Services Ads</a></li>
@@ -1008,7 +1032,7 @@
 
   <details>
     <summary>What is the difference between local service ads and Google Ads?</summary>
-    <p>With Local Services Ads you pay per lead, there are no keywords, and the ad sends customers straight to a call, message, or booking. With Google Search ads you pay per click, you choose keywords, and the click usually goes to a website. Local Services Ads can also show the Google Verified badge. <a href="https://support.google.com/google-ads/answer/17213585">Google is now moving</a> Local Services Ads into the Google Ads platform, but they remain a separate, pay-per-lead campaign type.</p>
+    <p>With Local Services Ads you pay per lead, there are no keywords, and the ad sends customers straight to a call, message, or booking. With Google Search ads you pay per click, you choose keywords, and the click usually goes to a website. Local Services Ads can also show the Google Verified badge. <a href="https://support.google.com/google-ads/answer/17213585">Google is now moving</a> Local Services Ads into the Google Ads platform as Performance Max campaigns with pay-per-lead goals, but they remain a separate, pay-per-lead campaign type.</p>
   </details>
 
   <details>
@@ -1048,14 +1072,24 @@
 
   <details>
     <summary>How much does LSA Command cost?</summary>
-    <p>LSA Command costs $200 per month per client. Voice AI is included, not an add-on. Setup usually takes one call. To see it on a client account, <a href="https://ryan.diyai.ai/30-min-discovery-call">book a 30-minute discovery call</a> or call or text 989-712-4370.</p>
+    <p>LSA Command costs $200 per month per client. Voice AI is included and there is no setup fee. Google's lead charges are separate and billed by Google. Setup usually takes one call. To see it on a client account, <a href="https://lsacommand.com/book/">book a 30-min call with our team</a> or call or text <a href="tel:+19897124370" data-cta="faq-call">989-712-4370</a>.</p>
+  </details>
+
+  <details>
+    <summary>Does LSA Command mark booked leads inside Google?</summary>
+    <p>Yes. When the AI books an appointment on a Google LSA call, LSA Command sets Lead Status to Booked, fills in Customer Name and Location, and writes the job and appointment into Additional Details, inside Google's own LSA platform.</p>
   </details>
 </section>
+
+<div class="cta cta-closing">
+  <p><strong>Manage Local Services Ads for clients?</strong> See 100% of calls answered within 30 seconds on one of your own client accounts. $200 per month per client, voice AI included, no setup fee. Built for agencies only.</p>
+  <p><a class="button" href="https://lsacommand.com/book/" data-cta="article-end-book">Book a 30-min call with our team</a> or call or text <a href="tel:+19897124370" data-cta="article-end-call">989-712-4370</a>.</p>
+</div>
 
           </div>
           <aside class="author-box" aria-label="About the author">
             <p class="eyebrow">About the author</p>
-            <p><strong>Ryan Steinolfson</strong> is the founder of LSA Command, software that helps marketing agencies get 100% of their clients' Google Local Services Ads calls answered within 30 seconds, with AI messaging that replies instantly. <a href="https://www.linkedin.com/in/ryansteinolfson" rel="author noopener" target="_blank">Ryan on LinkedIn</a></p>
+            <p><strong>The LSA Command Team</strong> builds software that helps marketing agencies get 100% of their clients' Google Local Services Ads calls answered within 30 seconds, with AI messaging that replies instantly. Built for agencies only.</p>
           </aside>
         </div>
       </div>
@@ -1064,7 +1098,7 @@
   <footer class="site-footer"><div class="container">
     <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
     <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/local-service-ads/">Local Service Ads guide</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
     <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
