@@ -11,7 +11,7 @@
 (function () {
   'use strict';
 
-  var BOOKING_PATTERN = /30-min-discovery-call|^\/discovery\/?$/;
+  var BOOKING_PATTERN = /^\/(discovery|book)\/?(\?|#|$)|lsacommand\.com\/(discovery|book)\/?(\?|#|$)/;
   var moneyFmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 
   function money(n) {

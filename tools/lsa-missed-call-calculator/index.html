@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer onload="window.__lsaTracking=true"></script>
@@ -126,7 +126,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="header">Book a 30-min call</a></nav>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="header">Book a 30-min call</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -165,7 +165,7 @@
           <div><dt>Revenue at risk a year</dt><dd id="mc-revenue-year">$48,000</dd></div>
         </dl>
         <p class="callout" id="mc-uplift"></p>
-        <p class="results-cta">Want these numbers from a real client account? <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="results_panel">Book a 30-min call</a></p>
+        <p class="results-cta">Want these numbers from a real client account? <a href="https://lsacommand.com/book/" data-cta="results_panel">Book a 30-min call</a></p>
       </section>
     </div>
     <div class="tool-notes">
@@ -195,7 +195,7 @@
 </ol>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>Does Google charge for missed calls on Local Services Ads?</summary><p>Yes, in some cases. A missed call is charged when it arrives during the hours on the Business Profile (and inside the ad schedule, if one is set) and the caller stays on the line for more than 20 seconds.</p></details><details><summary>Does a call that goes to voicemail count as missed?</summary><p>Google counts a call that reaches voicemail or an automated greeting as connected, so it can be charged after 20 seconds whether or not the caller leaves a message. Voicemail is not a safe overflow for LSA calls.</p></details><details><summary>How do I find missed-call charges on a client’s bill?</summary><p>Pull every charged phone lead for the last full month. Flag recordings with no conversation (ringing or the voicemail greeting) and charges at times nobody was on the phones, then match them against the client’s own call log.</p></details></div>
-<section class="cta-box" id="book"><h2>Find the missed calls on a real bill.</h2><p>Book a 30-min call and bring one client’s LSA account. We’ll go through last month’s charged calls together, find the ones nobody answered, and show you how agencies use LSA Command to answer them across a whole client book.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="cta_box">Book a 30-min call</a></section>
+<section class="cta-box" id="book"><h2>Find the missed calls on a real bill.</h2><p>Book a 30-min call and bring one client’s LSA account. We’ll go through last month’s charged calls together, find the ones nobody answered, and show you how agencies use LSA Command to answer them across a whole client book.</p><a class="button" href="https://lsacommand.com/book/" data-cta="cta_box">Book a 30-min call</a></section>
 <aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/tools/lsa-agency-margin-calculator/">Agency LSA margin calculator</a></li><li><a href="/tools/lsa-budget-calculator/">LSA budget calculator</a></li><li><a href="/lsa-ai-call-answering/">AI call answering for LSA</a></li><li><a href="/blog/google-local-services-ads-cost/">How much Google Local Services Ads cost</a></li></ul></aside>
       </div>
     </div>
