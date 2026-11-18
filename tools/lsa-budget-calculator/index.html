@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer onload="window.__lsaTracking=true"></script>
@@ -126,7 +126,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="header">Book a 30-min call</a></nav>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="header">Book a 30-min call</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -172,7 +172,7 @@
         <p class="callout" id="bu-sense"></p>
         <p class="callout" id="bu-max-check"></p>
         <p class="callout" id="bu-cpa-check"></p>
-        <p class="results-cta">Want these numbers from a real client account? <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="results_panel">Book a 30-min call</a></p>
+        <p class="results-cta">Want these numbers from a real client account? <a href="https://lsacommand.com/book/" data-cta="results_panel">Book a 30-min call</a></p>
       </section>
     </div>
     <div class="tool-notes">
@@ -199,7 +199,7 @@
 </ul>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>Is there a Google Local Services Ads budget calculator?</summary><p>Google doesn’t publish lead prices, so it has no official calculator. A practical estimate is leads needed per week (jobs wanted ÷ booking rate) × expected cost per lead, using the account’s own numbers.</p></details><details><summary>How is the LSA monthly max calculated?</summary><p>Average weekly budget × 30.4 ÷ 7. Google says spend never goes over it. A $700 weekly budget gives a $3,040 monthly max.</p></details><details><summary>What happens to the budget when LSA moves into Google Ads?</summary><p>Google is moving accounts over in phases from August 2026 through 2027. On an account’s migration day, Google divides the historical weekly budget by 7 to set a daily average budget and caps monthly spend at the daily average × 30.4. The monthly ceiling works out the same; the number the client sees changes.</p></details></div>
-<section class="cta-box" id="book"><h2>Not sure the budget is the problem?</h2><p>Book a 30-min call and bring one client’s LSA account. We’ll look at monthly max pacing, bid mode, missed calls on the latest bill and leads nobody rated, then show you how agencies run LSA Command across their clients.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="cta_box">Book a 30-min call</a></section>
+<section class="cta-box" id="book"><h2>Not sure the budget is the problem?</h2><p>Book a 30-min call and bring one client’s LSA account. We’ll look at monthly max pacing, bid mode, missed calls on the latest bill and leads nobody rated, then show you how agencies run LSA Command across their clients.</p><a class="button" href="https://lsacommand.com/book/" data-cta="cta_box">Book a 30-min call</a></section>
 <aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/tools/lsa-missed-call-calculator/">LSA missed-call cost calculator</a></li><li><a href="/tools/lsa-agency-margin-calculator/">Agency LSA margin calculator</a></li><li><a href="/blog/google-local-services-ads-cost/">How much Google Local Services Ads cost</a></li><li><a href="/blog/google-local-services-ads-performance-max/">LSA and Performance Max: what’s changing</a></li></ul></aside>
       </div>
     </div>

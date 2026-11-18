@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer onload="window.__lsaTracking=true"></script>
@@ -126,7 +126,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="header">Book a 30-min call</a></nav>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="header">Book a 30-min call</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -178,7 +178,7 @@
         </table>
         <p class="callout" id="am-verdict"></p>
         <p class="callout" id="am-hours"></p>
-        <p class="results-cta">Want these numbers from a real client account? <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="results_panel">Book a 30-min call</a></p>
+        <p class="results-cta">Want these numbers from a real client account? <a href="https://lsacommand.com/book/" data-cta="results_panel">Book a 30-min call</a></p>
       </section>
     </div>
     <div class="tool-notes">
@@ -202,7 +202,7 @@
 </ul>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>How many hours does LSA management take per client?</summary><p>It depends mostly on lead volume. Reviewing and rating leads by hand scales with every call and message, while disputes and reporting are closer to a fixed monthly cost. Enter your own times above to see the total for your book.</p></details><details><summary>What should an agency charge for LSA management?</summary><p>Start from your cost to serve. A simple floor is (hours per month × loaded hourly cost + tools per client) ÷ (1 − target margin). The calculator shows that floor for both the manual and the automated setup.</p></details><details><summary>What does LSA Command cost agencies?</summary><p>$200 per month per client, with every feature included and no setup fee. LSA Command is sold only through marketing agencies.</p></details></div>
-<section class="cta-box" id="book"><h2>Check the math on your own client book.</h2><p>Book a 30-min call with Ryan. Bring your client count and how your team handles lead review today, and we’ll walk through what LSA Command automates for each client at $200 a month, and what it doesn’t.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="cta_box">Book a 30-min call</a></section>
+<section class="cta-box" id="book"><h2>Check the math on your own client book.</h2><p>Book a 30-min call with our team. Bring your client count and how your team handles lead review today, and we’ll walk through what LSA Command automates for each client at $200 a month, and what it doesn’t.</p><a class="button" href="https://lsacommand.com/book/" data-cta="cta_box">Book a 30-min call</a></section>
 <aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/tools/lsa-missed-call-calculator/">LSA missed-call cost calculator</a></li><li><a href="/tools/lsa-budget-calculator/">LSA budget calculator</a></li><li><a href="/blog/lsa-reporting-software-agencies/">LSA reporting software for agencies</a></li><li><a href="/blog/multi-account-lsa-software-agencies/">Managing LSA across many client accounts</a></li></ul></aside>
       </div>
     </div>

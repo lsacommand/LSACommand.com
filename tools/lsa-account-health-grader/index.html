@@ -11,7 +11,7 @@
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
             page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            linker: { domains: ['lsacommand.com', 'api.leadconnectorhq.com'] }
         });
     </script>
     <script src="/lsa-tracking.js" defer onload="window.__lsaTracking=true"></script>
@@ -126,7 +126,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="header">Book a 30-min call</a></nav>
+      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/tools/">Free tools</a><a href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="header">Book a 30-min call</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -182,7 +182,7 @@
         </dl>
         <div class="callout fixes"><p><strong>Top 3 fixes, by points</strong></p><ol id="g-fixes"></ol></div>
         <p class="results-note">LSA Command’s own checklist and weights, not a Google score.</p>
-        <p class="results-cta">Want these numbers from a real client account? <a href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="results_panel">Book a 30-min call</a></p>
+        <p class="results-cta">Want these numbers from a real client account? <a href="https://lsacommand.com/book/" data-cta="results_panel">Book a 30-min call</a></p>
       </section>
     </div>
     <div class="tool-notes">
@@ -223,7 +223,7 @@
 </ul>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>Does Google give Local Services Ads accounts a health score?</summary><p>No. Google doesn’t publish an account score. It ranks ads on the bid, how likely the ad is to produce a lead and profile quality. This grader is LSA Command’s own checklist built around those factors.</p></details><details><summary>What affects Local Services Ads ranking?</summary><p>Google lists the bid, responsiveness, the customer’s search, relevance, contact options such as message and booking leads, and profile quality: rating, number of reviews, average response time, high-quality images and verification checks. See Google’s <a href="https://support.google.com/localservices/answer/7527305?hl=en">About ad rankings</a> page.</p></details><details><summary>How often should an agency grade a client’s LSA account?</summary><p>Monthly works for most accounts, after the month’s leads are in and before the client report goes out. Re-grade after any change to hours, call routing or job types.</p></details></div>
-<section class="cta-box" id="book"><h2>Want the grade from the real account?</h2><p>Book a 30-min call and bring one client’s LSA account. We’ll check these answers against the account itself, from charged missed calls to unrated leads and open disputes, then show you how agencies use LSA Command to keep every client’s account in shape.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="cta_box">Book a 30-min call</a></section>
+<section class="cta-box" id="book"><h2>Want the grade from the real account?</h2><p>Book a 30-min call and bring one client’s LSA account. We’ll check these answers against the account itself, from charged missed calls to unrated leads and open disputes, then show you how agencies use LSA Command to keep every client’s account in shape.</p><a class="button" href="https://lsacommand.com/book/" data-cta="cta_box">Book a 30-min call</a></section>
 <aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/tools/lsa-missed-call-calculator/">LSA missed-call cost calculator</a></li><li><a href="/tools/lsa-budget-calculator/">LSA budget calculator</a></li><li><a href="/tools/lsa-agency-margin-calculator/">Agency LSA margin calculator</a></li><li><a href="/lsa-lead-disputes/">Lead disputes and credits</a></li><li><a href="/lsa-reviews/">Review generation for LSA</a></li></ul></aside>
       </div>
     </div>
