@@ -14,6 +14,151 @@
       "permanent": true
     },
     {
+      "source": "/images/sample-ai-agent-settings.svg",
+      "destination": "/images/google-lsa-ai-agent-settings.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-call-flow-explained.svg",
+      "destination": "/images/google-lsa-call-flow-explained.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-call-flow.svg",
+      "destination": "/images/google-lsa-call-flow-ai-answers-missed-calls.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-customizable-agent-strip.svg",
+      "destination": "/images/google-lsa-ai-agent-customizable-prompts.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-dashboard-top.svg",
+      "destination": "/images/google-lsa-software-client-dashboard.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-high-value-rules.svg",
+      "destination": "/images/google-lsa-high-value-lead-rules.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-integrations.svg",
+      "destination": "/images/google-lsa-crm-integrations.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-lead-flow-strip.svg",
+      "destination": "/images/google-lsa-lead-flow-notes-notifications.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-lead-notes-detail.svg",
+      "destination": "/images/google-lsa-lead-notes-call-summary.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-leads-high-value.svg",
+      "destination": "/images/google-lsa-high-value-leads-identified.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-lsa-survey-popup.svg",
+      "destination": "/images/google-lsa-lead-survey-filled-out.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-new-lead-email.svg",
+      "destination": "/images/lsa-lead-notification-email.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-new-lead-sms.svg",
+      "destination": "/images/lsa-lead-notification-text-message.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-robocalls-blocked.svg",
+      "destination": "/images/google-lsa-robocalls-blocked.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-sms-to-takeover-flow.svg",
+      "destination": "/images/lsa-lead-conversation-takeover-flow.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-survey-rating-rules.svg",
+      "destination": "/images/google-lsa-lead-survey-rating-rules.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-survey-time.svg",
+      "destination": "/images/google-lsa-lead-survey-time-saved.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-takeover-screen.svg",
+      "destination": "/images/lsa-lead-conversation-takeover-screen.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-tracking-numbers.svg",
+      "destination": "/images/google-lsa-call-tracking-numbers.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-voice-prompt.svg",
+      "destination": "/images/google-lsa-ai-voice-agent-prompt.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/proof-lsa-lead-survey.svg",
+      "destination": "/images/google-lsa-lead-survey-proof-of-work.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/proof-pmax-lead-notes.svg",
+      "destination": "/images/google-ads-performance-max-lead-notes-proof-of-work.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/proof-pmax-lead-report.svg",
+      "destination": "/images/google-ads-leads-report-lsa-notes-proof-of-work.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/pmax-leads-report-redacted.svg",
+      "destination": "/images/google-ads-leads-report-lsa-lead-notes.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-daily-ai-report-email.svg",
+      "destination": "/images/google-lsa-daily-report-high-value-lead-address.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-monthly-summary-email.svg",
+      "destination": "/images/google-lsa-monthly-summary-high-value-leads-address.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-new-dashboard.svg",
+      "destination": "/images/google-lsa-dashboard-lead-log-caller-address.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/sample-notification-emails-gallery.svg",
+      "destination": "/images/lsa-lead-notifications-call-ended-early-email.svg",
+      "permanent": true
+    },
+    {
+      "source": "/images/pmax-lead-notes-redacted.svg",
+      "destination": "/images/google-lsa-booked-call-lead-status-phone-number.svg",
+      "permanent": true
+    },
+    {
       "source": "/case-studies/champion-pools/",
       "destination": "/case-studies/pool-contractor-b/",
       "permanent": true

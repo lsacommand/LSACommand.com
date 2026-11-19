@@ -147,3 +147,9 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initSticky); else initSticky();
 })();
+
+// Screenshot lightbox (click or tap to expand) on every page.
+(function () {
+  if (window.__lsaLightbox || document.querySelector('script[src^="/lightbox.js"]')) return;
+  var s = document.createElement('script'); s.src = '/lightbox.js?v=1'; s.defer = true; document.head.appendChild(s);
+})();
