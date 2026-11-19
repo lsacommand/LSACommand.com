@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0]
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSA Lead Notes, Added to Performance Max | LSA Command</title>
+  <meta name="description" content="LSA Command writes notes on every Google LSA lead and adds them to Performance Max, then sends text and email notifications to the client and agency.">
+  <link rel="canonical" href="https://lsacommand.com/lsa-notes-and-notifications/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="LSA Lead Notes, Added to Performance Max | LSA Command">
+  <meta property="og:description" content="LSA Command writes notes on every Google LSA lead and adds them to Performance Max, then sends text and email notifications to the client and agency.">
+  <meta property="og:url" content="https://lsacommand.com/lsa-notes-and-notifications/">
+  <meta property="og:image" content="https://lsacommand.com/images/og-lsa-command.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LSA Lead Notes, Added to Performance Max | LSA Command">
+  <meta name="twitter:description" content="LSA Command writes notes on every Google LSA lead and adds them to Performance Max, then sends text and email notifications to the client and agency.">
+  <meta name="twitter:image" content="https://lsacommand.com/images/og-lsa-command.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg",
+      "telephone": "+1-989-712-4370"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lsacommand.com/lsa-notes-and-notifications/#main",
+      "url": "https://lsacommand.com/lsa-notes-and-notifications/",
+      "name": "Lead notes on every Google LSA lead, added to Performance Max",
+      "headline": "Lead notes on every Google LSA lead, added to Performance Max",
+      "description": "LSA Command writes notes on every Google LSA lead and adds them to Performance Max, then sends text and email notifications to the client and agency.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/lsa-notes-and-notifications/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is in the lead notes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every lead gets an AI summary, the full transcript and the call recording, plus a Google LSA rating and an AI performance score."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the notes added to Performance Max?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LSA Command writes notes on every lead and adds them to Performance Max, for accounts on Google's Performance Max version of LSA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who receives the notifications?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Text and email notifications go to the client, the agency, or both. You decide who is on the list for each client."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does High-value leads identified mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the label LSA Command puts on the best leads. It appears in the lead notes, in the lead list and in the dashboard summary, so the client's team knows which leads to call back first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are notifications sent for message leads as well as calls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Calls and message leads both get lead notes and a text and email notification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do robocalls trigger a notification?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Calls flagged as robocalls are logged in the dashboard and do not send a notification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this replace Google's own lead email?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Google still sends its own email for a phone lead. LSA Command adds a text, a fuller email and lead notes, so the client does not have to log in to find out what the caller wanted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can notifications carry our agency's brand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LSA Command has white-label options, including sending email from a mailbox on your agency's domain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Notes and notifications are included in LSA Command at $200 per month per client."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes and notifications",
+          "item": "https://lsacommand.com/lsa-notes-and-notifications/"
+        }
+      ]
+    }
+  ]
+}</script>
+<!-- FirstPromoter click tracking; referrals and sales are tracked by the Laravel API. -->
+<script>(function(w){w.fpr=w.fpr||function(){w.fpr.q = w.fpr.q||[];w.fpr.q[arguments[0]=='set'?'unshift':'push'](arguments);};})(window);
+fpr("init", {cid:"n3qq3oq1"});
+fpr("click");
+</script>
+<script src="https://cdn.firstpromoter.com/fpr.js" async></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="notes-header">Book an LSA audit</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Notes and notifications</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">Notes and notifications</p>
+        <h1>Lead notes on every Google LSA lead, added to Performance Max</h1>
+        <p class="lede">LSA Command writes notes on every lead and adds them to Performance Max. Every call and message lead on every client account also gets a Google LSA rating and an AI performance score, and a text and an email go to the client, your agency, or both. High-value leads identified, so the best ones get called back first.</p>
+        <div class="hero-cta">
+          <a class="button button-lg" href="https://lsacommand.com/book/" data-cta="notes-hero">Book a 30-minute walkthrough</a>
+          <p class="cta-note">Your walkthrough includes an LSA account audit: bring one client's Google LSA account and we pull its response rate, lead quality and lead volume live. $200 per month per client. <a href="/pricing/">See pricing</a>.</p>
+        </div>
+      </header>
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#see-what-you-get">See exactly what you get</a></li><li><a href="#the-gap">The gap in Google's own notification</a></li><li><a href="#lead-notes">What is in the lead notes</a></li><li><a href="#performance-max">Notes added to Performance Max</a></li><li><a href="#high-value-leads">High-value leads identified</a></li><li><a href="#notifications">Text and email notifications</a></li><li><a href="#for-agencies">What it changes for an agency</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
+        <div class="article-body">
+          <div class="approved-copy">
+<p>A paid lead is only worth something if the right person hears about it and knows what to do next. That is the job of notes and notifications: every lead written up, scored and put in front of the people who need to act on it.</p>
+
+<h2 id="see-what-you-get">See exactly what you get</h2>
+<div class="wyg wyg-compact" data-wyg>
+  <div class="wyg-tabs" role="tablist" aria-label="See exactly what you get" hidden>
+    <button type="button" role="tab" id="wyg-tab-pmax" aria-controls="wyg-panel-pmax" aria-selected="true" tabindex="0">Notes and PMax</button>
+    <button type="button" role="tab" id="wyg-tab-notifications" aria-controls="wyg-panel-notifications" aria-selected="false" tabindex="-1">Notifications from your agency</button>
+    <button type="button" role="tab" id="wyg-tab-other-emails" aria-controls="wyg-panel-other-emails" aria-selected="false" tabindex="-1">More notification emails</button>
+    <button type="button" role="tab" id="wyg-tab-takeover" aria-controls="wyg-panel-takeover" aria-selected="false" tabindex="-1">Conversation takeover</button>
+    <button type="button" role="tab" id="wyg-tab-reports" aria-controls="wyg-panel-reports" aria-selected="false" tabindex="-1">Reports</button>
+    <button type="button" role="tab" id="wyg-tab-survey" aria-controls="wyg-panel-survey" aria-selected="false" tabindex="-1">Lead survey</button>
+    <button type="button" role="tab" id="wyg-tab-robocalls" aria-controls="wyg-panel-robocalls" aria-selected="false" tabindex="-1">Robocalls blocked</button>
+    <button type="button" role="tab" id="wyg-tab-dashboard" aria-controls="wyg-panel-dashboard" aria-selected="false" tabindex="-1">The new dashboard</button>
+    <button type="button" role="tab" id="wyg-tab-agent" aria-controls="wyg-panel-agent" aria-selected="false" tabindex="-1">Your AI agent, your rules</button>
+    <button type="button" role="tab" id="wyg-tab-callflow" aria-controls="wyg-panel-callflow" aria-selected="false" tabindex="-1">Call flow</button>
+    <button type="button" role="tab" id="wyg-tab-tracking" aria-controls="wyg-panel-tracking" aria-selected="false" tabindex="-1">Tracking numbers</button>
+    <button type="button" role="tab" id="wyg-tab-integrations" aria-controls="wyg-panel-integrations" aria-selected="false" tabindex="-1">Integrations</button>
+  </div>
+  <section class="wyg-panel" id="wyg-panel-pmax" aria-labelledby="wyg-title-pmax">
+    <div class="wyg-text"><h3 id="wyg-title-pmax">Notes on every lead, added to Performance Max</h3><p>LSA Command writes notes on every lead and adds them to Performance Max. Each lead gets a summary of the call or message, a Google LSA rating and scores for how the AI and the intake team handled it. High-value leads identified. Adding notes to Performance Max applies to accounts on Google's Performance Max version of LSA.</p></div>
+    <!-- PLACEHOLDER: team to explain how notes are added in PMax and supply a mockup -->
+    <div class="wyg-media wyg-media-one">
+      <figure class="wyg-fig"><img src="/images/sample-lead-notes-detail.svg" width="1400" height="967" loading="lazy" decoding="async" alt="Lead notes for one call in the agency's dashboard: a High-value lead identified banner, call notes, a Google LSA rating, an intake performance score and an AI performance score (sample data)"><figcaption>Lead notes for one call, under the agency's logo. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-notifications" aria-labelledby="wyg-title-notifications">
+    <div class="wyg-text"><h3 id="wyg-title-notifications">Notifications that come from your agency</h3><p>LSA Command is white label. As each lead is handled, the client gets a text and an email from your agency, under your logo and your white-label URL. The text gives the lead type, the customer's phone number and a link to the conversation. The email adds the customer's name, the location and the transcript.</p></div>
+    <div class="wyg-media wyg-media-phone">
+      <figure class="wyg-fig wyg-fig-phone"><img src="/images/sample-new-lead-sms.svg" width="560" height="780" loading="lazy" decoding="async" alt="Text notification on a phone, sent from the agency Sample Growth Marketing: High-value lead identified, New AI Lead for Sample Pools Co., lead type Call, the customer's phone number and a link on the agency's white-label URL (sample data)"><figcaption>The text notification, sent from the agency. Sample data.</figcaption></figure>
+      <figure class="wyg-fig"><img src="/images/sample-new-lead-email.svg" width="820" height="1209" loading="lazy" decoding="async" alt="Email notification titled LSA Incoming AI Lead, sent from the agency with the agency's logo at the top: a High-value lead identified banner, lead type, location, customer's name, customer's phone number and the call transcription (sample data)"><figcaption>The email notification, with the agency's logo and the transcript. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-other-emails" aria-labelledby="wyg-title-other-emails">
+    <div class="wyg-text"><h3 id="wyg-title-other-emails">More notification emails from your agency</h3><p>Two more emails the client gets from your agency. One says a customer has replied and links to take over the conversation. The other says an AI call ended early and gives the number to call back.</p></div>
+    <div class="wyg-media wyg-media-one">
+      <figure class="wyg-fig"><img src="/images/sample-notification-emails-gallery.svg" width="1400" height="1075" loading="lazy" decoding="async" alt="Two notification emails side by side, both from the agency with the agency's logo: New Reply, with a link to take over the conversation, and AI Call ended prematurely, suggesting a call back (sample data)"><figcaption>New reply, and AI call ended early. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-takeover" aria-labelledby="wyg-title-takeover">
+    <div class="wyg-text"><h3 id="wyg-title-takeover">Conversation takeover</h3><p>When a customer replies, the notification includes a link. One tap opens the conversation in the browser on your agency's white-label URL. A person can read every message, type a reply, and choose whether the AI keeps replying.</p></div>
+    <div class="wyg-media">
+      <figure class="wyg-fig"><img src="/images/sample-sms-to-takeover-flow.svg" width="1400" height="986" loading="lazy" decoding="async" alt="Three phones showing the flow: a new reply text notification arrives from the agency, the person taps the link, and the conversation opens on the agency's white-label URL with a reply box (sample data)"><figcaption>From the text notification to the conversation. Sample data.</figcaption></figure>
+      <figure class="wyg-fig"><img src="/images/sample-takeover-screen.svg" width="1200" height="1320" loading="lazy" decoding="async" alt="The conversation screen after tapping the link, on the agency's white-label URL with the agency's logo: the message thread between the customer and the AI agent, a reply box, a Send button and an AI Response Enabled toggle, beside three steps: tap the link, read the conversation, take over and reply (sample data)"><figcaption>The screen a person sees after tapping the link. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-reports" aria-labelledby="wyg-title-reports">
+    <div class="wyg-text"><h3 id="wyg-title-reports">Daily AI report and monthly summary</h3><p>Reports go to the client from your agency, with your logo and your white-label URL. The daily AI report email links to the live lead report. The monthly summary recaps the month: jobs grouped by type, lead volume, response rate and lead quality, compared with the month before.</p></div>
+    <div class="wyg-media">
+      <figure class="wyg-fig"><img src="/images/sample-daily-ai-report-email.svg" width="1400" height="820" loading="lazy" decoding="async" alt="Daily AI Report email from the agency, with the agency's logo and a link on the agency's white-label URL, beside the lead report it opens: real leads, calls answered in under 30 seconds, a high-value lead identified, and notes and an LSA rating for each lead (sample data)"><figcaption>The daily AI report email and the report it links to. Sample data.</figcaption></figure>
+      <figure class="wyg-fig wyg-fig-tall"><div class="wyg-scroll" tabindex="0" role="group" aria-label="The monthly summary email. Scroll to see all of it."><img src="/images/sample-monthly-summary-email.svg" width="900" height="1686" loading="lazy" decoding="async" alt="Monthly Performance Summary email from the agency, with the agency's logo: jobs listed by high value services, lower value services and other job types, then lead volume, response rate, lead quality and surveys completed, each compared with the month before (sample data)"></div><figcaption>The monthly summary email. Scroll inside the frame to read it all. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-survey" aria-labelledby="wyg-title-survey">
+    <div class="wyg-text"><h3 id="wyg-title-survey">Google's 1 to 5 lead survey, filled out for you</h3><p>Google's lead survey asks for a rating from 1 to 5 and the reasons. LSA Command fills it out every time one comes up, so the client's team doesn't have to. The survey gives Google feedback on the quality of the client's leads.</p></div>
+    <div class="wyg-media">
+      <figure class="wyg-fig"><img src="/images/sample-lsa-survey-popup.svg" width="1400" height="856" loading="lazy" decoding="async" alt="Illustration of the Google LSA lead survey filled in by LSA Command: a 1 to 5 star rating, reasons ticked and a note. Illustration only, not an actual Google screen (sample data)"><figcaption>Illustration of the survey. Not an actual Google screen. Sample data.</figcaption></figure>
+      <figure class="wyg-fig"><img src="/images/sample-survey-time.svg" width="1400" height="765" loading="lazy" decoding="async" alt="Comparison of filling out the Google LSA lead survey by hand in five steps after every lead with LSA Command picking the 1 to 5 rating, ticking the reasons and writing the note (sample data)"><figcaption>By hand compared with LSA Command. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-robocalls" aria-labelledby="wyg-title-robocalls">
+    <div class="wyg-text"><h3 id="wyg-title-robocalls">Robocalls blocked</h3><p>Robocalls and spam are screened out. They are tagged Blocked / Robocall in the lead log and kept out of lead notifications, so they don't take up the team's time. You can also add numbers to a blacklist.</p></div>
+    <div class="wyg-media wyg-media-one">
+      <figure class="wyg-fig"><img src="/images/sample-robocalls-blocked.svg" width="1400" height="1358" loading="lazy" decoding="async" alt="Lead log filtered to robocalls: four calls tagged Blocked / Robocall and Not charged, above a robocall protection panel with three layers (known spam caller screening, AI spam detection, your blocked numbers) and a blacklist of phone numbers (sample data)"><figcaption>Robocalls in the lead log, and the blacklist. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-dashboard" aria-labelledby="wyg-title-dashboard">
+    <div class="wyg-text"><h3 id="wyg-title-dashboard">The new dashboard</h3><p>One screen for each client, under your agency's logo: real leads, message leads, calls answered in under 30 seconds, lead quality and converted leads, compared with the previous period. Below that, what the AI agent did, how often Google showed the ad, and the lead log with call notes.</p></div>
+    <div class="wyg-media wyg-media-one">
+      <figure class="wyg-fig wyg-fig-scroll"><div class="wyg-scroll" tabindex="0" role="group" aria-label="The dashboard for one client. Scroll to see all of it."><img src="/images/sample-new-dashboard.svg" width="1400" height="1770" loading="lazy" decoding="async" alt="Client dashboard under the agency's logo for Sample Pools Co.: an account health score, real leads, message leads, calls answered in under 30 seconds, lead quality and converted leads, a High-value leads identified card, what the AI agent did, ad impressions, disputes approved as credits, and a lead log with call notes (sample data)"></div><figcaption>The dashboard for one client. Scroll inside the frame to read it all. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-agent" aria-labelledby="wyg-title-agent">
+    <div class="wyg-text"><h3 id="wyg-title-agent">Your AI agent, your rules</h3><p>You write the rules in plain words. Say what counts as a high-value lead and what does not. Set how leads are rated for Google's survey. Write the prompts for the voice agent and the message agent. The agent answers 24 hours a day, 7 days a week, transfers the call to a human when the caller needs one, and books appointments on the calendar.</p></div>
+    <div class="wyg-media">
+      <figure class="wyg-fig"><img src="/images/sample-customizable-agent-strip.svg" width="1600" height="940" loading="lazy" decoding="async" alt="Your AI agent, your rules: three settings side by side. You decide what counts as high value, you set how leads are rated for Google's survey, and you customize what the voice agent and the message agent say (sample data)"><figcaption>Three plain-language settings. Sample data.</figcaption></figure>
+      <figure class="wyg-fig"><img src="/images/sample-ai-agent-settings.svg" width="1600" height="1313" loading="lazy" decoding="async" alt="AI agent settings: one main prompt for the voice agent and the message agent, a transfer setting that hands the call to the team on a warm transfer, and a calendar setting so the AI agent books appointments. Notes on the image say it answers 24 hours a day, 7 days a week (sample data)"><figcaption>Voice and message prompts, transfer to a human, and calendar booking. Sample data.</figcaption></figure>
+      <figure class="wyg-fig"><img src="/images/sample-voice-prompt.svg" width="1600" height="1530" loading="lazy" decoding="async" alt="Main prompt screen for the AI agent, headed Your AI agent, your rules: write how it talks. A plain-words prompt covers services, hours, what to collect, booking and when to transfer, with a Separate Text Prompt option for the message agent and an opening message (sample data)"><figcaption>The prompt the voice agent and the message agent follow. Sample data.</figcaption></figure>
+      <figure class="wyg-fig"><img src="/images/sample-high-value-rules.svg" width="1400" height="904" loading="lazy" decoding="async" alt="Lead rules settings for high-value leads: one box for what makes a lead high value and one box for what should not count, both written in plain words (sample data)"><figcaption>What counts as a high-value lead. Sample data.</figcaption></figure>
+      <figure class="wyg-fig"><img src="/images/sample-survey-rating-rules.svg" width="1400" height="1085" loading="lazy" decoding="async" alt="Lead rules settings for Google survey ratings: one box for which requests are a good match for the business and one box for which are not, written in plain words, and a switch to send surveys to Google automatically (sample data)"><figcaption>Survey rating rules. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-callflow" aria-labelledby="wyg-title-callflow">
+    <div class="wyg-text"><h3 id="wyg-title-callflow">The call flow, step by step</h3><p>Your team gets the first chance at every call, and the AI is the backup. Here is each step.</p><ol class="wyg-steps"><li>A customer taps Call on the client's Local Services Ad.</li><li>Your team's phone rings. Your team gets the first 10 to 15 seconds of the call.</li><li>If no one answers, the call transfers straight to the AI, so every call is answered within 30 seconds.</li><li>The AI books the appointment, transfers to your team when the caller needs a person, and sends the lead with call notes.</li></ol><p>You choose the routing in Call Flow Settings. For message leads, AI messaging responds instantly.</p></div>
+    <div class="wyg-media">
+      <figure class="wyg-fig"><img src="/images/sample-call-flow-explained.svg" width="1600" height="815" loading="lazy" decoding="async" alt="How every LSA call is handled, in three steps: an LSA call comes in, the team's phone rings for the first 10 to 15 seconds, and if no one answers the AI agent picks up so the call is answered within 30 seconds. The AI then books the appointment, transfers to the team or takes notes. A note says message leads get an instant AI reply, day or night (sample data)"><figcaption>The call flow in three steps. Sample data.</figcaption></figure>
+      <figure class="wyg-fig"><img src="/images/sample-call-flow.svg" width="1500" height="1451" loading="lazy" decoding="async" alt="Call Flow Settings with five numbered steps explained: choose who answers first, the team's destination number, a call timeout of 10 seconds, Redirect to AI when no one answers, and business hours set to 24/7 (sample data)"><figcaption>The Call Flow Settings screen, with each setting explained. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-tracking" aria-labelledby="wyg-title-tracking">
+    <div class="wyg-text"><h3 id="wyg-title-tracking">Tracking numbers for each campaign</h3><p>Buy multiple numbers to track how many calls come from each campaign. Each number is tagged with its source, so the calls from each one are counted separately.</p></div>
+    <div class="wyg-media wyg-media-one">
+      <figure class="wyg-fig"><img src="/images/sample-tracking-numbers.svg" width="1400" height="967" loading="lazy" decoding="async" alt="Phone number settings: a form to purchase a new number and pick its source from a list, beside a list of three numbers each tagged with its source. A note reads: add a number for each campaign and see exactly where every call comes from (sample data)"><figcaption>One number for each campaign, each tagged with its source. Google, Facebook and Yelp are trademarks of their respective owners. Sample data.</figcaption></figure>
+    </div>
+  </section>
+  <section class="wyg-panel" id="wyg-panel-integrations" aria-labelledby="wyg-title-integrations">
+    <div class="wyg-text"><h3 id="wyg-title-integrations">Integrations</h3><p>Integrates with every platform that has an API. Leads, calls and bookings flow into the tools your agency and your clients already use.</p></div>
+    <div class="wyg-media wyg-media-one">
+      <figure class="wyg-fig"><img src="/images/sample-integrations.svg" width="1400" height="1396" loading="lazy" decoding="async" alt="Integrations settings screen with the heading Integrates with every platform that has an API, above a list of example connections for ads, call tracking, calendar booking and CRM tools, each marked Connected or Not Connected (sample data)"><figcaption>The integrations settings screen. The tools listed are examples. Sample data.</figcaption></figure>
+    </div>
+  </section>
+</div>
+<p><a class="button button-ghost" href="/what-you-get/" data-cta="notes-what-you-get">See every screen at full size</a></p>
+
+<h2 id="the-gap">The gap in Google's own notification</h2>
+<p>Since Google retired the Local Services Ads mobile app in January 2025, its notification for a phone lead is an email. It says a potential customer called. It has no text message, no call recording, no summary and no transcript, and the business has to log in to learn more.</p>
+<p>Emails get missed. In the LSA accounts we audit, 10 to 15% of paid leads routinely show no owner response at all, usually because the only notification was an email nobody saw. For an agency, that is a client paying for leads and blaming the ads. Our guide to <a href="/blog/lsa-lead-notifications/">Google LSA lead notifications</a> covers what Google sends and how to set it up properly.</p>
+
+<h2 id="lead-notes">What is in the lead notes</h2>
+<figure class="shot"><img src="/images/sample-lead-notes-detail.svg" width="1400" height="967" loading="lazy" decoding="async" alt="Lead notes for a pool leak detection call with a High-value lead identified banner, call notes, a Google LSA rating, an intake performance score and an AI performance score (sample data)"><figcaption>Lead notes for one call. Sample data.</figcaption></figure>
+<ul>
+<li><strong>AI summary.</strong> A short read on who called, what they need and what was agreed on the call.</li>
+<li><strong>Transcript.</strong> The full conversation, word for word.</li>
+<li><strong>Recording.</strong> One tap to hear the call as it happened.</li>
+<li><strong>Google LSA rating.</strong> The lead's rating, which is also sent back to Google as lead feedback. See <a href="/lsa-lead-disputes/">lead disputes and credits</a>.</li>
+<li><strong>AI performance score.</strong> How well the AI handled the call. When the client's own team handles a lead, their intake is scored too.</li>
+<li><strong>Google's lead survey, filled out.</strong> LSA Command fills out Google's 1 to 5 lead survey after every lead, so the client's team doesn't have to.</li>
+</ul>
+<p>Notes are also written into the lead in the client's Google LSA dashboard, so it stops being a list of "Potential customer" entries.</p>
+
+<h2 id="performance-max">Notes added to Performance Max</h2>
+<p>Google is moving Local Services Ads into Google Ads as Performance Max campaigns. For accounts on Google's Performance Max version of LSA, the notes go with them: LSA Command writes notes on every lead and adds them to Performance Max.</p>
+<p>If you are planning the move for your client book, see our guide to <a href="/blog/google-local-services-ads-performance-max/">LSA's move into Performance Max</a>.</p>
+
+<h2 id="high-value-leads">High-value leads identified</h2>
+<p>Not every lead deserves the same urgency. LSA Command labels the best leads, and the label follows the lead: the lead notes, the lead list and the summary at the top of the client dashboard.</p>
+<figure class="shot"><img src="/images/sample-leads-high-value.svg" width="1600" height="1307" loading="lazy" decoding="async" alt="Leads list under the agency's logo on the High value tab showing 6 High-value leads identified, each with call notes, a Google LSA rating and an AI performance score (sample data)"><figcaption>The leads list filtered to high-value leads. Sample data.</figcaption></figure>
+<p>For the client, that means the owner or office manager knows which callback to make first. For your agency, it is the simplest way to show a client that the leads they paid for were worth having.</p>
+
+<h2 id="notifications">Text and email notifications</h2>
+<ul>
+<li><strong>Both channels.</strong> A text and an email for each lead, sent as the lead is handled.</li>
+<li><strong>To the right people.</strong> The client, the agency, or both.</li>
+<li><strong>Enough to act on.</strong> The text gives the lead type, the customer's phone number and a link to the conversation. The email adds the customer's name, the location and the transcript.</li>
+<li><strong>A way in.</strong> The link also lets a person take over the conversation themselves.</li>
+<li><strong>No noise from spam.</strong> Calls flagged as robocalls are logged and do not send a notification.</li>
+</ul>
+<figure class="shot"><img src="/images/sample-lead-flow-strip.svg" width="1800" height="664" loading="lazy" decoding="async" alt="Four steps for every lead. Lead comes in, answered within 30 seconds or replied to instantly, lead notes written and High-value leads identified, text and email notifications sent (sample data)"><figcaption>Where notes and notifications sit in the flow for every lead. Sample data.</figcaption></figure>
+<p>Notes and notifications are the last two steps of one flow. Calls ring the client's team first for 10 to 15 seconds. If nobody picks up, the call transfers and the <a href="/lsa-ai-call-answering/">AI answers instantly</a>, so calls are answered within 30 seconds. <a href="/lsa-message-leads/">Message leads</a> get an instant AI reply. Either way, the notes and the notification follow.</p>
+
+<h2 id="for-agencies">What it changes for an agency</h2>
+<div class="card-grid">
+<div><h3>Fewer "the leads are bad" calls</h3>The client reads what each caller wanted and hears the recording, instead of guessing from a phone number.</div>
+<div><h3>You see what the client sees</h3>Put your account manager on the notification list and you know about a hot lead when the client does.</div>
+<div><h3>Your brand on it</h3>White-label options keep your agency out front, including email sent from a mailbox on your own domain.</div>
+<div><h3>Proof at reporting time</h3>Lead notes, ratings and the count of High-value leads identified give your monthly report something concrete to point at.</div>
+</div>
+
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq"><details><summary>What is in the lead notes?</summary><p>Every lead gets an AI summary, the full transcript and the call recording, plus a Google LSA rating and an AI performance score.</p></details><details><summary>Are the notes added to Performance Max?</summary><p>Yes. LSA Command writes notes on every lead and adds them to Performance Max, for accounts on Google's Performance Max version of LSA.</p></details><details><summary>Who receives the notifications?</summary><p>Text and email notifications go to the client, the agency, or both. You decide who is on the list for each client.</p></details><details><summary>What does High-value leads identified mean?</summary><p>It is the label LSA Command puts on the best leads. It appears in the lead notes, in the lead list and in the dashboard summary, so the client's team knows which leads to call back first.</p></details><details><summary>Are notifications sent for message leads as well as calls?</summary><p>Yes. Calls and message leads both get lead notes and a text and email notification.</p></details><details><summary>Do robocalls trigger a notification?</summary><p>No. Calls flagged as robocalls are logged in the dashboard and do not send a notification.</p></details><details><summary>Does this replace Google&#x27;s own lead email?</summary><p>No. Google still sends its own email for a phone lead. LSA Command adds a text, a fuller email and lead notes, so the client does not have to log in to find out what the caller wanted.</p></details><details><summary>Can notifications carry our agency&#x27;s brand?</summary><p>Yes. LSA Command has white-label options, including sending email from a mailbox on your agency's domain. The <a href="/setup/">setup guide</a> shows how.</p></details><details><summary>How much does it cost?</summary><p>Notes and notifications are included in LSA Command at $200 per month per client. <a href="/pricing/">See pricing</a>.</p></details></div>
+<section class="cta-box"><h2>Get an LSA account audit on your walkthrough.</h2><p>Book a 30-minute walkthrough with our team and bring one client's Google LSA account. We pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed. Rather talk now? Call or text <a href="tel:+19897124370" data-cta="notes-footer-call">989-712-4370</a>.</p><p><strong>LSA Command is sold only to marketing agencies</strong>, at $200 per month per client. <a href="/pricing/">See pricing</a>.</p><a class="button button-lg" href="https://lsacommand.com/book/" data-cta="notes-footer">Book a 30-minute walkthrough</a></section>
+<aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-lead-disputes/">Lead disputes and credits</a></li><li><a href="/agencies/">LSA Command for agencies</a></li><li><a href="/what-you-get/">See exactly what you get</a></li><li><a href="/blog/lsa-lead-notifications/">Guide: Google LSA lead notifications</a></li></ul></aside>
+<script>
+(function () {
+  // "See exactly what you get" tabs. Without this script every panel simply shows, stacked.
+  document.querySelectorAll('[data-wyg]').forEach(function (g) {
+    var list = g.querySelector('[role="tablist"]');
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+    function show(i, focus) {
+      tabs.forEach(function (t, j) {
+        var on = j === i;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        panels[j].hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+    }
+    panels.forEach(function (p, j) { p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', tabs[j].id); p.tabIndex = 0; });
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { show(i, false); });
+      t.addEventListener('keydown', function (e) {
+        var n = tabs.length, j = -1;
+        if (e.key === 'ArrowRight') j = (i + 1) % n;
+        else if (e.key === 'ArrowLeft') j = (i + n - 1) % n;
+        else if (e.key === 'Home') j = 0;
+        else if (e.key === 'End') j = n - 1;
+        if (j > -1) { e.preventDefault(); show(j, true); }
+      });
+    });
+    list.hidden = false;
+    g.classList.add('wyg-on');
+    show(0, false);
+    // Links such as #wyg-panel-callflow open that tab.
+    function fromHash() {
+      var j = panels.findIndex(function (p) { return '#' + p.id === location.hash; });
+      if (j > -1) { show(j, false); g.scrollIntoView(); }
+    }
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
+  });
+})();
+</script>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+</body>
+</html>

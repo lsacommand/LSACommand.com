@@ -10,27 +10,26 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LSA Client Report Template for Agencies (Free, After PMax) | LSA Command</title>
-  <meta name="description" content="Free monthly Google Local Services Ads client report template for agencies, rebuilt for LSA in Performance Max: charged vs. received leads, credits, cost per booked job, calls answered. PDF + spreadsheet.">
+  <title>LSA Client Report Template for Agencies (Free, After PMax)</title>
+  <meta name="description" content="Free monthly Google LSA client report template for agencies: charged and received leads, credits, cost per booked job, calls answered. PDF and sheet.">
   <link rel="canonical" href="https://lsacommand.com/resources/lsa-client-report-template/">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LSA Command">
   <meta property="og:title" content="LSA Client Report Template for Agencies (Free, After PMax) | LSA Command">
-  <meta property="og:description" content="Free monthly Google Local Services Ads client report template for agencies, rebuilt for LSA in Performance Max: charged vs. received leads, credits, cost per booked job, calls answered. PDF + spreadsheet.">
+  <meta property="og:description" content="Free monthly Google LSA client report template for agencies: charged and received leads, credits, cost per booked job, calls answered. PDF and sheet.">
   <meta property="og:url" content="https://lsacommand.com/resources/lsa-client-report-template/">
-  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta property="og:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="LSA Client Report Template for Agencies (Free, After PMax) | LSA Command">
-  <meta name="twitter:description" content="Free monthly Google Local Services Ads client report template for agencies, rebuilt for LSA in Performance Max: charged vs. received leads, credits, cost per booked job, calls answered. PDF + spreadsheet.">
-  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:description" content="Free monthly Google LSA client report template for agencies: charged and received leads, credits, cost per booked job, calls answered. PDF and sheet.">
+  <meta name="twitter:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -105,7 +104,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -118,7 +117,7 @@
         <div class="download">
           <a class="button" href="lsa-client-report-template.pdf" download data-ga-event="template_download" data-ga-location="page_header" data-file="lsa-client-report-template.pdf">Download the PDF</a>
           <a class="button secondary" href="lsa-client-report-template.xlsx" download data-ga-event="template_download" data-ga-location="page_header" data-file="lsa-client-report-template.xlsx">Get the spreadsheet (Excel)</a>
-          <a class="button secondary" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="page-header-book">Book a 30-min call</a>
+          <a class="button secondary" href="https://lsacommand.com/book/" data-cta="page-header-book">Book a 30-minute walkthrough</a>
           <span class="note">3-page PDF: a filled-in sample, a blank report and agency notes. The spreadsheet works in Excel and Google Sheets (or <a href="lsa-client-report-template.csv" download data-ga-event="template_download" data-ga-location="page_header" data-file="lsa-client-report-template.csv">grab the CSV</a>). No email required.</span>
         </div>
       </header>
@@ -141,9 +140,9 @@
 <p class="sample-note"><strong>SAMPLE DATA: illustrative numbers for a fictional business, not a real client or real results.</strong> It shows how the numbers relate to each other, not what any account should expect.</p>
 <p class="callout"><b>Status: PROVISIONAL.</b> 2 leads still in review. Google reassesses leads for 30 days, so charged and credited counts can still change. Final numbers in next month’s report.<br><b>September restated:</b> charged leads 21 → 20 after 1 late credit. Cost per charged lead $71.43 → $75.00.<br>Migrated to Performance Max on Sep 15, 2026. Year-over-year figures come from our archive, because Google’s old LSA reports didn’t carry over.</p>
 <div class="table-wrap"><table class="compare sample"><caption>Sample data: Sample Plumbing Co. (fictional), October 2026</caption><thead><tr><th scope="col">Section</th><th scope="col">Metric</th><th scope="col">Sample</th><th scope="col">Note</th></tr></thead><tbody><tr><td rowspan="4"><strong>01 Leads received</strong></td><td>Phone call leads</td><td class="val">22</td><td></td></tr><tr><td>Message leads</td><td class="val">8</td><td></td></tr><tr><td>Booking leads</td><td class="val">1</td><td></td></tr><tr><td><b>Total leads received</b></td><td class="val"><b>31</b></td><td>Matches the lead notifications the client saw</td></tr><tr><td rowspan="5"><strong>02 Charged vs. credited</strong></td><td>Charged</td><td class="val">24</td><td>= Conversions on the Campaigns page</td></tr><tr><td>Credited</td><td class="val">4</td><td>Google credited these back</td></tr><tr><td>In review</td><td class="val">2</td><td>Can still change: see the status line</td></tr><tr><td>Not charged</td><td class="val">1</td><td></td></tr><tr><td><b>Not charged so far</b></td><td class="val"><b>7</b></td><td>Credited + in review + not charged. In-review leads can still be charged</td></tr><tr><td rowspan="3"><strong>03 Spend and cost per lead</strong></td><td>Spend</td><td class="val">$1,560.00</td><td></td></tr><tr><td>Cost per charged lead</td><td class="val">$65.00</td><td>Spend ÷ charged leads (Cost / conv.)</td></tr><tr><td>Cost per lead received</td><td class="val">$50.32</td><td>Spend ÷ all leads received</td></tr><tr><td rowspan="5"><strong>04 What the leads asked for</strong></td><td>Water heater repair</td><td class="val">9</td><td></td></tr><tr><td>Drain cleaning</td><td class="val">8</td><td></td></tr><tr><td>General category search (shown with an X)</td><td class="val">6</td><td></td></tr><tr><td>Leak detection</td><td class="val">5</td><td></td></tr><tr><td>Toilet repair</td><td class="val">3</td><td>Low-value job for this client: review the service type</td></tr><tr><td rowspan="3"><strong>05 Booked jobs</strong></td><td>Leads marked Booked or Completed</td><td class="val">11</td><td></td></tr><tr><td>Booking rate</td><td class="val">35%</td><td>Booked ÷ leads received</td></tr><tr><td><b>Cost per booked job</b></td><td class="val"><b>$141.82</b></td><td>Spend ÷ booked jobs</td></tr><tr><td rowspan="4"><strong>06 Calls answered</strong></td><td>Call leads</td><td class="val">22</td><td></td></tr><tr><td>Reached a person</td><td class="val">17</td><td></td></tr><tr><td>Missed (voicemail, no answer)</td><td class="val">5</td><td>4 of 5 after 5pm</td></tr><tr><td><b>Answer rate</b></td><td class="val"><b>77%</b></td><td>The number the client controls</td></tr><tr><td rowspan="2"><strong>07 Rating and reviews</strong></td><td>Star rating</td><td class="val">4.8 → 4.8</td><td></td></tr><tr><td>Review count</td><td class="val">127 → 133</td><td>+6 this month</td></tr><tr><td rowspan="3"><strong>08 Budget pacing</strong></td><td>Average daily budget</td><td class="val">$60.00</td><td></td></tr><tr><td>Monthly cap (daily × 30.4)</td><td class="val">$1,824.00</td><td></td></tr><tr><td>Spent / % of cap</td><td class="val">$1,560.00 / 86%</td><td>Didn’t hit the monthly max, so ads ran all month</td></tr></tbody></table></div>
-<p><strong>This month in one sentence:</strong> “5 call leads went to voicemail, mostly after 5pm, so from November 1 calls overflow to the answering service after 15 seconds.”</p>
+<p><strong>This month in one sentence:</strong> “5 call leads went to voicemail, mostly after 5pm, so from November 1 calls overflow to the answering service after about 10 seconds.”</p>
 <p><strong>Next month’s actions:</strong></p>
-<ul><li>Overflow after-hours calls to the answering service at 15 seconds <span class="muted">(Agency + client, Nov 1)</span></li><li>Review the Toilet repair service type with the owner <span class="muted">(Agency, Nov 7)</span></li><li>Mark every lead Booked or Completed weekly <span class="muted">(Client office, Weekly)</span></li></ul>
+<ul><li>Overflow after-hours calls to the answering service at about 10 seconds <span class="muted">(Agency + client, Nov 1)</span></li><li>Review the Toilet repair service type with the owner <span class="muted">(Agency, Nov 7)</span></li><li>Mark every lead Booked or Completed weekly <span class="muted">(Client office, Weekly)</span></li></ul>
 <p>The blank version of the same page is page 2 of the <a href="lsa-client-report-template.pdf" download data-ga-event="template_download" data-ga-location="example" data-file="lsa-client-report-template.pdf">PDF</a>, and the <a href="lsa-client-report-template.xlsx" download data-ga-event="template_download" data-ga-location="example" data-file="lsa-client-report-template.xlsx">spreadsheet</a> calculates the cost and rate rows for you.</p>
 
 <h2 id="pmax-changes">What changed under Performance Max</h2>
@@ -162,7 +161,7 @@
 <p><b>Running 20 clients?</b> Keep one master sheet, one row per client, with the same numbers. Then read down the Answer rate column: clients whose calls aren’t reaching a person are the most likely to blame the ads and cancel, and the easiest conversation about fixing lead response.</p>
 <p>The spreadsheet has a Roster tab with these columns, and there’s a <a href="lsa-client-roster.csv" download data-ga-event="template_download" data-ga-location="roster" data-file="lsa-client-roster.csv">roster CSV</a> if you’d rather start from a blank sheet. For the tooling side, see <a href="/blog/lsa-reporting-software-agencies/">LSA reporting software for agencies</a>.</p>
 
-<section class="cta-box"><h2>Want a second set of eyes on one client’s report?</h2><p>Book a 30-minute call with Ryan. Bring last month’s LSA report for one client and we’ll rebuild it with you on the call using this template: charged vs. received leads, credits, cost per booked job and calls answered.</p><div class="actions"><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="resource-cta-book">Book a 30-min call</a><a class="button secondary" href="lsa-client-report-template.pdf" download data-ga-event="template_download" data-ga-location="cta_box" data-file="lsa-client-report-template.pdf">Download the PDF</a></div></section>
+<section class="cta-box"><h2>Want a second set of eyes on one client’s report?</h2><p>Book a 30-minute walkthrough with our team. Bring last month’s LSA report for one client and we’ll rebuild it with you on the call using this template: charged vs. received leads, credits, cost per booked job and calls answered.</p><div class="actions"><a class="button" href="https://lsacommand.com/book/" data-cta="resource-cta-book">Book a 30-minute walkthrough</a><a class="button secondary" href="lsa-client-report-template.pdf" download data-ga-event="template_download" data-ga-location="cta_box" data-file="lsa-client-report-template.pdf">Download the PDF</a></div></section>
 <h2 id="sources">Sources</h2><p>Checked against Google’s help pages on November 1, 2026. Google edits these pages often, so re-check before acting.</p><ul><li><a href="https://support.google.com/google-ads/answer/17213585" rel="noopener">LSA transition to Performance Max campaigns with pay-per-lead goals</a></li><li><a href="https://support.google.com/google-ads/answer/18550592" rel="noopener">How leads work in Performance Max campaigns with pay-per-lead goals</a></li><li><a href="https://support.google.com/google-ads/answer/17325352" rel="noopener">About goals and leads for pay-per-lead goals</a></li></ul>
 <aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/resources/lsa-pmax-migration-checklist/">LSA → Performance Max migration checklist</a></li><li><a href="/blog/lsa-reporting-software-agencies/">LSA reporting software for agencies</a></li><li><a href="/blog/lsa-lead-notifications/">LSA lead notifications</a></li><li><a href="/lsa-lead-disputes/">Lead disputes and credits</a></li></ul></aside>
 <p class="article-meta">Educational content only. Google product features and policies change; verify current requirements in Google’s help center. Google and Google Local Services Ads are trademarks of Google LLC.</p>
@@ -172,9 +171,10 @@
     </article>
   </main>
   <footer class="site-footer"><div class="container">
-    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
-    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
   <script>

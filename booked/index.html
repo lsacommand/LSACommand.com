@@ -10,18 +10,35 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
     <script>
-        // Booking confirmed: the calendar tool redirects here after a visitor books.
-        // Fire book_meeting once per browser session so a refresh does not double count.
+        // Booking confirmed. Two ways to land here:
+        //  1. /book/ saw the calendar's msgsndr-booking-complete message, fired booking_complete +
+        //     generate_lead, and sent the visitor here with tracked=1.
+        //  2. The calendar's own confirmation redirect (set to https://lsacommand.com/booked/ in
+        //     LeadConnector). That can load this page inside the calendar iframe, so break out first.
+        // Either way, booking_complete + generate_lead fire at most once per 30 minutes.
         (function () {
-            var key = 'lsa-book-meeting-sent';
-            try { if (window.sessionStorage.getItem(key)) return; window.sessionStorage.setItem(key, '1'); } catch (_) {}
-            gtag('event', 'book_meeting', { method: 'discovery_call' });
+            if (window.top !== window.self) { try { window.top.location.replace(window.location.href); return; } catch (_) {} }
+            var KEY = 'lsa-booking-sent';
+            var last = null;
+            try { last = JSON.parse(window.localStorage.getItem(KEY) || 'null'); } catch (_) {}
+            if (last && Date.now() - last < 30 * 60 * 1000) return;
+            try { window.localStorage.setItem(KEY, JSON.stringify(Date.now())); } catch (_) {}
+            var q = new URLSearchParams(window.location.search), origin = null, first = null;
+            try { origin = JSON.parse(window.localStorage.getItem('lsa-book-origin') || 'null'); first = JSON.parse(window.localStorage.getItem('lsa-first-touch-v2') || 'null'); } catch (_) {}
+            var params = {
+                method: 'walkthrough_booking',
+                booking_source: 'booked_page',
+                post_slug: q.get('post_slug') || (origin && origin.post_slug) || 'unknown',
+                cta_position: q.get('cta_position') || (origin && origin.cta_position) || 'unknown'
+            };
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) { var v = q.get(k) || (first && first[k]); if (v) params[k] = String(v).slice(0, 100); });
+            gtag('event', 'booking_complete', params);
+            gtag('event', 'generate_lead', params);
         })();
     </script>
   <meta charset="UTF-8">
@@ -47,7 +64,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/agencies/">For Agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -64,13 +81,16 @@
       <p>Need to reschedule or add someone? Use the link in your calendar invite, or text <a href="sms:+19897124370" data-cta="booked-text">989-712-4370</a>.</p>
       <section class="cta-box">
         <h2>While you wait</h2>
-        <p>See how LSA Command answers every call inside 30 seconds and verifies every message reply.</p>
-        <a class="button" href="/agencies/" data-cta="booked-agencies">See the agency setup</a>
+        <p>See how LSA Command answers every call within 30 seconds, writes lead notes and sends notifications to your clients.</p>
+        <a class="button" href="/agencies/" data-cta="booked-agencies">See how agencies run it</a> <a class="button button-ghost" href="/lsa-notes-and-notifications/" data-cta="booked-notes">Notes and notifications</a> <a class="button button-ghost" href="/pricing/" data-cta="booked-pricing">Pricing</a>
       </section>
     </section>
   </main>
   <footer class="site-footer"><div class="container">
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For Agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a></nav>
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>

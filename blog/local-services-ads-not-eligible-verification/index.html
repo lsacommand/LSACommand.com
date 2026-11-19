@@ -10,27 +10,26 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LSA Not Eligible? The 30-Day Verification Deadline | LSA Command</title>
-  <meta name="description" content="New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the DBA name-mismatch fix, and who can verify a client.">
+  <title>LSA Not Eligible? The 30-Day Verification Deadline</title>
+  <meta name="description" content="New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the name-mismatch fix, and who can verify.">
   <link rel="canonical" href="https://lsacommand.com/blog/local-services-ads-not-eligible-verification/">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="LSA Command">
   <meta property="og:title" content="LSA Not Eligible? The 30-Day Verification Deadline | LSA Command">
-  <meta property="og:description" content="New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the DBA name-mismatch fix, and who can verify a client.">
+  <meta property="og:description" content="New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the name-mismatch fix, and who can verify.">
   <meta property="og:url" content="https://lsacommand.com/blog/local-services-ads-not-eligible-verification/">
-  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta property="og:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="LSA Not Eligible? The 30-Day Verification Deadline | LSA Command">
-  <meta name="twitter:description" content="New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the DBA name-mismatch fix, and who can verify a client.">
-  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:description" content="New LSA campaigns can run before verification is done, then go Not Eligible on day 31. The 4 statuses, the name-mismatch fix, and who can verify.">
+  <meta name="twitter:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -57,11 +56,9 @@
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
       },
-      "datePublished": "2026-11-14",
-      "dateModified": "2026-11-14",
-      "author": {
-        "@id": "https://lsacommand.com/#organization"
-      },
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "author": {"@type": "Organization", "name": "LSA Command Team", "url": "https://lsacommand.com/"},
       "keywords": "local services ads not eligible, lsa verification required, local services ads verification deadline, lsa 30 day grace period, eligible limited verification required soon, lsa dba name mismatch, lsa business representative verification, google verified badge",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -145,7 +142,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -155,8 +152,11 @@
         <p class="eyebrow">LSA updates</p>
         <h1>LSA Verification After Performance Max: The 30-Day Deadline and the Day-31 Shutoff</h1>
         <p class="lede">New Local Services Ads campaigns can start running before verification is finished. That’s great until day 31, when Google switches the campaign to Not Eligible and the ads stop. Here’s how the grace period works now that LSA lives in Google Ads, what each of the four statuses means, the name mismatch Google says commonly fails verification, and who on an agency team can actually finish each check.</p>
-        <p class="article-meta">By <a href="/" rel="author">LSA Command</a> <span aria-hidden="true">·</span> <time datetime="2026-11-14">November 14, 2026</time> <span aria-hidden="true">·</span> 8 min read</p>
+        <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-10-22">October 22, 2026</time> <span aria-hidden="true">·</span> 8 min read</p>
       </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=local-services-ads-not-eligible-verification&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
       <div class="article-layout">
         <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#what-google-checks">What Google checks now</a></li><li><a href="#grace-period">The 30-day grace period</a></li><li><a href="#four-statuses">The four campaign statuses</a></li><li><a href="#day-20">Why we submit by day 20</a></li><li><a href="#name-mismatch">The name mismatch (DBA fix)</a></li><li><a href="#who-can-verify">Who can verify a client</a></li><li><a href="#staying-eligible">Staying eligible</a></li><li><a href="#where-lsa-command-fits">Where LSA Command fits</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
         <div class="article-body">
@@ -182,7 +182,7 @@
 <tr><td>Professional services and healthcare</td><td>They must also complete license checks for their vertical, on top of standard verification.</td></tr>
 <tr><td>Locksmiths and garage door services</td><td>No. Google says there’s no grace period: advanced verification, including business video verification, must be complete before the campaign can serve.</td></tr>
 </tbody></table></div>
-<p><strong>One inconsistency to know about.</strong> Google’s older Local Services help page still says advertisers who get accelerated verification have 14 days to complete additional steps. <a href="https://support.google.com/localservices/answer/6226575?hl=en">Source: Local Services Help</a> The Google Ads page for pay-per-lead campaigns says 30. Don’t argue with either page: the status card in the account shows the actual due date for that campaign, and that’s the date to plan around.</p>
+<p><strong>One inconsistency to know about.</strong> Google’s older Local Services help page still says advertisers who get fast-track verification have 14 days to complete additional steps. <a href="https://support.google.com/localservices/answer/6226575?hl=en">Source: Local Services Help</a> The Google Ads page for pay-per-lead campaigns says 30. Don’t argue with either page: the status card in the account shows the actual due date for that campaign, and that’s the date to plan around.</p>
 <h2 id="four-statuses">The four campaign statuses</h2>
 <p>Google shows verification health in the account’s status panel as one of four statuses. Learn them, because each one tells you exactly where a client stands.</p>
 <div class="table-wrap"><table class="compare">
@@ -202,10 +202,13 @@
 <tr><td>Day 0</td><td>Campaign live. Verification tasks open in the Advertiser Verification tab.</td></tr>
 <tr><td>Week 1</td><td>Verification call with the owner done; documents uploaded (see the checklist below).</td></tr>
 <tr><td>Day 20</td><td>Everything submitted. Our internal deadline (or 10 days before the due date on the status card, if that comes sooner).</td></tr>
-<tr><td>Days 20–30</td><td>Room for a full review of up to 7 business days, or one resubmission.</td></tr>
+<tr><td>Days 20 to 30</td><td>Room for a full review of up to 7 business days, or one resubmission.</td></tr>
 <tr><td>Day 31</td><td>Google’s line. Anything unfinished means Not Eligible and blocked ads.</td></tr>
 </tbody></table></div>
 <p>The day-20 rule is our own working rule, not Google’s. It just keeps a slow review or a rejected document from turning into a client’s ads going dark.</p>
+<!-- LSA-BOOK-CTA mid START -->
+<aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">Put this on every client's Google LSA account.</p><p>100% of calls answered within 30 seconds: your client's team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p>Proof: Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% between December 2025 and April 2026 (<a href="/case-studies/">case studies</a>).</p><p>When the AI books a job on a call, LSA Command fills the Lead Summary inside Google's LSA platform: Lead Status Booked, customer name, location, and appointment.</p><p>Bring one client account. The LSA Command team audits it live while you share your screen. No passwords change hands.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=local-services-ads-not-eligible-verification&amp;cta_position=mid" data-cta="post-mid-book" data-cta-position="mid">Book my 30-minute walkthrough</a> <span class="book-cta-alt">Prefer the phone? <a href="tel:+19897124370" data-cta="post-mid-call">Call 989-712-4370</a> or <a href="sms:+19897124370?&amp;body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="post-mid-text">text us</a>.</span></p></aside>
+<!-- LSA-BOOK-CTA mid END -->
 <h2 id="name-mismatch">The name mismatch, and the DBA fix</h2>
 <p>Google calls out one failure by name: “A common reason for verification failure is a name mismatch” between the Business Profile and the legal registration. Its own example is a profile named “Peninsula Plumbing” with a legal registration of “A&amp;B Services, LLC.” The registration check fails. <a href="https://support.google.com/google-ads/answer/18260066?hl=en">Source: Google Ads Help</a></p>
 <p>The fix is a DBA document (doing business as, also called a fictitious business name filing) that links the trade name to the legal name. Two details make it worth doing early:</p>
@@ -237,19 +240,35 @@
 <p>The most common trigger is a Business Profile edit. Google says a significant change to the business name or address sends the campaign to Not Eligible: Verification required while its team reviews the new details, typically within 24 to 48 hours. So route every profile change through one person and log it with a date.</p>
 <p>Then add one line to your weekly check for every client: open the campaign status. If it says anything other than Eligible, someone deals with it that day. If you get stuck, Google lists a dedicated support line for migrating LSA advertisers: <a href="tel:+18442050011">1-844-205-0011</a>, Monday to Friday, 9 a.m. to 8 p.m. Eastern. <a href="https://support.google.com/google-ads/answer/17213585?hl=en">Source: Google Ads Help</a></p>
 <h2 id="where-lsa-command-fits">Where LSA Command fits</h2>
-<p>Once a client is verified and live, the job is making sure every lead they pay for gets answered. That’s what LSA Command does for agencies, under your brand: calls ring the client’s team first and AI answers the ones nobody picks up within 30 seconds, message leads get an instant reply, robocalls are blocked, every lead is rated back to Google, and you get an instant text and email for every lead across your client book. See <a href="/agencies/">LSA Command for agencies</a>.</p><p>If you onboard LSA clients, book a 30-minute call with Ryan. We’ll go through your onboarding and verification steps and one client account together.</p>
+<p>Once a client is verified and live, the job is making sure every lead they pay for gets answered. That’s what LSA Command does for agencies, under your brand: calls ring the client’s team first and AI answers the ones nobody picks up within 30 seconds, message leads get an instant reply, robocalls are blocked, every lead is rated back to Google, and you get a text and email for every lead across your client book. See <a href="/agencies/">LSA Command for agencies</a>.</p><p>If you onboard LSA clients, book a 30-minute walkthrough with our team. We’ll go through your onboarding and verification steps and one client account together.</p>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>Why does my Local Services Ads campaign say Not Eligible?</summary><p>Usually because verification wasn’t finished in time. Most new pay-per-lead campaigns can serve for a 30-day grace period while verification is completed. If the required checks aren’t done within 30 days, Google changes the campaign status to Not Eligible and blocks the ads until the tasks in the Advertiser Verification tab are completed and approved. A significant change to the business name or address on the Business Profile can also trigger it.</p></details><details><summary>How long does LSA verification review take?</summary><p>Google says reviews of submitted verification documents typically take up to 7 business days, and DBA documents are reviewed manually within 48 hours. Applying for a new D-U-N-S number can take up to 30 days, so upload registration documents instead of waiting for one.</p></details><details><summary>Do locksmiths and garage door companies get the 30-day grace period?</summary><p>No. Google says locksmiths and garage door services must complete advanced verification, including business video verification, before their campaigns are allowed to serve.</p></details><details><summary>What if my Business Profile name doesn’t match my legal business name?</summary><p>Upload a DBA (doing business as, or fictitious business name) document on the Advertiser Verification page. You don’t have to wait for the registration check to fail. Google reviews it manually within 48 hours and, if it’s accepted, approves the Business Registration check.</p></details><details><summary>Can an agency complete LSA verification for a client?</summary><p>Only partly. The business representative check needs an email at the client’s own domain that matches its Dun &amp; Bradstreet record, or a registration document plus an identity check. Business registration needs an organization payments profile, and Google’s Local Services help says the person completing the business checks must be an owner or manager on the Business Profile. Plan the owner into the process.</p></details></div>
-<section class="cta-box"><h2>Onboarding LSA clients? Let’s check your verification steps together.</h2><p>Book a 30-minute call with Ryan. Bring your onboarding checklist and one client account, and we’ll walk through where verification usually stalls and how agencies keep every lead answered once a client is live. Prefer the phone? Call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/agencies/">LSA Command for agencies</a></li><li><a href="/blog/google-verified-badge/">Google Verified badge: what replaced Google Guaranteed</a></li><li><a href="/blog/local-services-ads-background-check-verification/">LSA background check and verification checklist</a></li><li><a href="/blog/lsa-multiple-clients-performance-max-agencies/">Managing LSA for multiple clients after Performance Max</a></li></ul></aside>
+<aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The <strong>LSA Command Team</strong> builds LSA Command, which helps marketing agencies get 100% of their clients’ Google Local Services Ads calls answered within 30 seconds, with lead notes and notifications on every lead.</p></aside><!-- LSA-BOOK-CTA end START -->
+<section class="cta-box book-cta-end" data-lsa-cta="end" data-headline="Onboarding LSA clients? Let’s check your verification steps together."><h2>Onboarding LSA clients? Let’s check your verification steps together.</h2><p>100% of calls answered within 30 seconds. Your client's team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly. Every lead gets notes and notifications, with High-value leads identified.</p><p>Bring one client's Google LSA account to a 30-minute walkthrough and the LSA Command team audits it live. No passwords change hands, and you keep what the audit finds whether or not you go ahead.</p><p class="book-cta-proof">From 28% to 100% of leads answered in under 30 seconds, across three pool contractor accounts, December 2025 to April 2026 (<a href="/case-studies/">case studies</a>).</p>
+<p>Google Local Services Ads is all LSA Command does. Built for agencies only. $200 per month per client.</p>
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<p class="book-cta-offer"><strong>Black Friday offer:</strong> get 5 client locations live on LSA Command by December 15, 2026, and the first month is free on every location you add before December 15.</p>
+<!-- BLACK-FRIDAY-OFFER END -->
+<a class="button" href="https://lsacommand.com/book/?post_slug=local-services-ads-not-eligible-verification&amp;cta_position=end" data-cta="post-end-book" data-cta-position="end">Book my 30-minute walkthrough</a> <a class="button button-ghost" href="tel:+19897124370" data-cta="post-end-call">Call 989-712-4370</a> <a class="button button-ghost" href="sms:+19897124370?&amp;body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="post-end-text">Text 989-712-4370</a></section>
+<!-- LSA-BOOK-CTA end END -->
+<aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/agencies/">LSA Command for agencies</a></li><li><a href="/blog/google-verified-badge/">Google Verified badge: what replaced Google Guaranteed</a></li><li><a href="/blog/local-services-ads-background-check-verification/">LSA background check and verification checklist</a></li><li><a href="/blog/lsa-multiple-clients-performance-max-agencies/">Managing LSA for multiple clients after Performance Max</a></li></ul></aside>
           </div>
         </div>
       </div>
     </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> 
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<span class="book-sticky-offer">Black Friday: get 5 client locations live by December 15, 2026, and the first month is free on every location you add before then.</span><span class="book-sticky-offer-short">Black Friday: 5 client locations live by December 15, 2026. First month free on each one added before then.</span>
+<!-- BLACK-FRIDAY-OFFER END -->
+<span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=local-services-ads-not-eligible-verification&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
   </main>
   <footer class="site-footer"><div class="container">
-    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
-    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>

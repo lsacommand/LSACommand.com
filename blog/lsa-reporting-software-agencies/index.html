@@ -10,14 +10,13 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Choose LSA Reporting Software for Agencies | LSA Command</title>
+  <title>How to Choose LSA Reporting Software for Agencies</title>
   <meta name="description" content="Compare LSA reporting software for agencies using booked-job data, lead feedback, client separation, and a practical demo checklist before you buy.">
   <link rel="canonical" href="https://lsacommand.com/blog/lsa-reporting-software-agencies/">
   <meta name="robots" content="index,follow">
@@ -51,12 +50,10 @@
         "@type": "WebPage",
         "@id": "https://lsacommand.com/blog/lsa-reporting-software-agencies/"
       },
-      "datePublished": "2026-10-26",
-      "dateModified": "2026-10-26",
+      "datePublished": "2026-07-20",
+      "dateModified": "2026-07-20",
       "inLanguage": "en",
-      "author": {
-        "@id": "https://lsacommand.com/#organization"
-      },
+      "author": {"@type": "Organization", "name": "LSA Command Team", "url": "https://lsacommand.com/"},
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
       }
@@ -98,7 +95,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -107,8 +104,11 @@ fpr("click");
       <header class="article-header">
         <p class="eyebrow">Agency buying guide</p>
         <h1 id="how-to-choose-lsa-reporting-software-for-agencies">How to Choose LSA Reporting Software for Agencies</h1>
-        <p class="article-meta">By <a href="/" rel="author">LSA Command</a> <span aria-hidden="true">·</span> <time datetime="2026-10-26">October 26, 2026</time> <span aria-hidden="true">·</span> 5 min read</p>
+        <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-07-20">July 20, 2026</time> <span aria-hidden="true">·</span> 5 min read</p>
       </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=lsa-reporting-software-agencies&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
       <div class="article-layout">
         <aside class="contents" aria-label="In this article"><p class="contents-label">In this article</p><nav aria-label="Table of contents"><ol><li><a href="#start-with-a-report-you-can-reconcile">Start with a report you can reconcile</a></li>
 <li><a href="#require-evidence-behind-booked-jobs">Require evidence behind booked jobs</a></li>
@@ -141,6 +141,9 @@ fpr("click");
 <p>A CRM tag called “Booked” does not, by itself, establish that anything was sent to Google. Similarly, a lead-quality rating does not prove that revenue was recorded or that an offline conversion was imported.</p>
 <p>Google documents a dedicated lead-feedback method and a field indicating whether feedback was submitted. That is a specific integration capability, not proof that every product offering a Google connection implements it. <a href="https://developers.google.com/google-ads/api/docs/campaigns/local-service-campaigns">See Google's Local Services API guidance</a>.</p>
 <p>If feedback is part of the software proposal, request a demonstration of the complete path: the source lead, the approved rating, the submission result, and any failure that requires attention. Ask separately about booking updates or conversion imports. “Syncs with Google” is too broad to answer these questions.</p>
+<!-- LSA-BOOK-CTA mid START -->
+<aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">Put this on every client's Google LSA account.</p><p>100% of calls answered within 30 seconds: your client's team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p>Proof: Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% between December 2025 and April 2026 (<a href="/case-studies/">case studies</a>).</p><p>When the AI books a job on a call, LSA Command fills the Lead Summary inside Google's LSA platform: Lead Status Booked, customer name, location, and appointment.</p><p>Bring one client account. The LSA Command team audits it live while you share your screen. No passwords change hands.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=lsa-reporting-software-agencies&amp;cta_position=mid" data-cta="post-mid-book" data-cta-position="mid">Book my 30-minute walkthrough</a> <span class="book-cta-alt">Prefer the phone? <a href="tel:+19897124370" data-cta="post-mid-call">Call 989-712-4370</a> or <a href="sms:+19897124370?&amp;body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="post-mid-text">text us</a>.</span></p></aside>
+<!-- LSA-BOOK-CTA mid END -->
 <h2 id="keep-lead-quality-and-credits-distinct">Keep lead quality and credits distinct</h2>
 <p>An inquiry can be a poor sales fit without qualifying for a credit. Google's current guidance says it no longer supports credits for “job type not serviced” or “geo not serviced” leads. It also lists category and regional exclusions. A feedback submission should never appear in a client report as money recovered unless the credit is actually recorded. <a href="https://support.google.com/localservices/answer/15100654?hl=en">Read Google's automated lead-credit guidance</a>.</p>
 <p>Ask the vendor to show separate fields for the agency's assessment, submitted feedback, and Google's recorded charge or credit status. A client should be able to understand which conclusion came from your team and which came from Google.</p>
@@ -156,17 +159,35 @@ fpr("click");
 <p>Confirm which actions are available today, which require manual work, and which are proposed features. Ask about exports, reporting access after cancellation, and any separate charges for accounts, users, or integrations.</p>
 <p>Record the time your team spends completing the test. Compare it with your existing process instead of relying on a generic time-saving claim.</p>
 <h2 id="bring-your-reporting-questions-to-lsa-command">Bring your reporting questions to LSA Command</h2>
-<p>The best next step is a walkthrough built around the questions your clients actually ask. Start with <a href="https://lsacommand.com/#lead-report">LSA Command's lead performance reporting overview</a>, then ask to review your required fields and workflow before deciding on fit.</p>
-<p>If you manage five or more businesses, <a href="https://ryan.diyai.ai/30-min-discovery-call">book an LSA Command agency walkthrough</a>. Bring one client's current reporting workflow, your CRM, and the question your reports struggle to answer. Use the session to assess fit and confirm the setup your agency would need, without sharing passwords or unnecessary customer details.</p>
+<p>The best next step is a walkthrough built around the questions your clients actually ask. Start with <a href="https://lsacommand.com/#agency-view">LSA Command's lead performance reporting overview</a>, then ask to review your required fields and workflow before deciding on fit.</p>
+<p>If you manage five or more businesses, <a href="https://lsacommand.com/book/">book an LSA Command agency walkthrough</a>. Bring one client's current reporting workflow, your CRM, and the question your reports struggle to answer. Use the session to assess fit and confirm the setup your agency would need, without sharing passwords or unnecessary customer details.</p>
 </div>
-          <aside class="related" aria-label="Related guide"><p class="eyebrow">Keep evaluating</p><a href="/blog/multi-account-lsa-software-agencies/">How to Choose LSA Software for Multiple Client Accounts <span aria-hidden="true">→</span></a></aside>
+<!-- LSA-BOOK-CTA end START -->
+<section class="cta-box book-cta-end" data-lsa-cta="end" data-headline="See it on one of your client accounts."><h2>See it on one of your client accounts.</h2><p>100% of calls answered within 30 seconds. Your client's team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly. Every lead gets notes and notifications, with High-value leads identified.</p><p>Bring one client's Google LSA account to a 30-minute walkthrough and the LSA Command team audits it live. No passwords change hands, and you keep what the audit finds whether or not you go ahead.</p><p class="book-cta-proof">From 28% to 100% of leads answered in under 30 seconds, across three pool contractor accounts, December 2025 to April 2026 (<a href="/case-studies/">case studies</a>).</p>
+<p>Google Local Services Ads is all LSA Command does. Built for agencies only. $200 per month per client.</p>
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<p class="book-cta-offer"><strong>Black Friday offer:</strong> get 5 client locations live on LSA Command by December 15, 2026, and the first month is free on every location you add before December 15.</p>
+<!-- BLACK-FRIDAY-OFFER END -->
+<a class="button" href="https://lsacommand.com/book/?post_slug=lsa-reporting-software-agencies&amp;cta_position=end" data-cta="post-end-book" data-cta-position="end">Book my 30-minute walkthrough</a> <a class="button button-ghost" href="tel:+19897124370" data-cta="post-end-call">Call 989-712-4370</a> <a class="button button-ghost" href="sms:+19897124370?&amp;body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="post-end-text">Text 989-712-4370</a></section>
+<!-- LSA-BOOK-CTA end END -->
+          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The <strong>LSA Command Team</strong> builds LSA Command, which helps marketing agencies get 100% of their clients’ Google Local Services Ads calls answered within 30 seconds, with lead notes and notifications on every lead.</p></aside><aside class="related" aria-label="Related guide"><p class="eyebrow">Keep evaluating</p><a href="/blog/multi-account-lsa-software-agencies/">How to Choose LSA Software for Multiple Client Accounts <span aria-hidden="true">→</span></a></aside>
           <p class="back-link"><a href="/blog/">← All agency guides</a></p>
         </div>
       </div>
     </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> 
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<span class="book-sticky-offer">Black Friday: get 5 client locations live by December 15, 2026, and the first month is free on every location you add before then.</span><span class="book-sticky-offer-short">Black Friday: 5 client locations live by December 15, 2026. First month free on each one added before then.</span>
+<!-- BLACK-FRIDAY-OFFER END -->
+<span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=lsa-reporting-software-agencies&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
   </main>
   <footer class="site-footer"><div class="container">
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>

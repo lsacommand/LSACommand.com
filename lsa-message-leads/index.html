@@ -10,27 +10,26 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Never Miss a Google LSA Message Lead | LSA Command</title>
-  <meta name="description" content="In the accounts we audit, 10–15% of replies to Google Local Services message leads never reach the customer. LSA Command verifies every reply through the LSA API and re-sends anything that drops.">
+  <meta name="description" content="AI messaging replies instantly to Google LSA message leads, then verifies each reply through the LSA API and re-sends any that never reached the customer.">
   <link rel="canonical" href="https://lsacommand.com/lsa-message-leads/">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LSA Command">
   <meta property="og:title" content="Never Miss a Google LSA Message Lead | LSA Command">
-  <meta property="og:description" content="In the accounts we audit, 10–15% of replies to Google Local Services message leads never reach the customer. LSA Command verifies every reply through the LSA API and re-sends anything that drops.">
+  <meta property="og:description" content="AI messaging replies instantly to Google LSA message leads, then verifies each reply through the LSA API and re-sends any that never reached the customer.">
   <meta property="og:url" content="https://lsacommand.com/lsa-message-leads/">
-  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta property="og:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Never Miss a Google LSA Message Lead | LSA Command">
-  <meta name="twitter:description" content="In the accounts we audit, 10–15% of replies to Google Local Services message leads never reach the customer. LSA Command verifies every reply through the LSA API and re-sends anything that drops.">
-  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:description" content="AI messaging replies instantly to Google LSA message leads, then verifies each reply through the LSA API and re-sends any that never reached the customer.">
+  <meta name="twitter:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -51,7 +50,7 @@
       "url": "https://lsacommand.com/lsa-message-leads/",
       "name": "Answer 100% of Your Google LSA Message Leads",
       "headline": "Answer 100% of Your Google LSA Message Leads",
-      "description": "In the accounts we audit, 10–15% of replies to Google Local Services message leads never reach the customer. LSA Command verifies every reply through the LSA API and re-sends anything that drops.",
+      "description": "AI messaging replies instantly to Google LSA message leads, then verifies each reply through the LSA API and re-sends any that never reached the customer.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
@@ -60,8 +59,8 @@
     {
       "@type": "VideoObject",
       "name": "LSA Command message lead fallback for Google Local Services Ads",
-      "description": "In the accounts we audit, 10–15% of replies to Google Local Services message leads never reach the customer. LSA Command verifies every reply through the LSA API and re-sends anything that drops.",
-      "thumbnailUrl": "https://lsacommand.com/preview-stats.png",
+      "description": "AI messaging replies instantly to Google LSA message leads, then verifies each reply through the LSA API and re-sends any that never reached the customer.",
+      "thumbnailUrl": "https://lsacommand.com/images/og-lsa-command.png",
       "uploadDate": "2026-10-30",
       "duration": "PT12S",
       "contentUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3FBaderAd23sqqiU6EqWQQkx6fA/hf_20261030_154332_c594f400-88e4-4ce4-bceb-2af28f855915.mp4",
@@ -128,7 +127,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/#pricing">Pricing</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -137,18 +136,18 @@ fpr("click");
       <header class="article-header">
         <p class="eyebrow">Message lead response</p>
         <h1>Answer 100% of Your Google LSA Message Leads</h1>
-        <p class="lede">Your phone says “delivered,” but in the accounts we audit, 10–15% of replies to LSA message leads never reach the customer. LSA Command checks every thread through the LSA API and re-sends anything that drops.</p>
+        <p class="lede">Your phone says “delivered,” but in the accounts we audit, 10 to 15% of replies to LSA message leads never reach the customer. LSA Command checks every thread through the LSA API and re-sends anything that drops.</p>
         
       </header>
       <div class="article-layout">
-        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#the-hidden-problem-with-lsa-message-leads">The hidden problem with LSA message leads</a></li><li><a href="#how-the-lsa-api-fallback-works">How the LSA API fallback works</a></li><li><a href="#protect-the-replies-in-minutes-badge">Protect the “replies in minutes” badge</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#the-hidden-problem-with-lsa-message-leads">The hidden problem with LSA message leads</a></li><li><a href="#how-the-lsa-api-fallback-works">How the LSA API fallback works</a></li><li><a href="#protect-the-replies-in-minutes-badge">Protect the “replies in minutes” badge</a></li><li><a href="#what-the-client-sees">What the client sees for every message lead</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
         <div class="article-body">
-          <figure class="video"><video src="https://d8j0ntlcm91z4.cloudfront.net/user_3FBaderAd23sqqiU6EqWQQkx6fA/hf_20261030_154332_c594f400-88e4-4ce4-bceb-2af28f855915.mp4" controls muted playsinline preload="metadata" poster="/preview-stats.png" aria-label="LSA Command message lead fallback for Google Local Services Ads"></video><figcaption>LSA Command message lead fallback for Google Local Services Ads</figcaption></figure>
+          <figure class="video"><video src="https://d8j0ntlcm91z4.cloudfront.net/user_3FBaderAd23sqqiU6EqWQQkx6fA/hf_20261030_154332_c594f400-88e4-4ce4-bceb-2af28f855915.mp4" controls muted playsinline preload="metadata" poster="/images/og-lsa-command.png" aria-label="LSA Command message lead fallback for Google Local Services Ads"></video><figcaption>LSA Command message lead fallback for Google Local Services Ads</figcaption></figure>
           <div class="approved-copy">
 <h2 id="the-hidden-problem-with-lsa-message-leads">The hidden problem with LSA message leads</h2>
 
 <p>When a homeowner messages you through Google Local Services Ads, your reply goes back to Google over SMS. Your phone, or any off-the-shelf AI agent, shows the reply as “delivered.”</p>
-<p>But in the accounts we audit, <strong>10–15% of those replies never land in the LSA lead thread</strong> and never reach the customer. This happens to replies from people and from generic AI bots alike. The only way to see it is to log into LSA and open each lead, so most businesses never find out.</p>
+<p>But in the accounts we audit, <strong>10 to 15% of those replies never land in the LSA lead thread</strong> and never reach the customer. This happens to replies from people and from generic AI bots alike. The only way to see it is to log into LSA and open each lead, so most businesses never find out.</p>
 <p>Every dropped reply is a paid lead that went cold. It also counts against your responsiveness, which is part of <a href="/blog/how-to-rank-higher-google-local-services-ads/">how LSA ranking works</a>.</p>
 <h2 id="how-the-lsa-api-fallback-works">How the LSA API fallback works</h2>
 
@@ -161,18 +160,22 @@ fpr("click");
 <h2 id="protect-the-replies-in-minutes-badge">Protect the “replies in minutes” badge</h2>
 
 <p>Fast, consistent replies help earn Google’s <em>“typically replies in minutes”</em> label on your listing. Slow ones can show customers that you reply in hours instead. A 90% response rate and a 100% response rate look similar on paper, but the gap is real paid leads that never got a reply.</p>
+<h2 id="what-the-client-sees">What the client sees for every message lead</h2>
+<figure class="shot"><img src="/images/sample-leads-high-value.svg" width="1600" height="1307" loading="lazy" decoding="async" alt="Leads list under the agency's logo showing 6 High-value leads identified, including message leads marked AI replied instantly, each with a Google LSA rating and an AI performance score (sample data)"><figcaption>The leads list in a client dashboard. Sample data.</figcaption></figure>
+<p>Each message lead shows in the client dashboard with its reply status, lead notes, a Google LSA rating and an AI performance score. A text and an email notification go to the client, your agency, or both, and the best leads carry the "High-value leads identified" label. <a href="/lsa-notes-and-notifications/">See notes and notifications</a>.</p>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>Why would a reply to an LSA message lead not be delivered?</summary><p>Replies travel back to Google over an SMS bridge. A share of them never reach the LSA thread even though your phone shows them as delivered. Without checking the thread through the LSA API, there’s no way to know.</p></details><details><summary>Do I have to let the AI answer my messages?</summary><p>No. You can answer messages yourself and LSA Command will still verify that every reply reached the customer, re-sending any that drop.</p></details><details><summary>How fast does LSA Command reply to a new message lead?</summary><p>The AI replies instantly, 24 hours a day.</p></details></div>
-<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><p><strong>LSA Command is sold only through marketing agencies</strong>, at $200 per month per client. Own a business? Ask your agency about it. <a href="/#pricing">See agency pricing</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a></li><li><a href="/lsa-service-area/">Service area targeting</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
+<section class="cta-box"><h2>Get an LSA account audit on your walkthrough.</h2><p>Book a 30-minute walkthrough with our team and bring one client's Google LSA account. We pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed. Rather talk now? Call or text <a href="tel:+19897124370" data-cta="message-leads-call">989-712-4370</a>.</p><p><strong>LSA Command is sold only to marketing agencies</strong>, at $200 per month per client. Own a business? Ask your agency about it. <a href="/pricing/">See pricing</a>.</p><a class="button button-lg" href="https://lsacommand.com/book/" data-cta="message-leads-cta">Book a 30-minute walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-notes-and-notifications/">Notes and notifications</a></li><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-lead-disputes/">Lead disputes and credits</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
           </div>
         </div>
       </div>
     </article>
   </main>
   <footer class="site-footer"><div class="container">
-    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
-    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>

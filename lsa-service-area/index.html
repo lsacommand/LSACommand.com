@@ -10,27 +10,26 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google LSA Service Area Targeting by City &amp; Zip Code | LSA Command</title>
-  <meta name="description" content="Choose every profitable city, county, and zip code for your Google Local Services Ads, push it to LSA in seconds, and track your current LSA rank in every city you serve.">
+  <title>Google LSA Service Area Targeting by Zip Code | LSA Command</title>
+  <meta name="description" content="Choose the cities, counties and zip codes for a Google Local Services Ads account, push them to LSA, and track the LSA rank in every city served.">
   <link rel="canonical" href="https://lsacommand.com/lsa-service-area/">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LSA Command">
-  <meta property="og:title" content="Google LSA Service Area Targeting by City &amp; Zip Code | LSA Command">
-  <meta property="og:description" content="Choose every profitable city, county, and zip code for your Google Local Services Ads, push it to LSA in seconds, and track your current LSA rank in every city you serve.">
+  <meta property="og:title" content="Google LSA Service Area Targeting by Zip Code | LSA Command">
+  <meta property="og:description" content="Choose the cities, counties and zip codes for a Google Local Services Ads account, push them to LSA, and track the LSA rank in every city served.">
   <meta property="og:url" content="https://lsacommand.com/lsa-service-area/">
-  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta property="og:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Google LSA Service Area Targeting by City &amp; Zip Code | LSA Command">
-  <meta name="twitter:description" content="Choose every profitable city, county, and zip code for your Google Local Services Ads, push it to LSA in seconds, and track your current LSA rank in every city you serve.">
-  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:title" content="Google LSA Service Area Targeting by Zip Code | LSA Command">
+  <meta name="twitter:description" content="Choose the cities, counties and zip codes for a Google Local Services Ads account, push them to LSA, and track the LSA rank in every city served.">
+  <meta name="twitter:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -51,7 +50,7 @@
       "url": "https://lsacommand.com/lsa-service-area/",
       "name": "Google LSA Service Area Targeting by City, County & Zip Code",
       "headline": "Google LSA Service Area Targeting by City, County & Zip Code",
-      "description": "Choose every profitable city, county, and zip code for your Google Local Services Ads, push it to LSA in seconds, and track your current LSA rank in every city you serve.",
+      "description": "Choose the cities, counties and zip codes for a Google Local Services Ads account, push them to LSA, and track the LSA rank in every city served.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
@@ -60,8 +59,8 @@
     {
       "@type": "VideoObject",
       "name": "LSA Command service area targeting for Google Local Services Ads",
-      "description": "Choose every profitable city, county, and zip code for your Google Local Services Ads, push it to LSA in seconds, and track your current LSA rank in every city you serve.",
-      "thumbnailUrl": "https://lsacommand.com/preview-stats.png",
+      "description": "Choose the cities, counties and zip codes for a Google Local Services Ads account, push them to LSA, and track the LSA rank in every city served.",
+      "thumbnailUrl": "https://lsacommand.com/images/og-lsa-command.png",
       "uploadDate": "2026-10-30",
       "duration": "PT12S",
       "contentUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3FBaderAd23sqqiU6EqWQQkx6fA/hf_20261030_154332_cb3e5992-b0cc-4938-b0b6-12eeccd3351e.mp4",
@@ -128,7 +127,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/#pricing">Pricing</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -141,9 +140,9 @@ fpr("click");
         
       </header>
       <div class="article-layout">
-        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#why-your-lsa-service-area-decides-your-lead-quality">Why your LSA service area decides your lead quality</a></li><li><a href="#build-the-exact-footprint-you-want">Build the exact footprint you want</a></li><li><a href="#your-real-lsa-rank-on-every-city-you-serve">Your real LSA rank on every city you serve</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#why-your-lsa-service-area-decides-your-lead-quality">Why your LSA service area decides your lead quality</a></li><li><a href="#build-the-exact-footprint-you-want">Build the exact footprint you want</a></li><li><a href="#your-real-lsa-rank-on-every-city-you-serve">Your real LSA rank on every city you serve</a></li><li><a href="#see-what-the-area-produces">See what the service area produces</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
         <div class="article-body">
-          <figure class="video"><video src="https://d8j0ntlcm91z4.cloudfront.net/user_3FBaderAd23sqqiU6EqWQQkx6fA/hf_20261030_154332_cb3e5992-b0cc-4938-b0b6-12eeccd3351e.mp4" controls muted playsinline preload="metadata" poster="/preview-stats.png" aria-label="LSA Command service area targeting for Google Local Services Ads"></video><figcaption>LSA Command service area targeting for Google Local Services Ads</figcaption></figure>
+          <figure class="video"><video src="https://d8j0ntlcm91z4.cloudfront.net/user_3FBaderAd23sqqiU6EqWQQkx6fA/hf_20261030_154332_cb3e5992-b0cc-4938-b0b6-12eeccd3351e.mp4" controls muted playsinline preload="metadata" poster="/images/og-lsa-command.png" aria-label="LSA Command service area targeting for Google Local Services Ads"></video><figcaption>LSA Command service area targeting for Google Local Services Ads</figcaption></figure>
           <div class="approved-copy">
 <h2 id="why-your-lsa-service-area-decides-your-lead-quality">Why your LSA service area decides your lead quality</h2>
 
@@ -152,26 +151,30 @@ fpr("click");
 <h2 id="build-the-exact-footprint-you-want">Build the exact footprint you want</h2>
 
 <ul>
-<li><strong>Find every profitable area.</strong> The Radius tool lists every city, county, and zip code in your region so you can include the ones you want and exclude the ones you don’t.</li>
+<li><strong>Find every profitable area.</strong> The service area tool lists every city, county, and zip code in your region so you can include the ones you want and exclude the ones you don’t.</li>
 <li><strong>Clean up duplicates.</strong> Overlapping and duplicate areas are found and removed in one click.</li>
 <li><strong>Push it to LSA instantly.</strong> No manual entry. Your finished service area uploads straight to your Google LSA account through the API.</li>
-<li><strong>See what each change produced.</strong> Every radius change is logged and compared against lead volume, so you know whether an expansion actually paid off.</li>
+<li><strong>See what each change produced.</strong> Every service-area change is logged and compared against lead volume, so you know whether an expansion actually paid off.</li>
 </ul>
 <h2 id="your-real-lsa-rank-on-every-city-you-serve">Your real LSA rank on every city you serve</h2>
 
 <p>The LSA Command Rank Tracker drops a numbered pin on each city in your service area, showing your current Local Services position there for your main keyword. Your home base is tracked weekly and your whole area monthly. Rank-over-time charts show whether faster response and more reviews are moving you up.</p>
+<h2 id="see-what-the-area-produces">See what the service area produces</h2>
+<figure class="shot"><img src="/images/sample-dashboard-top.svg" width="1600" height="528" loading="lazy" decoding="async" alt="Client dashboard under the agency's logo showing 46 real leads, 18 message leads, 100% of calls answered in under 30 seconds, lead quality 4.6 out of 5 and 6 high-value leads identified (sample data)"><figcaption>The client dashboard. Sample data.</figcaption></figure>
+<p>A service area is only right if the leads from it are worth having. Each client dashboard shows lead volume and lead quality for the period, and every lead carries lead notes, so you can tell whether a newly added city is sending real jobs. The best ones are labeled "High-value leads identified", and text and email notifications go to the client and your agency as leads come in. <a href="/lsa-notes-and-notifications/">See notes and notifications</a>.</p>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>Can I target specific zip codes in Google Local Services Ads?</summary><p>Yes. LSA lets you choose service areas by city, county, and zip code. LSA Command makes it fast to build that list and push it to your account.</p></details><details><summary>Will a bigger service area get me more LSA leads?</summary><p>It can, but proximity is a ranking factor, so far-away areas usually rank lower and may bring poorer-fit jobs. The goal is the most profitable footprint, not the biggest one.</p></details><details><summary>How do I know where I rank in each city?</summary><p>The LSA Command Rank Tracker shows your current LSA position on every city in your service area, tracked on your main keyword.</p></details></div>
-<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><p><strong>LSA Command is sold only through marketing agencies</strong>, at $200 per month per client. Own a business? Ask your agency about it. <a href="/#pricing">See agency pricing</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
+<section class="cta-box"><h2>Get an LSA account audit on your walkthrough.</h2><p>Book a 30-minute walkthrough with our team and bring one client's Google LSA account. We pull its response rate, lead quality and lead volume live. You share your screen, so no passwords are needed. Rather talk now? Call or text <a href="tel:+19897124370" data-cta="service-area-call">989-712-4370</a>.</p><p><strong>LSA Command is sold only to marketing agencies</strong>, at $200 per month per client. Own a business? Ask your agency about it. <a href="/pricing/">See pricing</a>.</p><a class="button button-lg" href="https://lsacommand.com/book/" data-cta="service-area-cta">Book a 30-minute walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/lsa-notes-and-notifications/">Notes and notifications</a></li><li><a href="/lsa-ai-call-answering/">AI call answering</a></li><li><a href="/lsa-message-leads/">Message lead response</a></li><li><a href="/lsa-lead-disputes/">Lead disputes and credits</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/plumbers/">Plumbers</a></li></ul></aside>
           </div>
         </div>
       </div>
     </article>
   </main>
   <footer class="site-footer"><div class="container">
-    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
-    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>

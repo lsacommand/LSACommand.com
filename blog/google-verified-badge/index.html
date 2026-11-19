@@ -10,27 +10,26 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Verified Badge: What Replaced Google Guaranteed | LSA Command</title>
-  <meta name="description" content="Google Guaranteed and Google Screened were folded into one Google Verified badge on Local Services Ads. What changed, what’s required, and what contractors should update.">
+  <title>Google Verified Badge: What Replaced Google Guaranteed</title>
+  <meta name="description" content="Google Guaranteed and Google Screened were folded into one Google Verified badge on Local Services Ads. What changed and what to update.">
   <link rel="canonical" href="https://lsacommand.com/blog/google-verified-badge/">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="LSA Command">
   <meta property="og:title" content="Google Verified Badge: What Replaced Google Guaranteed | LSA Command">
-  <meta property="og:description" content="Google Guaranteed and Google Screened were folded into one Google Verified badge on Local Services Ads. What changed, what’s required, and what contractors should update.">
+  <meta property="og:description" content="Google Guaranteed and Google Screened were folded into one Google Verified badge on Local Services Ads. What changed and what to update.">
   <meta property="og:url" content="https://lsacommand.com/blog/google-verified-badge/">
-  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta property="og:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Google Verified Badge: What Replaced Google Guaranteed | LSA Command">
-  <meta name="twitter:description" content="Google Guaranteed and Google Screened were folded into one Google Verified badge on Local Services Ads. What changed, what’s required, and what contractors should update.">
-  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:description" content="Google Guaranteed and Google Screened were folded into one Google Verified badge on Local Services Ads. What changed and what to update.">
+  <meta name="twitter:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -56,11 +55,9 @@
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
       },
-      "datePublished": "2026-06-25",
+      "datePublished": "2026-07-02",
       "dateModified": "2026-11-14",
-      "author": {
-        "@id": "https://lsacommand.com/#organization"
-      },
+      "author": {"@type": "Organization", "name": "LSA Command Team", "url": "https://lsacommand.com/"},
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://lsacommand.com/blog/google-verified-badge/"
@@ -133,7 +130,7 @@ fpr("click");
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -143,8 +140,11 @@ fpr("click");
         <p class="eyebrow">LSA updates</p>
         <h1>Google Verified Badge: What Replaced Google Guaranteed on Local Services Ads</h1>
         <p class="lede">The Google Guaranteed and Google Screened badges are gone. Local Services Ads now show a single Google Verified badge, and the customer money-back guarantee has ended.</p>
-        <p class="article-meta">By <a href="/" rel="author">LSA Command</a> <span aria-hidden="true">·</span> <time datetime="2026-06-25">June 25, 2026</time> <span aria-hidden="true">·</span> Updated <time datetime="2026-11-14">November 14, 2026</time></p>
+        <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-07-02">July 2, 2026</time> <span aria-hidden="true">·</span> Updated <time datetime="2026-11-14">November 14, 2026</time></p>
       </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=google-verified-badge&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
       <div class="article-layout">
         <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#what-changed">What changed</a></li><li><a href="#what-it-takes-to-get-the-badge">What it takes to get the badge</a></li><li><a href="#how-to-get-the-badge-now">How to get the badge now</a></li><li><a href="#what-contractors-should-update">What contractors should update</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
         <div class="article-body">
@@ -158,6 +158,9 @@ fpr("click");
 
 <p>The badge shows that a business completed Google’s verification checks for its category and location. Depending on your trade and area, those can include background checks, license verification, and insurance. Businesses that already completed verification received the badge automatically; new advertisers get it once verification is complete.</p>
 <p>Keep your documents current. On accounts that haven't moved into Google Ads yet, expired licenses or insurance can cost you the badge and your eligibility to run LSA.</p>
+<!-- LSA-BOOK-CTA mid START -->
+<aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">Put this on every client's Google LSA account: 100% of calls answered within 30 seconds, with notes and notifications on every lead.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=google-verified-badge&amp;cta_position=mid" data-cta="post-mid-book" data-cta-position="mid">Book my 30-minute walkthrough</a> <span class="book-cta-alt">Prefer the phone? <a href="tel:+19897124370" data-cta="post-mid-call">Call 989-712-4370</a> or <a href="sms:+19897124370?&amp;body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="post-mid-text">text us</a>.</span></p></aside>
+<!-- LSA-BOOK-CTA mid END -->
 <h2 id="how-to-get-the-badge-now">How to get the badge now that LSA runs in Google Ads</h2>
 <!-- To embed after the video is live: replace the marker below with <figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="How to Get the Google Verified Badge for Local Services Ads (2026)" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><figcaption>Watch: how to get the Google Verified badge for Local Services Ads</figcaption></figure> and add VideoObject schema. Video 6 is also embedded on /blog/local-services-ads-not-eligible-verification/. -->
 <!-- YOUTUBE_EMBED: video-6 -->
@@ -178,16 +181,32 @@ fpr("click");
 </ul>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>Is Google Guaranteed still available?</summary><p>No. Google Guaranteed, Google Screened, and License Verified by Google were consolidated into the Google Verified badge starting in October 2025, and the money-back guarantee ended.</p></details><details><summary>Does the Google Verified badge affect LSA ranking?</summary><p>Google has said the badge change doesn’t affect ranking. Ranking still depends on proximity, reviews, responsiveness, business hours, and complaints.</p></details><details><summary>How do I get the Google Verified badge?</summary><p>Link a verified Google Business Profile, then complete any extra checks Google assigns for your category and location, such as business registration, business representative, license, background or advanced verification checks. Most new campaigns can run during a 30-day grace period while you finish, and go Not Eligible if the checks aren’t done in time.</p></details></div>
-<section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call">Book a walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/blog/how-to-rank-higher-google-local-services-ads/">How to rank higher in Google Local Services Ads</a></li><li><a href="/lsa-reviews/">Review generation</a></li></ul></aside>
+<!-- LSA-BOOK-CTA end START -->
+<section class="cta-box book-cta-end" data-lsa-cta="end" data-headline="See it on one of your client accounts."><h2>See it on one of your client accounts.</h2><p>100% of calls answered within 30 seconds. Your client's team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly. Every lead gets notes and notifications, with High-value leads identified.</p><p>Bring one client's Google LSA account to a 30-minute walkthrough and the LSA Command team audits it live. No passwords change hands, and you keep what the audit finds whether or not you go ahead.</p><p class="book-cta-proof">From 28% to 100% of leads answered in under 30 seconds, across three pool contractor accounts, December 2025 to April 2026 (<a href="/case-studies/">case studies</a>).</p>
+<p>Google Local Services Ads is all LSA Command does. Built for agencies only. $200 per month per client.</p>
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<p class="book-cta-offer"><strong>Black Friday offer:</strong> get 5 client locations live on LSA Command by December 15, 2026, and the first month is free on every location you add before December 15.</p>
+<!-- BLACK-FRIDAY-OFFER END -->
+<a class="button" href="https://lsacommand.com/book/?post_slug=google-verified-badge&amp;cta_position=end" data-cta="post-end-book" data-cta-position="end">Book my 30-minute walkthrough</a> <a class="button button-ghost" href="tel:+19897124370" data-cta="post-end-call">Call 989-712-4370</a> <a class="button button-ghost" href="sms:+19897124370?&amp;body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="post-end-text">Text 989-712-4370</a></section>
+<!-- LSA-BOOK-CTA end END -->
+<aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The <strong>LSA Command Team</strong> builds LSA Command, which helps marketing agencies get 100% of their clients’ Google Local Services Ads calls answered within 30 seconds, with lead notes and notifications on every lead.</p></aside><section class="cta-box"><h2>See it on your own LSA account.</h2><p>Call or text <a href="tel:+19897124370">989-712-4370</a>, or book a walkthrough and bring your current LSA dashboard. We will show you exactly where leads are slipping.</p><a class="button" href="https://lsacommand.com/book/">Book a 30-minute walkthrough</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/blog/how-to-rank-higher-google-local-services-ads/">How to rank higher in Google Local Services Ads</a></li><li><a href="/lsa-reviews/">Review generation</a></li></ul></aside>
           </div>
         </div>
       </div>
     </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> 
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<span class="book-sticky-offer">Black Friday: get 5 client locations live by December 15, 2026, and the first month is free on every location you add before then.</span><span class="book-sticky-offer-short">Black Friday: 5 client locations live by December 15, 2026. First month free on each one added before then.</span>
+<!-- BLACK-FRIDAY-OFFER END -->
+<span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=google-verified-badge&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
   </main>
   <footer class="site-footer"><div class="container">
-    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
-    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>

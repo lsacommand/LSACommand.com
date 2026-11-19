@@ -10,27 +10,26 @@
         gtag('config', 'G-CSQW3SMTL4', {
             // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
             page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
-            page_referrer: document.referrer.split(/[?#]/)[0],
-            linker: { domains: ['lsacommand.com', 'ryan.diyai.ai'] }
+            page_referrer: document.referrer.split(/[?#]/)[0]
         });
     </script>
     <script src="/lsa-tracking.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Pause Google Local Services Ads (2026) | LSA Command</title>
-  <meta name="description" content="How to pause Google Local Services Ads in the old LSA dashboard and in Google Ads after Performance Max, plus partial-pause options and what pauses ads without you.">
+  <meta name="description" content="How to pause Google Local Services Ads in the old LSA dashboard and in Google Ads after Performance Max, plus partial-pause options.">
   <link rel="canonical" href="https://lsacommand.com/blog/how-to-pause-google-local-services-ads/">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="LSA Command">
   <meta property="og:title" content="How to Pause Google Local Services Ads (2026) | LSA Command">
-  <meta property="og:description" content="How to pause Google Local Services Ads in the old LSA dashboard and in Google Ads after Performance Max, plus partial-pause options and what pauses ads without you.">
+  <meta property="og:description" content="How to pause Google Local Services Ads in the old LSA dashboard and in Google Ads after Performance Max, plus partial-pause options.">
   <meta property="og:url" content="https://lsacommand.com/blog/how-to-pause-google-local-services-ads/">
-  <meta property="og:image" content="https://lsacommand.com/preview-stats.png">
+  <meta property="og:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to Pause Google Local Services Ads (2026) | LSA Command">
-  <meta name="twitter:description" content="How to pause Google Local Services Ads in the old LSA dashboard and in Google Ads after Performance Max, plus partial-pause options and what pauses ads without you.">
-  <meta name="twitter:image" content="https://lsacommand.com/preview-stats.png">
+  <meta name="twitter:description" content="How to pause Google Local Services Ads in the old LSA dashboard and in Google Ads after Performance Max, plus partial-pause options.">
+  <meta name="twitter:image" content="https://lsacommand.com/images/og-lsa-command.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -57,11 +56,9 @@
       "publisher": {
         "@id": "https://lsacommand.com/#organization"
       },
-      "datePublished": "2026-11-01",
-      "dateModified": "2026-11-01",
-      "author": {
-        "@id": "https://lsacommand.com/#organization"
-      },
+      "datePublished": "2026-09-07",
+      "dateModified": "2026-09-07",
+      "author": {"@type": "Organization", "name": "LSA Command Team", "url": "https://lsacommand.com/"},
       "keywords": "how to pause local service ads, how to pause google local service ads, pause local services ads, turn off local services ads, local services ads paused, google local service ads hours, lsa ad schedule",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -145,7 +142,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
-      <nav aria-label="Main navigation"><a href="/#everything">Features</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="nav-book">Book a walkthrough</a></nav>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -155,8 +152,11 @@
         <p class="eyebrow">LSA updates</p>
         <h1>How to Pause Google Local Services Ads (Before and After Performance Max)</h1>
         <p class="lede">A client is booked solid, on vacation, or behind on payment, and you need the leads to stop today. Where the pause switch lives now depends on whether the account has moved into Google Ads. Here’s how to pause in both places, the softer options, and the things that pause ads on their own.</p>
-        <p class="article-meta">By <a href="/" rel="author">LSA Command</a> <span aria-hidden="true">·</span> <time datetime="2026-11-01">November 1, 2026</time> <span aria-hidden="true">·</span> 7 min read</p>
+        <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-09-07">September 7, 2026</time> <span aria-hidden="true">·</span> 7 min read</p>
       </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=how-to-pause-google-local-services-ads&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
       <div class="article-layout">
         <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#which-version">First: has the account moved to Google Ads?</a></li><li><a href="#pause-google-ads">How to pause in Google Ads (migrated accounts)</a></li><li><a href="#pause-dashboard">How to pause in the LSA dashboard (not yet migrated)</a></li><li><a href="#while-paused">What happens while the ad is paused</a></li><li><a href="#partial-pause">Five ways to slow leads without a full pause</a></li><li><a href="#unplanned-pauses">Things that pause ads without you</a></li><li><a href="#pause-dont-remove">Pause, don’t remove</a></li><li><a href="#agency-policy">For agencies: a pause policy</a></li><li><a href="#where-lsa-command-fits">Where LSA Command fits</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></aside>
         <div class="article-body">
@@ -204,6 +204,9 @@
 <h3>5. Turn off message leads</h3>
 <p>If the team can’t keep up with texts, message leads can be switched off on their own. Google recommends opting in only when the business can respond within 24 hours. <a href="https://support.google.com/google-ads/answer/17326561?hl=en">Source: Google Ads Help</a></p>
 <p>On the old dashboard there’s also a “temporarily closed” status under business hours, which Google says you can select “if you want to turn off your leads.” <a href="https://support.google.com/localservices/answer/7435507?hl=en">Source: Google Local Services Help</a></p>
+<!-- LSA-BOOK-CTA mid START -->
+<aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">Put this on every client's Google LSA account.</p><p>100% of calls answered within 30 seconds: your client's team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p>Proof: Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% between December 2025 and April 2026 (<a href="/case-studies/">case studies</a>).</p><p>When the AI books a job on a call, LSA Command fills the Lead Summary inside Google's LSA platform: Lead Status Booked, customer name, location, and appointment.</p><p>Bring one client account. The LSA Command team audits it live while you share your screen. No passwords change hands.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=how-to-pause-google-local-services-ads&amp;cta_position=mid" data-cta="post-mid-book" data-cta-position="mid">Book my 30-minute walkthrough</a> <span class="book-cta-alt">Prefer the phone? <a href="tel:+19897124370" data-cta="post-mid-call">Call 989-712-4370</a> or <a href="sms:+19897124370?&amp;body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="post-mid-text">text us</a>.</span></p></aside>
+<!-- LSA-BOOK-CTA mid END -->
 <h2 id="unplanned-pauses">Things that pause ads without you</h2>
 <p>When a client says “our ads stopped,” check these before anything else. For the full troubleshooting list, see <a href="/blog/local-services-ads-not-showing/">why Local Services Ads aren’t showing</a>.</p>
 <div class="table-wrap"><table class="compare">
@@ -226,19 +229,35 @@
 <p>For the rest of the weekly routine across a client book, see <a href="/blog/lsa-multiple-clients-performance-max-agencies/">managing LSA for multiple clients after Performance Max</a>.</p>
 <h2 id="where-lsa-command-fits">Where LSA Command fits</h2>
 <p>A lot of pause requests are really “we can’t answer the phone right now.” LSA Command handles that part: it answers calls your client misses, replies to message leads instantly, blocks robocalls and rates every lead back to Google, so the ad can keep running through busy weeks. For agencies it runs under your brand. See <a href="/agencies/">LSA Command for agencies</a> or <a href="/lsa-ai-call-answering/">AI call answering for LSA</a>.</p>
-<p>If you manage clients who pause every busy season, book a 30-minute call with Ryan. We’ll look at one account and the options short of a full pause.</p>
+<p>If you manage clients who pause every busy season, book a 30-minute walkthrough with our team. We’ll look at one account and the options short of a full pause.</p>
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq"><details><summary>How do I pause Google Local Services Ads after the move to Google Ads?</summary><p>Go to the Settings tab on the Campaigns page in Google Ads, select the pay-per-lead campaign and set its status to Paused. Set it back to Enabled to resume.</p></details><details><summary>How do I pause Local Services Ads in the old dashboard?</summary><p>In the Local Services Ads lead inbox, open the menu, choose Profile &amp; budget, and switch the ad’s status off with the toggle. Switch it back on to resume on your ad schedule.</p></details><details><summary>Am I charged while Local Services Ads are paused?</summary><p>Google Ads says ads don’t accrue charges while they’re paused. Google also notes that a free version of the listing may still show while the ad is paused.</p></details><details><summary>Will turning off all job types stop Local Services Ads leads?</summary><p>No. Google says deselecting all job types won’t stop leads on the overall category. You have to pause the ad to stop all leads.</p></details><details><summary>Does pausing Local Services Ads hurt ranking?</summary><p>Google doesn’t document a ranking penalty for pausing. It does say missed calls can hurt responsiveness, which affects ranking, so pausing when nobody can answer is usually safer than leaving the ad on.</p></details></div>
-<section class="cta-box"><h2>Managing pauses across a client book? Let’s look at it.</h2><p>Book a 30-minute call with Ryan and bring one client account that pauses often, for capacity or seasonality. We’ll show you how to keep leads answered instead of switching the ad off. Prefer the phone? Call or text <a href="tel:+19897124370" data-cta="article-cta-call">989-712-4370</a>.</p><a class="button" href="https://ryan.diyai.ai/30-min-discovery-call" data-cta="article-cta-book">Book a 30-min call with Ryan</a></section><aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/blog/lsa-multiple-clients-performance-max-agencies/">Managing LSA for multiple clients after Performance Max</a></li><li><a href="/blog/local-services-ads-not-showing/">Why Local Services Ads aren’t showing</a></li><li><a href="/agencies/">LSA Command for agencies</a></li></ul></aside>
+<aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The <strong>LSA Command Team</strong> builds LSA Command, which helps marketing agencies get 100% of their clients’ Google Local Services Ads calls answered within 30 seconds, with lead notes and notifications on every lead.</p></aside><!-- LSA-BOOK-CTA end START -->
+<section class="cta-box book-cta-end" data-lsa-cta="end" data-headline="Managing pauses across a client book? Let’s look at it."><h2>Managing pauses across a client book? Let’s look at it.</h2><p>100% of calls answered within 30 seconds. Your client's team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly. Every lead gets notes and notifications, with High-value leads identified.</p><p>Bring one client's Google LSA account to a 30-minute walkthrough and the LSA Command team audits it live. No passwords change hands, and you keep what the audit finds whether or not you go ahead.</p><p class="book-cta-proof">From 28% to 100% of leads answered in under 30 seconds, across three pool contractor accounts, December 2025 to April 2026 (<a href="/case-studies/">case studies</a>).</p>
+<p>Google Local Services Ads is all LSA Command does. Built for agencies only. $200 per month per client.</p>
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<p class="book-cta-offer"><strong>Black Friday offer:</strong> get 5 client locations live on LSA Command by December 15, 2026, and the first month is free on every location you add before December 15.</p>
+<!-- BLACK-FRIDAY-OFFER END -->
+<a class="button" href="https://lsacommand.com/book/?post_slug=how-to-pause-google-local-services-ads&amp;cta_position=end" data-cta="post-end-book" data-cta-position="end">Book my 30-minute walkthrough</a> <a class="button button-ghost" href="tel:+19897124370" data-cta="post-end-call">Call 989-712-4370</a> <a class="button button-ghost" href="sms:+19897124370?&amp;body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="post-end-text">Text 989-712-4370</a></section>
+<!-- LSA-BOOK-CTA end END -->
+<aside class="related" aria-label="Related pages"><p class="eyebrow">Keep exploring</p><ul><li><a href="/blog/lsa-multiple-clients-performance-max-agencies/">Managing LSA for multiple clients after Performance Max</a></li><li><a href="/blog/local-services-ads-not-showing/">Why Local Services Ads aren’t showing</a></li><li><a href="/agencies/">LSA Command for agencies</a></li></ul></aside>
           </div>
         </div>
       </div>
     </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> 
+<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+<span class="book-sticky-offer">Black Friday: get 5 client locations live by December 15, 2026, and the first month is free on every location you add before then.</span><span class="book-sticky-offer-short">Black Friday: 5 client locations live by December 15, 2026. First month free on each one added before then.</span>
+<!-- BLACK-FRIDAY-OFFER END -->
+<span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=how-to-pause-google-local-services-ads&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
   </main>
   <footer class="site-footer"><div class="container">
-    <nav aria-label="Features"><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes &amp; credits</a><a href="/lsa-service-area/">Service area targeting</a><a href="/lsa-reviews/">Review generation</a></nav>
-    <nav aria-label="Industries"><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
-    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/agencies/">For agencies</a><a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
     <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
   </div></footer>
 </body>

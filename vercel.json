@@ -14,6 +14,41 @@
       "permanent": true
     },
     {
+      "source": "/case-studies/champion-pools/:path*",
+      "destination": "/case-studies/pool-contractor-b/",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/advantage-pools/:path*",
+      "destination": "/case-studies/pool-contractor-a/",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/edgewater-pools/:path*",
+      "destination": "/case-studies/pool-contractor-c/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study-champion-pools.svg",
+      "destination": "/case-study-pool-contractor-b.svg",
+      "permanent": true
+    },
+    {
+      "source": "/case-study-advantage-pools.jpg",
+      "destination": "/case-study-pool-contractor-a.svg",
+      "permanent": true
+    },
+    {
+      "source": "/case-study-edgewater-pools.jpg",
+      "destination": "/case-study-pool-contractor-c.svg",
+      "permanent": true
+    },
+    {
+      "source": "/lsa-replies-minutes-gold-star.svg",
+      "destination": "/lsa-replies-in-minutes.svg",
+      "permanent": true
+    },
+    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true
@@ -21,11 +56,6 @@
     {
       "source": "/setup.html",
       "destination": "/setup/",
-      "permanent": true
-    },
-    {
-      "source": "/case-study-champion-pools.jpg",
-      "destination": "/case-study-champion-pools.svg",
       "permanent": true
     },
     {
@@ -41,6 +71,16 @@
     {
       "source": "/lsa-after.png",
       "destination": "/lsa-after-redacted.svg",
+      "permanent": true
+    },
+    {
+      "source": "/lsa-availability.png",
+      "destination": "/lsa-availability-anon.svg",
+      "permanent": true
+    },
+    {
+      "source": "/review-ai-sms-example.jpg",
+      "destination": "/review-request-sms-example.svg",
       "permanent": true
     }
   ]
