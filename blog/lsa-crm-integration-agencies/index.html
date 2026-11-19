@@ -103,25 +103,25 @@ fpr("click");
     <article>
       <header class="article-header">
         <p class="eyebrow">Agency connection guide</p>
-        <h1 id="connecting-google-local-services-ads-to-customer-relationship-management-software">Connecting Google Local Services Ads to Customer Relationship Management Software</h1>
+        <h1 id="connecting-google-local-services-ads-to-customer-relationship-management-software">Local Services Ads CRM Integration: Connecting LSA to Your CRM</h1>
         <p class="article-meta"><span>By the LSA Command Team</span> <span aria-hidden="true">·</span> <time datetime="2026-07-27">July 27, 2026</time> <span aria-hidden="true">·</span> 9 min read</p>
       </header>
 <!-- LSA-BOOK-CTA top START -->
 <aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=lsa-crm-integration-agencies&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
 <!-- LSA-BOOK-CTA top END -->
       <div class="article-layout">
-        <aside class="contents" aria-label="In this article"><p class="contents-label">In this article</p><nav aria-label="Table of contents"><ol><li><a href="#define-what-the-integration-will-actually-do">Define what the integration will actually do</a></li>
+        <aside class="contents" aria-label="In this article"><p class="contents-label">In this article</p><nav aria-label="Table of contents"><ol><li><a href="#define-what-the-integration-will-actually-do">Define what the Local Services Ads CRM integration will actually do</a></li>
 <li><a href="#map-the-client-account-before-mapping-the-contact">Map the client account before mapping the contact</a></li>
 <li><a href="#choose-one-place-to-record-the-business-outcome">Choose one place to record the business outcome</a></li>
 <li><a href="#keep-duplicate-events-from-becoming-duplicate-work">Keep duplicate events from becoming duplicate work</a></li>
 <li><a href="#separate-historical-imports-from-new-lead-responses">Separate historical imports from new-lead responses</a></li>
-<li><a href="#test-the-handoff-before-adding-more-clients">Test the handoff before adding more clients</a></li>
+<li><a href="#test-the-handoff-before-adding-more-clients">Test the LSA CRM integration handoff before adding more clients</a></li>
 <li><a href="#explore-the-connection-with-lsa-command">Explore the connection with LSA Command</a></li></ol></nav></aside>
         <div class="article-body">
 <p>Imagine an agency connecting Google Local Services Ads to a client's customer relationship management system. A lead appears, the integration looks successful, and everyone moves on. Then a second notification creates another opportunity. A client changes an outcome that never reaches the report. An old imported lead receives a new welcome message.</p>
-<p>These are the details worth checking before you trust a connection between Local Services Ads and your client management software across your client accounts.</p>
+<p>These are the details worth checking before you trust a Local Services Ads CRM integration across your client accounts.</p>
 <p>Start with one practical question: can your team follow an inquiry from its Google account to the correct client-system record, responsible person and final outcome? Use the workflow below to evaluate a connector, an automation or a software platform before expanding it.</p>
-<h2 id="define-what-the-integration-will-actually-do">Define what the integration will actually do</h2>
+<h2 id="define-what-the-integration-will-actually-do">Define what the Local Services Ads CRM integration will actually do</h2>
 <p>“Connected to Google” can mean several things. A system might retrieve lead records, create contacts in the client system, notify a team, update opportunities or submit lead-quality feedback. Treat each as a separate capability to verify.</p>
 <p>Google documents Local Services lead data in the Google Ads application programming interface, including lead identifiers, types, status and credit information. Availability has limitations; for example, healthcare-category lead data is not available through the documented Local Services resources. A documented interface field does not establish that a particular software product uses it. <a href="https://developers.google.com/google-ads/api/docs/campaigns/local-service-campaigns">See Google's Local Services resource documentation</a>.</p>
 <p>Write down the proposed flow before connecting a client:</p>
@@ -174,7 +174,7 @@ fpr("click");
 <p>Before an import, identify every automation triggered by a new contact, pipeline entry, tag or field change. Ask the provider to show a safe import mode with outbound actions disabled, or another documented way to prevent historical records from entering new-lead campaigns.</p>
 <p>Then inspect a small, authorized sample. Check timestamps, client mapping, existing-contact matches and whether any notification or reply would fire. Approve the full import only after the sample behaves as intended.</p>
 <p>Keep customer data limited to what the workflow needs. Use synthetic records for demonstrations, keep credentials out of email, and have the authorized client approve access and any live communication changes.</p>
-<h2 id="test-the-handoff-before-adding-more-clients">Test the handoff before adding more clients</h2>
+<h2 id="test-the-handoff-before-adding-more-clients">Test the LSA CRM integration handoff before adding more clients</h2>
 <p>Use a supported test environment or authorized records, rather than creating fake consumer leads through live ads. Ask the person who will own the account to walk through these checks:</p>
 <ol>
 <li>A supported new lead reaches the correct client's system and responsible person. Using authorized synthetic demo records, open the resulting record and any shared output as the intended client role (not an agency administrator) and confirm only permitted data and actions are available. Include an unrelated demo record in the check; a filtered-looking screen alone is not proof of restricted access.</li>
@@ -189,7 +189,7 @@ fpr("click");
 <p>Record the input event, expected record or activity, actual result, timestamp, tester, test role and any manual intervention. For a retry test, record both attempts and the final opportunity count; for a later-message test, confirm the new activity is present. For an import test, retain evidence that no outbound action ran. Use sanitized records, not customer screenshots containing private details.</p>
 <p>A successful login is not the same as a passing handoff test. Keep the affected automation paused until the client’s approver accepts a safe result.</p>
 <p>Treat self-service setup as a separate acceptance question. If a provider proposes unaided onboarding, have a representative agency owner complete the permitted setup without staff performing steps or explaining missing instructions. Record where help was needed. A working connection demonstrated by an administrator does not establish that an agency owner can set it up independently.</p>
-<p>Start with one representative client, resolve the failures, and repeat the checks when another business has different routing or software requirements. Our <a href="https://lsacommand.com/blog/multi-account-lsa-software-agencies/">multi-account Local Services Ads software guide</a> covers the wider account-by-account rollout.</p>
+<p>Start your LSA CRM integration with one representative client, resolve the failures, and repeat the checks when another business has different routing or software requirements. Our <a href="https://lsacommand.com/blog/multi-account-lsa-software-agencies/">multi-account Local Services Ads software guide</a> covers the wider account-by-account rollout.</p>
 <h2 id="explore-the-connection-with-lsa-command">Explore the connection with LSA Command</h2>
 <p>The most useful demonstration starts with the handoff your agency needs to improve.</p>
 <p>If you want a guided evaluation, <a href="https://lsacommand.com/book/">book an LSA Command agency walkthrough</a>. Bring the name of your customer relationship management software, client count and a description of one lead-to-booking workflow, without passwords or unnecessary customer details. Ask to verify the supported integration, field mapping, manual steps and test process for that setup before deciding on fit.</p>
