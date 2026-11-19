@@ -50,9 +50,111 @@
                 Object.keys(attr).forEach(function (k) { u.searchParams.set(k, attr[k]); });
                 window.history.replaceState(null, '', u.pathname + '?' + u.searchParams.toString() + u.hash);
             } catch (_) {}
-    
-[... 8600 bytes from the middle of line 3 omitted (the full text is 3 lines, 14600 bytes). Full text: /cursor/stores/user/grok-bot/agents/55828cc8-e532-488f-b0c0-876ec0a32d35/assets/d71cd5bf0b6276330e59ee36b63eb2a081ca3e342295cf1bf9e3732d2fc52059.txt. To see more, run grep -o with a pattern or cut -b on that file with Shell; fetch only the part you need, in the same step as your next tool call if you can. ...]
-ust saw with what Google gives you today.</p>
+            function frameSrc() {
+                var url = new URL(window.LSA_BOOKING_EMBED_URL);
+                Object.keys(attr).forEach(function (k) { url.searchParams.set(k, attr[k]); });
+                return url.toString();
+            }
+
+            // 3. Confirmed booking: fire booking_complete + generate_lead once, then go to /booked/.
+            window.lsaBookingConfirmed = function (source) {
+                var last = readJSON(SENT_KEY);
+                var dup = last && Date.now() - last < 30 * 60 * 1000;
+                var params = { method: 'walkthrough_booking', booking_source: source };
+                Object.keys(attr).forEach(function (k) { params[k] = attr[k]; });
+                var next = '/booked/?post_slug=' + encodeURIComponent(attr.post_slug) + '&cta_position=' + encodeURIComponent(attr.cta_position) + '&tracked=1';
+                var gone = false;
+                function go() { if (!gone) { gone = true; window.location.assign(next); } }
+                if (dup || typeof window.gtag !== 'function') { go(); return; }
+                try { window.localStorage.setItem(SENT_KEY, JSON.stringify(Date.now())); } catch (_) {}
+                window.gtag('event', 'booking_complete', params);
+                window.gtag('event', 'generate_lead', Object.assign({ event_callback: go, event_timeout: 1500 }, params));
+                setTimeout(go, 1800);
+            };
+            window.addEventListener('message', function (event) {
+                var host = (event.origin || '').replace(/^https?:\/\//, '');
+                if (!/(^|\.)(leadconnectorhq\.com|msgsndr\.com|gohighlevel\.com)$/.test(host)) return;
+                var d = event.data;
+                if (Array.isArray(d) && d[0] === 'msgsndr-booking-complete') window.lsaBookingConfirmed('calendar_postmessage');
+            });
+
+            // 4. Load the calendar (or the fallback while the calendar is not LSA Command branded).
+            function load() {
+                var wrap = document.getElementById('lsa-booking-wrap');
+                var frame = document.getElementById('lsa-booking-frame');
+                var fallback = document.getElementById('lsa-booking-fallback');
+                if (!wrap || !frame) return;
+                if (!window.LSA_CALENDAR_READY) { wrap.hidden = true; if (fallback) fallback.hidden = false; return; }
+                if (frame.getAttribute('src')) return;
+                frame.setAttribute('src', frameSrc());
+                var helper = document.createElement('script');
+                helper.src = 'https://link.msgsndr.com/js/form_embed.js';
+                document.body.appendChild(helper);
+            }
+            if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', load); else load();
+        })();
+    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a 30-Minute LSA Command Walkthrough | LSA Command</title>
+  <meta name="description" content="Book a 30-minute walkthrough with the LSA Command team. Bring one Google Local Services Ads account and we'll audit it live.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://lsacommand.com/book/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>
+    .book{max-width:1000px;padding:48px 0 24px}
+    .book h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;margin:8px 0 14px}
+    .book-points{padding-left:1.2rem;margin:0 0 24px}
+    .book-points li{margin:0 0 8px}
+    .book-frame{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+    .book-frame iframe{width:100%;height:1150px;border:0;display:block}
+    @media (max-width:720px){.book-frame iframe{height:1500px}}
+    .book-alt{margin-top:18px;color:var(--muted)}
+    .book-proof{margin:0 0 20px;padding:12px 16px;border-left:4px solid var(--teal,#007b8d);background:#f2fafc;border-radius:8px}
+    .book-offer{margin:0 0 20px;padding:12px 16px;border-radius:12px;background:#fff7e0;border:1px solid #f2d68a}
+    .book-pick{font-size:1.25rem;margin:0;padding:18px 22px 0}
+    .book-frame .book-alt{padding:0 22px 18px}
+    .book-proof-line{margin:-8px 0 18px;font-weight:600;color:#183e52}
+    .book-pick-note{margin:6px 0 0;padding:0 22px;color:var(--muted)}
+    .book-after{font-size:1.4rem;margin:36px 0 12px}
+    .book-fallback[hidden],.book-frame[hidden]{display:none}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section class="book" id="book">
+      <p class="eyebrow">30-minute walkthrough · built for agencies only</p>
+      <h1>100% of your clients' Google LSA calls answered within 30 seconds. See how in 30 minutes.</h1>
+      <p class="lede">Each client's team gets the first 10 to 15 seconds, then AI answers, and AI messaging replies instantly. Open one client's Google Local Services Ads account on a screen share and the LSA Command team audits it live, so no passwords change hands.</p>
+      <!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->
+      <p class="book-offer"><strong>Black Friday offer:</strong> get 5 client locations live on LSA Command by December 15, 2026, and the first month is free on every location you add before December 15.</p>
+      <!-- BLACK-FRIDAY-OFFER END -->
+      <div class="book-frame" id="lsa-booking-wrap">
+        <h2 class="book-pick">Pick a time for your 30-minute walkthrough.</h2>
+        <p class="book-pick-note">On the call, have one client's Google LSA account open to share on screen. You do not need it to book.</p>
+        <iframe id="lsa-booking-frame" title="Book an LSA Command walkthrough, 30 minutes" loading="eager" scrolling="no"></iframe>
+        <p class="book-alt">Prefer the phone? Call <a href="tel:+19897124370" data-cta="book-call">989-712-4370</a> or <a href="sms:+19897124370?&body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="book-text">text us</a>.</p>
+      </div>
+      <div class="book-fallback cta-box" id="lsa-booking-fallback" hidden>
+        <h2>Book by text. It takes one message.</h2>
+        <p>Text your agency name and two times that work to 989-712-4370. The LSA Command team confirms by text and sends the calendar invite.</p>
+        <a class="button" href="sms:+19897124370?&body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="book-fallback-text">Text two times to 989-712-4370</a> <a class="button button-ghost" href="tel:+19897124370" data-cta="book-fallback-call">Call 989-712-4370</a>
+      </div>
+      <noscript><p>The booking calendar needs JavaScript. Call or text <a href="tel:+19897124370">989-712-4370</a> and we will set up a time.</p></noscript>
+      <p class="book-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100%, December 2025 to April 2026. <a href="/case-studies/" data-cta="book-proof">See the case studies</a>.</p>
+      <h2 class="book-after">What you see in 30 minutes</h2>
+      <p>The full flow on a real account: the call answered, lead notes, High-value leads identified, and the notifications your clients get. When the AI books a job on a call, you see the Lead Summary filled in inside Google's LSA platform: Lead Status Booked, customer name, location and appointment.</p>
+      <p>Then the LSA Command team audits your own client's account live, so you can compare what you just saw with what Google gives you today.</p>
       <p><strong>$200 per month per client. Built for agencies only.</strong> You leave with what the audit found on that account, whether or not you go ahead.</p>
     </section>
   </main>
