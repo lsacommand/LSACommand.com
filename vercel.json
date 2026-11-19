@@ -14,6 +14,21 @@
       "permanent": true
     },
     {
+      "source": "/case-studies/champion-pools/",
+      "destination": "/case-studies/pool-contractor-b/",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/advantage-pools/",
+      "destination": "/case-studies/pool-contractor-a/",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/edgewater-pools/",
+      "destination": "/case-studies/pool-contractor-c/",
+      "permanent": true
+    },
+    {
       "source": "/case-studies/champion-pools/:path*",
       "destination": "/case-studies/pool-contractor-b/",
       "permanent": true
