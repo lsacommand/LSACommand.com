@@ -21,8 +21,8 @@
         // calendar shows LSA Command branding only (no personal name, photo, other brand, or other
         // phone) and its confirmation redirect is https://lsacommand.com/booked/. While false, this
         // page shows the call/text fallback instead of the calendar.
-        window.LSA_BOOKING_EMBED_URL = 'https://api.leadconnectorhq.com/widget/booking/P4Z0PkG4Jn47zv6Iq3lE';
-        window.LSA_CALENDAR_READY = false;
+        window.LSA_BOOKING_EMBED_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oNJXwaqf21QagdoaMeSv9XrXGDl5wXPFO3JcClaChE3P1jwYbWPnCw9PBf3-eez38Nmf3AB22?gv=true'; // Google Calendar appointment schedule on ryan@lsacommand.com
+        window.LSA_CALENDAR_READY = true;
         // ===========================================================================================
         (function () {
             var UTM = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
@@ -86,10 +86,7 @@
                 if (!wrap || !frame) return;
                 if (!window.LSA_CALENDAR_READY) { wrap.hidden = true; if (fallback) fallback.hidden = false; return; }
                 if (frame.getAttribute('src')) return;
-                frame.setAttribute('src', frameSrc());
-                var helper = document.createElement('script');
-                helper.src = 'https://link.msgsndr.com/js/form_embed.js';
-                document.body.appendChild(helper);
+                frame.setAttribute('src', window.LSA_BOOKING_EMBED_URL);
             }
             if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', load); else load();
         })();
@@ -142,7 +139,7 @@
       <div class="book-frame" id="lsa-booking-wrap">
         <h2 class="book-pick">Pick a time for your 30-minute walkthrough.</h2>
         <p class="book-pick-note">On the call, have one client's Google LSA account open to share on screen. You do not need it to book.</p>
-        <iframe id="lsa-booking-frame" title="Book an LSA Command walkthrough, 30 minutes" loading="eager" scrolling="no"></iframe>
+        <iframe id="lsa-booking-frame" title="Book an LSA Command walkthrough, 30 minutes" loading="eager"></iframe>
         <p class="book-alt">Prefer the phone? Call <a href="tel:+19897124370" data-cta="book-call">989-712-4370</a> or <a href="sms:+19897124370?&body=LSA%20Command%20walkthrough.%20My%20agency%20name%20and%20two%20times%20that%20work%3A%20" data-cta="book-text">text us</a>.</p>
       </div>
       <div class="book-fallback cta-box" id="lsa-booking-fallback" hidden>
