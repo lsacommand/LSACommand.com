@@ -129,8 +129,13 @@
       "permanent": true
     },
     {
+      "source": "/images/google-ads-leads-report-lsa-lead-notes.svg",
+      "destination": "/images/google-ads-leads-report-ai-call-summary-notes-every-lead.svg",
+      "permanent": true
+    },
+    {
       "source": "/images/pmax-leads-report-redacted.svg",
-      "destination": "/images/google-ads-leads-report-lsa-lead-notes.svg",
+      "destination": "/images/google-ads-leads-report-ai-call-summary-notes-every-lead.svg",
       "permanent": true
     },
     {
