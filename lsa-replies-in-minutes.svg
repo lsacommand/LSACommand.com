@@ -1,6 +1,6 @@
 <svg width="760" height="980" viewBox="0 0 760 980" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Pool contractor Google LSA result with replies in minutes badge</title>
-  <desc id="desc">A recreated Google Local Services result for a pool contractor, with business names hidden, showing Open 24 hours, Message, and Typically replies in a few min highlighted.</desc>
+  <desc id="desc">A recreated Google Local Services result for a pool contractor, with business names hidden, showing Open 24/7, Message, and Typically replies in a few min highlighted.</desc>
   <rect width="760" height="980" fill="#1F1F1F"/>
   <rect x="30" y="46" width="700" height="92" rx="10" fill="#202124" stroke="#4B4D52" stroke-width="2"/>
   <rect x="58" y="78" width="36" height="26" rx="3" fill="#B8B8B8"/>
@@ -25,7 +25,7 @@
     <rect x="-10" y="126" width="244" height="42" rx="8" stroke="#38D9A9" stroke-width="5"/>
     <rect x="252" y="130" width="172" height="34" rx="8" fill="#38D9A9" fill-opacity="0.22" stroke="#38D9A9" stroke-width="2"/>
     <text x="338" y="153" text-anchor="middle" fill="#38D9A9" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.5">OPEN 24/7</text>
-    <text x="0" y="156" fill="#6EE787" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Open 24 hours</text>
+    <text x="0" y="156" fill="#6EE787" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Open 24/7</text>
     <text x="0" y="196" fill="#F1F3F4" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Background checked</text>
 
     <rect x="-10" y="213" width="492" height="60" rx="8" stroke="#EF4444" stroke-width="5"/>
@@ -50,7 +50,7 @@
     <rect x="0" y="-26" width="270" height="32" rx="6" fill="#5F6368"/>
     <text x="0" y="40" fill="#F1F3F4" font-family="Inter, Arial, sans-serif" font-size="27">4.7 ***** · Pool repair contra...</text>
     <text x="0" y="80" fill="#F1F3F4" font-family="Inter, Arial, sans-serif" font-size="27">17+ years in business</text>
-    <text x="0" y="120" fill="#6EE787" font-family="Inter, Arial, sans-serif" font-size="27">Open 24 hours</text>
+    <text x="0" y="120" fill="#6EE787" font-family="Inter, Arial, sans-serif" font-size="27">Open 24/7</text>
     <text x="0" y="160" fill="#F1F3F4" font-family="Inter, Arial, sans-serif" font-size="27">Family owned · 24/7 emergency services</text>
     <rect x="0" y="196" width="154" height="68" rx="34" stroke="#5F6368" stroke-width="2"/>
     <text x="76" y="239" text-anchor="middle" fill="#F1F3F4" font-family="Inter, Arial, sans-serif" font-size="25">Call</text>
