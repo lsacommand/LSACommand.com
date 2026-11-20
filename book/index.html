@@ -15,13 +15,15 @@
     </script>
     <script src="/lsa-tracking.js" defer></script>
     <script>
-        // ===== BOOKING CALENDAR (LeadConnector / GoHighLevel) =====================================
+        // ===== BOOKING CALENDAR (Cal.com) =====================================
         // LSA_BOOKING_EMBED_URL: the calendar's widget URL. Swap this ONE line to change calendars.
-        // LSA_CALENDAR_READY: keep false until scripts/check_booking_calendar.py passes, i.e. the
-        // calendar shows LSA Command branding only (no personal name, photo, other brand, or other
-        // phone) and its confirmation redirect is https://lsacommand.com/booked/. While false, this
-        // page shows the call/text fallback instead of the calendar.
-        window.LSA_BOOKING_EMBED_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oNJXwaqf21QagdoaMeSv9XrXGDl5wXPFO3JcClaChE3P1jwYbWPnCw9PBf3-eez38Nmf3AB22?gv=true'; // Google Calendar appointment schedule on the LSA Command team calendar
+        // LSA_CALENDAR_READY: keep false until the calendar shows LSA Command branding only (no personal
+        // name, photo, other brand, or other phone). While false, this page shows the call/text
+        // fallback instead of the calendar.
+        // Cal.com event, profile "LSA Command" (no personal name or photo).
+        // FALLBACK (old Google Calendar appointment schedule, shows a personal name; do not use unless Cal.com is down):
+        // https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oNJXwaqf21QagdoaMeSv9XrXGDl5wXPFO3JcClaChE3P1jwYbWPnCw9PBf3-eez38Nmf3AB22?gv=true
+        window.LSA_BOOKING_EMBED_URL = 'https://cal.com/lsacommand/walkthrough?embed=true&theme=light&layout=month_view';
         window.LSA_CALENDAR_READY = true;
         // ===========================================================================================
         (function () {
@@ -42,9 +44,7 @@
             UTM.forEach(function (k) { var v = here.get(k) || (first && first[k]); if (v) attr[k] = String(v).slice(0, 100); });
             window.lsaBookingAttribution = attr;
 
-            // 2. Put them on this page's URL: LeadConnector's form_embed.js hands the parent page's
-            //    query params to the calendar (fetch-query-params), which fills UTM attribution and
-            //    hidden fields (post_slug, cta_position) on the booking record. Also set on the iframe src.
+            // 2. Put them on this page's URL, and on the Cal.com iframe src (see frameSrc below).
             try {
                 var u = new URL(window.location.href);
                 Object.keys(attr).forEach(function (k) { u.searchParams.set(k, attr[k]); });
@@ -52,7 +52,10 @@
             } catch (_) {}
             function frameSrc() {
                 var url = new URL(window.LSA_BOOKING_EMBED_URL);
-                Object.keys(attr).forEach(function (k) { url.searchParams.set(k, attr[k]); });
+                // Cal.com: attribution rides along as booking metadata, UTMs pass through as utm_* params.
+                url.searchParams.set('metadata[post_slug]', attr.post_slug);
+                url.searchParams.set('metadata[cta_position]', attr.cta_position);
+                UTM.forEach(function (k) { if (attr[k]) { url.searchParams.set(k, attr[k]); url.searchParams.set('metadata[' + k + ']', attr[k]); } });
                 return url.toString();
             }
 
@@ -73,9 +76,10 @@
             };
             window.addEventListener('message', function (event) {
                 var host = (event.origin || '').replace(/^https?:\/\//, '');
-                if (!/(^|\.)(leadconnectorhq\.com|msgsndr\.com|gohighlevel\.com)$/.test(host)) return;
+                if (!/(^|\.)cal\.com$/.test(host)) return;
                 var d = event.data;
-                if (Array.isArray(d) && d[0] === 'msgsndr-booking-complete') window.lsaBookingConfirmed('calendar_postmessage');
+                var t = d && d.detail && d.detail.type || d && d.type;
+                if (d && d.originator === 'CAL' && (t === 'bookingSuccessful' || t === 'bookingSuccessfulV2')) window.lsaBookingConfirmed('calendar_postmessage');
             });
 
             // 4. Load the calendar (or the fallback while the calendar is not LSA Command branded).
@@ -86,7 +90,7 @@
                 if (!wrap || !frame) return;
                 if (!window.LSA_CALENDAR_READY) { wrap.hidden = true; if (fallback) fallback.hidden = false; return; }
                 if (frame.getAttribute('src')) return;
-                frame.setAttribute('src', window.LSA_BOOKING_EMBED_URL);
+                frame.setAttribute('src', frameSrc());
             }
             if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', load); else load();
         })();
@@ -107,8 +111,8 @@
     .book-points{padding-left:1.2rem;margin:0 0 24px}
     .book-points li{margin:0 0 8px}
     .book-frame{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
-    .book-frame iframe{width:100%;height:1150px;border:0;display:block}
-    @media (max-width:720px){.book-frame iframe{height:1500px}}
+    .book-frame iframe{width:100%;height:860px;border:0;display:block}
+    @media (max-width:720px){.book-frame iframe{height:1000px}}
     .book-alt{margin-top:18px;color:var(--muted)}
     .book-proof{margin:0 0 20px;padding:12px 16px;border-left:4px solid var(--teal,#007b8d);background:#f2fafc;border-radius:8px}
     .book-offer{margin:0 0 20px;padding:12px 16px;border-radius:12px;background:#fff7e0;border:1px solid #f2d68a}
