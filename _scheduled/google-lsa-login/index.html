@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0]
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google LSA Login: Local Service Ads Login in 2026 | LSA Command</title>
+  <meta name="description" content="Google LSA login in late 2026: where to sign in, which Google account to use, the local service ads login after the move into Google Ads, and fixes for access problems.">
+  <link rel="canonical" href="https://lsacommand.com/blog/google-lsa-login/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Google LSA Login: Where to Sign In to Local Service Ads Now">
+  <meta property="og:description" content="Your local service ads login may now open Google Ads instead of the LSA dashboard. Where to sign in, which account to use, and how to fix access problems.">
+  <meta property="og:url" content="https://lsacommand.com/blog/google-lsa-login/">
+  <meta property="og:image" content="https://lsacommand.com/blog/google-lsa-login/blog-google-lsa-login.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Google LSA login: where to sign in now. Local service ads login after the Google Ads move, plus fixes, from LSA Command">
+  <meta property="article:published_time" content="2026-12-10T11:30:00-05:00">
+  <meta property="article:modified_time" content="2026-12-10T11:30:00-05:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Google LSA Login: Where to Sign In to Local Service Ads Now">
+  <meta name="twitter:description" content="Your local service ads login may now open Google Ads instead of the LSA dashboard. Where to sign in, which account to use, and how to fix access problems.">
+  <meta name="twitter:image" content="https://lsacommand.com/blog/google-lsa-login/blog-google-lsa-login.png">
+  <meta name="twitter:image:alt" content="Google LSA login: where to sign in now. Local service ads login after the Google Ads move, plus fixes, from LSA Command">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>
+    .cta-box .button{display:inline-block;margin:12px 12px 0 0}
+    .table-wrap{overflow-x:auto;margin:1.25rem 0}
+    .table-wrap .compare{margin:0}
+    ol.chapters, ul.chapters{margin:0 0 1.5rem 1.2rem}
+    ol.chapters li, ul.chapters li{margin:.35rem 0}
+
+    .yt-facade{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#07243A}
+    .yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .yt-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .yt-play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-end;padding:0 2.2% 1.8% 0}
+    .yt-play svg{width:clamp(46px,12%,84px);height:auto;filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));transition:transform .15s}
+    .yt-play:hover svg{transform:scale(1.08)}
+    .video-with-infographic{margin:0 0 32px}
+    .video-with-infographic .video{margin:0 0 16px}
+    .infographic{margin:0}
+    .infographic img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:0 12px 42px rgba(7,36,58,.06)}
+    .infographic figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+    figure.shot{margin:1.5rem 0}
+    figure.shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+    figure.shot figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+    .callout{margin:1.5rem 0;padding:22px 24px;border:1px solid var(--line);border-left:6px solid #00AFC6;border-radius:16px;background:#F4FBFC}
+    .callout .callout-title{margin:0 0 12px;font-family:Outfit,Inter,sans-serif;font-weight:800;font-size:1.2rem;line-height:1.3;color:#07243A}
+    .callout dl{margin:0;display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:0}
+    .callout dt,.callout dd{margin:0;padding:10px 0;border-top:1px solid var(--line)}
+    .callout dt{font-weight:800;color:#07243A;padding-right:16px}
+    .callout dd .tag{display:inline-block;margin-right:6px;padding:2px 10px;border-radius:999px;background:#1a73e8;color:#fff;text-transform:none;letter-spacing:0;font-size:.78rem;font-weight:700;vertical-align:1px}
+    .callout .callout-foot{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line);font-weight:700;color:#07243A}
+    @media (max-width:560px){.callout dl{grid-template-columns:1fr}.callout dd{border-top:0;padding-top:0}}
+    .button.button-secondary{background:#fff;color:#07243A;border:2px solid #07243A}
+    .button.button-secondary:hover{background:#eaf6fa}
+    .faq{margin:0 0 1.5rem}
+    .related h2{margin-top:0}
+    @media (max-width:760px){.breadcrumbs li[aria-current]{display:none}.breadcrumbs li:nth-last-child(2)::after{content:""}.article-header .lede{font-size:1.05rem;line-height:1.6}.article-header{padding-bottom:20px;margin-bottom:22px}.article-meta{margin-top:14px}.book-cta-top{display:flex;flex-direction:column;align-items:stretch}.book-cta-top .button{order:-1;width:100%;margin-bottom:12px}}
+    ul.checklist{list-style:none;margin:0 0 1.5rem;padding:0}
+    ul.checklist li{position:relative;padding:.45rem 0 .45rem 2rem;border-bottom:1px solid var(--line)}
+    ul.checklist li::before{content:"";position:absolute;left:0;top:.65rem;width:1.1rem;height:1.1rem;border:2px solid #00AFC6;border-radius:4px;background:#fff}
+  </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lsacommand.com/blog/google-lsa-login/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lsacommand.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://lsacommand.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Google LSA Login: Where Your Local Service Ads Login Goes in 2026" }
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "BlogPosting"
+      ],
+      "@id": "https://lsacommand.com/blog/google-lsa-login/#main",
+      "url": "https://lsacommand.com/blog/google-lsa-login/",
+      "name": "Google LSA Login: Where Your Local Service Ads Login Goes in 2026",
+      "headline": "Google LSA Login: Where Your Local Service Ads Login Goes in 2026",
+      "description": "Google LSA login in late 2026: where to sign in, which Google account to use, the local service ads login after the move into Google Ads, and fixes for access problems.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-12-10T11:30:00-05:00",
+      "dateModified": "2026-12-10T11:30:00-05:00",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://lsacommand.com/#organization",
+        "name": "LSA Command",
+        "url": "https://lsacommand.com/"
+      },
+      "keywords": "google lsa login, local service ads login, local services ads sign in, lsa dashboard login, local services ads google ads migration, lsa account access, lsa command",
+      "image": [
+        { "@id": "https://lsacommand.com/blog/google-lsa-login/#og" },
+        { "@id": "https://lsacommand.com/blog/google-lsa-login/#thumbnail" },
+        { "@id": "https://lsacommand.com/blog/google-lsa-login/#infographic" },
+        { "@id": "https://lsacommand.com/blog/google-lsa-login/#img-where-to-sign-in" },
+        { "@id": "https://lsacommand.com/blog/google-lsa-login/#img-access-levels" },
+        { "@id": "https://lsacommand.com/blog/google-lsa-login/#img-call-answered-booked" }
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/google-lsa-login/"
+      },
+      "video": {
+        "@id": "https://lsacommand.com/blog/google-lsa-login/#video"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://lsacommand.com/blog/google-lsa-login/#video",
+      "name": "Google LSA Login: Where to Sign In to Local Service Ads in 2026",
+      "description": "Where the Google LSA login takes you in late 2026: the standalone Local Services Ads dashboard if the account has not moved, or an automatic redirect to Google Ads (Goals > Leads) if it has. Which Google account to use, local service ads login access levels, common sign-in fixes, and how LSA Command answers 100% of calls within 30 seconds once you are in.",
+      "thumbnailUrl": ["https://lsacommand.com/blog/google-lsa-login/google-lsa-login-video-thumbnail.jpg", "https://lsacommand.com/blog/google-lsa-login/google-lsa-login-video-thumbnail.webp"],
+      "uploadDate": "2026-12-10T11:30:00-05:00",
+      "url": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "contentUrl": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID_PENDING",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/google-lsa-login/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "Where is the Google LSA login?", "acceptedAnswer": {"@type": "Answer", "text": "Sign in with the Google account that was invited to the Local Services Ads account, at ads.google.com/localservices/inbox. If the account has not moved into Google Ads yet, you land in the standalone lead inbox. If it has moved, Google says you are automatically redirected to the campaign overview in Google Ads, and leads are under Goals > Leads."}},
+        {"@type": "Question", "name": "Is the local service ads login a separate username and password?", "acceptedAnswer": {"@type": "Answer", "text": "No. Google shares Local Services Ads access through each person's own Google account. The person invited must have or create a Google account, and that same Google account is the local service ads login."}},
+        {"@type": "Question", "name": "Why does my LSA dashboard redirect to Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "The account has migrated. Google is moving Local Services Ads into Google Ads as a Performance Max campaign type with pay-per-lead goals, and says that logging in on or after migration day redirects to the campaign overview in Google Ads. The original dashboard is no longer available after that."}},
+        {"@type": "Question", "name": "I signed in but I don't see the client's account. What should I do?", "acceptedAnswer": {"@type": "Answer", "text": "You are probably on the wrong Google account, or your access was removed or never accepted. Use your profile image to switch accounts. If it still is not listed, ask an administrator to invite your email from Admin > Access and security. If nobody with admin access is left, Google points to its Google Ads Account Access Request form, which asks for proof of ownership."}},
+        {"@type": "Question", "name": "Can an agency sign in to many client LSA accounts with one login?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, through a Google Ads manager account. Google says Local Services Ads use Google Ads to set up manager accounts, and they cannot be set up or changed inside Local Services Ads. Once a client accepts the link request, the account appears under your manager account."}},
+        {"@type": "Question", "name": "What does LSA Command do once we are signed in?", "acceptedAnswer": {"@type": "Answer", "text": "LSA Command answers 100% of calls within 30 seconds (the client's team gets the first 10 to 15 seconds, then AI answers), replies to message leads instantly, adds notes and a rating to every lead with High-value leads identified, sends text and email notifications, and marks booked calls as Booked inside the Google LSA account. It is $200 per month per client, with voice AI included."}}
+      ]
+    },
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-lsa-login/#og", "url": "https://lsacommand.com/blog/google-lsa-login/blog-google-lsa-login.png", "contentUrl": "https://lsacommand.com/blog/google-lsa-login/blog-google-lsa-login.png", "name": "Google LSA login: where to sign in now", "caption": "Google LSA login share image: the local service ads login after the Google Ads move, plus fixes.", "width": 1200, "height": 630, "encodingFormat": "image/png", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-lsa-login/#thumbnail", "url": "https://lsacommand.com/blog/google-lsa-login/google-lsa-login-video-thumbnail.webp", "contentUrl": "https://lsacommand.com/blog/google-lsa-login/google-lsa-login-video-thumbnail.webp", "name": "Google LSA login video thumbnail", "caption": "Video thumbnail for the Google LSA login video: from the LSA dashboard to Google Ads, Goals > Leads, with the local service ads login step by step.", "width": 1280, "height": 720, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-lsa-login/#infographic", "url": "https://lsacommand.com/blog/google-lsa-login/google-lsa-login-flowchart-local-service-ads-login.webp", "contentUrl": "https://lsacommand.com/blog/google-lsa-login/google-lsa-login-flowchart-local-service-ads-login.webp", "name": "Google LSA login flowchart: local service ads login paths and what LSA Command does on every lead", "caption": "Google LSA login flowchart: the local service ads login decisions (right Google account, access, migrated or not), then what LSA Command runs behind the scenes on every lead.", "width": 1600, "height": 3330, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-lsa-login/#img-where-to-sign-in", "url": "https://lsacommand.com/blog/google-lsa-login/google-lsa-login-where-to-sign-in-before-after-migration.webp", "contentUrl": "https://lsacommand.com/blog/google-lsa-login/google-lsa-login-where-to-sign-in-before-after-migration.webp", "name": "Google LSA login: where you land before and after migration", "caption": "Illustrative example: the Google LSA login lands in the standalone lead inbox before migration, and in Google Ads under Goals > Leads after it. Fictional data.", "width": 1600, "height": 800, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-lsa-login/#img-access-levels", "url": "https://lsacommand.com/blog/google-lsa-login/local-service-ads-login-access-levels.webp", "contentUrl": "https://lsacommand.com/blog/google-lsa-login/local-service-ads-login-access-levels.webp", "name": "Local service ads login access levels", "caption": "Illustrative example: local service ads login access levels on one client account, set from Admin > Access and security. Fictional accounts.", "width": 1600, "height": 800, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-lsa-login/#img-call-answered-booked", "url": "https://lsacommand.com/blog/google-lsa-login/google-lsa-login-call-answered-booked-lead.webp", "contentUrl": "https://lsacommand.com/blog/google-lsa-login/google-lsa-login-call-answered-booked-lead.webp", "name": "After the Google LSA login: a call answered and the lead marked Booked", "caption": "Illustrative example: after the Google LSA login, one LSA lead answered by AI within 30 seconds, with notes, a rating, notifications and Lead Status Booked. Fictional data.", "width": 1600, "height": 800, "encodingFormat": "image/webp", "inLanguage": "en"}
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Google LSA Login: Where Your Local Service Ads Login Goes in 2026</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">Google LSA guide</p>
+        <h1>Google LSA Login: Where Your Local Service Ads Login Goes in 2026</h1>
+        <p class="lede">The local service ads login now opens one of two places, depending on whether the account has moved into Google Ads. Here is how to tell, which Google account to use, and how to fix the usual access problems.</p>
+        <p class="article-meta"><span>By <a href="/author/lsa-command-team/" rel="author">the LSA Command Team</a></span> <span aria-hidden="true">·</span> <time datetime="2026-12-10">December 10, 2026</time> <span aria-hidden="true">·</span> 9 min read</p>
+      </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=google-lsa-login&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li>
+<li><a href="#where">Where the Google LSA login is today</a></li>
+<li><a href="#account">Which Google account to use</a></li>
+<li><a href="#migrated">Google LSA login after the move into Google Ads</a></li>
+<li><a href="#agencies">Local service ads login for agencies</a></li>
+<li><a href="#problems">Common Google LSA login problems</a></li>
+<li><a href="#after">After the login: every call answered</a></li>
+<li><a href="#checklist">Local service ads login checklist</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+<li><a href="#book">See it on one of your own client accounts</a></li></ol></nav></aside>
+        <div class="article-body">
+          <p><strong>Short answer:</strong> the Google LSA login is the Google account you were invited with, used at ads.google.com/localservices/inbox. If the account has not moved yet, you land in the standalone Local Services Ads dashboard. If it has moved into Google Ads, Google redirects you to the campaign overview, and your leads sit under Goals &gt; Leads.</p>
+
+          <p>That is the local service ads login in one paragraph. Below are the details agencies and owners trip over in late 2026: the wrong Google account, missing or removed access, the redirect after migration, and where notifications moved. Every step is checked against Google's help pages as of November 2026, with links. Where we could not confirm something, we say "check".</p>
+
+          <p>One thing does not change with where you sign in: the calls. LSA Command answers 100% of calls within 30 seconds. The client's team gets the first 10 to 15 seconds, then AI answers, and AI messaging replies to message leads instantly.</p>
+
+          <div class="video-with-infographic">
+          <figure class="video" id="watch">
+            <div class="yt-facade" data-video-id="VIDEO_ID_PENDING">
+              <img src="/blog/google-lsa-login/google-lsa-login-video-thumbnail.webp" alt="Google LSA login video thumbnail: where to sign in now in 2026, from the LSA dashboard to Google Ads Goals &gt; Leads, local service ads login step by step" title="Google LSA login video: where to sign in to local service ads" width="1280" height="720" decoding="async" fetchpriority="high">
+              <button type="button" class="yt-play" aria-label="Play video: Google LSA Login: Where to Sign In to Local Service Ads in 2026"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#07243A"/><path d="M45 24 27 14v20" fill="#FFD60A"/></svg></button>
+            </div>
+            <figcaption>Watch: Google LSA Login: Where to Sign In to Local Service Ads in 2026, the local service ads login explained step by step.<noscript> <a href="https://www.youtube.com/watch?v=VIDEO_ID_PENDING">Watch on YouTube</a>.</noscript></figcaption>
+          </figure>
+          <figure class="infographic">
+            <a href="/blog/google-lsa-login/google-lsa-login-flowchart-local-service-ads-login.webp"><img src="/blog/google-lsa-login/google-lsa-login-flowchart-local-service-ads-login.webp" width="1600" height="3330" loading="lazy" decoding="async" alt="Google LSA login flowchart: local service ads login decisions, redirect to Google Ads, then LSA Command answers every call within 30 seconds, adds notes and marks booked calls" title="Google LSA login flowchart: local service ads login paths and every lead handled"></a>
+            <figcaption>Google LSA login flowchart: the local service ads login decisions, then what LSA Command runs behind the scenes on every lead. Open the full-size image to read it.</figcaption>
+          </figure>
+          </div>
+
+          <h2 id="where">Where the Google LSA login is today</h2>
+
+          <p>For an account that has not moved into Google Ads, the sign-in is the same as it has been. Google's help page on <a href="https://support.google.com/localservices/answer/6224859" rel="noopener">managing leads and jobs</a> says you can "always sign in to your lead inbox on desktop" and links the inbox at ads.google.com/localservices/inbox. The menu in the top left holds Profile &amp; budget, where message leads, pausing and notification preferences live. Google's <a href="https://support.google.com/localservices/answer/6224841" rel="noopener">getting started page</a> still links an older inbox address on google.com, so if a bookmark looks different, that is why.</p>
+
+          <p>For an account that has moved, the same login takes you somewhere else. Google's page on the <a href="https://support.google.com/google-ads/answer/17213585" rel="noopener">Local Services Ads transition to Performance Max campaigns with pay-per-lead goals</a> says: "Attempting to log into your dashboard on or after your migration day will automatically redirect you to your campaign overview in Google Ads." The original dashboard is no longer available after that.</p>
+
+          <figure class="shot">
+            <a href="/blog/google-lsa-login/google-lsa-login-where-to-sign-in-before-after-migration.webp"><img src="/blog/google-lsa-login/google-lsa-login-where-to-sign-in-before-after-migration.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Illustrative Google LSA login mockup: before migration the local service ads login opens the standalone lead inbox; after migration it redirects to Google Ads, Goals &gt; Leads, fictional leads Customer A, B and C" title="Google LSA login: where you land before and after migration"></a>
+            <figcaption>Illustrative example: the Google LSA login lands in the standalone lead inbox before migration, and in Google Ads under Goals &gt; Leads after it. Fictional data, not Google's interface.</figcaption>
+          </figure>
+
+          <p>If you only need to know what the dashboard shows once you are in, our guide to the <a href="/blog/google-lsa-dashboard/">Google LSA dashboard</a> covers that. This page is about getting in.</p>
+
+          <h2 id="account">Which Google account to use for your local service ads login</h2>
+
+          <p>There is no separate LSA username and password. Google's page on <a href="https://support.google.com/localservices/answer/7652468" rel="noopener">managing access to your Local Services Ads account</a> says access is shared "through their Google account", and "the person you invite must have or create a Google Account". So the right login is whichever Google account was invited, or the one that created the account.</p>
+
+          <p>Two details cause most confusion:</p>
+          <ul>
+            <li><strong>The creating email gets the lead emails.</strong> Google's <a href="https://support.google.com/localservices/answer/6224859" rel="noopener">lead inbox help page</a> says the email address used to create the account receives an email with a clickable link to find lead details in the lead inbox on desktop. If the owner set up the account with a personal Gmail, that is often the account that works.</li>
+            <li><strong>A Google account with no access goes to sign-up.</strong> Google's <a href="https://support.google.com/google-ads/answer/1722062" rel="noopener">Sign in to Google Ads</a> page says that if you sign in to a Google account that is not associated with a Google Ads account, you are sent to the sign-up page, with the banner "It doesn't look like you have an account yet." That is a wrong-account problem, not a missing account.</li>
+          </ul>
+
+          <p>To switch, Google says to click your profile image, choose Switch account, and sign in with the other email. The same menu lists the Google Ads accounts your current Google account can open, which is the quickest way to check whether you have access at all.</p>
+
+          <h2 id="migrated">Google LSA login after the move into Google Ads</h2>
+
+          <p>Google is moving Local Services Ads into Google Ads as a specialized Performance Max campaign type with pay-per-lead goals. Per Google's transition page, the first phase began in August 2026 for select US home and storefront services, broader groups follow in late 2026 (including service-area businesses without storefronts and accounts with custom bidding or booking setups), and non-US accounts and remaining categories follow in 2027. <a href="https://www.seroundtable.com/google-local-services-ads-transition-google-ads-41717.html" rel="noopener">Search Engine Roundtable</a> (July 21, 2026) covered the same timeline, and <a href="https://www.searchenginejournal.com/google-is-bringing-local-services-ads-into-google-ads/582816/" rel="noopener">Search Engine Journal</a> (July 20, 2026) reported the move.</p>
+
+          <p>What that means for the Google LSA login:</p>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Task</th><th>Not migrated yet</th><th>After migration (per Google)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Where the login lands</td><td>Standalone LSA dashboard</td><td>Automatic redirect to the campaign overview in Google Ads</td></tr>
+              <tr><td>Leads, messages, recordings</td><td>Lead inbox under Leads</td><td>Goals menu &gt; Leads (check: some accounts show it under Goals &gt; Conversions). Google says this "replaces your Local Services Ads lead inbox"</td></tr>
+              <tr><td>Notification settings</td><td>Profile &amp; budget</td><td>Admin &gt; Notifications. All users and direct managers are opted in by default</td></tr>
+              <tr><td>Budget, bidding, service types</td><td>Profile &amp; budget</td><td>Campaigns &gt; Settings</td></tr>
+              <tr><td>User access</td><td>Admin &gt; Access and security</td><td>Admin &gt; Access and security</td></tr>
+              <tr><td>Old performance reports</td><td>In the dashboard</td><td>Not carried over. Lead totals can be downloaded on the redirection page</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p>Three things to know before migration day. First, Google emails the account administrator 14 days before, sends a final reminder 7 days later, and emails again when the move is done. If the administrator is a client's personal inbox, nobody at the agency may see it. Second, Google says to allow up to two weeks for the migration to finish. Third, on November 17, 2026, <a href="https://www.seroundtable.com/google-local-services-ads-historical-reports-available-for-download-42560.html" rel="noopener">Search Engine Roundtable</a> reported that historical reports can now be downloaded on the redirection page. Google says that download includes lead totals (spend and charged leads by phone, message and booking), not impressions or clicks.</p>
+
+          <p>Past leads, message history and older call recordings carry over, per Google. Verified status and the Google Verified badge carry over too. New Local Services Ads campaigns still start from Google's LSA sign-up at g.co/localservices for now. For the full agency runbook, see our <a href="/blog/lsa-performance-max-migration-agencies/">LSA Performance Max migration playbook</a>.</p>
+
+          <h2 id="agencies">Local service ads login for agencies and manager accounts</h2>
+
+          <p>Do not pass one client password around the office. Google's model is one Google account per person, each with its own access level. Per the <a href="https://support.google.com/localservices/answer/7652468" rel="noopener">access help page</a>, an administrator goes to Admin &gt; Access and security, clicks the plus button, picks a level, enters the email and selects Send invitation. The invited person accepts from the email. Pending invitations can be revoked from the same screen.</p>
+
+          <figure class="shot">
+            <a href="/blog/google-lsa-login/local-service-ads-login-access-levels.webp"><img src="/blog/google-lsa-login/local-service-ads-login-access-levels.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Illustrative local service ads login access mockup for Google LSA login: Admin &gt; Access and security on Roofing client 1 with Administrative, Standard, Billing-only, Email-only and a pending Read-only invitation, fictional example.com accounts" title="Local service ads login access levels on one client account"></a>
+            <figcaption>Illustrative example: local service ads login access levels on one client account, set from Admin &gt; Access and security. Fictional accounts.</figcaption>
+          </figure>
+
+          <p>Google lists five levels: Email-only, Billing-only, Read-only, Standard and Administrative. Only Administrative can edit bidding and budget and manage users. Billing access is controlled separately in the Google payments profile.</p>
+
+          <p>For more than a handful of clients, a Google Ads manager account is the cleaner route. Google says Local Services Ads use Google Ads to set up manager accounts, they cannot be set up or changed from inside Local Services Ads, and linking is required for features like consolidated monthly billing. With one sign-in, your team switches between linked clients from the account list. Our <a href="/blog/local-services-ads-manager-account/">LSA manager account guide</a> walks through the link request and who should own what.</p>
+
+          <h2 id="problems">Common Google LSA login problems and fixes</h2>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>What you see</th><th>Likely cause</th><th>What to do</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>The sign-up page, "It doesn't look like you have an account yet"</td><td>Wrong Google account</td><td>Profile image &gt; Switch account, and sign in with the invited email</td></tr>
+              <tr><td>"You have signed in to a Google Account, but this is not a valid Google Ads login"</td><td>That Google account has no access</td><td>Ask an administrator to invite it, or use the account that created the LSA account</td></tr>
+              <tr><td>The LSA dashboard sends you to Google Ads</td><td>The account has migrated</td><td>Normal. Leads are under Goals &gt; Leads</td></tr>
+              <tr><td>The account is missing from your list</td><td>Access removed, or the invite was never accepted</td><td>Ask an administrator to check Admin &gt; Access and security and re-invite</td></tr>
+              <tr><td>The person who set it up has left</td><td>No remaining administrator</td><td>Google points to its Google Ads Account Access Request form, which asks for proof of ownership</td></tr>
+              <tr><td>Account Access tab will not load</td><td>A bug reported in May 2026</td><td>An advertiser in the SER thread (not Google) reported a workaround: ads.google.com/aw/accountaccess/users. Check whether it is still needed</td></tr>
+              <tr><td>Signed in, but the ad is paused or under review</td><td>Not a login issue. Often verification, billing or profile changes</td><td>See verification and eligibility steps below</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p>Sources for the table: Google's <a href="https://support.google.com/google-ads/troubleshooter/2364595" rel="noopener">Fix sign-in issues troubleshooter</a> (the error text and the "previous owner has left" path), the <a href="https://support.google.com/google-ads/answer/1722062" rel="noopener">Sign in to Google Ads</a> page (switching accounts, the access request form), and <a href="https://www.seroundtable.com/google-local-service-ads-account-access-broken-41277.html" rel="noopener">Search Engine Roundtable on May 6, 2026</a> for the Account Access bug. The same <a href="https://support.google.com/google-ads/answer/1722062" rel="noopener">Sign in to Google Ads</a> page says broad Google Account recovery issues, such as lost phone numbers or 2-step verification, are outside the scope of Google Ads support, so take those to Google Account Help.</p>
+
+          <p>On verification holds: after migration, Search Engine Roundtable and Search Engine Journal both reported that business name, address and hours sync from Google Business Profile, and that a major name or address change triggers a verification review during which the campaign may pause. If an ad stops after a profile edit, check that first. Our guide to <a href="/blog/local-services-ads-not-eligible-verification/">Local Services Ads verification problems</a> covers the rest. If you still need Google, here is <a href="/blog/google-local-services-ads-support/">how to contact Google LSA support</a>.</p>
+
+          <aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">Signed in and seeing missed calls in the lead list?</p><p>Bring one client account. The LSA Command team walks you through it live in 30 minutes and shows how every call gets answered within 30 seconds.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=google-lsa-login&amp;cta_position=mid" data-cta-position="mid" data-cta="article-mid-book">Book my 30-minute walkthrough</a></p></aside>
+
+          <!-- BLACK-FRIDAY-OFFER-START: remove this whole block on Dec 16, 2026 -->
+          <aside class="callout black-friday" aria-label="Black Friday offer" data-expires="2026-12-15">
+            <p class="callout-title">Black Friday offer, ends December 15, 2026</p>
+            <p>Get 5 locations live by December 15, 2026 and the first month is free on every location added before that date. See the <a href="/blog/lsa-command-pricing-explained/">LSA Command pricing explained</a>, then <a href="https://lsacommand.com/book/" data-cta="article-bf-book">book a 30-min discovery call</a>.</p>
+          </aside>
+          <!-- BLACK-FRIDAY-OFFER-END -->
+
+          <h2 id="after">After the Google LSA login: every call answered, booked calls marked</h2>
+
+          <p>Signing in shows you the leads. It does not answer them. By the time you open the lead list, the missed calls are already history. LSA Command closes that gap on the same Google LSA leads, migrated or not.</p>
+
+          <figure class="shot">
+            <a href="/blog/google-lsa-login/google-lsa-login-call-answered-booked-lead.webp"><img src="/blog/google-lsa-login/google-lsa-login-call-answered-booked-lead.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Illustrative mockup after the Google LSA login: an LSA lead for Roofing client 1 rings the team first, AI answers within 30 seconds, notes, a five-star rating, High-value lead, text and email notifications sent, and Lead Status Booked in the local service ads account, fictional data" title="After the Google LSA login: call answered, lead marked Booked"></a>
+            <figcaption>Illustrative example: after the Google LSA login, one LSA lead answered by AI within 30 seconds, with notes, a rating, notifications and Lead Status Booked. Fictional data.</figcaption>
+          </figure>
+
+          <ul>
+            <li><strong>100% of calls answered within 30 seconds.</strong> The client's team gets the first 10 to 15 seconds of ringing. If nobody picks up, AI answers and can book the job.</li>
+            <li><strong>AI messaging replies instantly</strong> to message leads.</li>
+            <li><strong>Notes on every lead.</strong> Every call is notated and rated, with High-value leads identified so the client knows which to work first.</li>
+            <li><strong>Text and email notifications</strong> to the agency and the owner, plus daily and monthly summaries. More on <a href="/lsa-notes-and-notifications/">notes and notifications</a>.</li>
+            <li><strong>Booked calls marked inside Google.</strong> Lead Status is set to Booked and the lead summary is filled in, so the next person who signs in sees which leads became jobs. Here is <a href="/blog/local-services-ads-lead-inbox/">how booked LSA leads get filled out</a>.</li>
+            <li><strong>Robocall and spam blocking</strong>, review requests, zip code service area targeting, help with lead feedback and disputes, CRM integrations, and white label for agencies.</li>
+          </ul>
+
+          <p>The price is $200 per month per client, with voice AI included. See the <a href="/pricing/">pricing page</a>, and the <a href="/case-studies/">case studies</a> for the published pool contractor results.</p>
+
+          <h2 id="checklist">Local service ads login checklist for each client account</h2>
+
+          <p>Run this once per client, ideally before the account migrates.</p>
+
+          <ul class="checklist">
+            <li>Write down which Google account created the LSA account, and who controls that inbox.</li>
+            <li>Confirm at least two people at the business have Administrative access, so one departure does not lock everyone out.</li>
+            <li>Give your agency access through a manager account rather than a shared password.</li>
+            <li>Set office staff to Standard and the bookkeeper to Billing-only.</li>
+            <li>Make sure the administrator email that gets Google's 14-day migration notice is one someone reads.</li>
+            <li>After migration, check Admin &gt; Notifications so the right people get lead notifications.</li>
+            <li>Download the historical lead totals from the redirection page and keep them with the client file.</li>
+            <li>Bookmark both ads.google.com/localservices/inbox and Google Ads, and note which one the client now uses.</li>
+          </ul>
+
+          <p>Want a second check on the rest of the account? Our free <a href="/tools/lsa-account-health-grader/">LSA account health grader</a> scores an account and ranks the top fixes. It is free.</p>
+
+          <h2 id="faq">Frequently asked questions</h2>
+          <div class="faq">
+            <details><summary>Where is the Google LSA login?</summary><p>Sign in with the Google account that was invited to the Local Services Ads account, at ads.google.com/localservices/inbox. If the account has not moved into Google Ads yet, you land in the standalone lead inbox. If it has moved, Google says you are automatically redirected to the campaign overview in Google Ads, and leads are under Goals &gt; Leads.</p></details>
+            <details><summary>Is the local service ads login a separate username and password?</summary><p>No. Google shares Local Services Ads access through each person's own Google account. The person invited must have or create a Google account, and that same Google account is the local service ads login.</p></details>
+            <details><summary>Why does my LSA dashboard redirect to Google Ads?</summary><p>The account has migrated. Google is moving Local Services Ads into Google Ads as a Performance Max campaign type with pay-per-lead goals, and says that logging in on or after migration day redirects to the campaign overview in Google Ads. The original dashboard is no longer available after that.</p></details>
+            <details><summary>I signed in but I don't see the client's account. What should I do?</summary><p>You are probably on the wrong Google account, or your access was removed or never accepted. Use your profile image to switch accounts. If it still is not listed, ask an administrator to invite your email from Admin &gt; Access and security. If nobody with admin access is left, Google points to its Google Ads Account Access Request form, which asks for proof of ownership.</p></details>
+            <details><summary>Can an agency sign in to many client LSA accounts with one login?</summary><p>Yes, through a Google Ads manager account. Google says Local Services Ads use Google Ads to set up manager accounts, and they cannot be set up or changed inside Local Services Ads. Once a client accepts the link request, the account appears under your manager account.</p></details>
+            <details><summary>What does LSA Command do once we are signed in?</summary><p>LSA Command answers 100% of calls within 30 seconds (the client's team gets the first 10 to 15 seconds, then AI answers), replies to message leads instantly, adds notes and a rating to every lead with High-value leads identified, sends text and email notifications, and marks booked calls as Booked inside the Google LSA account. It is $200 per month per client, with voice AI included.</p></details>
+          </div>
+          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The LSA Command Team has almost two decades of agency experience helping local businesses with Local Services Ads. After seeing 20 to 30 percent of calls missed, we built LSA Command to answer every call, reply to message leads and mark the calls the AI books as Booked in Google. <a href="/author/lsa-command-team/">More about the LSA Command Team</a></p></aside>
+
+          <div class="cta-box" id="book">
+            <h2 id="price-and-next-step">After your local service ads login, see it on one of your own client accounts</h2>
+            <p>You have the login sorted. Now make every call on that account count: 100% of calls answered within 30 seconds, instant AI replies to message leads, notes and notifications on every lead, and booked calls marked inside Google, for $200 per month per client with voice AI included.</p>
+            <p>Bring one client account to a free 30-minute walkthrough. Plain talk, no pressure, and you keep whatever the audit finds.</p>
+            <p><a class="button" href="https://lsacommand.com/book/?post_slug=google-lsa-login&amp;cta_position=end" data-cta-position="end" data-cta="article-footer-book">Book my 30-minute walkthrough</a></p>
+          </div>
+          <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
+<ul>
+            <li><a href="/blog/google-lsa-dashboard/">The Google LSA dashboard, explained</a></li>
+            <li><a href="/blog/local-services-ads-manager-account/">How to manage client LSA from a manager account</a></li>
+            <li><a href="/blog/lsa-performance-max-migration-agencies/">LSA in Performance Max: the agency migration playbook</a></li>
+            <li><a href="/blog/local-services-ads-missed-calls/">Local Services Ads missed calls</a></li>
+            <li><a href="/blog/google-local-services-ads-support/">How to contact Google LSA support</a></li>
+            <li><a href="/blog/local-services-ads-lead-inbox/">Local Services Ads lead inbox: booked LSA leads filled out</a></li>
+            <li><a href="/pricing/">Pricing</a></li></ul></aside>
+        </div>
+      </div>
+    </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> <span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=google-lsa-login&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+<script>
+(function(){document.querySelectorAll('.yt-facade').forEach(function(f){var b=f.querySelector('.yt-play');if(!b)return;b.addEventListener('click',function(){var id=f.getAttribute('data-video-id');if(!id||id.indexOf('PENDING')>-1)return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';i.title="Google LSA Login: Where to Sign In to Local Service Ads in 2026";i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';i.setAttribute('allowfullscreen','');i.referrerPolicy='strict-origin-when-cross-origin';f.appendChild(i);b.remove();i.focus();});});})();
+</script>
+</body>
+</html>
