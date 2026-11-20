@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0]
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Local Services Ads Historical Reports: Google Local Services Ads Reports Guide</title>
+  <meta name="description" content="How to download Local Services Ads historical reports before migration: what Google Local Services Ads reports include, what they skip, and a backup checklist.">
+  <link rel="canonical" href="https://lsacommand.com/blog/download-local-services-ads-historical-reports/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="Download Local Services Ads Historical Reports Before Your Account Moves">
+  <meta property="og:description" content="Google now lets you download Local Services Ads historical reports. See what Google Local Services Ads reports include, what they skip, and how to back up every client.">
+  <meta property="og:url" content="https://lsacommand.com/blog/download-local-services-ads-historical-reports/">
+  <meta property="og:image" content="https://lsacommand.com/blog/download-local-services-ads-historical-reports/blog-download-local-services-ads-historical-reports.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Download Local Services Ads historical reports: the file holds total lead spend and charged leads by phone, message and booking, not impressions or clicks">
+  <meta property="article:published_time" content="2026-12-14T11:30:00-05:00">
+  <meta property="article:modified_time" content="2026-12-14T11:30:00-05:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Download Local Services Ads Historical Reports Before Your Account Moves">
+  <meta name="twitter:description" content="Google now lets you download Local Services Ads historical reports. See what Google Local Services Ads reports include, what they skip, and how to back up every client.">
+  <meta name="twitter:image" content="https://lsacommand.com/blog/download-local-services-ads-historical-reports/blog-download-local-services-ads-historical-reports.png">
+  <meta name="twitter:image:alt" content="Download Local Services Ads historical reports: the file holds total lead spend and charged leads by phone, message and booking, not impressions or clicks">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>
+    .cta-box .button{display:inline-block;margin:12px 12px 0 0}
+    .table-wrap{overflow-x:auto;margin:1.25rem 0}
+    .table-wrap .compare{margin:0}
+    ol.chapters, ul.chapters{margin:0 0 1.5rem 1.2rem}
+    ol.chapters li, ul.chapters li{margin:.35rem 0}
+
+    .yt-facade{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#07243A}
+    .yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .yt-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .yt-play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-end;padding:0 2.2% 1.8% 0}
+    .yt-play svg{width:clamp(46px,12%,84px);height:auto;filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));transition:transform .15s}
+    .yt-play:hover svg{transform:scale(1.08)}
+    .video-with-infographic{margin:0 0 32px}
+    .video-with-infographic .video{margin:0 0 16px}
+    .infographic{margin:0}
+    .infographic img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:0 12px 42px rgba(7,36,58,.06)}
+    .infographic figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+    figure.shot{margin:1.5rem 0}
+    figure.shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+    figure.shot figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+    .callout{margin:1.5rem 0;padding:22px 24px;border:1px solid var(--line);border-left:6px solid #00AFC6;border-radius:16px;background:#F4FBFC}
+    .callout .callout-title{margin:0 0 12px;font-family:Outfit,Inter,sans-serif;font-weight:800;font-size:1.2rem;line-height:1.3;color:#07243A}
+    .callout ul,.callout ol{margin:0 0 0 1.2rem}
+    .callout li{margin:.35rem 0}
+    .callout code{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.92em}
+    .callout .callout-foot{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line);font-weight:700;color:#07243A}
+    .button.button-secondary{background:#fff;color:#07243A;border:2px solid #07243A}
+    .button.button-secondary:hover{background:#eaf6fa}
+    .faq{margin:0 0 1.5rem}
+    .related h2{margin-top:0}
+    .sources{font-size:.92rem}
+    .sources li{margin:.4rem 0}
+    @media (max-width:760px){.breadcrumbs li[aria-current]{display:none}.breadcrumbs li:nth-last-child(2)::after{content:""}.article-header .lede{font-size:1.05rem;line-height:1.6}.article-header{padding-bottom:20px;margin-bottom:22px}.article-meta{margin-top:14px}.book-cta-top{display:flex;flex-direction:column;align-items:stretch}.book-cta-top .button{order:-1;width:100%;margin-bottom:12px}}
+  </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Download Local Services Ads Historical Reports"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "BlogPosting"
+      ],
+      "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#main",
+      "url": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/",
+      "name": "How to Download Local Services Ads Historical Reports (and What Google Local Services Ads Reports Leave Out)",
+      "headline": "How to Download Local Services Ads Historical Reports (and What Google Local Services Ads Reports Leave Out)",
+      "description": "How to download Local Services Ads historical reports before migration: what Google Local Services Ads reports include, what they skip, and a backup checklist.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-12-14T11:30:00-05:00",
+      "dateModified": "2026-12-14T11:30:00-05:00",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://lsacommand.com/#organization",
+        "name": "LSA Command",
+        "url": "https://lsacommand.com/"
+      },
+      "keywords": "download local services ads historical reports, google local services ads reports, local services ads historical reports, local services ads redirection page, lsa reports, local services ads migration, google ads leads page",
+      "image": [
+        { "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#og-image" },
+        { "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#thumbnail" },
+        { "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#infographic" },
+        { "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#infographic-part-b" },
+        { "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#img-included-vs-excluded" },
+        { "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#img-agency-backup-tracker" },
+        { "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#img-cost-per-charged-lead" },
+        { "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#img-booked-lead-notes-notifications" }
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/"
+      },
+      "video": {
+        "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#video"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#video",
+      "name": "How to Download Local Services Ads Historical Reports Before Your LSA Account Moves to Google Ads",
+      "description": "How to download Local Services Ads historical reports from the redirection page before an LSA account moves to Google Ads: what the Google Local Services Ads reports file includes (total lead spend, charged leads by phone, message and booking), what it skips (impressions, clicks, other report data), and a backup routine for agencies. LSA Command answers 100% of calls within 30 seconds.",
+      "thumbnailUrl": ["https://lsacommand.com/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-video-thumbnail.webp"],
+      "uploadDate": "2026-12-14T11:30:00-05:00",
+      "url": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "contentUrl": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID_PENDING",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I download my historical Local Services Ads reports?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Google's Google Ads Help article on the move to Performance Max with pay-per-lead goals says you can download your historical Local Services Ads reports on the redirection page. Search Engine Roundtable reported the change on November 17, 2026. The file covers lead totals only, so plan to capture anything else another way."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is in the Local Services Ads historical report download?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google says the download includes your lead totals: total lead spend and the number of charged leads, split by phone, message and booking. Google has not said in the text we checked what file format it uses or what date range it covers, so open your own file and confirm both."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the download include impressions or clicks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Google says the download does not include impressions, clicks, or other report data. If you rely on any of those views, take screenshots of them before the account migrates, because Google also says previous performance reports will not carry over to Google Ads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I lose my lead history when my LSA account moves to Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Google says past customer lead history, including contact details, message history and older call recordings, transfers to the Leads page in Google Ads, under the Goals menu (some accounts show it under Goals, then Conversions). What does not transfer is campaign-level performance data such as past impressions, clicks, weekly spend and ad-level reports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the Local Services Ads redirection page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the page Google shows Local Services Ads accounts that are moving to Google Ads. Google's help article on the transition links to it directly (ads.google.com/localservices/gaferedirection). The exact layout and button names can differ by account, so sign in with the Google account that has access and check what your page shows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should agencies download Google Local Services Ads reports for every client?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Download the file for each client before that client's migration, save it with the client name and download date in the file name, add screenshots of anything the file skips, and log it in one tracker so nobody has to guess which accounts are done."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does LSA Command help after the move?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The download shows what you paid for leads, not what they became. LSA Command answers 100% of calls within 30 seconds: the team gets the first 10 to 15 seconds, then AI answers, and AI messaging replies instantly. Every lead gets notes and a rating, High-value leads identified, and booked calls marked Booked in Google. $200 per month per client."
+          }
+        }
+      ]
+    },
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#og-image", "url": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/blog-download-local-services-ads-historical-reports.png", "contentUrl": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/blog-download-local-services-ads-historical-reports.png", "name": "Download Local Services Ads historical reports: share image", "caption": "Download Local Services Ads historical reports: the file holds total lead spend and charged leads by phone, message and booking, not impressions or clicks.", "width": 1200, "height": 630, "encodingFormat": "image/png", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#thumbnail", "url": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-video-thumbnail.webp", "contentUrl": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-video-thumbnail.webp", "name": "Download Local Services Ads historical reports video thumbnail", "caption": "Video thumbnail: download Local Services Ads historical reports before your Google Ads move. Lead spend, charged leads and the phone, message and booking split are in the file; impressions and clicks are not.", "width": 1280, "height": 720, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#infographic", "url": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-backup-flowchart-part-a.webp", "contentUrl": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-backup-flowchart-part-a.webp", "name": "Download Local Services Ads historical reports: backup routine flowchart (Part A)", "caption": "Process flowchart, Part A: how to download Local Services Ads historical reports for each client before migration.", "width": 1600, "height": 2480, "encodingFormat": "image/webp", "inLanguage": "en", "description": "Flowchart. Check whether the client's migration date is known (if not, recheck weekly), sign in and open the redirection page Google links from its help article, check whether the download option is there (if not, screenshot the Reports page and check again), download the historical report with lead totals, then in parallel save the file with the client name and date, screenshot impressions, clicks and weekly spend, and log it in a tracker. Repeat for every client account before the lead history moves to Leads (Goals menu) in Google Ads and old dashboard access ends."},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#infographic-part-b", "url": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-lead-flowchart-part-b.webp", "contentUrl": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-lead-flowchart-part-b.webp", "name": "Beyond Google Local Services Ads reports: LSA Command lead flowchart (Part B)", "caption": "Process flowchart, Part B: what Google Local Services Ads reports leave out, and what LSA Command does on every Google LSA lead.", "width": 1600, "height": 2620, "encodingFormat": "image/webp", "inLanguage": "en", "description": "Flowchart. A Google LSA lead comes in; message leads get an instant AI messaging reply; robocalls and spam are blocked and kept out of notifications; calls ring the client's own team for 10 to 15 seconds, then AI answers so 100% of calls are answered within 30 seconds; every lead is notated and rated; High-value leads identified and worked first; text and email notifications go out in parallel; booked appointments update the Google LSA lead to Lead Status Booked with the summary filled in; daily and monthly summaries record what leads became."},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#img-included-vs-excluded", "url": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-download-included-vs-excluded.webp", "contentUrl": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-download-included-vs-excluded.webp", "name": "Google Local Services Ads reports download: included vs excluded", "caption": "Google Local Services Ads reports download: total lead spend and charged leads split by phone, message and booking are included; impressions, clicks and other report data are not. Illustrative example.", "width": 1600, "height": 620, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#img-agency-backup-tracker", "url": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-agency-backup-tracker.webp", "contentUrl": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-agency-backup-tracker.webp", "name": "Agency tracker to download Local Services Ads historical reports for every client", "caption": "A simple agency tracker to download Local Services Ads historical reports for every client: migration date, download done, file name, screenshots and a final check. Illustrative example, fictional clients.", "width": 1600, "height": 640, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#img-cost-per-charged-lead", "url": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-cost-per-charged-lead.webp", "contentUrl": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-cost-per-charged-lead.webp", "name": "Google Local Services Ads reports: cost per charged lead from the download", "caption": "Using Google Local Services Ads reports from the download: lead mix by phone, message and booking, and average cost per charged lead. Illustrative example, fictional numbers.", "width": 1600, "height": 680, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/#img-booked-lead-notes-notifications", "url": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-booked-lead-notes-notifications.webp", "contentUrl": "https://lsacommand.com/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-booked-lead-notes-notifications.webp", "name": "Beyond Google Local Services Ads reports: notes, notifications and Booked status", "caption": "What Google Local Services Ads reports do not show: a lead notification with notes, High-value leads identified and the Google LSA lead marked Booked. Illustrative example, fictional customer.", "width": 1600, "height": 720, "encodingFormat": "image/webp", "inLanguage": "en"}
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">How to Download Local Services Ads Historical Reports</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">LSA reporting</p>
+        <h1>How to Download Local Services Ads Historical Reports (and What Google Local Services Ads Reports Leave Out)</h1>
+        <p class="lede">Google now lets you keep your Local Services Ads lead spend history before the move to Google Ads. Here is what the file holds, what it skips, and a backup routine for every client account.</p>
+        <p class="article-meta"><span>By <a href="/author/lsa-command-team/" rel="author">the LSA Command Team</a></span> <span aria-hidden="true">·</span> <time datetime="2026-12-14">December 14, 2026</time> <span aria-hidden="true">·</span> 9 min read</p>
+      </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Moving clients to Google Ads?</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly, and booked calls are marked Booked inside Google.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, <a href="/case-studies/">published case studies</a>).</p><p>Bring one client account and we will walk through it live in 30 minutes. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=download-local-services-ads-historical-reports&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li>
+<li><a href="#what-changed">What changed</a></li>
+<li><a href="#includes">What the download includes</a></li>
+<li><a href="#leaves-out">What the download leaves out</a></li>
+<li><a href="#step-by-step">Step by step</a></li>
+<li><a href="#agency-routine">Backup routine for agencies</a></li>
+<li><a href="#after-migration">After migration</a></li>
+<li><a href="#using-the-file">Using the file</a></li>
+<li><a href="#proof">Proof of what happened on each call</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#sources">Sources</a></li></ol></nav></aside>
+        <div class="article-body">
+          <p>You can now download Local Services Ads historical reports from the LSA redirection page, Google says. The file holds your lead totals: total lead spend and charged leads, split by phone, message and booking. It does not include impressions, clicks or other report data. Download it for each client before migration, and screenshot anything else you need.</p>
+
+          <p>That matters because Google is moving Local Services Ads into Google Ads as Performance Max campaigns with pay-per-lead goals, and Google says previous performance reports will not carry over. This guide covers the exact backup routine, what to capture by hand, and how to keep proof of what each lead became. For the wider migration checklist, see <a href="/blog/lsa-performance-max-migration-agencies/">what agencies must do now that LSA is in Performance Max</a>.</p>
+
+          <div class="video-with-infographic">
+          <figure class="video" id="watch">
+            <div class="yt-facade" data-video-id="VIDEO_ID_PENDING" data-no-zoom>
+              <img src="/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-video-thumbnail.webp" alt="Video thumbnail: download Local Services Ads historical reports before your Google Ads move, showing lead spend, charged leads and the phone, message and booking split in the file, with impressions and clicks missing" title="Video: how to download Local Services Ads historical reports" width="1280" height="720" decoding="async" fetchpriority="high">
+              <button type="button" class="yt-play" aria-label="Play video: How to Download Local Services Ads Historical Reports Before Your LSA Account Moves to Google Ads"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#07243A"/><path d="M45 24 27 14v20" fill="#FFD60A"/></svg></button>
+            </div>
+            <figcaption>Watch: How to Download Local Services Ads Historical Reports Before Your LSA Account Moves to Google Ads. Video thumbnail for the download Local Services Ads historical reports walkthrough.<noscript> <a href="https://www.youtube.com/watch?v=VIDEO_ID_PENDING">Watch on YouTube</a>.</noscript></figcaption>
+          </figure>
+          <figure class="infographic">
+            <img src="/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-backup-flowchart-part-a.webp" width="1600" height="2480" loading="lazy" decoding="async" alt="Process flowchart, Part A, to download Local Services Ads historical reports for each client: check the migration date, open the redirection page, download the lead totals or screenshot the Reports page and recheck, then save, screenshot and log in parallel, and repeat for every client before migration" title="Flowchart Part A: download Local Services Ads historical reports for every client">
+            <figcaption>Process flowchart, Part A: the routine to download Local Services Ads historical reports for each client before migration. Part B, what LSA Command does on every lead after it, sits in the section on proof below. Illustrative process.</figcaption>
+          </figure>
+          </div>
+
+          <h2 id="what-changed">What changed: you can now download Local Services Ads historical reports</h2>
+
+          <p>When Google first described the move into Google Ads, its help article said Local Services Ads performance reports would not transition, that a download would come "soon" on the redirection page, and that anyone who needed reports right away should take screenshots before migrating. Search Engine Roundtable quoted that earlier wording from an archived copy dated October 26, 2026.</p>
+
+          <p>On November 17, 2026, <a href="https://www.seroundtable.com/google-local-services-ads-historical-reports-available-for-download-42560.html" rel="noopener">Search Engine Roundtable reported</a> that the download is now available. Google's <a href="https://support.google.com/google-ads/answer/17213585" rel="noopener">Google Ads Help article on the transition to Performance Max with pay-per-lead goals</a> now says, in its "keep in mind" box: "You can download your historical Local Services Ads reports on the redirection page."</p>
+
+          <p>One honest caveat: when we checked the article, its FAQ section still used the older future-tense wording ("A dedicated download page will be available"). The top of the page and the news coverage say it is live. If your redirection page does not show a download yet, keep screenshotting and check again.</p>
+
+          <h2 id="includes">What the Google Local Services Ads reports download includes</h2>
+
+          <p>Google's own description is short. The download "includes your lead totals (total lead spend and number of charged leads, split by phone, message, and booking)".</p>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Data</th><th>In the download?</th><th>Source</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Total lead spend</td><td>Yes</td><td>Google Ads Help, answer 17213585</td></tr>
+              <tr><td>Number of charged leads</td><td>Yes</td><td>Google Ads Help, answer 17213585</td></tr>
+              <tr><td>Split by phone, message and booking</td><td>Yes</td><td>Google Ads Help, answer 17213585</td></tr>
+              <tr><td>Impressions</td><td>No</td><td>Google Ads Help, answer 17213585</td></tr>
+              <tr><td>Clicks</td><td>No</td><td>Google Ads Help, answer 17213585</td></tr>
+              <tr><td>Other report data</td><td>No</td><td>Google Ads Help, answer 17213585</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <figure class="shot">
+            <img src="/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-download-included-vs-excluded.webp" width="1600" height="620" loading="lazy" decoding="async" alt="Google Local Services Ads reports download, included vs excluded: total lead spend, number of charged leads and the phone, message and booking split are in; impressions, clicks and other report data are out" title="Google Local Services Ads reports download: included vs excluded">
+            <figcaption>Google Local Services Ads reports download: what is in the file and what is not, based on Google's help text. Illustrative example.</figcaption>
+          </figure>
+
+          <p>What Google has not said, in anything we could verify: the file format, the date range inside the file, whether it is per account or per location, and whether a manager account can pull files for many linked accounts at once. Treat all of those as "check on your own redirection page". For reference, Google's <a href="https://support.google.com/localservices/answer/6226265" rel="noopener">View reports on Local Services Ads</a> page says on-dashboard report data is available from October 1, 2017 onward, but Google does not say the download covers that same range.</p>
+
+          <h2 id="leaves-out">What the download leaves out of your Google Local Services Ads reports</h2>
+
+          <p>Google is direct about it: the download "does not include impressions, clicks, or other report data." The FAQ on the same help article adds that previous campaign-level performance metrics, "such as past impressions, clicks, weekly spend, and ad-level performance reports", will not migrate.</p>
+
+          <p>So if a client report, a monthly review or a pricing conversation leans on any of those numbers, capture them before the account moves:</p>
+
+          <ul>
+            <li><strong>Screenshot the views you use.</strong> Set the date range you care about, then capture each view in full. Name every image with the client and the date range.</li>
+            <li><strong>Copy key numbers into a sheet.</strong> A screenshot is proof. A sheet row is something you can compare next quarter.</li>
+            <li><strong>Note lead credits separately.</strong> Google's reports page lists lead credits received, and Google's description of the download does not mention them. If credits matter to the client's history, record them yourself.</li>
+          </ul>
+
+          <p>For a refresher on where each view lives before it goes away, see our guide to the <a href="/blog/google-lsa-dashboard/">Google LSA dashboard</a>.</p>
+
+          <aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">The file shows spend. It does not show which calls became jobs.</p><p>LSA Command answers 100% of calls within 30 seconds, writes notes on every lead and marks booked calls Booked inside Google. Bring one client account and see it live in 30 minutes.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=download-local-services-ads-historical-reports&amp;cta_position=mid" data-cta-position="mid" data-cta="article-mid-book">Book my 30-minute walkthrough</a></p></aside>
+
+          <h2 id="step-by-step">How to download Local Services Ads historical reports, step by step</h2>
+
+          <p>These steps follow Google's help text. Button names on the redirection page can vary, and Google has not published a screenshot-level walkthrough, so confirm each step on your own screen.</p>
+
+          <ol>
+            <li><strong>Sign in with the right Google account.</strong> Use the account that has access to the client's Local Services Ads account. If you manage many clients, our guide to <a href="/blog/local-services-ads-manager-account/">managing client LSA from a manager account</a> covers access.</li>
+            <li><strong>Open the redirection page.</strong> Use <a href="https://ads.google.com/localservices/gaferedirection" rel="noopener">the redirection page Google links from its help article</a> (the link sits in the <a href="https://support.google.com/google-ads/answer/17213585" rel="noopener">transition help article</a>, on the line about downloading historical reports).</li>
+            <li><strong>Find the historical reports download.</strong> If it is not there yet, screenshot the Reports page (Local Services Ads inbox, then the menu, then Reports, per Google's reports help page) and check again later.</li>
+            <li><strong>Download and rename the file.</strong> Use the client name and the download date, for example <code>roofing-client-1_lsa-history_2026-12-14</code>.</li>
+            <li><strong>Open it and check it.</strong> Confirm you see total lead spend and charged leads by phone, message and booking. Write down the date range and format you actually got.</li>
+            <li><strong>Capture what is missing.</strong> Screenshot impressions, clicks and weekly spend views, and save them in the same client folder.</li>
+          </ol>
+
+          <p>If you run many accounts and have developer help, Google's reports page also notes that the Local Services API lets manager (MCC) accounts access reporting data for all managed accounts. Check that it still covers your accounts before you rely on it. Our post on the <a href="/blog/local-services-ads-api/">Local Services Ads API</a> explains what it can and cannot do.</p>
+
+          <h2 id="agency-routine">A backup routine to download Local Services Ads historical reports for every client</h2>
+
+          <p>For one account, the steps above take minutes. For 20 or 40 clients, the risk is not difficulty. It is that one account migrates before anyone remembers to back it up. A small routine fixes that.</p>
+
+          <figure class="shot">
+            <img src="/blog/download-local-services-ads-historical-reports/download-local-services-ads-historical-reports-agency-backup-tracker.webp" width="1600" height="640" loading="lazy" decoding="async" alt="Agency tracker sheet to download Local Services Ads historical reports for every client, with columns for migration date, report downloaded, file name, screenshots and checked, using fictional clients" title="Agency tracker to download Local Services Ads historical reports">
+            <figcaption>A simple tracker to download Local Services Ads historical reports for every client before migration. Illustrative example, fictional clients.</figcaption>
+          </figure>
+
+          <aside class="callout" aria-label="Free backup checklist">
+            <p class="callout-title">Free checklist: back up every client's LSA history</p>
+            <ol>
+              <li>One folder per client, named the same way in every tool you use.</li>
+              <li>File name template: <code>client-name_lsa-history_YYYY-MM-DD</code>. Screenshots: <code>client-name_lsa-screens_YYYY-MM-DD_view-name</code>.</li>
+              <li>A tracker row per client: migration date (or "check account"), report downloaded, file name, screenshots saved, checked by.</li>
+              <li>Open every file once. Note the date range and format you actually received.</li>
+              <li>Recheck weekly any client whose migration date is not known yet.</li>
+              <li>Once a client has moved, confirm their lead history shows on the Leads page in Google Ads.</li>
+            </ol>
+            <p class="callout-foot">Copy it into your project tool as is. Want a broader account review too? Run the free <a href="/tools/lsa-account-health-grader/">LSA account health grader</a>.</p>
+          </aside>
+
+          <p>Assign one owner for the tracker. Google sets each account's migration timing, not you, so the job is simply to be done before it happens.</p>
+
+          <h2 id="after-migration">What happens to Google Local Services Ads reports after migration</h2>
+
+          <p>Google's transition article draws a clear line between what moves and what does not:</p>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Carries over to Google Ads</th><th>Does not carry over</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Past customer lead history, including contact details, message history and older call recordings, on the new Leads page (Goals menu, then Leads; some accounts show it under Goals, then Conversions)</td><td>Previous performance reports</td></tr>
+              <tr><td>Targeted locations, service types, business categories, budget limits, ad schedule and business photos</td><td>Campaign-level metrics such as past impressions, clicks, weekly spend and ad-level performance reports</td></tr>
+              <tr><td>Verified status and the Google Verified badge</td><td>Access to the original Local Services Ads dashboard</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p>In Google's words: "This table replaces your Local Services Ads lead inbox." You can check, download or interact with your leads there. So lead records are safe. The summary numbers you used to pull from LSA reports are what you need to keep yourself. For how reporting tools handle this across many clients, see <a href="/blog/lsa-reporting-software-agencies/">how to choose LSA reporting software for agencies</a>.</p>
+
+          <h2 id="using-the-file">Using the file: cost per charged lead from Google Local Services Ads reports</h2>
+
+          <p>Lead totals are still useful. Two quick numbers per client give you a baseline to compare against once the account runs inside Google Ads:</p>
+
+          <ul>
+            <li><strong>Average cost per charged lead:</strong> total lead spend divided by total charged leads.</li>
+            <li><strong>Lead mix:</strong> the share of charged leads that were phone, message and booking.</li>
+          </ul>
+
+          <figure class="shot">
+            <img src="/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-cost-per-charged-lead.webp" width="1600" height="680" loading="lazy" decoding="async" alt="Google Local Services Ads reports from the download in a sheet: charged leads by phone, message and booking, lead mix percentages, total lead spend and average cost per charged lead, fictional numbers" title="Google Local Services Ads reports: cost per charged lead">
+            <figcaption>Turning Google Local Services Ads reports into a baseline: lead mix and average cost per charged lead. Illustrative example, fictional numbers.</figcaption>
+          </figure>
+
+          <p>Only split spend by lead type if your own file shows spend that way. Google's description is clear that charged leads are split by type; read your file before you assume the same for spend. Also note when each charge happened relative to billing changes: Google began charging for some missed calls in 2026 (missed calls during business hours where the caller stays on the line more than 20 seconds, per Google's <a href="https://support.google.com/localservices/answer/7195435" rel="noopener">How leads work</a> help page), which we cover in <a href="/blog/lsa-missed-call-charges/">how to check your LSA bill for missed call charges</a>.</p>
+
+          <h2 id="proof">Beyond Google Local Services Ads reports: proof of what happened on each call</h2>
+
+          <p>Here is the gap no download fills. Lead totals tell you what a client paid and how many leads came in. They do not tell you which calls were answered, which were missed, which were worth chasing, or which turned into booked jobs. That is the question clients actually ask.</p>
+
+          <figure class="infographic">
+            <img src="/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-lead-flowchart-part-b.webp" width="1600" height="2620" loading="lazy" decoding="async" alt="Process flowchart, Part B, beyond Google Local Services Ads reports: a Google LSA lead comes in, message leads get an instant AI reply, spam is blocked, the team gets 10 to 15 seconds then AI answers within 30 seconds, every lead is notated and rated, High-value leads identified, text and email notifications go out, and booked leads are marked Booked in Google" title="Flowchart Part B: what Google Local Services Ads reports leave out, handled on every lead">
+            <figcaption>Process flowchart, Part B: what Google Local Services Ads reports leave out, and what LSA Command does behind the scenes on every Google LSA lead. Illustrative process.</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <img src="/blog/download-local-services-ads-historical-reports/google-local-services-ads-reports-booked-lead-notes-notifications.webp" width="1600" height="720" loading="lazy" decoding="async" alt="Beyond Google Local Services Ads reports: a lead notification for a fictional roofing client with notes, High-value leads identified and the Google LSA lead record marked Booked, caller details hidden" title="Beyond Google Local Services Ads reports: notes, notifications and Booked status">
+            <figcaption>What Google Local Services Ads reports do not show: notes, a High-value rating and the lead marked Booked in Google. Illustrative example, fictional customer, caller details hidden.</figcaption>
+          </figure>
+
+          <p>This is what LSA Command adds on every Google LSA lead, before and after the move:</p>
+
+          <ul>
+            <li><strong>100% of calls answered within 30 seconds.</strong> The client's own team gets the first 10 to 15 seconds, then AI answers. AI messaging replies to message leads instantly.</li>
+            <li><strong>Notes on every lead.</strong> Every call is notated and rated, and High-value leads identified so the team works them first. More on <a href="/lsa-notes-and-notifications/">notes and notifications</a>.</li>
+            <li><strong>Text and email notifications.</strong> The team, the agency and the owner hear about each lead, plus daily and monthly summaries. See how this compares with Google's own options in <a href="/blog/lsa-lead-notifications/">how to get Google LSA lead notifications</a>.</li>
+            <li><strong>Booked calls marked inside Google.</strong> When a call is booked, the lead gets Lead Status Booked and the lead summary is filled in, inside Google's LSA platform. Our post on the <a href="/blog/local-services-ads-lead-inbox/">Local Services Ads lead inbox</a> shows how.</li>
+          </ul>
+
+          <p>The price is $200 per month per client, with voice AI included.</p>
+
+          <!-- BLACK-FRIDAY-OFFER-START: remove this whole block on Dec 16, 2026 -->
+          <aside class="callout black-friday" aria-label="Black Friday offer" data-expires="2026-12-15">
+            <p class="callout-title">Black Friday offer, ends December 15, 2026</p>
+            <p>Get 5 locations live by December 15, 2026 and the first month is free on every location added before that date. See the <a href="/blog/lsa-command-pricing-explained/">LSA Command pricing explained</a>, then <a href="https://lsacommand.com/book/" data-cta="article-bf-book">book a 30-min discovery call</a>.</p>
+          </aside>
+          <!-- BLACK-FRIDAY-OFFER-END -->
+
+          <h2 id="faq">Frequently asked questions</h2>
+          <div class="faq">
+            <details><summary>Can I download my historical Local Services Ads reports?</summary><p>Yes. Google's Google Ads Help article on the move to Performance Max with pay-per-lead goals says you can download your historical Local Services Ads reports on the redirection page. Search Engine Roundtable reported the change on November 17, 2026. The file covers lead totals only, so plan to capture anything else another way.</p></details>
+            <details><summary>What is in the Local Services Ads historical report download?</summary><p>Google says the download includes your lead totals: total lead spend and the number of charged leads, split by phone, message and booking. Google has not said in the text we checked what file format it uses or what date range it covers, so open your own file and confirm both.</p></details>
+            <details><summary>Does the download include impressions or clicks?</summary><p>No. Google says the download does not include impressions, clicks, or other report data. If you rely on any of those views, take screenshots of them before the account migrates, because Google also says previous performance reports will not carry over to Google Ads.</p></details>
+            <details><summary>Do I lose my lead history when my LSA account moves to Google Ads?</summary><p>No. Google says past customer lead history, including contact details, message history and older call recordings, transfers to the Leads page in Google Ads, under the Goals menu (some accounts show it under Goals, then Conversions). What does not transfer is campaign-level performance data such as past impressions, clicks, weekly spend and ad-level reports.</p></details>
+            <details><summary>Where is the Local Services Ads redirection page?</summary><p>It is the page Google shows Local Services Ads accounts that are moving to Google Ads. Google's help article on the transition links to it directly (ads.google.com/localservices/gaferedirection). The exact layout and button names can differ by account, so sign in with the Google account that has access and check what your page shows.</p></details>
+            <details><summary>Should agencies download Google Local Services Ads reports for every client?</summary><p>Yes. Download the file for each client before that client's migration, save it with the client name and download date in the file name, add screenshots of anything the file skips, and log it in one tracker so nobody has to guess which accounts are done.</p></details>
+            <details><summary>How does LSA Command help after the move?</summary><p>The download shows what you paid for leads, not what they became. LSA Command answers 100% of calls within 30 seconds: the team gets the first 10 to 15 seconds, then AI answers, and AI messaging replies instantly. Every lead gets notes and a rating, High-value leads identified, and booked calls marked Booked in Google. $200 per month per client.</p></details>
+          </div>
+
+          <h2 id="sources">Sources</h2>
+          <ul class="sources">
+            <li>Google Ads Help, <a href="https://support.google.com/google-ads/answer/17213585" rel="noopener">Local Services Ads transition to Performance Max campaigns with pay-per-lead goals</a> (checked November 20, 2026): download on the redirection page, what the file includes and excludes, what carries over, the Leads page.</li>
+            <li>Search Engine Roundtable, <a href="https://www.seroundtable.com/google-local-services-ads-historical-reports-available-for-download-42560.html" rel="noopener">Google Local Services Ads Historical Reports Can Now Be Downloaded</a> (November 17, 2026): the change, and the earlier help text from an October 26, 2026 archive.</li>
+            <li>Google Local Services Help, <a href="https://support.google.com/localservices/answer/6226265" rel="noopener">View reports on Local Services Ads</a> (checked November 20, 2026): what on-dashboard reports show, data from October 1, 2017, and API access for manager accounts.</li>
+          </ul>
+
+          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The LSA Command Team has almost two decades of agency experience helping local businesses with Local Services Ads. We built LSA Command first for our own agency's Google LSA accounts, to answer every call, reply to message leads and mark the calls that book as Booked in Google. <a href="/author/lsa-command-team/">More about the LSA Command Team</a></p></aside>
+
+          <div class="cta-box" id="book">
+            <h2 id="price-and-next-step">Keep your Local Services Ads history, then keep the proof</h2>
+            <p>Download each client's Local Services Ads history before the move. Then make sure every new lead is answered, noted and marked when it books.</p>
+            <p>100% of calls answered within 30 seconds, instant AI replies to message leads, notes and notifications on every lead, and booked calls marked inside Google, for $200 per month per client with voice AI included. Bring one client account to a free 30-minute walkthrough. No pressure, just a look at what happens to their calls today.</p>
+            <p><a class="button" href="https://lsacommand.com/book/?post_slug=download-local-services-ads-historical-reports&amp;cta_position=end" data-cta-position="end" data-cta="article-footer-book">Book my 30-minute walkthrough</a></p>
+          </div>
+          <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
+<ul>
+            <li><a href="/blog/lsa-performance-max-migration-agencies/">Google moved LSA into Performance Max: what agencies must do now</a></li>
+            <li><a href="/blog/local-services-ads-manager-account/">How to manage client Local Services Ads from a manager account</a></li>
+            <li><a href="/blog/lsa-reporting-software-agencies/">How to choose LSA reporting software for agencies</a></li>
+            <li><a href="/blog/google-lsa-dashboard/">The Google LSA dashboard, explained</a></li>
+            <li><a href="/blog/google-lsa-login/">Google LSA login: where to sign in</a></li>
+            <li><a href="/blog/local-services-ads-updates/">Local Services Ads updates: every 2026 change</a></li>
+            <li><a href="/tools/">Free LSA tools</a></li>
+            <li><a href="/pricing/">Pricing</a></li></ul></aside>
+        </div>
+      </div>
+    </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong>
+<!-- BLACK-FRIDAY-OFFER-START: remove this whole block on Dec 16, 2026 -->
+<span class="book-sticky-offer">Black Friday: get 5 locations live by December 15, 2026 and the first month is free on every location added before that date.</span><span class="book-sticky-offer-short">Black Friday: 5 locations live by December 15, 2026, first month free.</span>
+<!-- BLACK-FRIDAY-OFFER-END -->
+<span class="book-sticky-extra">Built for agencies. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=download-local-services-ads-historical-reports&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+<script>
+(function(){document.querySelectorAll('.yt-facade').forEach(function(f){var b=f.querySelector('.yt-play');if(!b)return;b.addEventListener('click',function(){var id=f.getAttribute('data-video-id');if(!id)return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';i.title="How to Download Local Services Ads Historical Reports Before Your LSA Account Moves to Google Ads";i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';i.setAttribute('allowfullscreen','');i.referrerPolicy='strict-origin-when-cross-origin';f.appendChild(i);b.remove();i.focus();});});})();
+</script>
+</body>
+</html>
