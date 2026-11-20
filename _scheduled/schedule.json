@@ -12,5 +12,54 @@
     "to": "blog/google-local-services-ads-for-lawyers-case-study",
     "sitemap": "/blog/google-local-services-ads-for-lawyers-case-study/",
     "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/google-local-services-ads-for-lawyers-case-study/\">Google Local Services Ads for Lawyers: Google's 300-Lead Case Study</a></h3><p>Google's case study on a law firm: 300 leads in one month, 30 cases per month, and what it means for answering every call.</p><p class=\"card-meta\"><time datetime=\"2026-12-03\">December 3, 2026</time> \u00b7 8 min read</p></article>"
+  },
+  {
+    "publish_at": "2026-12-07T11:30:00-05:00",
+    "from": "_scheduled/local-services-ads-missed-calls",
+    "to": "blog/local-services-ads-missed-calls",
+    "sitemap": "/blog/local-services-ads-missed-calls/",
+    "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/local-services-ads-missed-calls/\">Local Services Ads Missed Calls: Where LSA Missed Calls Happen and Why Callers Hang Up</a></h3><p>Local services ads missed calls: Marchex found 6.2% of about 170,000 LSA calls failed to connect. See where LSA missed calls happen and the fix for each.</p><p class=\"card-meta\"><time datetime=\"2026-12-07\">December 7, 2026</time> \u00b7 9 min read</p></article>"
+  },
+  {
+    "publish_at": "2026-12-10T11:30:00-05:00",
+    "from": "_scheduled/google-lsa-login",
+    "to": "blog/google-lsa-login",
+    "sitemap": "/blog/google-lsa-login/",
+    "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/google-lsa-login/\">Google LSA Login: Where Your Local Service Ads Login Goes in 2026</a></h3><p>Google LSA login in late 2026: where to sign in, which Google account to use, the local service ads login after the move into Google Ads, and fixes for access problems.</p><p class=\"card-meta\"><time datetime=\"2026-12-10\">December 10, 2026</time> \u00b7 9 min read</p></article>"
+  },
+  {
+    "publish_at": "2026-12-14T11:30:00-05:00",
+    "from": "_scheduled/download-local-services-ads-historical-reports",
+    "to": "blog/download-local-services-ads-historical-reports",
+    "sitemap": "/blog/download-local-services-ads-historical-reports/",
+    "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/download-local-services-ads-historical-reports/\">How to Download Local Services Ads Historical Reports (and What Google Local Services Ads Reports Leave Out)</a></h3><p>How to download Local Services Ads historical reports before migration: what Google Local Services Ads reports include, what they skip, and a backup checklist.</p><p class=\"card-meta\"><time datetime=\"2026-12-14\">December 14, 2026</time> \u00b7 9 min read</p></article>"
+  },
+  {
+    "publish_at": "2026-12-17T11:30:00-05:00",
+    "from": "_scheduled/google-local-services-ads-pay-per-lead",
+    "to": "blog/google-local-services-ads-pay-per-lead",
+    "sitemap": "/blog/google-local-services-ads-pay-per-lead/",
+    "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/google-local-services-ads-pay-per-lead/\">Google Local Services Ads Pay Per Lead: What Gets Charged, and the 2026 Payment Model</a></h3><p>Google Local Services Ads pay per lead explained: what gets charged, the 20-second missed call rule, and the Google Local Services Ads payment model in 2026.</p><p class=\"card-meta\"><time datetime=\"2026-12-17\">December 17, 2026</time> \u00b7 9 min read</p></article>"
+  },
+  {
+    "publish_at": "2026-12-21T11:30:00-05:00",
+    "from": "_scheduled/local-services-ads-updates",
+    "to": "blog/local-services-ads-updates",
+    "sitemap": "/blog/local-services-ads-updates/",
+    "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/local-services-ads-updates/\">Local Services Ads Updates and News for 2026: Every Change and What Agencies Should Do</a></h3><p>Local services ads updates for 2026, dated and sourced: the Google Ads move, missed call charges, report downloads and more local services ads news.</p><p class=\"card-meta\"><time datetime=\"2026-12-21\">December 21, 2026</time> \u00b7 10 min read</p></article>"
+  },
+  {
+    "publish_at": "2026-12-24T11:30:00-05:00",
+    "from": "_scheduled/local-service-ads-phone-number",
+    "to": "blog/local-service-ads-phone-number",
+    "sitemap": "/blog/local-service-ads-phone-number/",
+    "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/local-service-ads-phone-number/\">Local Service Ads Phone Number: Why Your Local Service Ads Number Has an Extension</a></h3><p>The local service ads phone number on your ad is a Google forwarding number, and the local service ads number on a lead can carry an extension. Here is the fix.</p><p class=\"card-meta\"><time datetime=\"2026-12-24\">December 24, 2026</time> \u00b7 9 min read</p></article>"
+  },
+  {
+    "publish_at": "2026-12-28T11:30:00-05:00",
+    "from": "_scheduled/local-service-ads-examples",
+    "to": "blog/local-service-ads-examples",
+    "sitemap": "/blog/local-service-ads-examples/",
+    "card": "<article class=\"post-card\" data-cat=\"Agency guides\"><p class=\"tag\">Agency guides</p><h3><a href=\"/blog/local-service-ads-examples/\">Local Service Ads Examples: 5 Annotated Local Services Ads Examples for 2026</a></h3><p>Local service ads examples for a plumber, HVAC, roofer, lawyer and real estate agent. Annotated local services ads examples show what top ads share in 2026.</p><p class=\"card-meta\"><time datetime=\"2026-12-28\">December 28, 2026</time> \u00b7 9 min read</p></article>"
   }
 ]
