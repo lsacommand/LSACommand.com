@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0]
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Local Services Ads Pay Per Lead: The 2026 Payment Model</title>
+  <meta name="description" content="Google Local Services Ads pay per lead explained: what gets charged, the 20-second missed call rule, and the Google Local Services Ads payment model in 2026.">
+  <link rel="canonical" href="https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="Google Local Services Ads Pay Per Lead: The 2026 Payment Model">
+  <meta property="og:description" content="What Google charges you for: valid leads, missed calls over 20 seconds, the 15-day repeat rule, and the Google Local Services Ads payment model inside Google Ads. Plus a terms checklist for agencies.">
+  <meta property="og:url" content="https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/">
+  <meta property="og:image" content="https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/blog-google-local-services-ads-pay-per-lead.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Google LSA pay per lead: what you're charged for. Share image on the Google Local Services Ads payment model with a lead charge status card showing charged and not charged leads">
+  <meta property="article:published_time" content="2026-12-17T11:30:00-05:00">
+  <meta property="article:modified_time" content="2026-12-17T11:30:00-05:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Google Local Services Ads Pay Per Lead: The 2026 Payment Model">
+  <meta name="twitter:description" content="What Google charges you for: valid leads, missed calls over 20 seconds, the 15-day repeat rule, and the Google Local Services Ads payment model inside Google Ads. Plus a terms checklist for agencies.">
+  <meta name="twitter:image" content="https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/blog-google-local-services-ads-pay-per-lead.png">
+  <meta name="twitter:image:alt" content="Google LSA pay per lead: what you're charged for. Share image on the Google Local Services Ads payment model with a lead charge status card showing charged and not charged leads">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>
+    .cta-box .button{display:inline-block;margin:12px 12px 0 0}
+    .table-wrap{overflow-x:auto;margin:1.25rem 0}
+    .table-wrap .compare{margin:0}
+    ol.chapters, ul.chapters{margin:0 0 1.5rem 1.2rem}
+    ol.chapters li, ul.chapters li{margin:.35rem 0}
+
+    .yt-facade{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#07243A}
+    .yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .yt-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .yt-play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-end;padding:0 2.2% 1.8% 0}
+    .yt-play svg{width:clamp(46px,12%,84px);height:auto;filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));transition:transform .15s}
+    .yt-play:hover svg{transform:scale(1.08)}
+    .video-with-infographic{margin:0 0 32px}
+    .video-with-infographic .video{margin:0 0 16px}
+    .infographic{margin:0}
+    .infographic img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:0 12px 42px rgba(7,36,58,.06)}
+    .infographic figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+    figure.shot{margin:1.5rem 0}
+    figure.shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+    figure.shot figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+    .callout{margin:1.5rem 0;padding:22px 24px;border:1px solid var(--line);border-left:6px solid #00AFC6;border-radius:16px;background:#F4FBFC}
+    .callout .callout-title{margin:0 0 12px;font-family:Outfit,Inter,sans-serif;font-weight:800;font-size:1.2rem;line-height:1.3;color:#07243A}
+    .callout ul{margin:0 0 0 1.2rem}
+    .callout li{margin:.45rem 0}
+    .callout .callout-foot{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line);font-weight:700;color:#07243A}
+    .button.button-secondary{background:#fff;color:#07243A;border:2px solid #07243A}
+    .button.button-secondary:hover{background:#eaf6fa}
+    .faq{margin:0 0 1.5rem}
+    .sources li{margin:.4rem 0;font-size:.95rem}
+    .related h2{margin-top:0}
+    @media (max-width:760px){.breadcrumbs li[aria-current]{display:none}.breadcrumbs li:nth-last-child(2)::after{content:""}.article-header .lede{font-size:1.05rem;line-height:1.6}.article-header{padding-bottom:20px;margin-bottom:22px}.article-meta{margin-top:14px}.book-cta-top{display:flex;flex-direction:column;align-items:stretch}.book-cta-top .button{order:-1;width:100%;margin-bottom:12px}}
+  </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Local Services Ads Pay Per Lead: What Gets Charged, and the 2026 Payment Model",
+          "item": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "BlogPosting"
+      ],
+      "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#main",
+      "url": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/",
+      "name": "Google Local Services Ads Pay Per Lead: What Gets Charged, and the 2026 Payment Model",
+      "headline": "Google Local Services Ads Pay Per Lead: What Gets Charged, and the 2026 Payment Model",
+      "description": "Google Local Services Ads pay per lead explained: what gets charged, the 20-second missed call rule, and the Google Local Services Ads payment model in 2026.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-12-17T11:30:00-05:00",
+      "dateModified": "2026-12-17T11:30:00-05:00",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://lsacommand.com/#organization",
+        "name": "LSA Command",
+        "url": "https://lsacommand.com/"
+      },
+      "keywords": "google local services ads pay per lead, google local services ads payment model, lsa pay per lead, charged leads, missed call charges, performance max pay-per-lead goals, lsa command",
+      "image": [
+        { "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#primaryimage" },
+        { "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#thumbnail" },
+        { "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#infographic" },
+        { "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#img-charge-status" },
+        { "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#img-payment-model" },
+        { "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#img-terms-checklist" }
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/"
+      },
+      "video": {
+        "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#video"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#video",
+      "name": "Google Local Services Ads Pay Per Lead: What You Actually Get Charged For (2026)",
+      "description": "How Google Local Services Ads pay per lead works in 2026: what counts as a charged lead, the 20-second missed call rule, the 15-day repeat contact rule, and how the Google Local Services Ads payment model works inside Google Ads with pay-per-lead goals. Plus how LSA Command answers 100% of calls within 30 seconds.",
+      "thumbnailUrl": ["https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-video-thumbnail.jpg", "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-video-thumbnail.webp"],
+      "uploadDate": "2026-12-17T11:30:00-05:00",
+      "url": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "contentUrl": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID_PENDING",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Google Local Services Ads pay per lead or pay per click?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pay per lead. Google says you only pay for valid leads, such as phone calls, message leads or bookings, rather than ad clicks. That stays the same after Local Services Ads move into Google Ads as Performance Max campaigns with pay-per-lead goals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as a charged lead in Google Local Services Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per Google's How leads work help page: a call you answer or a callback where you speak with the customer, a missed call during business hours where the caller stays on the line more than 20 seconds, a text message or email, a voicemail, and a booking request (US and Canada only). Leads Google determines to be invalid or low quality are not charged."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Google charge for missed Local Services Ads calls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in some cases. Since October 1, 2026, a missed call during business hours can be charged as a valid lead if the caller stays on the line more than 20 seconds. With a press-a-key phone menu, the 20-second timer resets at the first key press, and later key presses do not reset it. Missed calls outside business hours or outside the ad schedule are not charged."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Am I charged again when the same customer calls back?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally no. Google says follow-ups from the same phone number or email address are not charged again as long as there is interaction within 15 days. If 15 days pass with no activity, a new call or message can count as a new lead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Google Local Services Ads payment model work in Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You still pay per valid lead. Weekly budgets become daily budgets (the weekly figure divided by 7), monthly spend is capped at the daily budget times 30.4, manual bidding is gone, and bidding uses Maximize Conversions or a single campaign-level Target CPA. In reports, Conversions are the leads you were charged for and Cost per conversion is your average cost per lead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I still dispute a Local Services Ads lead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google says manual lead disputes are no longer supported for campaigns with pay-per-lead goals. Invalid leads are detected automatically, and filling in the Rate this lead survey starts an automated evaluation that can result in a change to the Charge Status. Google decides; nobody can promise a credit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does LSA Command cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LSA Command is $200 per month per client, with voice AI included. That covers 100% of calls answered within 30 seconds, instant AI replies to message leads, notes and notifications on every lead, and booked calls marked inside Google's LSA platform."
+          }
+        }
+      ]
+    },
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#primaryimage", "url": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/blog-google-local-services-ads-pay-per-lead.png", "contentUrl": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/blog-google-local-services-ads-pay-per-lead.png", "name": "Google Local Services Ads pay per lead: what Google LSA charges you for", "caption": "Share image for the Google Local Services Ads pay per lead guide.", "width": 1200, "height": 630, "encodingFormat": "image/png", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#thumbnail", "url": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-video-thumbnail.webp", "contentUrl": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-video-thumbnail.webp", "name": "Google Local Services Ads pay per lead video thumbnail", "caption": "Video thumbnail for the Google Local Services Ads pay per lead video: what gets charged, with a lead charge status card.", "width": 1280, "height": 720, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#infographic", "url": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-flowchart.webp", "contentUrl": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-flowchart.webp", "name": "Google Local Services Ads pay per lead flowchart", "caption": "Google Local Services Ads pay per lead flowchart: what LSA Command does on every lead, and how Google decides whether the lead is charged.", "width": 1600, "height": 2440, "encodingFormat": "image/webp", "inLanguage": "en", "description": "Flowchart of a Google Local Services Ads pay per lead: a customer calls, messages or books; spam and robocalls are blocked; the client's team gets the first 10 to 15 seconds, then AI answers so 100% of calls are answered within 30 seconds; the call is transcribed; notes, ratings with High-value leads identified, and text and email notifications run in parallel; booked calls get Lead Status Booked inside Google's LSA platform. On Google's side, the lead is Charged, Not charged, or In review and Credited."},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#img-charge-status", "url": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-charge-status.webp", "contentUrl": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-charge-status.webp", "name": "Google Local Services Ads pay per lead: charge status by lead", "caption": "Illustrative example: Google Local Services Ads pay per lead charge status by lead, with fictional customers and LSA Command notes.", "width": 1600, "height": 900, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#img-payment-model", "url": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-payment-model-before-after.webp", "contentUrl": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-payment-model-before-after.webp", "name": "Google Local Services Ads payment model: before and after the move into Google Ads", "caption": "Illustrative example: the Google Local Services Ads payment model in the old LSA dashboard compared with Google Ads campaigns with pay-per-lead goals.", "width": 1600, "height": 900, "encodingFormat": "image/webp", "inLanguage": "en"},
+    {"@type": "ImageObject", "@id": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/#img-terms-checklist", "url": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-terms-checklist.webp", "contentUrl": "https://lsacommand.com/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-terms-checklist.webp", "name": "Google Local Services Ads pay per lead terms checklist", "caption": "Illustrative example: the Google Local Services Ads pay per lead terms checklist agencies review before a client accepts.", "width": 1600, "height": 900, "encodingFormat": "image/webp", "inLanguage": "en"}
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Google Local Services Ads Pay Per Lead: What Gets Charged, and the 2026 Payment Model</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">Agency guide</p>
+        <h1>Google Local Services Ads Pay Per Lead: What Gets Charged, and the 2026 Payment Model</h1>
+        <p class="lede">You pay for leads, not clicks. Here is exactly what Google counts as a charged lead in 2026, how the Google Local Services Ads payment model works inside Google Ads, and the terms to check before a client accepts.</p>
+        <p class="article-meta"><span>By <a href="/author/lsa-command-team/" rel="author">the LSA Command Team</a></span> <span aria-hidden="true">·</span> <time datetime="2026-12-17">December 17, 2026</time> <span aria-hidden="true">·</span> 9 min read</p>
+      </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=google-local-services-ads-pay-per-lead&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li>
+<li><a href="#chapters">What the video covers</a></li>
+<li><a href="#what-it-means">What Google Local Services Ads pay per lead means</a></li>
+<li><a href="#charged-leads">What counts as a charged lead</a></li>
+<li><a href="#missed-calls">Missed calls and the 15-day rule</a></li>
+<li><a href="#payment-model">The payment model inside Google Ads</a></li>
+<li><a href="#credits">Lead quality, credits and disputes</a></li>
+<li><a href="#terms-checklist">Terms checklist for agencies</a></li>
+<li><a href="#answer-every-call">Why answering every call matters</a></li>
+<li><a href="#sources">Sources</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+<li><a href="#book">Check one of your client accounts</a></li></ol></nav></aside>
+        <div class="article-body">
+          <p><strong>Google Local Services Ads pay per lead means the business pays for valid leads, such as answered calls, qualifying missed calls, messages and booking requests, not for clicks or impressions. Since October 1, 2026, a missed call during business hours can be charged when the caller stays on the line more than 20 seconds.</strong></p>
+
+          <p>So an unanswered call can be a lead you paid for and lost. LSA Command starts with one promise: 100% of calls answered within 30 seconds. The client's own team gets the first 10 to 15 seconds of ringing, then AI answers. AI messaging replies to message leads instantly.</p>
+
+          <p>Below: what Google charges for, how the Google Local Services Ads payment model works inside Google Ads, and a terms checklist. For the basics of the ad format, read <a href="/local-service-ads/">how Local Service Ads work</a>.</p>
+
+          <div class="video-with-infographic">
+          <figure class="video" id="watch">
+            <div class="yt-facade" data-video-id="VIDEO_ID_PENDING">
+              <img src="/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-video-thumbnail.webp" alt="Google Local Services Ads pay per lead video thumbnail: what gets charged, with a lead charge status card showing answered and missed calls charged and repeat and spam calls not charged" title="Google Local Services Ads pay per lead video" width="1280" height="720" decoding="async" fetchpriority="high">
+              <button type="button" class="yt-play" aria-label="Play video: Google Local Services Ads Pay Per Lead: What You Actually Get Charged For (2026)"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#07243A"/><path d="M45 24 27 14v20" fill="#FFD60A"/></svg></button>
+            </div>
+            <figcaption>Watch: Google Local Services Ads Pay Per Lead: What You Actually Get Charged For (2026). Video thumbnail for the Google Local Services Ads pay per lead video.<noscript> <a href="https://www.youtube.com/watch?v=VIDEO_ID_PENDING">Watch on YouTube</a>.</noscript></figcaption>
+          </figure>
+          <figure class="infographic">
+            <a href="/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-flowchart.webp"><img src="/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-flowchart.webp" width="1600" height="2440" loading="lazy" decoding="async" alt="Google Local Services Ads pay per lead flowchart: a customer calls, messages or books; robocalls are blocked; the client's team gets the first 10 to 15 seconds, then AI answers so 100% of calls are answered within 30 seconds; notes, High-value leads identified and text and email notifications run in parallel; booked calls are marked Booked inside Google's LSA platform; on Google's side each lead is Charged, Not charged, or In review and Credited" title="Google Local Services Ads pay per lead flowchart"></a>
+            <figcaption>Google Local Services Ads pay per lead flowchart: what LSA Command does on every lead, and how Google decides whether the lead is charged. Illustrative. Open the full-size image to read it.</figcaption>
+          </figure>
+          </div>
+
+          <h2 id="chapters">What the video covers: Google Local Services Ads pay per lead in 3 minutes</h2>
+          <ul class="chapters">
+            <li>Pay per lead, not per click</li>
+            <li>What counts as a charged lead</li>
+            <li>The 20-second missed call rule and the 15-day rule</li>
+            <li>The Google Local Services Ads payment model inside Google Ads</li>
+            <li>Terms to check before a client accepts</li>
+            <li>100% of calls answered within 30 seconds, for $200 per month per client</li>
+          </ul>
+
+          <h2 id="what-it-means">What Google Local Services Ads pay per lead means</h2>
+
+          <p>With Local Services Ads, the business pays when a customer contacts it through the ad and Google counts that contact as a valid lead, not for each click.</p>
+
+          <p>Google's help page on the move into Google Ads states it plainly: "You still only pay for valid leads (such as phone calls and messages) rather than ad clicks." The FAQ on the same page adds bookings to that list (<a href="https://support.google.com/google-ads/answer/17213585?hl=en" rel="noopener">Google Ads Help</a>, checked November 2026).</p>
+
+          <p>The pay per lead part has not changed. What changed in 2026 is which contacts count, where the campaign lives, and how budgets and bids work. For what leads usually cost, see <a href="/blog/google-local-services-ads-cost/">how much Google Local Services Ads cost</a>.</p>
+
+          <h2 id="charged-leads">What counts as a charged lead under Google Local Services Ads pay per lead</h2>
+
+          <p>Google's <a href="https://support.google.com/localservices/answer/7195435?hl=en" rel="noopener">How leads work</a> help page lists the contacts that count as valid leads. Google expanded that page in October 2026, as <a href="https://www.seroundtable.com/google-local-service-ads-how-leads-work-42259.html" rel="noopener">Search Engine Roundtable reported on October 8, 2026</a>. Here is the current list, in plain terms:</p>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Lead type</th><th>When Google counts it as a valid lead</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Answered call</td><td>You answer, or you call the customer back and speak with them. Ring time does not matter for answered calls.</td></tr>
+              <tr><td>Missed call</td><td>Missed during business hours, and the caller stays on the line more than 20 seconds.</td></tr>
+              <tr><td>Voicemail</td><td>A voicemail or greeting during business hours counts as a connected call: charged after 20 seconds, message left or not.</td></tr>
+              <tr><td>Message</td><td>You receive a text message or email from the customer.</td></tr>
+              <tr><td>Booking</td><td>You receive a booking request (United States and Canada only).</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p>Google also says what is not charged. Leads it determines to be invalid or low quality are not charged, and its automated systems filter out invalid activity such as spam and duplicate contacts. Message leads are "typically priced lower than the corresponding phone lead price," but not always.</p>
+
+          <figure class="shot">
+            <a href="/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-charge-status.webp"><img src="/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-charge-status.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Illustrative Google Local Services Ads pay per lead charge status table for a fictional plumbing client: answered calls and a message Charged, a repeat call within 15 days and a robocall Not charged, one lead In review and one Credited, with LSA Command notes" title="Google Local Services Ads pay per lead: charge status by lead"></a>
+            <figcaption>Illustrative example: Google Local Services Ads pay per lead charge status by lead. Fictional customers. Status names (Charged, Not charged, In review, Credited) come from Google's How leads work page.</figcaption>
+          </figure>
+
+          <p>Each lead carries one of four charge statuses: Charged, Not charged, In review or Credited. Read that column weekly, not just the monthly total.</p>
+
+          <h2 id="missed-calls">Missed calls and the 15-day rule in the Google Local Services Ads payment model</h2>
+
+          <p>The biggest 2026 change is missed calls. Google emailed advertisers that "On October 01, 2026, we are updating how and when you are charged for call leads originating from Local Services Ads," and that missed calls during business hours "will now be charged as valid leads if a user stays on the line for more than 20 seconds" (<a href="https://www.seroundtable.com/google-lsa-missed-subsequent-calls-41940.html" rel="noopener">Search Engine Roundtable, August 25, 2026</a>).</p>
+
+          <p>The details from Google's help page:</p>
+          <ul>
+            <li><strong>Business hours</strong> are the hours in the Google Business Profile. If the ad schedule differs, missed calls are only charged during the active ad schedule and within business hours.</li>
+            <li><strong>Phone menus.</strong> With a press-a-key menu, the 20-second timer resets when the caller presses the first key, and the call is charged if it continues more than 20 seconds after that. Later key presses in a multi-level menu do not reset the timer again. If the caller hangs up without pressing a key, there is no charge, even if the menu played longer than 20 seconds.</li>
+            <li><strong>The 15-day rule.</strong> Once a lead is charged, follow-ups from the same phone number or email address are not charged again, provided there is interaction within 15 days. After 15 days with no activity, a new contact can be a new charged lead.</li>
+          </ul>
+
+          <p>We go deeper on reading these charges on a bill in <a href="/blog/lsa-missed-call-charges/">Google LSA missed call charges</a>. To put a dollar figure on unanswered calls for one client, try the free <a href="/tools/lsa-missed-call-calculator/">LSA missed call calculator</a>.</p>
+
+          <h2 id="payment-model">The Google Local Services Ads payment model after the move into Google Ads</h2>
+
+          <p>Google is moving Local Services Ads into Google Ads as "a specialized Performance Max campaign type optimized specifically for pay-per-lead goals." The first phase started in August 2026 for select US home and storefront service advertisers, with more accounts in late 2026 and the rest in 2027 (<a href="https://support.google.com/google-ads/answer/17213585?hl=en" rel="noopener">Google Ads Help</a>; <a href="https://www.seroundtable.com/google-local-services-ads-transition-google-ads-41717.html" rel="noopener">Search Engine Roundtable, July 21, 2026</a>). Ads still show only on Search and Maps, in the same positions.</p>
+
+          <p>The Google Local Services Ads payment model still charges per lead. What moves is how you control spend:</p>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Setting</th><th>Old LSA dashboard</th><th>Google Ads with pay-per-lead goals</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>What you pay for</td><td>Valid leads</td><td>Valid leads (unchanged)</td></tr>
+              <tr><td>Budget</td><td>Average weekly budget</td><td>Daily budget: the old weekly budget divided by 7. Monthly spend capped at the daily budget times 30.4</td></tr>
+              <tr><td>Bidding</td><td>Manual bidding (a maximum cost per lead) or Target CPA by category</td><td>Maximize Conversions (the default) or one campaign-level Target CPA. Manual bidding is no longer supported</td></tr>
+              <tr><td>Reporting</td><td>LSA dashboard reports</td><td>Conversions are the leads you were charged for. Cost / conv. is your average cost per lead</td></tr>
+              <tr><td>Lead problems</td><td>Feedback and dispute options in the dashboard</td><td>Manual disputes no longer supported. The Rate this lead survey starts an automated evaluation</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <figure class="shot">
+            <a href="/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-payment-model-before-after.webp"><img src="/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-payment-model-before-after.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Illustrative comparison of the Google Local Services Ads payment model before and after the move: valid leads in both, weekly budget to daily budget, manual bidding to Maximize Conversions or Target CPA, Conversions equal charged leads, manual disputes replaced by Rate this lead" title="Google Local Services Ads payment model: before and after"></a>
+            <figcaption>Illustrative example: the Google Local Services Ads payment model in the old LSA dashboard compared with Google Ads campaigns with pay-per-lead goals. Summarized from Google Ads Help.</figcaption>
+          </figure>
+
+          <p>On the billing side, Google says Local Services Ads "use Google Ads to power its billing and payment systems," and accounts that already have Google Ads reuse those payment settings (<a href="https://support.google.com/localservices/answer/7435485?hl=en" rel="noopener">How to pay for Local Services Ads</a>). On Target CPA, Google warns that if the target is set too low to compete locally, ads may not serve (<a href="https://support.google.com/google-ads/answer/17326057?hl=en" rel="noopener">Lead quality and budgets</a>). For invoices, payment profiles and who pays, read <a href="/blog/google-local-services-ads-billing/">Google Local Services Ads billing</a>. For the migration steps account by account, see <a href="/blog/lsa-performance-max-migration-agencies/">the LSA Performance Max migration playbook</a>.</p>
+
+          <aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">Paying per lead? Make sure every lead gets answered.</p><p>Bring one client account. In 30 minutes we show you which calls went unanswered.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=google-local-services-ads-pay-per-lead&amp;cta_position=mid" data-cta-position="mid" data-cta="article-mid-book">Book my 30-minute walkthrough</a></p></aside>
+
+          <h2 id="credits">Lead quality, credits and disputes under the Google Local Services Ads payment model</h2>
+
+          <p>Under the current Google Local Services Ads payment model, Google does the policing itself. Its help pages say leads are assessed at first contact, that "Charged leads get reassessed by our models over time," and that Google continues to assess lead quality over a 30-day period. Leads found to be poor quality, duplicate or invalid can be credited automatically (<a href="https://support.google.com/localservices/answer/15100654?hl=en" rel="noopener">About automated lead credits</a>).</p>
+
+          <p>Google says that "in most cases" credits are applied to the account balance within 30 days, and the original charge still appears on the invoice. It also "no longer supports credits for 'job type not serviced' and 'geo not serviced' leads," so service types and service area settings need to be right from day one. For campaigns with pay-per-lead goals, Google says "manual lead disputes are no longer supported." To flag a bad lead, you select it on the Leads page and fill in the Rate this lead survey, which starts an automated evaluation. Lead credits are not available for health care verticals, tax specialists or advertisers in EMEA.</p>
+
+          <p>Google decides every credit; nobody can promise one. What an agency controls is honest, prompt feedback on each lead. Our free <a href="/tools/lsa-lead-dispute-helper/">LSA lead dispute helper</a> helps you write that feedback, and <a href="/blog/how-to-dispute-google-lsa-leads/">how to dispute Google LSA leads</a> covers the steps that still work.</p>
+
+          <h2 id="terms-checklist">Google Local Services Ads pay per lead terms: the agency checklist</h2>
+
+          <p>Before a client runs pay-per-lead ads, they (or their agency) accept Google's <a href="https://www.google.com/ads/localservices/TC-US-2026-08.html" rel="noopener">Additional Terms for Ads with Pay-per-lead Goals (United States)</a>, last modified August 24, 2026. Google Ads is also rolling out a setting named "Ads with pay-per-lead goals terms" that advertisers must opt into to activate (<a href="https://www.seroundtable.com/google-ads-with-pay-per-lead-goals-terms-42490.html" rel="noopener">Search Engine Roundtable, November 10, 2026</a>). The terms are short. What we review with each client before anyone clicks accept (not legal advice):</p>
+
+          <figure class="shot">
+            <a href="/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-terms-checklist.webp"><img src="/blog/google-local-services-ads-pay-per-lead/google-local-services-ads-pay-per-lead-terms-checklist.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Illustrative Google Local Services Ads pay per lead terms checklist: who accepts the terms, provider requirements, call and message recording, customer disputes, business hours and ad schedule, phone menu, budget and bidding, lead feedback owner" title="Google Local Services Ads pay per lead terms checklist"></a>
+            <figcaption>Illustrative example: the Google Local Services Ads pay per lead terms checklist agencies review before a client accepts. Based on Google's US terms and help pages.</figcaption>
+          </figure>
+
+          <aside class="callout" aria-label="Pay per lead terms checklist">
+            <p class="callout-title">Before the client accepts: 8 checks</p>
+            <ul>
+              <li><strong>Who accepts.</strong> The terms cover a customer "using the platform on an Advertiser's behalf," and say references to "you" also apply to Advertisers. Agree in writing who clicks accept and who is bound.</li>
+              <li><strong>Provider requirements and verification.</strong> The provider must meet Google's Minimum Provider Requirements, give "honest, complete, and accurate information," and may be asked to recertify. Access can be denied if requirements are not met at any time. For accounts moving over, Google says "Insurance and license reverification are no longer required," and verified status and the Google Verified badge transfer to Google Ads automatically.</li>
+              <li><strong>Call and message recording.</strong> The provider authorizes Google to "access, monitor, and record telephone calls, text messages, live chat" started through the program, must obtain the permissions local law requires, and must tell its team that calls may be recorded and get their consent.</li>
+              <li><strong>Customer disputes.</strong> The terms say "ultimately it is up to you to resolve any disputes between you and your users." Google is not the referee on a job gone wrong.</li>
+              <li><strong>Business hours and ad schedule.</strong> Missed calls are only charged during business hours and the ad schedule, so both must match when the phone is really covered.</li>
+              <li><strong>Phone menu.</strong> If the client uses a press-a-key menu, the 20-second timer resets at the first key press, and later key presses do not reset it again.</li>
+              <li><strong>Budget and bidding.</strong> Agree the daily budget and whether to use Maximize Conversions or Target CPA. Weigh volume against cost per lead before you pick.</li>
+              <li><strong>Who rates leads.</strong> Name who fills in Rate this lead, and how fast.</li>
+            </ul>
+            <p class="callout-foot">Google can change these terms. Material changes take effect no sooner than seven days after posting, except changes for new functions or legal reasons, which can apply immediately.</p>
+          </aside>
+
+          <h2 id="answer-every-call">Why answering every call matters when Google Local Services Ads charge per lead</h2>
+
+          <p>Under Google Local Services Ads pay per lead, a qualifying call costs the same whether it books a job or rings out. What happens when the phone rings is the part LSA Command handles:</p>
+
+          <ul>
+            <li><strong>100% of calls answered within 30 seconds.</strong> The client's team gets the first 10 to 15 seconds, then the AI answers and can book the job. See how <a href="/lsa-ai-call-answering/">AI call answering</a> works.</li>
+            <li><strong>AI messaging replies instantly</strong> to message leads.</li>
+            <li><strong>Notes on every lead</strong>, each call rated, and <strong>High-value leads identified</strong>, so the team knows who to call first.</li>
+            <li><strong>Text and email notifications</strong> to the agency and the owner, plus daily and monthly summaries.</li>
+            <li><strong>Booked calls marked inside Google's LSA platform</strong>, with Lead Status set to Booked and the lead summary filled in. </li>
+            <li><strong>Robocall and spam blocking</strong>, and help with lead feedback. We never promise credits.</li>
+          </ul>
+
+          <p>$200 per month per client, voice AI included. See the <a href="/pricing/">pricing page</a>.</p>
+
+          <h2 id="sources">Sources</h2>
+          <ul class="sources">
+            <li>Google Local Services Help, <a href="https://support.google.com/localservices/answer/7195435?hl=en" rel="noopener">How leads work</a> (checked November 20, 2026).</li>
+            <li>Google Ads Help, <a href="https://support.google.com/google-ads/answer/17213585?hl=en" rel="noopener">Local Services Ads transition to Performance Max campaigns with pay-per-lead goals</a> (checked November 20, 2026).</li>
+            <li>Google Ads Help, <a href="https://support.google.com/google-ads/answer/17326057?hl=en" rel="noopener">Lead quality and budgets for campaigns with pay-per-lead goals</a> (checked November 20, 2026).</li>
+            <li>Google Local Services Help, <a href="https://support.google.com/localservices/answer/15100654?hl=en" rel="noopener">About automated Local Services Ads lead credits</a> and <a href="https://support.google.com/localservices/answer/7435485?hl=en" rel="noopener">How to pay for Local Services Ads</a> (checked November 20, 2026).</li>
+            <li>Google, <a href="https://www.google.com/ads/localservices/TC-US-2026-08.html" rel="noopener">Additional Terms for Ads with Pay-per-lead Goals (United States)</a>, last modified August 24, 2026.</li>
+            <li>Search Engine Roundtable: <a href="https://www.seroundtable.com/google-local-services-ads-transition-google-ads-41717.html" rel="noopener">transition to Google Ads</a> (July 21, 2026), <a href="https://www.seroundtable.com/google-lsa-missed-subsequent-calls-41940.html" rel="noopener">missed and subsequent calls</a> (August 25, 2026), <a href="https://www.seroundtable.com/google-local-service-ads-how-leads-work-42259.html" rel="noopener">How leads work expanded</a> (October 8, 2026), <a href="https://www.seroundtable.com/google-ads-with-pay-per-lead-goals-terms-42490.html" rel="noopener">Ads with pay-per-lead goals terms</a> (November 10, 2026).</li>
+          </ul>
+
+          <h2 id="faq">Frequently asked questions</h2>
+          <div class="faq">
+            <details><summary>Is Google Local Services Ads pay per lead or pay per click?</summary><p>Pay per lead. Google says you only pay for valid leads, such as phone calls, message leads or bookings, rather than ad clicks. That stays the same after Local Services Ads move into Google Ads as Performance Max campaigns with pay-per-lead goals.</p></details>
+            <details><summary>What counts as a charged lead in Google Local Services Ads?</summary><p>Per Google's How leads work help page: a call you answer or a callback where you speak with the customer, a missed call during business hours where the caller stays on the line more than 20 seconds, a text message or email, a voicemail, and a booking request (US and Canada only). Leads Google determines to be invalid or low quality are not charged.</p></details>
+            <details><summary>Does Google charge for missed Local Services Ads calls?</summary><p>Yes, in some cases. Since October 1, 2026, a missed call during business hours can be charged as a valid lead if the caller stays on the line more than 20 seconds. With a press-a-key phone menu, the 20-second timer resets at the first key press, and later key presses do not reset it. Missed calls outside business hours or outside the ad schedule are not charged.</p></details>
+            <details><summary>Am I charged again when the same customer calls back?</summary><p>Generally no. Google says follow-ups from the same phone number or email address are not charged again as long as there is interaction within 15 days. If 15 days pass with no activity, a new call or message can count as a new lead.</p></details>
+            <details><summary>How does the Google Local Services Ads payment model work in Google Ads?</summary><p>You still pay per valid lead. Weekly budgets become daily budgets (the weekly figure divided by 7), monthly spend is capped at the daily budget times 30.4, manual bidding is gone, and bidding uses Maximize Conversions or a single campaign-level Target CPA. In reports, Conversions are the leads you were charged for and Cost per conversion is your average cost per lead.</p></details>
+            <details><summary>Can I still dispute a Local Services Ads lead?</summary><p>Google says manual lead disputes are no longer supported for campaigns with pay-per-lead goals. Invalid leads are detected automatically, and filling in the Rate this lead survey starts an automated evaluation that can result in a change to the Charge Status. Google decides; nobody can promise a credit.</p></details>
+            <details><summary>How much does LSA Command cost?</summary><p>LSA Command is $200 per month per client, with voice AI included. That covers 100% of calls answered within 30 seconds, instant AI replies to message leads, notes and notifications on every lead, and booked calls marked inside Google's LSA platform.</p></details>
+          </div>
+          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The LSA Command Team has almost two decades of agency experience helping local businesses with Local Services Ads. After seeing 20 to 30 percent of calls missed, we built LSA Command to answer every call, reply to message leads and mark the calls the AI books as Booked in Google. <a href="/author/lsa-command-team/">More about the LSA Command Team</a></p></aside>
+
+
+          <div class="cta-box" id="book">
+            <h2 id="price-and-next-step">Check one of your client accounts</h2>
+            <p><strong>LSA Command works only with agency owners, not business owners.</strong> It was built first for our own agency's Google LSA accounts.</p>
+            <p>When every valid lead is billed, every call should be answered. 100% of calls answered within 30 seconds, instant AI replies to message leads, notes and notifications on every lead, for $200 per month per client with voice AI included. The walkthrough is free, takes 30 minutes, and you keep what we find.</p>
+            <p><a class="button" href="https://lsacommand.com/book/?post_slug=google-local-services-ads-pay-per-lead&amp;cta_position=end" data-cta-position="end" data-cta="article-footer-book">Book my 30-minute walkthrough</a></p>
+          </div>
+          <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
+<ul>
+            <li><a href="/blog/lsa-missed-call-charges/">Google LSA missed call charges: how to check your bill</a></li>
+            <li><a href="/blog/local-services-ads-missed-calls/">Local Services Ads missed calls</a></li>
+            <li><a href="/blog/google-local-services-ads-cost/">How much Google Local Services Ads cost</a></li>
+            <li><a href="/blog/google-local-services-ads-billing/">Google Local Services Ads billing for agencies</a></li>
+            <li><a href="/blog/lsa-performance-max-migration-agencies/">LSA in Performance Max: the agency migration playbook</a></li>
+            <li><a href="/blog/google-lsa-login/">Google LSA login</a></li>
+            <li><a href="/blog/how-to-dispute-google-lsa-leads/">How to dispute Google LSA leads</a></li>
+            <li><a href="/pricing/">Pricing</a></li></ul></aside>
+        </div>
+      </div>
+    </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> <span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=google-local-services-ads-pay-per-lead&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p class="footer-contact">Call or text <a href="tel:+19897124370" data-cta="footer-call">989-712-4370</a></p>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+<script>
+(function(){document.querySelectorAll('.yt-facade').forEach(function(f){var b=f.querySelector('.yt-play');if(!b)return;b.addEventListener('click',function(){var id=f.getAttribute('data-video-id');if(!id)return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';i.title="Google Local Services Ads Pay Per Lead: What You Actually Get Charged For (2026)";i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';i.setAttribute('allowfullscreen','');i.referrerPolicy='strict-origin-when-cross-origin';f.appendChild(i);b.remove();i.focus();});});})();
+</script>
+</body>
+</html>
