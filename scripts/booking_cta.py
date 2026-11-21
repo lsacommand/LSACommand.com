@@ -31,9 +31,9 @@ LINKER = re.compile(r",\s*linker:\s*\{\s*domains:\s*\[[^\]]*\]\s*\}")
 BLOCK = re.compile(r"[ \t]*<!-- LSA-BOOK-CTA (top|mid|end|sticky) START -->.*?<!-- LSA-BOOK-CTA \1 END -->\n?", re.S)
 CHECK = "--check" in sys.argv
 
-PROOF = ("Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% "
+PROOF = ("Across three pool contractor accounts, leads answered within 30 seconds went from 28% to 100% "
          "between December 2025 and April 2026 (<a href=\"/case-studies/\">case studies</a>).")
-PROOF_SHORT = ("From 28% to 100% of leads answered in under 30 seconds, across three pool contractor accounts, "
+PROOF_SHORT = ("From 28% to 100% of leads answered within 30 seconds, across three pool contractor accounts, "
                "December 2025 to April 2026 (<a href=\"/case-studies/\">case studies</a>).")
 BF = ("<!-- BLACK-FRIDAY-OFFER START (remove on 2026-12-16) -->\n"
       "<p class=\"book-cta-offer\"><strong>Black Friday offer:</strong> get 5 client locations live on LSA Command "
@@ -52,7 +52,7 @@ def top_block(slug):
             '<div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p>'
             "<p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets "
             "the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p>"
-            '<p class="book-cta-proof">Across three pool contractor accounts, leads answered in under 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p>'
+            '<p class="book-cta-proof">Across three pool contractor accounts, leads answered within 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p>'
             "<p>Bring one client account and the LSA Command team audits it live in 30 minutes. No passwords "
             "change hands, and you keep what the audit finds whether or not you go ahead. $200 per month per client.</p></div>"
             + link(slug, "top", "Book my 30-minute walkthrough") +
