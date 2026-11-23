@@ -160,7 +160,7 @@
 
   /*
    * Optional cost-per-lead check. Not scored: it compares the account's own actual CPL with the agency's own target,
-   * so there is no Google benchmark in it (Google doesn't publish lead prices).
+   * so there is no Google benchmark in it (Google doesn't publish market-wide lead prices).
    * actual, target: dollars, or null/NaN when left blank. weeklyLeads: optional, for the monthly dollar gap.
    * Returns null when either number is missing or not a positive number. Within ±10% of target counts as on target (our call).
    */
@@ -170,7 +170,9 @@
     function ok(n) { return typeof n === 'number' && isFinite(n) && n > 0; }
     if (!ok(actual) || !ok(target)) return null;
     var diff = actual - target, pct = diff / target;
-    var status = pct > CPL_TOLERANCE ? 'over' : pct < -CPL_TOLERANCE ? 'under' : 'on';
+    // Compare at a fixed precision so an exact ±10% in cents (e.g. 57.20 vs 52) isn't pushed over the line by float error.
+    var p = Math.round(pct * 1e9) / 1e9;
+    var status = p > CPL_TOLERANCE ? 'over' : p < -CPL_TOLERANCE ? 'under' : 'on';
     var leadsPerMonth = (typeof weeklyLeads === 'number' && isFinite(weeklyLeads) && weeklyLeads >= 0) ? weeklyLeads * WEEKS_PER_MONTH : null;
     return { actual: actual, target: target, diff: diff, pct: pct * 100, status: status,
              leadsPerMonth: leadsPerMonth, monthlyGap: leadsPerMonth == null ? null : diff * leadsPerMonth };

@@ -211,7 +211,7 @@
 <li><strong>Answer rate</strong> scores 0 at 60% or less and full marks at 95% or more, in a straight line between. That range is our call, not Google’s.</li>
 <li><strong>Leads rated</strong> and <strong>leads per week</strong> also score in a straight line: full marks at 100% rated and at 10 leads a week.</li>
 <li><strong>Bid mode:</strong> Maximize leads with no target earns 4 points, Target CPL 3, manual bids reviewed in the last month 3, and stale manual bids 0. Target CPL sits one point below because Google still recommends Maximize leads without a target first.</li>
-<li><strong>Cost per lead vs. target</strong> is optional and doesn’t change the score. It compares the account’s own actual cost per lead with the target you enter: within 10% either way counts as on target (our call, not Google’s). With leads per week filled in, it also shows the monthly gap in dollars (leads per week × 30.4 ÷ 7 × the difference). It uses no market benchmark, because Google doesn’t publish lead prices.</li>
+<li><strong>Cost per lead vs. target</strong> is optional and doesn’t change the score. It compares the account’s own actual cost per lead with the target you enter: within 10% either way counts as on target (our call, not Google’s). With leads per week filled in, it also shows the monthly gap in dollars (leads per week × 30.4 ÷ 7 × the difference). It uses no market benchmark, because Google doesn’t publish market-wide lead prices.</li>
 <li><strong>Grades:</strong> A is 90 and up, B 80, C 70, D 60, F below 60.</li>
 <li><strong>Top 3 fixes</strong> are the questions losing the most points. When two lose the same amount, the one asked first wins, so the list leans toward calls and leads.</li>
 </ul>
@@ -279,8 +279,12 @@
       return;
     }
     var c = G.cplCheck(v.actualCpl, v.targetCpl, v.weeklyLeads);
-    var head = T.money(c.actual) + ' actual vs. ' + T.money(c.target) + ' target: ';
-    var pct = T.num(Math.abs(c.pct), 0) + '%';
+    // Show cents when they were typed, so $57.20 vs $52 or a $0.50 target don't display as rounded whole dollars.
+    var cpl = function (n) { return Math.round(n * 100) % 100 === 0 ? T.money(n) : '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+    var head = cpl(c.actual) + ' actual vs. ' + cpl(c.target) + ' target: ';
+    var abs = Math.abs(c.pct);
+    // Just outside the band (e.g. 10.4%) gets a decimal, so it doesn't read as "10% over" next to "within 10% is on target".
+    var pct = T.num(abs, Math.round(abs) > 10 ? 0 : Math.round(abs * 10) === 100 ? 2 : 1) + '%';
     var gap = c.monthlyGap == null || Math.round(Math.abs(c.monthlyGap)) === 0 ? '' :
       ' At ' + T.num(v.weeklyLeads, 1) + ' leads a week that’s about ' + T.money(Math.abs(c.monthlyGap)) + ' a month ' + (c.diff > 0 ? 'more' : 'less') + ' than the target pace.';
     if (c.status === 'over') {
