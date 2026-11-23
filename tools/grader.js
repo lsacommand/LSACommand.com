@@ -8,6 +8,7 @@
  *
  * Input: { answerRate: 0-100, ratedShare: 0-100, weeklyLeads: >= 0, <choice questions>: option key }.
  * Output: null if anything is missing or out of range, otherwise { score, grade, categories, items, fixes }.
+ * cplCheck() is a separate, unscored actual-vs-target cost-per-lead comparison.
  */
 (function (root) {
   'use strict';
@@ -110,9 +111,13 @@
       fix: 'Raise the budget toward 10 leads a week, or narrow the target.',
       why: 'Google recommends budgeting for at least 10 leads a week, so Maximize leads has enough data to work with.' },
     { key: 'bidMode', cat: 'budget', max: 4, type: 'choice',
-      options: { maximize: 4, manualReviewed: 3, manualStale: 0 },
+      optionSource: { target: '15406075' },
+      options: { maximize: 4, target: 3, manualReviewed: 3, manualStale: 0 },
       source: '7527305',
       fix: 'Move to Maximize leads, or review manual bids monthly.',
+      // Target CPL is automated, but Google still ranks plain Maximize leads (no target) first, so it sits one point below.
+      optionFix: { target: 'Check the Target CPL against the real cost per lead every month, or try Maximize leads with no target.' },
+      optionWhy: { target: 'Google’s Target CPL page says Maximize leads without a target is still its top recommendation, and that the target you set decides roughly the average you’ll pay per lead.' },
       why: 'The bid is one of Google’s ranking factors and Google recommends Maximize leads. Manual bids nobody has looked at in months drift out of line, and manual bidding goes away when the account moves into Google Ads.' }
   ];
 
@@ -135,7 +140,8 @@
         pts = q.options[v];
       }
       items.push({ key: q.key, cat: q.cat, points: pts, max: q.max, lost: q.max - pts, order: i,
-                   fix: q.fix, why: q.why, source: q.source });
+                   fix: (q.optionFix && q.optionFix[v]) || q.fix, why: (q.optionWhy && q.optionWhy[v]) || q.why,
+                   source: (q.optionSource && q.optionSource[v]) || q.source });
     }
     var raw = items.reduce(function (s, it) { return s + it.points; }, 0);
     var score = Math.round(raw);
@@ -152,7 +158,26 @@
     return { raw: raw, score: score, grade: letter(score), total: TOTAL, categories: categories, items: items, fixes: fixes };
   }
 
-  var api = { QUESTIONS: QUESTIONS, CATEGORIES: CATEGORIES, TOTAL: TOTAL, grade: grade, letter: letter };
+  /*
+   * Optional cost-per-lead check. Not scored: it compares the account's own actual CPL with the agency's own target,
+   * so there is no Google benchmark in it (Google doesn't publish lead prices).
+   * actual, target: dollars, or null/NaN when left blank. weeklyLeads: optional, for the monthly dollar gap.
+   * Returns null when either number is missing or not a positive number. Within ±10% of target counts as on target (our call).
+   */
+  var CPL_TOLERANCE = 0.10;
+  var WEEKS_PER_MONTH = 30.4 / 7;
+  function cplCheck(actual, target, weeklyLeads) {
+    function ok(n) { return typeof n === 'number' && isFinite(n) && n > 0; }
+    if (!ok(actual) || !ok(target)) return null;
+    var diff = actual - target, pct = diff / target;
+    var status = pct > CPL_TOLERANCE ? 'over' : pct < -CPL_TOLERANCE ? 'under' : 'on';
+    var leadsPerMonth = (typeof weeklyLeads === 'number' && isFinite(weeklyLeads) && weeklyLeads >= 0) ? weeklyLeads * WEEKS_PER_MONTH : null;
+    return { actual: actual, target: target, diff: diff, pct: pct * 100, status: status,
+             leadsPerMonth: leadsPerMonth, monthlyGap: leadsPerMonth == null ? null : diff * leadsPerMonth };
+  }
+
+  var api = { QUESTIONS: QUESTIONS, CATEGORIES: CATEGORIES, TOTAL: TOTAL, grade: grade, letter: letter,
+              cplCheck: cplCheck, CPL_TOLERANCE: CPL_TOLERANCE };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.LSAGrader = api;
 })(this);

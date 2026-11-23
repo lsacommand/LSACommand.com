@@ -139,7 +139,7 @@
     <header class="article-header">
       <p class="eyebrow">Free tool for agencies</p>
       <h1>LSA account health grader</h1>
-      <p class="lede">Answer 16 questions about one client’s Local Services Ads account. You get a score out of 100, a letter grade, a breakdown by area, and the three fixes worth the most points, with the Google rule behind each one.</p>
+      <p class="lede">Answer 16 questions about one client’s Local Services Ads account. You get a score out of 100, a letter grade, a breakdown by area, and the three fixes worth the most points, with the Google rule behind each one. Add the account’s cost per lead and your target to see how far apart they are.</p>
     </header>
     <div class="tool-layout">
       <form class="calc" id="calc" novalidate aria-label="LSA account health grader inputs">
@@ -168,7 +168,9 @@
 </div></fieldset>
 <fieldset><legend>5. Budget and bids <small>10 points</small></legend><div class="fields">
 <div class="field"><label for="weeklyLeads">Leads per week <span class="sr-only">(leads)</span></label><div class="input-wrap"><input id="weeklyLeads" name="weeklyLeads" type="number" inputmode="decimal" min="0" max="1000" step="any" value="8" aria-describedby="weeklyLeads-hint"><span class="unit post" aria-hidden="true">leads</span></div><p class="hint" id="weeklyLeads-hint">Average of the last 4 weeks, calls and messages together.</p></div>
-<div class="field wide"><p class="q-label" id="bidMode-label">Bid mode</p><div class="choices" role="radiogroup" aria-labelledby="bidMode-label" aria-describedby="bidMode-hint"><label><input type="radio" name="bidMode" value="maximize" checked> Maximize leads</label><label><input type="radio" name="bidMode" value="manualReviewed"> Manual bids, reviewed in the last month</label><label><input type="radio" name="bidMode" value="manualStale"> Manual bids, not reviewed in months</label></div><p class="hint" id="bidMode-hint">Account already moved into Google Ads? Manual bids aren’t available there, so pick “Maximize leads” (it’s called Maximize conversions in Google Ads).</p></div>
+<div class="field wide"><p class="q-label" id="bidMode-label">Bid mode</p><div class="choices" role="radiogroup" aria-labelledby="bidMode-label" aria-describedby="bidMode-hint"><label><input type="radio" name="bidMode" value="maximize" checked> Maximize leads, no target</label><label><input type="radio" name="bidMode" value="target"> Maximize leads with a target cost per lead (Target CPL)</label><label><input type="radio" name="bidMode" value="manualReviewed"> Manual bids, reviewed in the last month</label><label><input type="radio" name="bidMode" value="manualStale"> Manual bids, not reviewed in months</label></div><p class="hint" id="bidMode-hint">Account already moved into Google Ads? Manual bids aren’t available there. Pick “Maximize leads, no target” for Maximize conversions, or the Target CPL answer if a Target CPA is set.</p></div>
+<div class="field"><label for="actualCpl">Actual cost per lead <small>(optional)</small> <span class="sr-only">(dollars)</span></label><div class="input-wrap"><span class="unit pre" aria-hidden="true">$</span><input id="actualCpl" name="actualCpl" type="number" inputmode="decimal" min="0.01" max="10000" step="any" value="" placeholder="e.g. 60" data-optional aria-describedby="actualCpl-hint"></div><p class="hint" id="actualCpl-hint">Last 30 days: charged lead spend ÷ charged leads, from the account’s reports.</p></div>
+<div class="field"><label for="targetCpl">Target cost per lead <small>(optional)</small> <span class="sr-only">(dollars)</span></label><div class="input-wrap"><span class="unit pre" aria-hidden="true">$</span><input id="targetCpl" name="targetCpl" type="number" inputmode="decimal" min="0.01" max="10000" step="any" value="" placeholder="e.g. 55" data-optional aria-describedby="targetCpl-hint"></div><p class="hint" id="targetCpl-hint">The Target CPL set in the account, or the most the client can pay per lead and still make money. Not scored: it only adds the cost-per-lead check to the results.</p></div>
 </div></fieldset>
           <p class="error-note" role="alert">Check the highlighted box: it needs a number in range.</p>
           <div class="calc-actions"><button type="button" class="button" data-share>Copy link with these numbers</button><button type="reset" class="button ghost" data-reset>Reset to example</button><p data-status aria-live="polite"></p></div>
@@ -186,6 +188,7 @@
           <div><dt>Budget and bids</dt><dd id="g-cat-budget">8.8 / 10</dd><span class="bar" aria-hidden="true"><i id="g-bar-budget" style="width:88%"></i></span></div>
         </dl>
         <div class="callout fixes"><p><strong>Top 3 fixes, by points</strong></p><ol id="g-fixes"></ol></div>
+        <div class="callout" id="g-cpl"><p><strong>Cost per lead vs. target</strong> <small>(not scored)</small></p><p id="g-cpl-text">Add the actual and target cost per lead under Budget and bids to compare them.</p></div>
         <p class="results-note">LSA Command’s own checklist and weights, not a Google score.</p>
         <p class="results-cta">Want these numbers from a real client account? <a href="https://lsacommand.com/book/" data-cta="results_panel">Book a 30-min call</a></p>
       </section>
@@ -207,6 +210,8 @@
 <ul>
 <li><strong>Answer rate</strong> scores 0 at 60% or less and full marks at 95% or more, in a straight line between. That range is our call, not Google’s.</li>
 <li><strong>Leads rated</strong> and <strong>leads per week</strong> also score in a straight line: full marks at 100% rated and at 10 leads a week.</li>
+<li><strong>Bid mode:</strong> Maximize leads with no target earns 4 points, Target CPL 3, manual bids reviewed in the last month 3, and stale manual bids 0. Target CPL sits one point below because Google still recommends Maximize leads without a target first.</li>
+<li><strong>Cost per lead vs. target</strong> is optional and doesn’t change the score. It compares the account’s own actual cost per lead with the target you enter: within 10% either way counts as on target (our call, not Google’s). With leads per week filled in, it also shows the monthly gap in dollars (leads per week × 30.4 ÷ 7 × the difference). It uses no market benchmark, because Google doesn’t publish lead prices.</li>
 <li><strong>Grades:</strong> A is 90 and up, B 80, C 70, D 60, F below 60.</li>
 <li><strong>Top 3 fixes</strong> are the questions losing the most points. When two lose the same amount, the one asked first wins, so the list leans toward calls and leads.</li>
 </ul>
@@ -218,12 +223,13 @@
 <li><strong>Reviews.</strong> Star rating and number of reviews affect ranking, and customers are more likely to leave a review when the request comes from the business directly. Google gives each business a review link to share. <span class="source">Source: <a href="https://support.google.com/localservices/answer/7496631?hl=en">Reviews and ratings</a>.</span></li>
 <li><strong>Credits and disputes.</strong> Google re-checks charged leads and credits some automatically, usually within 30 days. Leaving feedback can earn a bonus credit. Leads for job types or areas the business doesn’t serve are no longer credited. Credits aren’t available in health care, for tax specialists, or in EMEA. <span class="source">Source: <a href="https://support.google.com/localservices/answer/15100654?hl=en">About automated lead credits</a>.</span> A lead can only be disputed within 30 days. <span class="source">Source: <a href="https://support.google.com/localservices/answer/11444751?hl=en">Dispute a lead</a>.</span> For accounts already in Google Ads, manual lead disputes are no longer supported; Google points to the “Rate this lead” survey on the Leads page. <span class="source">Source: <a href="https://support.google.com/google-ads/answer/17326057?hl=en">Lead quality and budgets</a>.</span></li>
 <li><strong>Lead volume.</strong> Google recommends budgeting for at least 10 leads a week. <span class="source">Source: <a href="https://support.google.com/localservices/answer/10125017?hl=en">How bidding works</a>.</span></li>
+<li><strong>Bid modes and Target CPL.</strong> Google lists three bid modes: Maximize leads (recommended), Target cost per lead (automated, with an optional target) and Max per lead (manual). With Target CPL, Google adjusts bids to keep the average cost per lead close to the target. Some leads cost more and some less, and the account never spends past its monthly budget. Google says Maximize leads without a target is still its top recommendation. <span class="source">Source: <a href="https://support.google.com/localservices/answer/10125017?hl=en">How bidding works</a> and <a href="https://support.google.com/localservices/answer/15406075?hl=en">About Target CPL bidding</a>.</span> In Google Ads, Target CPA is recommended only for campaigns with more than 15 leads a month whose cost per lead is too high; Maximize conversions is the default. <span class="source">Source: <a href="https://support.google.com/google-ads/answer/17326561">Google Ads Help, bidding for local services</a>.</span></li>
 </ul>
 <h2 id="limits">What this grader can’t see</h2>
 <ul>
 <li>It only knows what you tell it. It doesn’t connect to the account, so a wrong answer gives a wrong grade.</li>
 <li>Competitor comparisons are by eye, from a search in the client’s area. Results change by location and time of day.</li>
-<li>It doesn’t check lead prices, invoices or individual charged calls. The <a href="/tools/lsa-missed-call-calculator/">missed-call cost calculator</a> and <a href="/tools/lsa-budget-calculator/">budget calculator</a> cover the money side.</li>
+<li>It doesn’t check market lead prices, invoices or individual charged calls. The cost-per-lead check only compares the two numbers you type in. The <a href="/tools/lsa-missed-call-calculator/">missed-call cost calculator</a> and <a href="/tools/lsa-budget-calculator/">budget calculator</a> cover the money side.</li>
 <li>Nothing you answer leaves your browser. “Copy link” puts the answers in the part of the link after the #, which isn’t sent to any server.</li>
 </ul>
 <h2 id="faq">Frequently asked questions</h2>
@@ -253,13 +259,47 @@
     F: 'Real gaps. The fixes below are worth the most points.'
   };
   function pts(n) { return T.num(n, 1); }
+  function cplStatus(v) {
+    if (!v) return 'incomplete';
+    var c = G.cplCheck(v.actualCpl, v.targetCpl, v.weeklyLeads);
+    return c ? c.status : 'none';
+  }
+  // Optional, unscored: actual cost per lead vs. the target the agency enters.
+  function showCpl(v) {
+    var box = document.getElementById('g-cpl');
+    box.classList.remove('warn');
+    if (!v) { T.set('g-cpl-text', 'Fix any highlighted box to see this.'); return; }
+    var has = function (n) { return typeof n === 'number' && isFinite(n); };
+    if (!has(v.actualCpl) && !has(v.targetCpl)) {
+      T.set('g-cpl-text', 'Add the actual and target cost per lead under Budget and bids to compare them.');
+      return;
+    }
+    if (!has(v.actualCpl) || !has(v.targetCpl)) {
+      T.set('g-cpl-text', has(v.actualCpl) ? 'Add a target cost per lead to compare against.' : 'Add the actual cost per lead to compare against the target.');
+      return;
+    }
+    var c = G.cplCheck(v.actualCpl, v.targetCpl, v.weeklyLeads);
+    var head = T.money(c.actual) + ' actual vs. ' + T.money(c.target) + ' target: ';
+    var pct = T.num(Math.abs(c.pct), 0) + '%';
+    var gap = c.monthlyGap == null || Math.round(Math.abs(c.monthlyGap)) === 0 ? '' :
+      ' At ' + T.num(v.weeklyLeads, 1) + ' leads a week that’s about ' + T.money(Math.abs(c.monthlyGap)) + ' a month ' + (c.diff > 0 ? 'more' : 'less') + ' than the target pace.';
+    if (c.status === 'over') {
+      box.classList.add('warn');
+      T.set('g-cpl-text', head + pct + ' over.' + gap + ' Check the fixes above first: missed calls, slow replies and wrong job types or areas all push up what each useful lead costs.');
+    } else if (c.status === 'under') {
+      T.set('g-cpl-text', head + pct + ' under.' + gap + ' If the client wants more leads, there may be room to raise the budget, as long as the leads are turning into jobs.');
+    } else {
+      T.set('g-cpl-text', head + 'on target (within 10% either way).');
+    }
+  }
   T.mount({
     form: document.getElementById('calc'),
     tool: 'account_health_grader',
-    extra: function (v) { var r = G.grade(v); return { grade_band: r ? r.grade : 'incomplete' }; },
+    extra: function (v) { var ok = v && v._valid, r = ok ? G.grade(v) : null; return { grade_band: r ? r.grade : 'incomplete', cpl_check: cplStatus(ok ? v : null) }; },
     compute: function (v) {
       var list = document.getElementById('g-fixes'), gradeEl = document.getElementById('g-grade');
       var r = v ? G.grade(v) : null;
+      showCpl(v);
       list.textContent = '';
       if (!r) {
         T.set('g-score', '-'); T.set('g-grade', ''); gradeEl.removeAttribute('aria-label');
