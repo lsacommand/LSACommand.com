@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0]
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Service Ads Eligibility: Google LSA Requirements Check</title>
+  <meta name="description" content="Local service ads eligibility in 1 minute: 5 questions from Google's own pages cover the Google LSA requirements, then Google's own check confirms it.">
+  <link rel="canonical" href="https://lsacommand.com/blog/local-service-ads-eligibility/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="Local Service Ads Eligibility: Google LSA Requirements Check">
+  <meta property="og:description" content="Local service ads eligibility in 1 minute: 5 questions from Google's own pages cover the Google LSA requirements, then Google's own check confirms it.">
+  <meta property="og:url" content="https://lsacommand.com/blog/local-service-ads-eligibility/">
+  <meta property="og:image" content="https://lsacommand.com/blog/local-service-ads-eligibility/blog-local-service-ads-eligibility.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Local service ads eligibility: check Google LSA requirements in 1 minute, with a checklist card for country, category, Business Profile, screening and lead types">
+  <meta property="article:published_time" content="2027-01-04T11:30:00-05:00">
+  <meta property="article:modified_time" content="2027-01-04T11:30:00-05:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Local Service Ads Eligibility: Google LSA Requirements Check">
+  <meta name="twitter:description" content="Local service ads eligibility in 1 minute: 5 questions from Google's own pages cover the Google LSA requirements, then Google's own check confirms it.">
+  <meta name="twitter:image" content="https://lsacommand.com/blog/local-service-ads-eligibility/blog-local-service-ads-eligibility.png">
+  <meta name="twitter:image:alt" content="Local service ads eligibility: check Google LSA requirements in 1 minute, with a checklist card for country, category, Business Profile, screening and lead types">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>
+    .cta-box .button{display:inline-block;margin:12px 12px 0 0}
+    .table-wrap{overflow-x:auto;margin:1.25rem 0}
+    .table-wrap .compare{margin:0}
+    ol.chapters, ul.chapters{margin:0 0 1.5rem 1.2rem}
+    ol.chapters li, ul.chapters li{margin:.35rem 0}
+
+    .yt-facade{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#07243A}
+    .yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .yt-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .yt-play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-end;padding:0 2.2% 1.8% 0}
+    .yt-play svg{width:clamp(46px,12%,84px);height:auto;filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));transition:transform .15s}
+    .yt-play:hover svg{transform:scale(1.08)}
+    .video-with-infographic{margin:0 0 32px}
+    .video-with-infographic .video{margin:0 0 16px}
+    .infographic{margin:0}
+    .infographic img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:0 12px 42px rgba(7,36,58,.06)}
+    .infographic figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+    figure.shot{margin:1.5rem 0}
+    figure.shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+    figure.shot figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+    .callout{margin:1.5rem 0;padding:22px 24px;border:1px solid var(--line);border-left:6px solid #00AFC6;border-radius:16px;background:#F4FBFC}
+    .callout .callout-title{margin:0 0 12px;font-family:Outfit,Inter,sans-serif;font-weight:800;font-size:1.2rem;line-height:1.3;color:#07243A}
+    .callout ul{margin:0 0 0 1.2rem}
+    .callout li{margin:.35rem 0}
+    .button.button-secondary{background:#fff;color:#07243A;border:2px solid #07243A}
+    .button.button-secondary:hover{background:#eaf6fa}
+    .faq{margin:0 0 1.5rem}
+    .related h2{margin-top:0}
+    .disclosure{font-size:.95rem}
+    .sources li{margin:.4rem 0;font-size:.95rem}
+    @media (max-width:760px){.breadcrumbs li[aria-current]{display:none}.breadcrumbs li:nth-last-child(2)::after{content:""}.article-header .lede{font-size:1.05rem;line-height:1.6}.article-header{padding-bottom:20px;margin-bottom:22px}.article-meta{margin-top:14px}.book-cta-top{display:flex;flex-direction:column;align-items:stretch}.book-cta-top .button{order:-1;width:100%;margin-bottom:12px}}
+  </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Local Service Ads Eligibility: Check Your Client Against Google LSA Requirements in 1 Minute"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "BlogPosting"
+      ],
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#main",
+      "url": "https://lsacommand.com/blog/local-service-ads-eligibility/",
+      "name": "Local Service Ads Eligibility: Check Your Client Against Google LSA Requirements in 1 Minute",
+      "headline": "Local Service Ads Eligibility: Check Your Client Against Google LSA Requirements in 1 Minute",
+      "description": "Local service ads eligibility in 1 minute: 5 questions from Google's own pages cover the Google LSA requirements, then Google's own check confirms it.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2027-01-04T11:30:00-05:00",
+      "dateModified": "2027-01-04T11:30:00-05:00",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://lsacommand.com/#organization",
+        "name": "LSA Command",
+        "url": "https://lsacommand.com/"
+      },
+      "keywords": "local service ads eligibility, google lsa requirements, google local services ads, local services ads eligibility check, lsa verification, google business profile, google ads api, lsa for agencies, lsa command",
+      "image": [
+        {
+          "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#thumbnail"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#infographic"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#img-self-check"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#img-by-category"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#img-check-result"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#img-audit"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#og-image"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/"
+      },
+      "video": {
+        "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#video"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#video",
+      "name": "Local Service Ads Eligibility: Check Google LSA Requirements in 1 Minute",
+      "description": "Local service ads eligibility in one minute: five Google LSA requirements from Google's public pages, Google's own eligibility check through the Google Ads API, what LSA Command shows for each connected account, and the Business opportunity audit for clients already running. LSA Command answers 100% of calls within 30 seconds.",
+      "thumbnailUrl": [
+        "https://lsacommand.com/blog/local-service-ads-eligibility/local-service-ads-eligibility-video-thumbnail.webp"
+      ],
+      "uploadDate": "2027-01-04T11:30:00-05:00",
+      "url": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "contentUrl": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID_PENDING",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the Google LSA requirements in short?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google's public pages point to five checks: the business is in a country where Local Services Ads run, its category is on Google's list for that country (and state, for some categories), it has a public and verified Google Business Profile, it can pass the screening Google lists for its category (license, insurance and background checks vary), and the lead types it wants are offered there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I check local service ads eligibility for a client?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with the 1-minute self-check in this post, then confirm with Google. Since Google Ads API v26.1 (October 28, 2026), Google offers a method named CheckLocalServicesEligibility that returns whether an account and its Business Profile listing are eligible, plus the eligible lead types and categories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Local Services Ads categories are limited to certain states?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On Google's U.S. Getting started page, checked November 24, 2026, seven categories are marked California and Florida only. They are named in the category section of this post."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a business need a Google Business Profile for Local Services Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Google's screening and verification requirements page says Local Services advertisers must have a public and verified Google Business Profile. Search Engine Roundtable reported the same from a Google email on March 7, 2025."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can every eligible business get call, message and booking leads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Google says booking leads are available only in the United States and Canada, and are not available for health care verticals. Google's eligibility method returns the eligible lead types for each account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does LSA Command check eligibility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a business whose Google Ads account is connected, LSA Command calls Google's CheckLocalServicesEligibility method for the account and its Business Profile listing. It is read-only on Google. It shows one of six statuses, the eligible lead types and categories, and Google's reasons in Google's own words. It runs once a day and on demand."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does LSA Command cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LSA Command is $200 per month per client, with voice AI included. You can book a free 30 minute walkthrough to see it on one of your own client accounts."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#thumbnail",
+      "url": "https://lsacommand.com/blog/local-service-ads-eligibility/local-service-ads-eligibility-video-thumbnail.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-service-ads-eligibility/local-service-ads-eligibility-video-thumbnail.webp",
+      "name": "Local service ads eligibility video thumbnail",
+      "caption": "Video thumbnail for the local service ads eligibility video, with a Google LSA requirements checklist for a fictional business.",
+      "width": 1280,
+      "height": 720,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#infographic",
+      "url": "https://lsacommand.com/blog/local-service-ads-eligibility/local-service-ads-eligibility-process-flowchart.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-service-ads-eligibility/local-service-ads-eligibility-process-flowchart.webp",
+      "name": "Local service ads eligibility flowchart: from Google's check to an answered call",
+      "caption": "Local service ads eligibility flowchart: how LSA Command checks Google LSA requirements with Google's own method, audits accounts already running, and handles every lead once the ads are live. Illustrative process.",
+      "width": 1600,
+      "height": 4300,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en",
+      "description": "Process flowchart for local service ads eligibility. Part 1: if a Google Ads account is connected, LSA Command finds the Business Profile listing (from an existing Local Services campaign or the account's Business Profile location asset), then calls Google's CheckLocalServicesEligibility method, read-only, and shows one of six statuses with eligible lead types, categories, job types and callouts, or Google's reasons. It runs once a day and on demand. Part 2: the Business opportunity audit checks every business in an MCC over the last 90 days of LSA leads, scores calls not answered and message reply speed, and gives one score out of 100, most to fix first. Part 3: once ads run, the client's team rings first for 10 to 15 seconds, then AI answers so 100% of calls are answered within 30 seconds; most robocalls and spam are blocked and kept out of notifications; booked calls get Lead Status Booked in Google LSA; AI messaging replies instantly; every lead is notated and rated with High-value leads identified; text notifications, email notifications and a GoHighLevel update (if connected) go out in parallel, followed by a weekly lead summary."
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#img-self-check",
+      "url": "https://lsacommand.com/blog/local-service-ads-eligibility/local-service-ads-eligibility-1-minute-self-check.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-service-ads-eligibility/local-service-ads-eligibility-1-minute-self-check.webp",
+      "name": "Local service ads eligibility: the 1-minute self-check",
+      "caption": "Local service ads eligibility in five questions, built from Google LSA requirements on Google's public pages. The 1 minute is a rough guide, not a measurement. Illustrative example, fictional data.",
+      "width": 1600,
+      "height": 1196,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#img-by-category",
+      "url": "https://lsacommand.com/blog/local-service-ads-eligibility/google-lsa-requirements-by-category-and-state.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-service-ads-eligibility/google-lsa-requirements-by-category-and-state.webp",
+      "name": "Google LSA requirements by category and state",
+      "caption": "Google LSA requirements change by category and state, which changes local service ads eligibility. Illustrative example, summarizing Google's U.S. help pages checked November 24, 2026.",
+      "width": 1600,
+      "height": 1154,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#img-check-result",
+      "url": "https://lsacommand.com/blog/local-service-ads-eligibility/local-service-ads-eligibility-check-result.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-service-ads-eligibility/local-service-ads-eligibility-check-result.webp",
+      "name": "Local service ads eligibility check result from Google",
+      "caption": "Local service ads eligibility as Google returns it: eligible lead types and categories, or Google's reasons when Google LSA requirements are not met. Illustrative example, fictional data.",
+      "width": 1600,
+      "height": 1150,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#img-audit",
+      "url": "https://lsacommand.com/blog/local-service-ads-eligibility/google-lsa-requirements-business-opportunity-audit.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-service-ads-eligibility/google-lsa-requirements-business-opportunity-audit.webp",
+      "name": "After Google LSA requirements: the Business opportunity audit",
+      "caption": "Once Google LSA requirements are met, the Business opportunity audit shows which live accounts have the most to fix. Illustrative example, fictional data; bars are not real scores.",
+      "width": 1600,
+      "height": 1076,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-service-ads-eligibility/#og-image",
+      "url": "https://lsacommand.com/blog/local-service-ads-eligibility/blog-local-service-ads-eligibility.png",
+      "contentUrl": "https://lsacommand.com/blog/local-service-ads-eligibility/blog-local-service-ads-eligibility.png",
+      "name": "Local service ads eligibility check: share image",
+      "caption": "Local service ads eligibility: check Google LSA requirements in 1 minute, with a checklist card for country, category, Business Profile, screening and lead types",
+      "width": 1200,
+      "height": 630,
+      "encodingFormat": "image/png",
+      "inLanguage": "en"
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Local Service Ads Eligibility: Check Your Client Against Google LSA Requirements in 1 Minute</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">LSA eligibility</p>
+        <h1>Local Service Ads Eligibility: Check Your Client Against Google LSA Requirements in 1 Minute</h1>
+        <p class="lede">Does your client qualify for Google Local Services Ads? Five questions from Google's public pages, then Google's own answer through the Google Ads API, and what to check once the ads are running.</p>
+        <p class="article-meta"><span>By <a href="/author/lsa-command-team/" rel="author">the LSA Command Team</a></span> <span aria-hidden="true">·</span> <time datetime="2027-01-04">January 4, 2027</time> <span aria-hidden="true">·</span> 8 min read</p>
+      </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered within 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team walks you through it live in 30 minutes. No passwords change hands. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=local-service-ads-eligibility&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li>
+<li><a href="#self-check">The 1-minute local service ads eligibility self-check</a></li>
+<li><a href="#by-category">Google LSA requirements by category and state</a></li>
+<li><a href="#google-check">Google's own local service ads eligibility check</a></li>
+<li><a href="#audit">Past Google LSA requirements: the audit</a></li>
+<li><a href="#after-eligibility">After eligibility: answer every lead</a></li>
+<li><a href="#checklist">Free Google LSA requirements checklist</a></li>
+<li><a href="#sources">Sources</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+<li><a href="#book">See it on your own client account</a></li></ol></nav></aside>
+        <div class="article-body">
+          <p>LSA Command starts with one promise: 100% of calls answered within 30 seconds. Your client's own team gets the first 10 to 15 seconds to pick up, then AI answers, and AI messaging replies to message leads instantly. None of that matters until the ad is allowed to run, so this post starts one step earlier, with local service ads eligibility.</p>
+
+          <p><strong>Local service ads eligibility comes down to five Google LSA requirements:</strong> the right country, a category Google lists for that country and state, a public and verified Google Business Profile, the screening Google sets for that category, and the lead types Google offers there. You can check all five in about a minute, then ask Google to confirm.</p>
+
+          <p class="disclosure"><strong>Note:</strong> every image on this page is an illustrative mockup with fictional businesses ("Anytown Plumbing Co.") and fictional data. Every fact about Google links to its source, and Google can change these rules at any time.</p>
+
+          <div class="video-with-infographic">
+          <figure class="video" id="watch">
+            <div class="yt-facade" data-video-id="VIDEO_ID_PENDING">
+              <img src="/blog/local-service-ads-eligibility/local-service-ads-eligibility-video-thumbnail.webp" alt="Local service ads eligibility video thumbnail: a checklist card for a fictional plumbing business covering the Google LSA requirements, with the question: does your client qualify?" title="Local service ads eligibility video" width="1280" height="720" decoding="async" fetchpriority="high">
+              <button type="button" class="yt-play" aria-label="Play video: Local Service Ads Eligibility: Check Google LSA Requirements in 1 Minute"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#07243A"/><path d="M45 24 27 14v20" fill="#FFD60A"/></svg></button>
+            </div>
+            <figcaption>Watch: Local Service Ads Eligibility: Check Google LSA Requirements in 1 Minute.<noscript> <a href="https://www.youtube.com/watch?v=VIDEO_ID_PENDING">Watch on YouTube</a>.</noscript></figcaption>
+          </figure>
+          <figure class="infographic">
+            <a href="/blog/local-service-ads-eligibility/local-service-ads-eligibility-process-flowchart.webp"><img src="/blog/local-service-ads-eligibility/local-service-ads-eligibility-process-flowchart.webp" width="1600" height="4300" loading="lazy" decoding="async" alt="Local service ads eligibility flowchart: LSA Command finds the Business Profile listing, asks Google's CheckLocalServicesEligibility method whether the account meets Google LSA requirements, shows eligible lead types or Google's reasons, audits every business in an MCC over 90 days of leads, then answers 100% of calls within 30 seconds with notes, High-value leads identified and text and email notifications" title="Local service ads eligibility: process flowchart"></a>
+            <figcaption>Local service ads eligibility flowchart: how LSA Command checks Google LSA requirements with Google's own method, audits accounts already running, and handles every lead once the ads are live. Illustrative process. Open the full-size image to read it.</figcaption>
+          </figure>
+          </div>
+
+          <h2 id="self-check">The 1-minute local service ads eligibility self-check</h2>
+
+          <p>Use this before a sales call or before you quote a new client. Every row comes from a public Google page, so you need no login. Open Google's <a href="https://support.google.com/localservices/answer/6224841?hl=en&amp;co=GENIE.CountryCode%3DUS" rel="noopener">Getting started</a> page and its <a href="https://support.google.com/localservices/answer/12174778?hl=en&amp;co=GENIE.CountryCode%3DUS" rel="noopener">screening and verification requirements</a> page, then answer five questions.</p>
+
+          <p>This is the quick yes or no screen. Our <a href="/blog/local-services-ads-categories/">Local Services Ads categories list</a> holds the full category list and the longer pre-sale category check. To confirm category and area, use Google's own public "Check eligibility" step on the Getting started page: "To check if Local Services Ads are available in your area, check your business eligibility."</p>
+
+          <figure class="shot">
+            <a href="/blog/local-service-ads-eligibility/local-service-ads-eligibility-1-minute-self-check.webp"><img src="/blog/local-service-ads-eligibility/local-service-ads-eligibility-1-minute-self-check.webp" width="1600" height="1196" loading="lazy" decoding="async" alt="Local service ads eligibility self-check card for a fictional plumbing business: five Google LSA requirements questions on country, category and state, verified Business Profile, screening and licensing, and lead types, each with a tick" title="Local service ads eligibility: 1-minute self-check"></a>
+            <figcaption>Local service ads eligibility in five questions, built from Google LSA requirements on Google's public pages. The 1 minute is a rough guide, not a measurement. Illustrative example, fictional data.</figcaption>
+          </figure>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Question</th><th>What Google says</th><th>If the answer is no</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. Country</td><td>The Getting started page has a country selector with 11 countries: Austria, Belgium, Canada, France, Germany, Ireland, Italy, Spain, Switzerland, the United Kingdom and the United States. The rules differ in each.</td><td>Google's page has no version for that country. Confirm with Google before you promise anything.</td></tr>
+              <tr><td>2. Category (and state)</td><td>"At this time, Local Services Ads are available only for certain service categories." Some U.S. categories are limited to certain states (see the next section).</td><td>Stop here. Confirm with Google's "Check eligibility" step before you quote.</td></tr>
+              <tr><td>3. Business Profile</td><td>"Local Services advertisers must have a public and verified Google Business profile to advertise."</td><td>Claim and verify the profile first.</td></tr>
+              <tr><td>4. Screening and licensing</td><td>Screening procedures "vary by category and region but may include license, insurance, and background checks" (<a href="https://support.google.com/localservices/answer/6230381?hl=en" rel="noopener">Google</a>).</td><td>Gather the documents before sign-up. Our <a href="/blog/local-services-ads-background-check-verification/">verification checklist</a> lists them.</td></tr>
+              <tr><td>5. Lead types</td><td>Leads arrive as calls and messages, and customers can also schedule a booking. Booking leads are U.S. and Canada only and "aren't available for health care verticals."</td><td>Plan the account around the lead types the client can get.</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p>One more item sits behind all five: the Google Ads account itself. Google's <a href="https://support.google.com/localservices/answer/7195435?hl=en" rel="noopener">How leads work</a> page says, "Billing for Local Services Ads is managed by Google Ads. Any suspension in your Google Ads account will also suspend your Local Services Ads."</p>
+
+          <p><strong>Why the Business Profile row is strict.</strong> <a href="https://www.seroundtable.com/google-local-service-ads-requires-business-profile-38221.html" rel="noopener">Search Engine Roundtable</a> (October 10, 2024) published Google's notice that by November 21, 2024 a Local Services ad "will need a matching Google Business Profile." On March 7, 2025 it <a href="https://www.seroundtable.com/google-business-profile-associated-with-local-service-ads-39019.html" rel="noopener">reported</a> Google's follow-up email: "From now, you must have an affiliated public Google Business Profile to run Local Services Ads."</p>
+
+          <h2 id="by-category">Google LSA requirements change by category and state</h2>
+
+          <p>Google's U.S. requirements page says background check, business registration and insurance requirements "are only required for select users," then lists exceptions category by category.</p>
+
+          <figure class="shot">
+            <a href="/blog/local-service-ads-eligibility/google-lsa-requirements-by-category-and-state.webp"><img src="/blog/local-service-ads-eligibility/google-lsa-requirements-by-category-and-state.webp" width="1600" height="1154" loading="lazy" decoding="async" alt="Google LSA requirements by category and state: a table showing urgent categories with extra screening, garage door and locksmith with Advanced Verification, state-limited categories, and lead type limits that affect local service ads eligibility" title="Google LSA requirements by category and state"></a>
+            <figcaption>Google LSA requirements change by category and state, which changes local service ads eligibility. Illustrative example, summarizing Google's U.S. help pages checked November 24, 2026.</figcaption>
+          </figure>
+
+          <ul>
+            <li><strong>Urgent categories get extra screening.</strong> Google calls plumbing, HVAC, electrician, garage door and locksmith "urgent" categories and says providers "undergo an additional level of screening, which includes service professional background checks."</li>
+            <li><strong>Garage door and locksmith go further.</strong> Both also go through "Google's Advanced Verification screening process," and Google says pre-badge ads are not available for garage door services, health care verticals or locksmiths.</li>
+            <li><strong>Seven categories are state-limited.</strong> Architect, drain expert, home insulation, insurance agency, interior designer, piercing studio and tattoo studio are marked California and Florida only.</li>
+            <li><strong>Allow time.</strong> Google says screening and verification takes 3 to 4 weeks on average after documents are submitted, and recommends starting as soon as the account exists.</li>
+          </ul>
+
+          <p>For the full steps, see <a href="/blog/how-to-set-up-google-local-services-ads/">how to set up Google Local Services Ads for a client</a>, and if a live campaign already shows "Not eligible," read <a href="/blog/local-services-ads-not-eligible-verification/">the verification deadline guide</a>.</p>
+
+          <h2 id="google-check">Google's own local service ads eligibility check</h2>
+
+          <p>A self-check is a good guess. For a connected account, Google now gives a firmer answer. Local Services Ads are moving into Google Ads (Google's <a href="https://support.google.com/google-ads/answer/17213585?hl=en" rel="noopener">transition page</a> describes the move to Performance Max campaigns with pay-per-lead goals), and the Google Ads API gained an eligibility method on the way.</p>
+
+          <p>Google's <a href="https://developers.google.com/google-ads/api/docs/release-notes" rel="noopener">Google Ads API release notes</a> for v26.1 (October 28, 2026) list a new method, <a href="https://developers.google.com/google-ads/api/reference/rpc/v26/LocalServicesEligibilityService/CheckLocalServicesEligibility" rel="noopener">CheckLocalServicesEligibility</a>, "to check Local Services eligibility for a customer and Google Business Profile listing ID." <a href="https://www.seroundtable.com/google-ads-api-version-261-42409.html" rel="noopener">Search Engine Roundtable</a> (October 28, 2026) summed it up: it "checks whether an account and Google Business Profile listing qualify for Local Services" and "can return eligible lead types, service categories, job types, and business callouts." The release notes add reasons that explain eligibility issues, "such as licensing issues."</p>
+
+          <p>LSA Command runs that method for you:</p>
+
+          <figure class="shot">
+            <a href="/blog/local-service-ads-eligibility/local-service-ads-eligibility-check-result.webp"><img src="/blog/local-service-ads-eligibility/local-service-ads-eligibility-check-result.webp" width="1600" height="1150" loading="lazy" decoding="async" alt="Local service ads eligibility check result mockup: a fictional plumbing business shown as Eligible with lead types, category, job types and callouts, a fictional garage door business shown as Not eligible with Google's reasons, and the six possible results of the Google LSA requirements check" title="Local service ads eligibility: Google's answer per account"></a>
+            <figcaption>Local service ads eligibility as Google returns it: eligible lead types and categories, or Google's reasons when Google LSA requirements are not met. Illustrative example, fictional data.</figcaption>
+          </figure>
+
+          <ul>
+            <li><strong>It needs a connected account.</strong> The check runs for a business whose Google Ads account is connected to LSA Command. For a prospect with no connection, use the self-check above and Google's public "Check eligibility" step.</li>
+            <li><strong>It finds the listing.</strong> LSA Command looks for the Business Profile listing in an existing Local Services campaign or in the account's Business Profile location asset. If it finds more than one, you pick the listing.</li>
+            <li><strong>It is read-only on Google.</strong> Nothing in the Google Ads account changes.</li>
+            <li><strong>It returns one of six statuses:</strong> eligible, not eligible, no listing found, choose a listing, invalid listing, or check failed.</li>
+            <li><strong>When eligible, it shows the detail.</strong> Each eligible lead type appears with its eligible categories: category name, job types and callouts.</li>
+            <li><strong>Google's reasons appear in Google's own words,</strong> both the short and the long text, so a licensing issue reads the way Google wrote it.</li>
+            <li><strong>It repeats.</strong> The check runs automatically once a day for connected accounts, and on demand.</li>
+          </ul>
+
+          <aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">Eligible is step one. Who answers when the ad starts ringing?</p><p>Bring one client account. The LSA Command team walks you through the call flow live in 30 minutes, free.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=local-service-ads-eligibility&amp;cta_position=mid" data-cta-position="mid" data-cta="article-mid-book">Book my 30-minute walkthrough</a></p></aside>
+
+          <h2 id="audit">Past Google LSA requirements: the Business opportunity audit</h2>
+
+          <p>For clients already running Local Services Ads, pair the eligibility check with LSA Command's Business opportunity audit to see where each account loses leads.</p>
+
+          <figure class="shot">
+            <a href="/blog/local-service-ads-eligibility/google-lsa-requirements-business-opportunity-audit.webp"><img src="/blog/local-service-ads-eligibility/google-lsa-requirements-business-opportunity-audit.webp" width="1600" height="1076" loading="lazy" decoding="async" alt="Business opportunity audit mockup for clients that already meet Google LSA requirements: three setup steps, then every business in an MCC ranked by calls not answered and message reply speed over 90 days of leads, with the most to fix listed first, the step after local service ads eligibility" title="Google LSA requirements met: Business opportunity audit"></a>
+            <figcaption>Once Google LSA requirements are met, the Business opportunity audit shows which live accounts have the most to fix. Illustrative example, fictional data; bars are not real scores.</figcaption>
+          </figure>
+
+          <ul>
+            <li><strong>Setup takes about 2 minutes,</strong> in 3 steps: connect Google Ads, pick the MCC you want to check, and start the audit. Agencies with several MCCs pick one at a time.</li>
+            <li><strong>It checks every business in the MCC.</strong> It pulls the last 90 days of LSA leads and listens to the call recordings. Businesses with no leads are listed separately.</li>
+            <li><strong>It scores two things:</strong> calls not answered and message reply speed.</li>
+            <li><strong>You get one overall score out of 100.</strong> Closer to 100 means more to fix, and the businesses with the most to fix are listed first.</li>
+          </ul>
+
+          <h2 id="after-eligibility">After local service ads eligibility: answer every lead</h2>
+
+          <p>Passing Google LSA requirements gets the ad shown. Google's <a href="https://support.google.com/localservices/answer/7527305?hl=en" rel="noopener">About ad rankings</a> page names two auction factors: your bid, and how likely your ad is to result in a lead. Under the second it lists responsiveness and warns, "Missed calls may negatively affect your responsiveness." A missed call during business hours can also be a charged lead when the caller stays on the line more than 20 seconds, a rule <a href="https://www.seroundtable.com/google-lsa-missed-subsequent-calls-41940.html" rel="noopener">Search Engine Roundtable</a> (August 25, 2026) reported would start October 1, 2026 (see <a href="/blog/lsa-missed-call-charges/">LSA missed call charges</a>).</p>
+
+          <p>That is LSA Command's main work:</p>
+
+          <ul>
+            <li><strong>100% of calls answered within 30 seconds.</strong> The client's team rings first for 10 to 15 seconds, then AI answers.</li>
+            <li><strong>AI messaging replies instantly</strong> to message leads (more on <a href="/blog/respond-to-google-lsa-message-leads/">responding to LSA message leads</a>).</li>
+            <li><strong>Notes on every lead, and every lead rated,</strong> with High-value leads identified.</li>
+            <li><strong>Text and email notifications,</strong> a weekly lead summary and GoHighLevel integration.</li>
+            <li><strong>Booked calls marked inside Google's LSA platform:</strong> Lead Status set to Booked and the lead summary filled in.</li>
+            <li><strong>Most robocalls and spam are blocked</strong> and kept out of notifications.</li>
+          </ul>
+
+          <p>From our own published results: across three pool contractor accounts in our <a href="/case-studies/">case studies</a>, leads answered within 30 seconds went from 28% to 100% between December 2025 and April 2026. The price is $200 per month per client, with voice AI included.</p>
+
+          <h2 id="checklist">Free checklist: Google LSA requirements for a new client</h2>
+
+          <p>Copy this into your onboarding form, free.</p>
+
+          <aside class="callout" aria-label="Google LSA requirements checklist">
+            <p class="callout-title">Local service ads eligibility checklist</p>
+            <ul>
+              <li>Country is on Google's Local Services country selector.</li>
+              <li>Category is on Google's list for that country, and not limited to another state.</li>
+              <li>Google Business Profile is public, verified and matched to the Local Services account.</li>
+              <li>License, insurance and background check documents for the category are ready.</li>
+              <li>Urgent category (plumbing, HVAC, electrician, garage door, locksmith)? Plan for extra screening.</li>
+              <li>Google Ads account is active, with billing set up and no suspension.</li>
+              <li>Lead types decided: calls, messages, and bookings where Google offers them.</li>
+              <li>3 to 4 weeks allowed for verification before the launch date you promise.</li>
+              <li>Every call covered from day one: team first, then a backup that answers within 30 seconds.</li>
+            </ul>
+          </aside>
+
+          <p>Two free tools help with the last line: the <a href="/tools/lsa-account-health-grader/">LSA account health grader</a> ranks the top fixes for an account, and the <a href="/tools/lsa-missed-call-calculator/">LSA missed call calculator</a> estimates what unanswered calls cost a client.</p>
+
+          <h2 id="sources">Sources for these Google LSA requirements</h2>
+          <p>Google pages were checked on November 24, 2026.</p>
+          <ul class="sources">
+            <li>Google, <a href="https://support.google.com/localservices/answer/6224841?hl=en&amp;co=GENIE.CountryCode%3DUS" rel="noopener">Getting started with Local Services Ads (United States)</a>: category list, state-limited categories, country selector, lead types, booking limits, pre-badge ads.</li>
+            <li>Google, <a href="https://support.google.com/localservices/answer/12174778?hl=en&amp;co=GENIE.CountryCode%3DUS" rel="noopener">Business screening and verification requirements (United States)</a>: verified Business Profile, urgent categories, Advanced Verification, 3 to 4 week average.</li>
+            <li>Google, <a href="https://support.google.com/localservices/answer/6230381?hl=en" rel="noopener">How providers qualify for Local Services Ads</a>: license, insurance and background checks.</li>
+            <li>Google, <a href="https://support.google.com/localservices/answer/7195435?hl=en" rel="noopener">How leads work</a>: Google Ads suspension, booking leads, missed calls over 20 seconds.</li>
+            <li>Google, <a href="https://support.google.com/localservices/answer/7527305?hl=en" rel="noopener">About ad rankings</a>: the two auction factors and responsiveness.</li>
+            <li>Google Ads Help, <a href="https://support.google.com/google-ads/answer/17213585?hl=en" rel="noopener">Local Services Ads transition to Performance Max campaigns with pay-per-lead goals</a>.</li>
+            <li>Google, <a href="https://developers.google.com/google-ads/api/docs/release-notes" rel="noopener">Google Ads API release notes</a>, v26.1 (October 28, 2026), and the <a href="https://developers.google.com/google-ads/api/reference/rpc/v26/LocalServicesEligibilityService/CheckLocalServicesEligibility" rel="noopener">CheckLocalServicesEligibility reference</a>.</li>
+            <li>Search Engine Roundtable, <a href="https://www.seroundtable.com/google-lsa-missed-subsequent-calls-41940.html" rel="noopener">Google To Charge For Missed &amp; Subsequent Calls On LSAs</a> (August 25, 2026).</li>
+            <li>Search Engine Roundtable, <a href="https://www.seroundtable.com/google-ads-api-version-261-42409.html" rel="noopener">Google Ads API Version 26.1 Now Out Available</a> (October 28, 2026).</li>
+            <li>Search Engine Roundtable, <a href="https://www.seroundtable.com/google-local-service-ads-requires-business-profile-38221.html" rel="noopener">Google Local Service Ads To Soon Require Google Business Profile</a> (October 10, 2024).</li>
+            <li>Search Engine Roundtable, <a href="https://www.seroundtable.com/google-business-profile-associated-with-local-service-ads-39019.html" rel="noopener">Google Business Profile Now Associated With Local Service Ads</a> (March 7, 2025).</li>
+          </ul>
+
+          <h2 id="faq">Frequently asked questions about local service ads eligibility</h2>
+          <div class="faq">
+            <details><summary>What are the Google LSA requirements in short?</summary><p>Google's public pages point to five checks: the business is in a country where Local Services Ads run, its category is on Google's list for that country (and state, for some categories), it has a public and verified Google Business Profile, it can pass the screening Google lists for its category (license, insurance and background checks vary), and the lead types it wants are offered there.</p></details>
+            <details><summary>How do I check local service ads eligibility for a client?</summary><p>Start with the 1-minute self-check in this post, then confirm with Google. Since Google Ads API v26.1 (October 28, 2026), Google offers a method named CheckLocalServicesEligibility that returns whether an account and its Business Profile listing are eligible, plus the eligible lead types and categories.</p></details>
+            <details><summary>Which Local Services Ads categories are limited to certain states?</summary><p>On Google's U.S. Getting started page, checked November 24, 2026, seven categories are marked California and Florida only. They are named in the category section of this post.</p></details>
+            <details><summary>Does a business need a Google Business Profile for Local Services Ads?</summary><p>Yes. Google's screening and verification requirements page says Local Services advertisers must have a public and verified Google Business Profile. Search Engine Roundtable reported the same from a Google email on March 7, 2025.</p></details>
+            <details><summary>Can every eligible business get call, message and booking leads?</summary><p>No. Google says booking leads are available only in the United States and Canada, and are not available for health care verticals. Google's eligibility method returns the eligible lead types for each account.</p></details>
+            <details><summary>How does LSA Command check eligibility?</summary><p>For a business whose Google Ads account is connected, LSA Command calls Google's CheckLocalServicesEligibility method for the account and its Business Profile listing. It is read-only on Google. It shows one of six statuses, the eligible lead types and categories, and Google's reasons in Google's own words. It runs once a day and on demand.</p></details>
+            <details><summary>How much does LSA Command cost?</summary><p>LSA Command is $200 per month per client, with voice AI included. You can book a free 30 minute walkthrough to see it on one of your own client accounts.</p></details>
+          </div>
+          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The LSA Command Team has almost two decades of agency experience helping local businesses with Local Services Ads. After watching too many LSA calls go unanswered on client accounts, we built LSA Command to answer every call, reply to message leads and mark the calls the AI books as Booked in Google. <a href="/author/lsa-command-team/">More about the LSA Command Team</a></p></aside>
+
+
+          <div class="cta-box" id="book">
+            <h2 id="price-and-next-step">See local service ads eligibility and call answering on your own client account</h2>
+            <p><strong>LSA Command works only with agency owners, not business owners.</strong> It was built first for our own agency's Google LSA accounts.</p>
+            <p>Meeting Google LSA requirements gets a client into the auction. Answering wins the lead. LSA Command answers 100% of calls within 30 seconds and marks booked calls inside Google's LSA platform, for $200 per month per client with voice AI included. The walkthrough is free and takes 30 minutes.</p>
+            <p><a class="button" href="https://lsacommand.com/book/?post_slug=local-service-ads-eligibility&amp;cta_position=end" data-cta-position="end" data-cta="article-footer-book">Book my 30-minute walkthrough</a> <a class="button button-secondary" href="/pricing/" data-cta="article-footer-pricing">See pricing</a></p>
+          </div>
+          <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
+<ul>
+            <li><a href="/blog/local-services-ads-categories/">Google LSA categories and eligibility list</a></li>
+            <li><a href="/blog/how-to-set-up-google-local-services-ads/">How to set up Google Local Services Ads for a client</a></li>
+            <li><a href="/blog/local-services-ads-background-check-verification/">LSA background check and verification checklist</a></li>
+            <li><a href="/blog/local-services-ads-not-eligible-verification/">LSA "Not eligible": the verification deadline</a></li>
+            <li><a href="/blog/google-verified-badge/">Google Verified badge guide</a></li>
+            <li><a href="/blog/local-services-ads-credits/">Local Services Ads credits: what Google credited and denied</a></li>
+            <li><a href="/tools/lsa-account-health-grader/">Free LSA account health grader</a></li></ul></aside>
+        </div>
+      </div>
+    </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> <span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=local-service-ads-eligibility&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+<script>
+(function(){document.querySelectorAll('.yt-facade').forEach(function(f){var b=f.querySelector('.yt-play');if(!b)return;b.addEventListener('click',function(){var id=f.getAttribute('data-video-id');if(!id)return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';i.title="Local Service Ads Eligibility: Check Google LSA Requirements in 1 Minute";i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';i.setAttribute('allowfullscreen','');i.referrerPolicy='strict-origin-when-cross-origin';f.appendChild(i);b.remove();i.focus();});});})();
+</script>
+</body>
+</html>
