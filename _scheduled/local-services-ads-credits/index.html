@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0]
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Local Services Ads Credits: Local Services Ads Credit Status, Explained</title>
+  <meta name="description" content="Google local services ads credits, explained: the four charge statuses, the bonus credit decisions, and how to read the local services ads credit status on every lead.">
+  <link rel="canonical" href="https://lsacommand.com/blog/local-services-ads-credits/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="Google Local Services Ads Credits: Local Services Ads Credit Status, Explained">
+  <meta property="og:description" content="Google local services ads credits, explained: the four charge statuses, the bonus credit decisions, and how to read the local services ads credit status on every lead.">
+  <meta property="og:url" content="https://lsacommand.com/blog/local-services-ads-credits/">
+  <meta property="og:image" content="https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Google local services ads credits: credited or denied? A list of reported leads showing the local services ads credit status of each one: Credited, Credit in review, Denied or Not charged">
+  <meta property="article:published_time" content="2026-12-31T11:30:00-05:00">
+  <meta property="article:modified_time" content="2026-12-31T11:30:00-05:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Google Local Services Ads Credits: Local Services Ads Credit Status, Explained">
+  <meta name="twitter:description" content="Google local services ads credits, explained: the four charge statuses, the bonus credit decisions, and how to read the local services ads credit status on every lead.">
+  <meta name="twitter:image" content="https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-og.png">
+  <meta name="twitter:image:alt" content="Google local services ads credits: credited or denied? A list of reported leads showing the local services ads credit status of each one: Credited, Credit in review, Denied or Not charged">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>
+    .cta-box .button{display:inline-block;margin:12px 12px 0 0}
+    .table-wrap{overflow-x:auto;margin:1.25rem 0}
+    .table-wrap .compare{margin:0}
+    ol.chapters, ul.chapters{margin:0 0 1.5rem 1.2rem}
+    ol.chapters li, ul.chapters li{margin:.35rem 0}
+
+    .yt-facade{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#07243A}
+    .yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .yt-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .yt-play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-end;padding:0 2.2% 1.8% 0}
+    .yt-play svg{width:clamp(46px,12%,84px);height:auto;filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));transition:transform .15s}
+    .yt-play:hover svg{transform:scale(1.08)}
+    .video-with-infographic{margin:0 0 32px}
+    .video-with-infographic .video{margin:0 0 16px}
+    .infographic{margin:0}
+    .infographic img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:0 12px 42px rgba(7,36,58,.06)}
+    .infographic figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+    figure.shot{margin:1.5rem 0}
+    figure.shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+    figure.shot figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+    .callout{margin:1.5rem 0;padding:22px 24px;border:1px solid var(--line);border-left:6px solid #00AFC6;border-radius:16px;background:#F4FBFC}
+    .callout .callout-title{margin:0 0 12px;font-family:Outfit,Inter,sans-serif;font-weight:800;font-size:1.2rem;line-height:1.3;color:#07243A}
+    .callout ul{margin:0 0 0 1.2rem}
+    .callout li{margin:.35rem 0}
+    .button.button-secondary{background:#fff;color:#07243A;border:2px solid #07243A}
+    .button.button-secondary:hover{background:#eaf6fa}
+    .faq{margin:0 0 1.5rem}
+    .related h2{margin-top:0}
+    .disclosure{font-size:.95rem}
+    .sources li{margin:.4rem 0;font-size:.95rem}
+    @media (max-width:760px){.breadcrumbs li[aria-current]{display:none}.breadcrumbs li:nth-last-child(2)::after{content:""}.article-header .lede{font-size:1.05rem;line-height:1.6}.article-header{padding-bottom:20px;margin-bottom:22px}.article-meta{margin-top:14px}.book-cta-top{display:flex;flex-direction:column;align-items:stretch}.book-cta-top .button{order:-1;width:100%;margin-bottom:12px}}
+  </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Local Services Ads Credits: How to Read the Local Services Ads Credit Status on Every Lead"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "BlogPosting"
+      ],
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#main",
+      "url": "https://lsacommand.com/blog/local-services-ads-credits/",
+      "name": "Google Local Services Ads Credits: How to Read the Local Services Ads Credit Status on Every Lead",
+      "headline": "Google Local Services Ads Credits: How to Read the Local Services Ads Credit Status on Every Lead",
+      "description": "Google local services ads credits, explained: the four charge statuses, the bonus credit decisions, and how to read the local services ads credit status on every lead.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2026-12-31T11:30:00-05:00",
+      "dateModified": "2026-12-31T11:30:00-05:00",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://lsacommand.com/#organization",
+        "name": "LSA Command",
+        "url": "https://lsacommand.com/"
+      },
+      "keywords": "google local services ads credits, local services ads credit status, google local services ads, automated lead credits, bonus credit, rate this lead, charge status, lsa for agencies, lsa command",
+      "image": [
+        {
+          "@id": "https://lsacommand.com/blog/local-services-ads-credits/#thumbnail"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-services-ads-credits/#infographic"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-services-ads-credits/#img-statuses"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-services-ads-credits/#img-bonus"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-services-ads-credits/#img-reconciliation"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/local-services-ads-credits/#img-outcome"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/local-services-ads-credits/"
+      },
+      "video": {
+        "@id": "https://lsacommand.com/blog/local-services-ads-credits/#video"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#video",
+      "name": "Google Local Services Ads Credits: Which Leads Did Google Credit or Deny?",
+      "description": "Google local services ads credits, step by step: Google's four charge statuses, the two kinds of credit (automated credits and bonus credits), why an In review lead is not credited yet, and how LSA Command shows the local services ads credit status and Google's answer on every reported lead. LSA Command answers 100% of calls within 30 seconds.",
+      "thumbnailUrl": [
+        "https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-video-thumbnail.webp"
+      ],
+      "uploadDate": "2026-12-31T11:30:00-05:00",
+      "url": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "contentUrl": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID_PENDING",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are Google local services ads credits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google local services ads credits are credits Google applies to an advertiser's account balance for leads it decides were low quality or invalid. Google says charged leads are reassessed by its models over time and may be credited automatically, and that it may also occasionally credit leads reported as poor quality through the lead feedback survey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if Google credited an LSA lead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the lead's charge status. Google lists four: Not charged, Charged, In review and Credited. A lead is credited only when the status says Credited. Google says credits are applied to the account balance within 30 days in most cases, and the original charge still appears on the invoice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does In review mean on a Local Services Ads lead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google's definition is: \"This lead is being reviewed. If the lead isn't a good match for your business, a credit will be applied.\" The review is not finished, so an In review lead is not a credit yet. Its local services ads credit status is still pending: report it that way and check it again next month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a bonus credit in Google Local Services Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a credit tied to the feedback you leave in Rate this lead. Google's API reference lists four decisions: issued with the cap not reached, issued with the cap now reached, not issued because the bonus credit cap is reached, and not issued because the lead is not eligible. An issued bonus credit is available for use in about two months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I still dispute a Local Services Ads lead manually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Google's transition page for the move into Google Ads says manual lead disputes are no longer supported. Credits are handled by Google's automated review, and the way to flag a lead is the Rate this lead survey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LSA Command get credits for my clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No one can promise that, because Google makes every credit decision. LSA Command fills in Google's lead survey on every lead, then shows Google's answer on each reported lead: credited, in review, denied because the credit limit was reached, denied as not eligible, or no decision yet. It is $200 per month per client, with voice AI included."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#thumbnail",
+      "url": "https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-video-thumbnail.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-video-thumbnail.webp",
+      "name": "Google local services ads credits video thumbnail",
+      "caption": "Video thumbnail for the Google local services ads credits video: reported leads marked Credited, Credit in review, Denied and Not charged, with the line Track the credit status of every lead. Illustrative example, fictional data.",
+      "width": 1280,
+      "height": 720,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#infographic",
+      "url": "https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-flowchart.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-flowchart.webp",
+      "name": "Google local services ads credits flowchart: how the local services ads credit status of a lead is decided and tracked",
+      "caption": "Google local services ads credits flowchart: what LSA Command does behind the scenes, from the first ring to Google's decision and the local services ads credit status of the lead. Illustrative process.",
+      "width": 1600,
+      "height": 4948,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en",
+      "description": "Process flowchart for Google local services ads credits: a call rings the client's team for the first 10 to 15 seconds, then AI answers so 100% of calls are answered within 30 seconds, and AI messaging replies to message leads instantly; most robocalls and spam are blocked and kept out of notifications; every lead is notated and rated with High-value leads identified; text and email notifications go out in parallel with notes written onto the lead in Google LSA and Lead Status Booked for booked calls; Google's lead survey is filled in on every lead; then two tracks run in parallel: the bonus credit decision for leads rated dissatisfied (issued with the cap not reached, issued with the cap now reached, not issued over the cap, not issued because the lead is not eligible, with issued bonus credits available in about two months) and Google's automated review (Not charged, Charged, In review, Credited); LSA Command reads the credit state and shows a badge and Google's answer; only leads with the Credited status are counted as credited in the monthly report."
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#img-statuses",
+      "url": "https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-four-charge-statuses.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-four-charge-statuses.webp",
+      "name": "Google local services ads credits: the four charge statuses",
+      "caption": "Google local services ads credits: the four charge statuses in Google's own words, and how to count each local services ads credit status in a client report. Illustrative example.",
+      "width": 1600,
+      "height": 1180,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#img-bonus",
+      "url": "https://lsacommand.com/blog/local-services-ads-credits/local-services-ads-credit-status-bonus-credit-decisions.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-services-ads-credits/local-services-ads-credit-status-bonus-credit-decisions.webp",
+      "name": "Local services ads credit status: Google's four bonus credit decisions",
+      "caption": "Local services ads credit status for bonus credits: the four answers Google can return, and how LSA Command labels each one when tracking Google local services ads credits. Illustrative example.",
+      "width": 1600,
+      "height": 1400,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#img-reconciliation",
+      "url": "https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-monthly-reconciliation-in-review.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-services-ads-credits/google-local-services-ads-credits-monthly-reconciliation-in-review.webp",
+      "name": "Google local services ads credits: monthly reconciliation, In review kept separate",
+      "caption": "Google local services ads credits reconciliation: the same month reported two ways. An In review lead is not a credit until the local services ads credit status says Credited. Illustrative example, fictional data.",
+      "width": 1600,
+      "height": 1190,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/local-services-ads-credits/#img-outcome",
+      "url": "https://lsacommand.com/blog/local-services-ads-credits/local-services-ads-credit-status-on-every-reported-lead.webp",
+      "contentUrl": "https://lsacommand.com/blog/local-services-ads-credits/local-services-ads-credit-status-on-every-reported-lead.webp",
+      "name": "Local services ads credit status on every reported lead in LSA Command",
+      "caption": "Local services ads credit status on every reported lead: how LSA Command shows Google local services ads credits in the Charge column. Illustrative example, fictional data.",
+      "width": 1600,
+      "height": 2026,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Google Local Services Ads Credits: How to Read the Local Services Ads Credit Status on Every Lead</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">Google LSA credits</p>
+        <h1>Google Local Services Ads Credits: How to Read the Local Services Ads Credit Status on Every Lead</h1>
+        <p class="lede">Google's four lead statuses, automated credits versus bonus credits, what is no longer credited, and why an "In review" lead must not be counted as credited in a client report.</p>
+        <p class="article-meta"><span>By <a href="/author/lsa-command-team/" rel="author">the LSA Command Team</a></span> <span aria-hidden="true">·</span> <time datetime="2026-12-31">December 31, 2026</time> <span aria-hidden="true">·</span> 9 min read</p>
+      </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered within 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team walks you through it live in 30 minutes. No passwords change hands. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=local-services-ads-credits&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li>
+<li><a href="#statuses">Google local services ads credits: the four charge statuses</a></li>
+<li><a href="#two-kinds">Two kinds of Google local services ads credits</a></li>
+<li><a href="#not-credited">What Google local services ads credits no longer cover</a></li>
+<li><a href="#in-review">Why "In review" is not a credited status</a></li>
+<li><a href="#lsa-command">How LSA Command shows the local services ads credit status</a></li>
+<li><a href="#checklist">Monthly credit reconciliation checklist</a></li>
+<li><a href="#sources">Sources</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+<li><a href="#book">See every local services ads credit status live</a></li></ol></nav></aside>
+        <div class="article-body">
+          <p>LSA Command starts with one promise: 100% of calls answered within 30 seconds. The business's own team gets the first 10 to 15 seconds to pick up, then AI answers. AI messaging replies to message leads instantly. This guide covers what happens after the lead: Google local services ads credits.</p>
+
+          <p><strong>Google local services ads credits appear as one of four charge statuses on every lead:</strong> Not charged, Charged, In review or Credited. Only Credited means Google issued a credit. A bonus credit for rating a lead gets its own decision: issued, over the cap, or not eligible. Count a credit only when the local services ads credit status says Credited.</p>
+
+          <p class="disclosure"><strong>Note:</strong> Google makes every credit decision. Nothing on this page is a promise that any lead will be credited. The mockups use a fictional business ("Anytown Plumbing Co."), fictional customers ("Customer A") and masked numbers.</p>
+
+          <div class="video-with-infographic">
+          <figure class="video" id="watch">
+            <div class="yt-facade" data-video-id="VIDEO_ID_PENDING" data-no-zoom>
+              <img src="/blog/local-services-ads-credits/google-local-services-ads-credits-video-thumbnail.webp" alt="Google local services ads credits video thumbnail: a list of reported leads marked Credited, Credit in review, Denied and Not charged, with the line In review is not credited and Track the credit status of every lead" title="Google local services ads credits video: the local services ads credit status of every reported lead" width="1280" height="720" decoding="async" fetchpriority="high">
+              <button type="button" class="yt-play" aria-label="Play video: Google Local Services Ads Credits: Which Leads Did Google Credit or Deny?"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#07243A"/><path d="M45 24 27 14v20" fill="#FFD60A"/></svg></button>
+            </div>
+            <figcaption>Watch: Google Local Services Ads Credits: Which Leads Did Google Credit or Deny?<noscript> <a href="https://www.youtube.com/watch?v=VIDEO_ID_PENDING">Watch on YouTube</a>.</noscript></figcaption>
+          </figure>
+          <figure class="infographic">
+            <a href="/blog/local-services-ads-credits/google-local-services-ads-credits-flowchart.webp"><img src="/blog/local-services-ads-credits/google-local-services-ads-credits-flowchart.webp" width="1600" height="4948" loading="lazy" decoding="async" alt="Google local services ads credits flowchart: a lead is answered (team rings first for 10 to 15 seconds, then AI answers within 30 seconds), notated and rated, Google's lead survey is filled in, then two tracks run in parallel: the bonus credit decision (issued, over the cap, or not eligible) and Google's automated credit review (Not charged, Charged, In review, Credited). LSA Command shows Google's answer and only Credited leads are counted as credited" title="Google local services ads credits flowchart: how the local services ads credit status of a lead is decided and tracked"></a>
+            <figcaption>Google local services ads credits flowchart: what LSA Command does behind the scenes, from the first ring to Google's decision and the local services ads credit status of the lead. Illustrative process. Open the full-size image to read it.</figcaption>
+          </figure>
+          </div>
+
+          <h2 id="statuses">Google local services ads credits start with four charge statuses</h2>
+
+          <p>Every lead in a Google Local Services Ads (LSA) account carries a billing status. Google's <a href="https://support.google.com/localservices/answer/7195435?hl=en" rel="noopener">How leads work</a> page says you can track it "under the Charge Status column on the Leads page in Google Ads (marked as 'Charged,' 'Not charged,' 'In review,' or 'Credited')." Its page on <a href="https://support.google.com/localservices/answer/15100654?hl=en" rel="noopener">automated lead credits</a> defines each one.</p>
+
+          <figure class="shot">
+            <a href="/blog/local-services-ads-credits/google-local-services-ads-credits-four-charge-statuses.webp"><img src="/blog/local-services-ads-credits/google-local-services-ads-credits-four-charge-statuses.webp" width="1600" height="1180" loading="lazy" decoding="async" alt="Google local services ads credits: Google's four lead report statuses, Not charged, Charged, In review and Credited, each with Google's own wording and a note that Credited is the only local services ads credit status to count as a credit" title="Google local services ads credits: the four charge statuses"></a>
+            <figcaption>Google local services ads credits: the four charge statuses in Google's own words, and how to count each local services ads credit status in a client report. Illustrative example.</figcaption>
+          </figure>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Status</th><th>What Google says</th><th>Count it as a credit?</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Not charged</td><td>Leads "that weren't charged from the onset," for reasons "including low quality or duplicate lead."</td><td>No. It was never billed.</td></tr>
+              <tr><td>Charged</td><td>Leads "that were charged from the onset."</td><td>No.</td></tr>
+              <tr><td>In review</td><td>"This lead is being reviewed. If the lead isn't a good match for your business, a credit will be applied"</td><td>Not yet. The review can end either way.</td></tr>
+              <tr><td>Credited</td><td>Leads where "you were charged and then credited. This may occur either through autocrediting or as a bonus credit for leaving feedback."</td><td>Yes. This is the only one.</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p>Google says "in most cases, credits will be applied to your account balance within 30 days." It also says "the original lead charge will still appear on your invoice." So the invoice and the lead list will not match. Our guide to <a href="/blog/google-local-services-ads-billing/">Google Local Services Ads billing</a> covers the invoice side.</p>
+
+          <h2 id="two-kinds">Two kinds of Google local services ads credits: automated credits and bonus credits</h2>
+
+          <p>Credited has two routes. Track them separately.</p>
+
+          <p><strong>1. Automated credits.</strong> Google says leads "are first assessed when the potential customer makes initial contact, and leads determined to be invalid or low quality are not charged." After that, "charged leads get reassessed by our models over time, and may be issued credits automatically if later determined to be low quality." How leads work adds that Google "continuously assesses lead quality over a 30-day period." <a href="https://www.seroundtable.com/google-automate-local-services-ads-lead-credits-37617.html" rel="noopener">Search Engine Roundtable</a> (June 25, 2024) reported Google's announcement that this automated process would replace manual credit requests starting in July 2024.</p>
+
+          <p><strong>2. Bonus credits for feedback.</strong> Each lead has a "Rate this lead" survey, which Google calls the Lead Feedback Survey. Google says it "may also occasionally credit leads you report as poor quality through this survey." When a rating is sent through the Google Ads API, Google answers with a decision. The <a href="https://developers.google.com/google-ads/api/reference/rpc/latest/LocalServicesLeadCreditIssuanceDecisionEnum.CreditIssuanceDecision" rel="noopener">API reference</a> lists four possible answers. Inside Google Ads, the <a href="https://support.google.com/google-ads/answer/17326057?hl=en" rel="noopener">Lead quality and budgets</a> page describes the same loop: complete the Rate this lead survey on the Leads page, and the result shows under the Charge Status column.</p>
+
+          <figure class="shot">
+            <a href="/blog/local-services-ads-credits/local-services-ads-credit-status-bonus-credit-decisions.webp"><img src="/blog/local-services-ads-credits/local-services-ads-credit-status-bonus-credit-decisions.webp" width="1600" height="1400" loading="lazy" decoding="async" alt="Local services ads credit status for bonus credits: Google's four bonus credit answers after a dissatisfied rating (issued with the cap not reached, issued with the cap now reached, not issued because the cap is reached, not issued because the lead is not eligible) and the about two months timing, part of tracking Google local services ads credits" title="Local services ads credit status: Google's four bonus credit decisions"></a>
+            <figcaption>Local services ads credit status for bonus credits: the four answers Google can return, and how LSA Command labels each one when tracking Google local services ads credits. Illustrative example; quotes from the Google Ads API reference.</figcaption>
+          </figure>
+
+          <p>Two are a yes: a bonus credit issued with the cap not reached, and one issued that brings the account to its cap. Two are a no: "Bonus credit is not issued because the provider has reached the bonus credit cap," and "Bonus credit is not issued because this lead is not eligible for bonus credit."</p>
+
+          <p>Two cautions. First, the reference gives no size for the cap, so we quote none. Second, timing: Google's <a href="https://developers.google.com/google-ads/api/reference/rpc/latest/ProvideLeadFeedbackResponse" rel="noopener">response reference</a> says "if a bonus credit is issued, it will be available for use in about two months." That is a different clock from the 30 days Google gives for automated credits. An approved bonus credit in one month's report may not be usable until about two reports later.</p>
+
+          <h2 id="not-credited">What Google local services ads credits no longer cover</h2>
+
+          <p>Per Google:</p>
+
+          <ul>
+            <li><strong>Wrong job type and wrong area.</strong> "Google no longer supports credits for 'job type not serviced' and 'geo not serviced' leads." Fix the settings instead: see <a href="/lsa-service-area/">service area targeting</a> and our post on <a href="/blog/bad-google-lsa-leads/">bad Google LSA leads</a>.</li>
+            <li><strong>Some advertisers entirely.</strong> "Lead credits aren't available for health care verticals, tax specialists, or advertisers in EMEA."</li>
+            <li><strong>Manual disputes.</strong> Google's <a href="https://support.google.com/google-ads/answer/17213585?hl=en" rel="noopener">transition page</a> for the move into Google Ads states: "Manual lead disputes are no longer supported." What replaced them is covered in <a href="/blog/how-to-dispute-google-lsa-leads/">how to dispute Google LSA leads</a>.</li>
+            <li><strong>Missed calls.</strong> A missed call during business hours where the caller stays on the line more than 20 seconds is a valid lead under How leads work. See <a href="/blog/lsa-missed-call-charges/">LSA missed call charges</a>.</li>
+          </ul>
+
+          <h2 id="in-review">Why "In review" is not a credited local services ads credit status</h2>
+
+          <p>The easiest mistake in an agency credit report is adding "In review" leads to the credited total. Google's wording even says "a credit will be applied" if the lead isn't a good match. But the sentence starts with "if." The review has not finished.</p>
+
+          <p>Google's API reference draws a similar line. A lead's <a href="https://developers.google.com/google-ads/api/reference/rpc/latest/LocalServicesCreditStateEnum.CreditState" rel="noopener">credit state</a> is either pending ("A credit has been filed and is being processed by Ads backend, but has not been applied to the account yet") or credited ("The credit has been issued to the Ads account").</p>
+
+          <figure class="shot">
+            <a href="/blog/local-services-ads-credits/google-local-services-ads-credits-monthly-reconciliation-in-review.webp"><img src="/blog/local-services-ads-credits/google-local-services-ads-credits-monthly-reconciliation-in-review.webp" width="1600" height="1190" loading="lazy" decoding="async" alt="Google local services ads credits reconciliation for a fictional plumbing client: one report overcounts by adding In review leads to credited, the other lists Credited, Credit in review, denied and undecided leads on separate lines so each local services ads credit status is counted once" title="Google local services ads credits: monthly reconciliation, In review kept separate"></a>
+            <figcaption>Google local services ads credits reconciliation: the same month reported two ways. An "In review" lead is not a credit until the local services ads credit status says Credited. Illustrative example, fictional data.</figcaption>
+          </figure>
+
+          <p>The cost of the mistake is trust. If you tell a client five leads were credited and two later settle as Charged, next month's report has to take them back. Keep one line per local services ads credit status, and move a lead to the credited line only when Google does.</p>
+
+          <aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">Want Google's credit decision on every reported lead, for every client?</p><p>Bring one client account. The LSA Command team walks you through the lead list live in 30 minutes, free.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=local-services-ads-credits&amp;cta_position=mid" data-cta-position="mid" data-cta="article-mid-book">Book my 30-minute walkthrough</a></p></aside>
+
+          <h2 id="lsa-command">How LSA Command shows the local services ads credit status on every reported lead</h2>
+
+          <p>The credit question sits at the end of a longer chain. LSA Command answers the call (team first, then AI, within 30 seconds), writes notes on every lead, rates every lead, and fills in Google's lead survey on every lead. Then it reads each lead's credit state back from Google and shows that local services ads credit status next to the lead.</p>
+
+          <figure class="shot">
+            <a href="/blog/local-services-ads-credits/local-services-ads-credit-status-on-every-reported-lead.webp"><img src="/blog/local-services-ads-credits/local-services-ads-credit-status-on-every-reported-lead.webp" width="1600" height="2026" loading="lazy" decoding="async" alt="Local services ads credit status on every reported lead: mockup lead table for a fictional plumbing business with a Charge column showing Credited, Credit in review, Charged and Not charged badges, and under each reported lead Google's answer, such as Google credited this lead or Google denied credit: not eligible, for tracking Google local services ads credits" title="Local services ads credit status on every reported lead in LSA Command"></a>
+            <figcaption>Local services ads credit status on every reported lead: how LSA Command shows Google local services ads credits in the Charge column. Illustrative example, fictional data.</figcaption>
+          </figure>
+
+          <p><strong>One badge per lead.</strong> In the lead table's Charge column, and in the lead detail panel, each lead shows one of four badges: "Credited", "Credit in review", "Charged" or "Not charged".</p>
+
+          <p><strong>Google's answer under the badge.</strong> For every lead that was reported as bad (a dissatisfied or very dissatisfied rating sent to Google through Rate this lead), a line under the badge shows what Google decided:</p>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Line shown in LSA Command</th><th>Plain meaning</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>"Google credited this lead"</td><td>The credit is issued. Count it.</td></tr>
+              <tr><td>"Google is reviewing a credit"</td><td>Still pending. Do not count it yet.</td></tr>
+              <tr><td>"Reported to Google; not charged"</td><td>The lead was reported, and it was never billed.</td></tr>
+              <tr><td>"Google approved a credit"</td><td>Google answered the rating with a bonus credit. Keep it on its own line.</td></tr>
+              <tr><td>"Google denied credit: credit limit reached"</td><td>No credit: the account is at its cap.</td></tr>
+              <tr><td>"Google denied credit: not eligible"</td><td>No credit: Google says this lead does not qualify.</td></tr>
+              <tr><td>"Reported to Google; no credit decision yet"</td><td>Reported, with no answer recorded so far.</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p>Report an approved bonus credit on its own line, and move the lead to the credited total only when its status says Credited. Leads rated satisfied never show a credit outcome. And a lead whose credit is still under review shows "Credit in review" and is not counted as credited. The dashboard has a card for this view, "Bad Leads Reported to Google", which reads: "Bad-fit leads are reported to Google with call evidence. See Google's credit decision on each one."</p>
+
+          <p>What this does not do: it does not decide credits, speed them up or promise them. Google decides. LSA Command reports bad-fit leads to Google with call evidence and shows you the answer, for $200 per month per client with voice AI included. The rest of the product runs alongside: High-value leads identified, text and email notifications, booked calls marked inside Google's LSA platform, most robocalls and spam blocked and kept out of notifications, and a weekly lead summary.</p>
+
+          <p>Across three pool contractor accounts in our <a href="/case-studies/">case studies</a>, leads answered within 30 seconds went from 28% to 100% between December 2025 and April 2026.</p>
+
+          <h2 id="checklist">Monthly checklist: reconcile Google local services ads credits for each client</h2>
+
+          <p>This free checklist works on any client account.</p>
+
+          <aside class="callout" aria-label="Monthly Google local services ads credits reconciliation checklist">
+            <p class="callout-title">Monthly local services ads credit status checklist</p>
+            <ul>
+              <li>Open the Leads page and read the Charge Status column for every lead in the month.</li>
+              <li>Count leads in four separate lines: Not charged, Charged, In review, Credited.</li>
+              <li>Report only the Credited line as credits. Show In review as pending.</li>
+              <li>Recheck last month's In review leads and record where each one landed.</li>
+              <li>Confirm every lead has a rating in Rate this lead, good and bad.</li>
+              <li>For each lead rated dissatisfied, record Google's answer: issued, cap reached or not eligible.</li>
+              <li>Flag approved bonus credits as "available in about two months," not as a credit the client can use this month.</li>
+              <li>Tell the client the original charge still appears on the invoice even when a lead is credited.</li>
+            </ul>
+          </aside>
+
+          <p>Two free tools help. The <a href="/tools/lsa-lead-dispute-helper/">free lead credit checker</a> compares one lead against Google's published credit rules, and the <a href="/tools/lsa-account-health-grader/">LSA account health grader</a> ranks the top fixes for an account. For a whole client book, see <a href="/blog/lsa-lead-disputes-agencies/">the lead credit process for agencies</a>.</p>
+
+          <h2 id="sources">Sources for this Google local services ads credits guide</h2>
+          <p>All pages below were checked on November 24, 2026.</p>
+          <ul class="sources">
+            <li>Google Local Services Help, <a href="https://support.google.com/localservices/answer/15100654?hl=en" rel="noopener">About Automated Local Services Ads lead credits</a> (four statuses, 30 days, exclusions, Rate this lead).</li>
+            <li>Google Local Services Help, <a href="https://support.google.com/localservices/answer/7195435?hl=en" rel="noopener">How leads work</a> (Charge Status column, 30-day assessment, survey credits, missed calls).</li>
+            <li>Google Ads Help, <a href="https://support.google.com/google-ads/answer/17213585?hl=en" rel="noopener">Local Services Ads transition to Performance Max campaigns with pay-per-lead goals</a> (manual lead disputes no longer supported).</li>
+            <li>Google Ads Help, <a href="https://support.google.com/google-ads/answer/17326057?hl=en" rel="noopener">Lead quality and budgets for campaigns with pay-per-lead goals</a> (Rate this lead and the Charge Status column in Google Ads).</li>
+            <li>Google Ads API reference, <a href="https://developers.google.com/google-ads/api/reference/rpc/latest/LocalServicesLeadCreditIssuanceDecisionEnum.CreditIssuanceDecision" rel="noopener">CreditIssuanceDecision</a> (four bonus credit decisions).</li>
+            <li>Google Ads API reference, <a href="https://developers.google.com/google-ads/api/reference/rpc/latest/ProvideLeadFeedbackResponse" rel="noopener">ProvideLeadFeedbackResponse</a> (bonus credit available in about two months).</li>
+            <li>Google Ads API reference, <a href="https://developers.google.com/google-ads/api/reference/rpc/latest/LocalServicesCreditStateEnum.CreditState" rel="noopener">CreditState</a> (pending and credited).</li>
+            <li>Search Engine Roundtable, <a href="https://www.seroundtable.com/google-automate-local-services-ads-lead-credits-37617.html" rel="noopener">Google To Automate Local Services Ads Lead Credits</a> (June 25, 2024).</li>
+          </ul>
+
+          <h2 id="faq">Frequently asked questions about Google local services ads credits</h2>
+          <div class="faq">
+            <details><summary>What are Google local services ads credits?</summary><p>Google local services ads credits are credits Google applies to an advertiser's account balance for leads it decides were low quality or invalid. Google says charged leads are reassessed by its models over time and may be credited automatically, and that it may also occasionally credit leads reported as poor quality through the lead feedback survey.</p></details>
+            <details><summary>How do I know if Google credited an LSA lead?</summary><p>Check the lead's charge status. Google lists four: Not charged, Charged, In review and Credited. A lead is credited only when the status says Credited. Google says credits are applied to the account balance within 30 days in most cases, and the original charge still appears on the invoice.</p></details>
+            <details><summary>What does In review mean on a Local Services Ads lead?</summary><p>Google's definition is: "This lead is being reviewed. If the lead isn't a good match for your business, a credit will be applied." The review is not finished, so an In review lead is not a credit yet. Its local services ads credit status is still pending: report it that way and check it again next month.</p></details>
+            <details><summary>What is a bonus credit in Google Local Services Ads?</summary><p>It is a credit tied to the feedback you leave in Rate this lead. Google's API reference lists four decisions: issued with the cap not reached, issued with the cap now reached, not issued because the bonus credit cap is reached, and not issued because the lead is not eligible. An issued bonus credit is available for use in about two months.</p></details>
+            <details><summary>Can I still dispute a Local Services Ads lead manually?</summary><p>No. Google's transition page for the move into Google Ads says manual lead disputes are no longer supported. Credits are handled by Google's automated review, and the way to flag a lead is the Rate this lead survey.</p></details>
+            <details><summary>Does LSA Command get credits for my clients?</summary><p>No one can promise that, because Google makes every credit decision. LSA Command fills in Google's lead survey on every lead, then shows Google's answer on each reported lead: credited, in review, denied because the credit limit was reached, denied as not eligible, or no decision yet. It is $200 per month per client, with voice AI included.</p></details>
+          </div>
+          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The LSA Command Team has almost two decades of agency experience helping local businesses with Local Services Ads. After watching too many LSA calls go unanswered on client accounts, we built LSA Command to answer every call, reply to message leads and mark the calls the AI books as Booked in Google. <a href="/author/lsa-command-team/">More about the LSA Command Team</a></p></aside>
+
+
+          <div class="cta-box" id="book">
+            <h2 id="price-and-next-step">See every local services ads credit status live on your own client account</h2>
+            <p><strong>LSA Command works only with agency owners, not business owners.</strong> It was built first for our own agency's Google LSA accounts.</p>
+            <p>Bring one client account and see every reported lead with its local services ads credit status beside it, so every credit in your client report is one Google has issued. LSA Command answers 100% of calls within 30 seconds and fills in Google's lead survey on every lead, for $200 per month per client with voice AI included. The walkthrough is free and takes 30 minutes.</p>
+            <p><a class="button" href="https://lsacommand.com/book/?post_slug=local-services-ads-credits&amp;cta_position=end" data-cta-position="end" data-cta="article-footer-book">Book my 30-minute walkthrough</a> <a class="button button-secondary" href="/pricing/" data-cta="article-footer-pricing">See pricing</a></p>
+          </div>
+          <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
+<ul>
+            <li><a href="/blog/how-to-dispute-google-lsa-leads/">How to dispute Google LSA leads (manual disputes are gone)</a></li>
+            <li><a href="/blog/lsa-lead-disputes-agencies/">Lead credits across every client, for agencies</a></li>
+            <li><a href="/blog/bad-google-lsa-leads/">Why you are getting bad Google LSA leads</a></li>
+            <li><a href="/blog/google-local-services-ads-billing/">Google Local Services Ads billing for agencies</a></li>
+            <li><a href="/blog/google-local-services-ads-pay-per-lead/">Google Local Services Ads pay per lead</a></li>
+            <li><a href="/tools/lsa-lead-dispute-helper/">Free lead credit checker</a></li></ul></aside>
+        </div>
+      </div>
+    </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> <span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=local-services-ads-credits&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+<script>
+(function(){document.querySelectorAll('.yt-facade').forEach(function(f){var b=f.querySelector('.yt-play');if(!b)return;b.addEventListener('click',function(){var id=f.getAttribute('data-video-id');if(!id||id==='VIDEO_ID_PENDING')return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';i.title="Google Local Services Ads Credits: Which Leads Did Google Credit or Deny?";i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';i.setAttribute('allowfullscreen','');i.referrerPolicy='strict-origin-when-cross-origin';f.appendChild(i);b.remove();i.focus();});});})();
+</script>
+</body>
+</html>
