@@ -1,6 +1,7 @@
 /*
  * LSA Command free tools: shared page behavior (inputs → live results, share links, GA4 events).
  * The math lives in calc.js. Each tool page calls LSATools.mount({ form, tool, compute, extra }).
+ * Number inputs marked data-optional may be left blank; they come through as null instead of failing validation.
  *
  * GA4 (G-CSQW3SMTL4) events sent from here:
  *   tool_used           params: tool_name, interaction ('calculate' | 'share_link' | 'open_shared_link' | 'reset'), plus page extras
@@ -56,6 +57,11 @@
       fields.forEach(function (input) {
         if (input.type === 'radio') {
           if (input.checked) out[input.name] = input.value;
+          return;
+        }
+        if (input.hasAttribute('data-optional') && String(input.value).trim() === '') {
+          input.setAttribute('aria-invalid', 'false'); // optional box left blank: fine, passed on as null
+          out[input.name] = null;
           return;
         }
         var v = parse(input.value);
