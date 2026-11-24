@@ -62,6 +62,7 @@
         var min = input.min === '' ? -Infinity : Number(input.min);
         var max = input.max === '' ? Infinity : Number(input.max);
         var bad = !isFinite(v) || v < min || v > max;
+        if (!bad && input.step === '1' && Math.floor(v) !== v) bad = true; // whole numbers only (clients, days)
         if (input.closest('[hidden]')) bad = false; // inactive mode
         input.setAttribute('aria-invalid', bad ? 'true' : 'false');
         if (bad && !input.closest('[hidden]')) ok = false;

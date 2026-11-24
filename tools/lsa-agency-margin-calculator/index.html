@@ -224,7 +224,7 @@
 (function () {
   var T = window.LSATools, C = window.LSACalc;
   var ids = ['am-net', 'am-net-year', 'am-rev-m', 'am-rev-a', 'am-hrs-m', 'am-hrs-a', 'am-lab-m', 'am-lab-a', 'am-tool', 'am-mar-m', 'am-mar-a', 'am-pct-m', 'am-pct-a', 'am-floor-m', 'am-floor-a'];
-  function pct(n) { return n == null ? '-' : T.num(n, 1) + '%'; }
+  function pct(n) { return n == null ? '-' : T.num(n, 1).replace(/^-/, '−') + '%'; }
   T.mount({
     form: document.getElementById('calc'),
     tool: 'agency_margin',
@@ -254,11 +254,13 @@
       } else if (Math.round(r.netChange) >= 0) {
         verdict.innerHTML = 'At $' + T.num(v.hourlyCost, 2) + '/hr, LSA Command pays for itself on labor alone once it saves <strong>' + be +
           ' hours per client</strong> a month. These numbers save <strong>' + saved + '</strong>.';
+      } else if (r.hoursSavedPer <= 0) {
+        verdict.textContent = 'At these numbers the “with LSA Command” times are not lower than today’s, so there are no hours saved. Check the placeholder times above.';
       } else {
         verdict.innerHTML = 'On labor alone, your manual process is cheaper at these numbers. Automation saves <strong>' + saved +
           ' hours per client</strong>; at $' + T.num(v.hourlyCost, 2) + '/hr it needs <strong>' + be + '</strong> to break even. The value has to come from what the labor math leaves out.';
       }
-      hours.innerHTML = 'Hours freed: <strong>' + T.num(r.hoursSaved, 1) + ' a month</strong>, about ' + T.num(r.fteFreed * 100) + '% of one full-time person.';
+      hours.innerHTML = r.hoursSaved > 0 ? 'Hours freed: <strong>' + T.num(r.hoursSaved, 1) + ' a month</strong>, about ' + T.num(r.fteFreed * 100) + '% of one full-time person.' : '';
     }
   });
 })();

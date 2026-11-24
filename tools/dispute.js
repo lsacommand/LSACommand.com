@@ -121,13 +121,13 @@
     return input.daysAgo + ' days ago';
   }
 
-  function draftText(input, r) {
+  function draftText(input, r, feedbackOnly) {
     var type = LEAD_TYPES[input.leadType].toLowerCase();
     var parts = [r.text];
     var d = cleanDetails(input.details);
     if (d) parts.push(d.replace(/[.!?…]?$/, function (m) { return m || '.'; }));
     parts.push('Lead: ' + type + ' ' + when(input) + ', charged ' + money(input.charge) + '.');
-    parts.push(r.verdict === 'unlikely' ? 'Sharing this so you can send us better-matched leads.' : 'Please review this lead and credit it if it qualifies.');
+    parts.push(r.verdict === 'unlikely' || feedbackOnly ? 'Sharing this so you can send us better-matched leads.' : 'Please review this lead and credit it if it qualifies.');
     return parts.join(' ');
   }
 
@@ -175,7 +175,7 @@
       out.notes.push('Google says leads can only be disputed within 30 days, and automatic credits usually land within 30 days. Google doesn’t say whether feedback after that can still earn a credit.');
       out.steps.push('Rate the lead anyway: it still tells Google what to send.');
       out.steps.push('Check charged leads every week so the next one isn’t missed.');
-      out.draft = draftText(input, r); out.draftKind = 'feedback';
+      out.draft = draftText(input, r, true); out.draftKind = 'feedback';
       return done('too_late', 'This lead is ' + input.daysAgo + ' days old, past Google’s 30-day window.', ['11444751', '15100654']);
     }
 
