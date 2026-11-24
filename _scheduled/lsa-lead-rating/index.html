@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js): LSA Command -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSQW3SMTL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CSQW3SMTL4', {
+            // Keep campaign + ad-click params (UTMs, gclid) so GA4 can attribute traffic; drop everything else.
+            page_location: (function () { var u = new URL(window.location.href), keep = new URLSearchParams(); ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'gclid', 'gbraid', 'wbraid'].forEach(function (k) { var v = u.searchParams.get(k); if (v) keep.set(k, v); }); var q = keep.toString(); return u.origin + u.pathname + (q ? '?' + q : ''); })(),
+            page_referrer: document.referrer.split(/[?#]/)[0]
+        });
+    </script>
+    <script src="/lsa-tracking.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Local Services Ads Lead Rating: AI Lead Scoring</title>
+  <meta name="description" content="A Google Local Services Ads lead rating tells Google which leads fit. See how AI lead scoring rates every lead, holds ratings for review and logs approvals.">
+  <link rel="canonical" href="https://lsacommand.com/blog/lsa-lead-rating/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LSA Command">
+  <meta property="og:title" content="Google Local Services Ads Lead Rating: AI Lead Scoring">
+  <meta property="og:description" content="A Google Local Services Ads lead rating tells Google which leads fit. See how AI lead scoring rates every lead, holds ratings for review and logs approvals.">
+  <meta property="og:url" content="https://lsacommand.com/blog/lsa-lead-rating/">
+  <meta property="og:image" content="https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Google Local Services Ads lead rating: AI rates, you approve. AI lead scoring for LSA with a To review list showing Reject, Edit and Approve buttons (illustrative example)">
+  <meta property="article:published_time" content="2027-01-07T11:30:00-05:00">
+  <meta property="article:modified_time" content="2027-01-07T11:30:00-05:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Google Local Services Ads Lead Rating: AI Lead Scoring">
+  <meta name="twitter:description" content="A Google Local Services Ads lead rating tells Google which leads fit. See how AI lead scoring rates every lead, holds ratings for review and logs approvals.">
+  <meta name="twitter:image" content="https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-og.png">
+  <meta name="twitter:image:alt" content="Google Local Services Ads lead rating: AI rates, you approve. AI lead scoring for LSA with a To review list showing Reject, Edit and Approve buttons (illustrative example)">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <style>
+    .cta-box .button{display:inline-block;margin:12px 12px 0 0}
+    .table-wrap{overflow-x:auto;margin:1.25rem 0}
+    .table-wrap .compare{margin:0}
+    ol.chapters, ul.chapters{margin:0 0 1.5rem 1.2rem}
+    ol.chapters li, ul.chapters li{margin:.35rem 0}
+
+    .yt-facade{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#07243A}
+    .yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .yt-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .yt-play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-end;padding:0 2.2% 1.8% 0}
+    .yt-play svg{width:clamp(46px,12%,84px);height:auto;filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));transition:transform .15s}
+    .yt-play:hover svg{transform:scale(1.08)}
+    .video-with-infographic{margin:0 0 32px}
+    .video-with-infographic .video{margin:0 0 16px}
+    .infographic{margin:0}
+    .infographic img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:0 12px 42px rgba(7,36,58,.06)}
+    .infographic figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+    figure.shot{margin:1.5rem 0}
+    figure.shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+    figure.shot figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+    .callout{margin:1.5rem 0;padding:22px 24px;border:1px solid var(--line);border-left:6px solid #00AFC6;border-radius:16px;background:#F4FBFC}
+    .callout .callout-title{margin:0 0 12px;font-family:Outfit,Inter,sans-serif;font-weight:800;font-size:1.2rem;line-height:1.3;color:#07243A}
+    .callout ul{margin:0 0 0 1.2rem}
+    .callout li{margin:.35rem 0}
+    .button.button-secondary{background:#fff;color:#07243A;border:2px solid #07243A}
+    .button.button-secondary:hover{background:#eaf6fa}
+    .faq{margin:0 0 1.5rem}
+    .related h2{margin-top:0}
+    .disclosure{font-size:.95rem}
+    .sources li{margin:.4rem 0;font-size:.95rem}
+    @media (max-width:760px){.breadcrumbs li[aria-current]{display:none}.breadcrumbs li:nth-last-child(2)::after{content:""}.article-header .lede{font-size:1.05rem;line-height:1.6}.article-header{padding-bottom:20px;margin-bottom:22px}.article-meta{margin-top:14px}.book-cta-top{display:flex;flex-direction:column;align-items:stretch}.book-cta-top .button{order:-1;width:100%;margin-bottom:12px}}
+  </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lsacommand.com/#organization",
+      "name": "LSA Command",
+      "url": "https://lsacommand.com/",
+      "logo": "https://lsacommand.com/lsa-command-logo.svg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lsacommand.com/blog/lsa-lead-rating/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lsacommand.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lsacommand.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Local Services Ads Lead Rating: AI Lead Scoring, and You Stay in Control"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "BlogPosting"
+      ],
+      "@id": "https://lsacommand.com/blog/lsa-lead-rating/#main",
+      "url": "https://lsacommand.com/blog/lsa-lead-rating/",
+      "name": "Google Local Services Ads Lead Rating: AI Lead Scoring, and You Stay in Control",
+      "headline": "Google Local Services Ads Lead Rating: AI Lead Scoring, and You Stay in Control",
+      "description": "A Google Local Services Ads lead rating tells Google which leads fit. See how AI lead scoring rates every lead, holds ratings for review and logs approvals.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      },
+      "datePublished": "2027-01-07T11:30:00-05:00",
+      "dateModified": "2027-01-07T11:30:00-05:00",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://lsacommand.com/#organization",
+        "name": "LSA Command",
+        "url": "https://lsacommand.com/"
+      },
+      "keywords": "google local services ads lead rating, ai lead scoring, ai lead scoring for lsa, local services ads, rate this lead, lead feedback survey, lsa lead quality, lsa for agencies, lsa command",
+      "image": [
+        {
+          "@id": "https://lsacommand.com/blog/lsa-lead-rating/#thumbnail"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/lsa-lead-rating/#infographic"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/lsa-lead-rating/#img-settings"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/lsa-lead-rating/#img-review"
+        },
+        {
+          "@id": "https://lsacommand.com/blog/lsa-lead-rating/#img-log"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lsacommand.com/blog/lsa-lead-rating/"
+      },
+      "video": {
+        "@id": "https://lsacommand.com/blog/lsa-lead-rating/#video"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://lsacommand.com/blog/lsa-lead-rating/#video",
+      "name": "Google Local Services Ads Lead Rating: AI Lead Scoring, and You Stay in Control",
+      "description": "What a Google Local Services Ads lead rating is, why Google asks for it, and how AI lead scoring in LSA Command rates every LSA lead while you stay in control: review first, strictness levels, the transcript beside each held rating, Approve, Edit or Reject, and the approval log. LSA Command answers 100% of calls within 30 seconds.",
+      "thumbnailUrl": [
+        "https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-video-thumbnail.webp"
+      ],
+      "uploadDate": "2027-01-07T11:30:00-05:00",
+      "url": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "contentUrl": "https://www.youtube.com/watch?v=VIDEO_ID_PENDING",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID_PENDING",
+      "publisher": {
+        "@id": "https://lsacommand.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lsacommand.com/blog/lsa-lead-rating/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Google Local Services Ads lead rating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Google Local Services Ads lead rating is the feedback you give Google on one lead. In the leads list you select Rate this lead and fill in Google's Lead Feedback Survey. Through the Google Ads API the same survey has five answers, from very satisfied to very dissatisfied, plus a reason and an optional comment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a Google Local Services Ads lead rating get a credit from Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not on its own. Google says it uses the feedback to send more of the leads you want and fewer of those you do not, and that it may also occasionally credit leads reported as poor quality. Google decides every credit. LSA Command does not promise credits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AI lead scoring the same thing as Google's lead rating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not quite. AI lead scoring usually means software judging how good a lead is. In LSA Command the AI reads the call or message thread and scores each new LSA lead on Google's own 5-step rating, with a reason. That is the rating Google can receive. Separately, High-value leads identified tells your team which leads to work first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I stop AI ratings from going to Google until someone approves them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. On the Lead Ratings page, turn off Send AI ratings to Google automatically. That is review first mode: every AI rating waits until someone on your team approves it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do Relaxed, Balanced and Strict mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They are the strictness levels that apply when automatic sending is on. Relaxed sends every AI rating. Balanced holds dissatisfied ratings for review. Strict sends only satisfied ratings automatically. Settings apply to new AI ratings only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when I reject an AI rating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A rejected rating is never sent to Google. The approval log records the lead, shows Not sent, and lists the decision, who made it and when."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does LSA Command cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LSA Command is $200 per month per client, with voice AI included. You can book a free 30 minute walkthrough and bring one client account."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/lsa-lead-rating/#thumbnail",
+      "url": "https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-video-thumbnail.webp",
+      "contentUrl": "https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-video-thumbnail.webp",
+      "name": "Google Local Services Ads lead rating video thumbnail",
+      "caption": "Video thumbnail for the Google Local Services Ads lead rating video: AI lead scoring for LSA, with a held rating and Reject, Edit and Approve buttons. Illustrative example, fictional data.",
+      "width": 1280,
+      "height": 720,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/lsa-lead-rating/#infographic",
+      "url": "https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-ai-lead-scoring-flowchart.webp",
+      "contentUrl": "https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-ai-lead-scoring-flowchart.webp",
+      "name": "Google Local Services Ads lead rating flowchart: how AI lead scoring reaches Google",
+      "caption": "Google Local Services Ads lead rating flowchart: how AI lead scoring moves from the call or message to Google, and where you approve, edit or reject. Illustrative process. Open the full-size image to read it.",
+      "width": 1600,
+      "height": 4352,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en",
+      "description": "Google Local Services Ads lead rating flowchart: a call rings the client's team for 10 to 15 seconds, then AI answers so 100% of calls are answered within 30 seconds, or AI messaging replies instantly; notes are written and High-value leads identified; text and email notifications go out in parallel; AI lead scoring rates the lead on Google's 5-step scale; the rating is sent automatically or held by review first or strictness; a held rating is approved, edited or rejected; every decision lands in the approval log"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/lsa-lead-rating/#img-settings",
+      "url": "https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-settings-review-first-strictness.webp",
+      "contentUrl": "https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-settings-review-first-strictness.webp",
+      "name": "Google Local Services Ads lead rating settings: review first and strictness",
+      "caption": "Google Local Services Ads lead rating settings: the automatic sending checkbox and the three strictness levels for AI lead scoring. Illustrative example, fictional data.",
+      "width": 1600,
+      "height": 1060,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/lsa-lead-rating/#img-review",
+      "url": "https://lsacommand.com/blog/lsa-lead-rating/ai-lead-scoring-google-local-services-ads-lead-rating-review-transcript.webp",
+      "contentUrl": "https://lsacommand.com/blog/lsa-lead-rating/ai-lead-scoring-google-local-services-ads-lead-rating-review-transcript.webp",
+      "name": "AI lead scoring held for review, with the transcript",
+      "caption": "AI lead scoring held for review: each Google Local Services Ads lead rating shows the AI's rating, reason and comment, the transcript, and Reject, Edit and Approve buttons. Illustrative example, fictional data.",
+      "width": 1600,
+      "height": 1712,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lsacommand.com/blog/lsa-lead-rating/#img-log",
+      "url": "https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-approval-log.webp",
+      "contentUrl": "https://lsacommand.com/blog/lsa-lead-rating/google-local-services-ads-lead-rating-approval-log.webp",
+      "name": "Google Local Services Ads lead rating approval log",
+      "caption": "Google Local Services Ads lead rating approval log: the lead, the rating sent or \"Not sent\", the decision, who made it and when, for AI lead scoring. Illustrative example, fictional data.",
+      "width": 1600,
+      "height": 1308,
+      "encodingFormat": "image/webp",
+      "inLanguage": "en"
+    }
+  ]
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="LSA Command home"><img src="/lsa-command-logo.svg" alt="LSA Command" width="720" height="240"></a>
+      <nav aria-label="Main navigation"><a href="/agencies/">Agencies</a><a class="nav-extra" href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/pricing/">Pricing</a><a href="/case-studies/">Case studies</a><a class="nav-extra" href="/industries/">Industries</a><a class="nav-extra" href="/blog/">Blog</a><a class="button" href="https://lsacommand.com/book/" data-cta="nav-book">Book an LSA audit</a></nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Google Local Services Ads Lead Rating: AI Lead Scoring, and You Stay in Control</li></ol></nav>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">LSA lead quality</p>
+        <h1>Google Local Services Ads Lead Rating: AI Lead Scoring, and You Stay in Control</h1>
+        <p class="lede">What Google's lead rating is, why it matters, and how AI rates every LSA lead while your team decides what Google actually receives: review first, strictness levels, the transcript beside each rating and a log of who approved it.</p>
+        <p class="article-meta"><span>By <a href="/author/lsa-command-team/" rel="author">the LSA Command Team</a></span> <span aria-hidden="true">·</span> <time datetime="2027-01-07">January 7, 2027</time> <span aria-hidden="true">·</span> 9 min read</p>
+      </header>
+<!-- LSA-BOOK-CTA top START -->
+<aside class="book-cta book-cta-top" data-lsa-cta="top" aria-label="Book a walkthrough, top of article"><div class="book-cta-copy"><p class="book-cta-eyebrow">Built for agencies only: Google LSA for your clients</p><p><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> Their team gets the first 10 to 15 seconds, then AI answers. AI messaging replies instantly.</p><p class="book-cta-proof">Across three pool contractor accounts, leads answered within 30 seconds went from 28% to 100% (December 2025 to April 2026, published case studies).</p><p>Bring one client account and the LSA Command team walks you through it live in 30 minutes. No passwords change hands. $200 per month per client.</p></div><a class="button" href="https://lsacommand.com/book/?post_slug=lsa-lead-rating&amp;cta_position=top" data-cta="post-top-book" data-cta-position="top">Book my 30-minute walkthrough</a></aside>
+<!-- LSA-BOOK-CTA top END -->
+      <div class="article-layout">
+        <aside class="contents" aria-label="On this page"><p class="contents-label">On this page</p><nav aria-label="Table of contents"><ol><li><a href="#watch">Watch the video</a></li>
+<li><a href="#what-it-is">What a Google Local Services Ads lead rating is</a></li>
+<li><a href="#why-it-matters">Why your Google Local Services Ads lead rating matters to Google</a></li>
+<li><a href="#ai-lead-scoring">How AI lead scoring works for LSA leads</a></li>
+<li><a href="#review-first">Review first and strictness</a></li>
+<li><a href="#to-review">Approve, edit or reject</a></li>
+<li><a href="#approval-log">The approval log</a></li>
+<li><a href="#checklist">Free lead rating checklist</a></li>
+<li><a href="#what-else">What else runs around each rating</a></li>
+<li><a href="#sources">Sources</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+<li><a href="#book">See it on your own client account</a></li></ol></nav></aside>
+        <div class="article-body">
+          <p>LSA Command starts with one promise: 100% of calls answered within 30 seconds. The business's own team gets the first 10 to 15 seconds to pick up, then AI answers. AI messaging replies to message leads instantly. Once a lead is answered, the next job is the Google Local Services Ads lead rating: telling Google whether that lead was a good one.</p>
+
+          <p><strong>A Google Local Services Ads lead rating is the feedback you send Google on a single lead:</strong> one of five answers, from very satisfied to very dissatisfied, plus a reason. LSA Command uses AI lead scoring to rate every new lead from its call or messages, and you decide whether those ratings go to Google automatically or wait for approval.</p>
+
+          <p class="disclosure"><strong>Note:</strong> the screen images here are illustrative mockups with fictional data. Every Google fact is linked to its source.</p>
+
+          <div class="video-with-infographic">
+          <figure class="video" id="watch">
+            <div class="yt-facade" data-video-id="VIDEO_ID_PENDING">
+              <img src="/blog/lsa-lead-rating/google-local-services-ads-lead-rating-video-thumbnail.webp" alt="Google Local Services Ads lead rating video thumbnail: AI lead scoring for LSA, AI rates every lead and you approve what Google sees, with a held rating card for a fictional plumbing lead" title="Google Local Services Ads lead rating video: AI lead scoring for LSA" width="1280" height="720" decoding="async" fetchpriority="high" data-no-zoom>
+              <button type="button" class="yt-play" aria-label="Play video: Google Local Services Ads Lead Rating: AI Lead Scoring, and You Stay in Control"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#07243A"/><path d="M45 24 27 14v20" fill="#FFD60A"/></svg></button>
+            </div>
+            <figcaption>Watch: Google Local Services Ads Lead Rating: AI Lead Scoring, and You Stay in Control.<noscript> <a href="https://www.youtube.com/watch?v=VIDEO_ID_PENDING">Watch on YouTube</a>.</noscript></figcaption>
+          </figure>
+          <figure class="infographic">
+            <a href="/blog/lsa-lead-rating/google-local-services-ads-lead-rating-ai-lead-scoring-flowchart.webp"><img src="/blog/lsa-lead-rating/google-local-services-ads-lead-rating-ai-lead-scoring-flowchart.webp" width="1600" height="4352" loading="lazy" decoding="async" alt="Google Local Services Ads lead rating flowchart: a call rings the client&#x27;s team for 10 to 15 seconds, then AI answers so 100% of calls are answered within 30 seconds, or AI messaging replies instantly; notes are written and High-value leads identified; text and email notifications go out in parallel; AI lead scoring rates the lead on Google&#x27;s 5-step scale; the rating is sent automatically or held by review first or strictness; a held rating is approved, edited or rejected; every decision lands in the approval log" title="Google Local Services Ads lead rating and AI lead scoring flowchart"></a>
+            <figcaption>Google Local Services Ads lead rating flowchart: how AI lead scoring moves from the call or message to Google, and where you approve, edit or reject. Illustrative process. Open the full-size image to read it.</figcaption>
+          </figure>
+          </div>
+
+          <h2 id="what-it-is">What a Google Local Services Ads lead rating is, and how Google collects it</h2>
+
+          <p>Google's help page on <a href="https://support.google.com/localservices/answer/15100654?hl=en" rel="noopener">automated Local Services Ads lead credits</a> gives the steps: open Leads, select "Rate this lead" in the top right corner, and submit the survey. Google calls it the Lead Feedback Survey. The same page says feedback can also be submitted with the Google Ads API.</p>
+
+          <p>Google's published API definition spells out what the survey holds. The <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/enums/local_services_lead_survey_answer.proto" rel="noopener">survey answer</a> is one of five steps: very satisfied, satisfied, neutral, dissatisfied or very dissatisfied. A satisfied or dissatisfied answer carries a reason, and Google's <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/services/local_services_lead_service.proto" rel="noopener">lead service definition</a> says a free form comment is required when the reason is "Other".</p>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Reasons for a satisfied rating</th><th>Reasons for a dissatisfied rating</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Booked customer: the lead "converted into a booked customer or client"</td><td>Geo mismatch: the service "does not match the business' service area"</td></tr>
+              <tr><td>Likely booked customer: the lead could convert soon</td><td>Job type mismatch: a service "not offered by the business"</td></tr>
+              <tr><td>Service related: the lead matched the services the business offers</td><td>Not ready to book</td></tr>
+              <tr><td>High value service: a service "that generates high value for the business"</td><td>Spam: Google's examples are a bot, a silent call or a scam</td></tr>
+              <tr><td>Other (comment required)</td><td>Duplicate: the customer contacted the business more than once</td></tr>
+              <tr><td></td><td>Solicitation: someone looking for a job or selling a product</td></tr>
+              <tr><td></td><td>Other (comment required)</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p>Source: Google's API definitions for the <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/enums/local_services_lead_survey_satisfied_reason.proto" rel="noopener">satisfied reasons</a> and <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/enums/local_services_lead_survey_dissatisfied_reason.proto" rel="noopener">dissatisfied reasons</a> (Google Ads API v26, checked November 24, 2026).</p>
+
+          <h2 id="why-it-matters">Why your Google Local Services Ads lead rating matters to Google</h2>
+
+          <p>Google tells advertisers two things about this feedback.</p>
+
+          <ul>
+            <li><strong>It shapes the leads you get.</strong> Google's <a href="https://support.google.com/localservices/answer/7195435?hl=en" rel="noopener">How leads work</a> page says: "If you believe the lead you received is poor quality, you can let us know in the Feedback Survey for that lead. We'll do our best to send you more of the leads that you want and fewer of those you don't want."</li>
+            <li><strong>It can lead to a bonus credit, at Google's discretion.</strong> The same page adds: "We may also occasionally credit leads you report as poor quality through this survey." When a rating is sent through the API, Google answers with a <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/enums/local_services_lead_credit_issuance_decision.proto" rel="noopener">bonus credit decision</a>: issued, not issued because the bonus credit cap was reached, or not issued because the lead is not eligible. Google's definition says an issued bonus credit "will be available for use in about two months."</li>
+          </ul>
+
+          <p>Google has asked for this since it automated lead credits. <a href="https://www.seroundtable.com/google-automate-local-services-ads-lead-credits-37617.html" rel="noopener">Search Engine Roundtable</a> (June 25, 2024) quoted Google's Ads Liaison: "we are also opening an in-product Lead Feedback survey on every lead." A later <a href="https://www.seroundtable.com/google-lsa-lead-quality-drops-38884.html" rel="noopener">report</a> (February 11, 2025) quoted the same source: "We also encourage advertisers and agencies to provide feedback on all leads in their accounts".</p>
+
+          <p>Three limits keep expectations honest. Google's credits page says it "no longer supports credits for 'job type not serviced' and 'geo not serviced' leads," and that lead credits are not available for health care verticals, tax specialists or advertisers in EMEA. Google's <a href="https://support.google.com/google-ads/answer/17213585?hl=en" rel="noopener">transition page</a> says "Manual lead disputes are no longer supported." And Google alone decides a credit. We cover that side in <a href="/blog/how-to-dispute-google-lsa-leads/">how to dispute Google LSA leads</a> and <a href="/blog/lsa-lead-disputes-agencies/">LSA lead disputes for agencies</a>, and the causes of poor leads in <a href="/blog/bad-google-lsa-leads/">why you are getting bad Google LSA leads</a>.</p>
+
+          <p>Since Google says it uses this feedback to decide which leads to send more of, a wrong rating tells Google the wrong thing about what your client wants. That is the case for keeping a person in control of what gets sent.</p>
+
+          <h2 id="ai-lead-scoring">How AI lead scoring works for LSA leads in LSA Command</h2>
+
+          <p>"AI lead scoring" usually means software judging how good a lead is. AI lead scoring for LSA has a second job: the score has to fit the survey Google already uses. In LSA Command, AI rates each new LSA lead from its call or its messages. The result is Google's 5-step lead rating (very satisfied through very dissatisfied) with a reason and an optional comment.</p>
+
+          <p>Everything lives on one page, Lead Ratings, described in the product as: "Control how AI ratings are sent to Google for your LSA leads. Approve held ratings here and see who approved each one." You select a business, then choose how much the AI may send on its own.</p>
+
+          <h2 id="review-first">Review first and strictness: who sends each Google Local Services Ads lead rating</h2>
+
+          <p>One checkbox sets the mode: "Send AI ratings to Google automatically."</p>
+
+          <ul>
+            <li><strong>Turned off, that is review first.</strong> Every AI rating waits until someone approves it. Nothing reaches Google without a decision from your team.</li>
+            <li><strong>Turned on, strictness decides.</strong> You pick one of three levels, and the level decides which ratings go straight to Google and which are held.</li>
+          </ul>
+
+          <figure class="shot">
+            <a href="/blog/lsa-lead-rating/google-local-services-ads-lead-rating-settings-review-first-strictness.webp"><img src="/blog/lsa-lead-rating/google-local-services-ads-lead-rating-settings-review-first-strictness.webp" width="1600" height="1060" loading="lazy" decoding="async" alt="Google Local Services Ads lead rating settings mockup for a fictional plumbing business: a checkbox to send AI ratings to Google automatically, and AI lead scoring strictness set to Relaxed, Balanced or Strict" title="Google Local Services Ads lead rating settings: review first and strictness for AI lead scoring"></a>
+            <figcaption>Google Local Services Ads lead rating settings: the automatic sending checkbox and the three strictness levels for AI lead scoring. Illustrative example, fictional data.</figcaption>
+          </figure>
+
+          <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Setting</th><th>What happens to a new AI rating</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Review first (automatic sending off)</td><td>Every AI rating waits until someone approves it.</td></tr>
+              <tr><td>Strict</td><td>Send only satisfied ratings automatically.</td></tr>
+              <tr><td>Balanced</td><td>Hold dissatisfied ratings for review.</td></tr>
+              <tr><td>Relaxed</td><td>Send every AI rating.</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p>Settings apply to new AI ratings only. Our suggestion: start a new client on review first, then loosen as the ratings earn trust.</p>
+
+          <aside class="book-cta book-cta-mid" data-lsa-cta="mid" aria-label="Book a walkthrough, middle of article"><p class="book-cta-title">Want to see a Google Local Services Ads lead rating held, edited and approved on a live account?</p><p>Bring one client account. The LSA Command team walks you through the call flow and the Lead Ratings page in 30 minutes, free.</p><p><a class="button" href="https://lsacommand.com/book/?post_slug=lsa-lead-rating&amp;cta_position=mid" data-cta-position="mid" data-cta="article-mid-book">Book my 30-minute walkthrough</a></p></aside>
+
+          <h2 id="to-review">Approve, edit or reject: AI lead scoring with the transcript beside it</h2>
+
+          <p>Held ratings collect in the "To review" tab. Each one shows the customer, the lead type, the job type and the date, plus a pill that says why it is waiting: "Review first" or "Held by strictness." Under that sit the AI's rating, its reason and its comment.</p>
+
+          <figure class="shot">
+            <a href="/blog/lsa-lead-rating/ai-lead-scoring-google-local-services-ads-lead-rating-review-transcript.webp"><img src="/blog/lsa-lead-rating/ai-lead-scoring-google-local-services-ads-lead-rating-review-transcript.webp" width="1600" height="1712" loading="lazy" decoding="async" alt="AI lead scoring mockup of the To review tab: a Google Local Services Ads lead rating for Customer A held by strictness with the call transcript beside it and Reject, Edit and Approve and send to Google buttons, and a second held rating below it" title="AI lead scoring: Google Local Services Ads lead rating held for review"></a>
+            <figcaption>AI lead scoring held for review: each Google Local Services Ads lead rating shows the AI's rating, reason and comment, the transcript, and Reject, Edit and Approve buttons. Illustrative example, fictional data.</figcaption>
+          </figure>
+
+          <p>"Show transcript" opens the call or message thread right beside the rating, so the reviewer checks the AI's reasoning against what was really said. Then there are three choices:</p>
+
+          <ul>
+            <li><strong>Approve &amp; send to Google.</strong> The rating goes to Google as written.</li>
+            <li><strong>Edit.</strong> Change the rating, the reason or the comment before it is sent. A comment is required when the reason is Other, which matches Google's own rule.</li>
+            <li><strong>Reject.</strong> Rejected ratings are never sent.</li>
+          </ul>
+
+          <h2 id="approval-log">The approval log: an audit trail for every Google Local Services Ads lead rating</h2>
+
+          <p>The second tab, "Approval log," records what happened to each rating in five columns: Lead, Rating sent (or "Not sent"), Decision, By, and When. "By" shows the person who decided, or "Automatic (AI)" when the rating went out under your automatic settings.</p>
+
+          <figure class="shot">
+            <a href="/blog/lsa-lead-rating/google-local-services-ads-lead-rating-approval-log.webp"><img src="/blog/lsa-lead-rating/google-local-services-ads-lead-rating-approval-log.webp" width="1600" height="1308" loading="lazy" decoding="async" alt="Google Local Services Ads lead rating approval log mockup: five fictional leads with the rating sent or Not sent, the decision, and whether a team member or Automatic (AI) made it, with dates, for AI lead scoring" title="Google Local Services Ads lead rating approval log for AI lead scoring"></a>
+            <figcaption>Google Local Services Ads lead rating approval log: the lead, the rating sent or "Not sent", the decision, who made it and when, for AI lead scoring. Illustrative example, fictional data.</figcaption>
+          </figure>
+
+          <p>For an agency, that answers the questions a client eventually asks. Who told Google this lead was bad? When? Was it the AI or someone on the account? Select the business and walk the owner through the decisions line by line.</p>
+
+          <h2 id="checklist">Free checklist: a Google Local Services Ads lead rating routine for agencies</h2>
+
+          <p>Copy this and adjust it per client.</p>
+
+          <aside class="callout" aria-label="Google Local Services Ads lead rating checklist">
+            <p class="callout-title">Google Local Services Ads lead rating checklist</p>
+            <ul>
+              <li>Decide, per client, who on your team approves ratings.</li>
+              <li>Read the transcript before approving any dissatisfied rating.</li>
+              <li>Reject any rating you would not put your client's name on. Rejected ratings are never sent.</li>
+              <li>When the same dissatisfied reason keeps repeating, fix the cause. Google's advice: "revisit your service areas, job types, and categories."</li>
+              <li>Review the approval log with the client once a month, and never report a rating as a credit. Google decides credits.</li>
+            </ul>
+          </aside>
+
+          <p>Our free <a href="/tools/lsa-account-health-grader/">LSA account health grader</a> ranks the top fixes for an account, and the <a href="/blog/google-local-services-ads-billing/">billing guide</a> explains how charges and credits show up.</p>
+
+          <h2 id="what-else">What else runs around each lead rating</h2>
+
+          <p>The rating is one step in the chain shown in the flowchart above. Calls are answered within 30 seconds and message leads get an instant AI reply. Notes go on every lead inside Google LSA, with High-value leads identified. Text and email notifications reach the client, and most robocalls and spam are blocked and kept out of notifications (see <a href="/blog/lsa-lead-notifications/">LSA lead notifications</a>). Booked calls are marked inside Google's LSA platform with Lead Status set to Booked. Agencies also get a weekly lead summary and white label.</p>
+
+          <p>From our own published results: across three pool contractor accounts in our <a href="/case-studies/">case studies</a>, leads answered within 30 seconds went from 28% to 100% between December 2025 and April 2026. The price is $200 per month per client, with voice AI included.</p>
+
+          <h2 id="sources">Sources for this lead rating guide</h2>
+          <p>All pages below were checked on November 24, 2026.</p>
+          <ul class="sources">
+            <li>Google, <a href="https://support.google.com/localservices/answer/15100654?hl=en" rel="noopener">About Automated Local Services Ads lead credits</a> (Rate this lead, Lead Feedback Survey, credit limits, bonus credit for leaving feedback).</li>
+            <li>Google, <a href="https://support.google.com/localservices/answer/7195435?hl=en" rel="noopener">How leads work</a> (Feedback Survey quote, occasional credits).</li>
+            <li>Google Ads Help, <a href="https://support.google.com/google-ads/answer/17213585?hl=en" rel="noopener">Local Services Ads transition to Performance Max campaigns with pay-per-lead goals</a> (manual lead disputes no longer supported).</li>
+            <li>Google Ads API v26, <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/services/local_services_lead_service.proto" rel="noopener">Local Services lead service definition</a> (ProvideLeadFeedback, comment rule, bonus credit decision, about two months).</li>
+            <li>Google Ads API v26, <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/enums/local_services_lead_survey_answer.proto" rel="noopener">survey answer</a>, <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/enums/local_services_lead_survey_satisfied_reason.proto" rel="noopener">satisfied reasons</a>, <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/enums/local_services_lead_survey_dissatisfied_reason.proto" rel="noopener">dissatisfied reasons</a> and <a href="https://github.com/googleapis/googleapis/blob/master/google/ads/googleads/v26/enums/local_services_lead_credit_issuance_decision.proto" rel="noopener">credit issuance decision</a>.</li>
+            <li>Search Engine Roundtable, <a href="https://www.seroundtable.com/google-automate-local-services-ads-lead-credits-37617.html" rel="noopener">Google Automated Local Services Ads Lead Credits Coming</a> (June 25, 2024).</li>
+            <li>Search Engine Roundtable, <a href="https://www.seroundtable.com/google-lsa-lead-quality-drops-38884.html" rel="noopener">Advertisers: Google LSA Lead Quality Drops After Auto Lead Credits</a> (February 11, 2025).</li>
+          </ul>
+
+          <h2 id="faq">Frequently asked questions about Google Local Services Ads lead rating and AI lead scoring</h2>
+          <div class="faq">
+            <details><summary>What is a Google Local Services Ads lead rating?</summary><p>A Google Local Services Ads lead rating is the feedback you give Google on one lead. In the leads list you select Rate this lead and fill in Google's Lead Feedback Survey. Through the Google Ads API the same survey has five answers, from very satisfied to very dissatisfied, plus a reason and an optional comment.</p></details>
+            <details><summary>Does a Google Local Services Ads lead rating get a credit from Google?</summary><p>Not on its own. Google says it uses the feedback to send more of the leads you want and fewer of those you do not, and that it may also occasionally credit leads reported as poor quality. Google decides every credit. LSA Command does not promise credits.</p></details>
+            <details><summary>Is AI lead scoring the same thing as Google's lead rating?</summary><p>Not quite. AI lead scoring usually means software judging how good a lead is. In LSA Command the AI reads the call or message thread and scores each new LSA lead on Google's own 5-step rating, with a reason. That is the rating Google can receive. Separately, High-value leads identified tells your team which leads to work first.</p></details>
+            <details><summary>Can I stop AI ratings from going to Google until someone approves them?</summary><p>Yes. On the Lead Ratings page, turn off Send AI ratings to Google automatically. That is review first mode: every AI rating waits until someone on your team approves it.</p></details>
+            <details><summary>What do Relaxed, Balanced and Strict mean?</summary><p>They are the strictness levels that apply when automatic sending is on. Relaxed sends every AI rating. Balanced holds dissatisfied ratings for review. Strict sends only satisfied ratings automatically. Settings apply to new AI ratings only.</p></details>
+            <details><summary>What happens when I reject an AI rating?</summary><p>A rejected rating is never sent to Google. The approval log records the lead, shows Not sent, and lists the decision, who made it and when.</p></details>
+            <details><summary>How much does LSA Command cost?</summary><p>LSA Command is $200 per month per client, with voice AI included. You can book a free 30 minute walkthrough and bring one client account.</p></details>
+          </div>
+          <aside class="author-box" aria-label="About the author"><p class="eyebrow">About the author</p><p>The LSA Command Team has almost two decades of agency experience helping local businesses with Local Services Ads. After watching too many LSA calls go unanswered on client accounts, we built LSA Command to answer every call, reply to message leads and mark the calls the AI books as Booked in Google. <a href="/author/lsa-command-team/">More about the LSA Command Team</a></p></aside>
+
+
+          <div class="cta-box" id="book">
+            <h2 id="price-and-next-step">See Google Local Services Ads lead rating and AI lead scoring on your own client account</h2>
+            <p><strong>LSA Command works only with agency owners, not business owners.</strong> It was built first for our own agency's Google LSA accounts.</p>
+            <p>Bring one client account. We will show the call flow that answers 100% of calls within 30 seconds, then the Lead Ratings page: the AI's rating, the transcript beside it, and Approve, Edit or Reject. $200 per month per client with voice AI included. The walkthrough is free and takes 30 minutes.</p>
+            <p><a class="button" href="https://lsacommand.com/book/?post_slug=lsa-lead-rating&amp;cta_position=end" data-cta-position="end" data-cta="article-footer-book">Book my 30-minute walkthrough</a> <a class="button button-secondary" href="/pricing/" data-cta="article-footer-pricing">See pricing</a></p>
+          </div>
+          <aside class="related" aria-label="Related reading"><h2 id="related">Related reading</h2>
+<ul>
+            <li><a href="/blog/local-services-ads-credits/">Local Services Ads credits: which leads Google credited</a></li>
+            <li><a href="/blog/how-to-dispute-google-lsa-leads/">How to dispute Google LSA leads (manual disputes are gone)</a></li>
+            <li><a href="/blog/bad-google-lsa-leads/">Why you are getting bad Google LSA leads</a></li>
+            <li><a href="/blog/local-service-ads-eligibility/">Local Service Ads eligibility check</a></li>
+</ul></aside>
+        </div>
+      </div>
+    </article>
+<!-- LSA-BOOK-CTA sticky START -->
+<div class="book-sticky" data-lsa-sticky hidden role="region" aria-label="Book a walkthrough, sticky bar"><p class="book-sticky-text"><strong>100% of your clients' Google LSA calls answered within 30 seconds.</strong> <span class="book-sticky-extra">Built for agencies only. $200 per month per client.</span></p><a class="button" href="https://lsacommand.com/book/?post_slug=lsa-lead-rating&amp;cta_position=sticky" data-cta="post-sticky-book" data-cta-position="sticky">Book my walkthrough</a><button type="button" class="book-sticky-close" data-lsa-sticky-close aria-label="Dismiss booking bar">&times;</button></div>
+<!-- LSA-BOOK-CTA sticky END -->
+  </main>
+  <footer class="site-footer"><div class="container">
+    <nav aria-label="Product"><a href="/agencies/">For agencies</a><a href="/pricing/">Pricing</a><a href="/what-you-get/">What you get</a><a href="/lsa-notes-and-notifications/">Notes and notifications</a><a href="/lsa-ai-call-answering/">AI call answering</a><a href="/lsa-message-leads/">Message lead response</a><a href="/lsa-lead-disputes/">Lead disputes and credits</a><a href="/lsa-reviews/">Review generation</a></nav>
+    <nav aria-label="Industries"><a href="/industries/">Industries</a><a href="/industries/hvac/">HVAC</a><a href="/industries/plumbers/">Plumbers</a><a href="/industries/roofers/">Roofers</a><a href="/industries/electricians/">Electricians</a><a href="/industries/pool-contractors/">Pool contractors</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/case-studies/">Case studies</a><a href="/blog/">Blog</a><a href="/tools/">Free tools</a><a href="/resources/">Resources</a><a href="/setup/">Setup guide</a><a href="/support.html">Support</a><a href="https://lsacommand.com/book/" data-cta="footer-book">Book an LSA audit</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/gdpr.html">GDPR</a><a href="/hipaa-compliance.html">HIPAA Compliance</a></nav>
+    <p>© 2026 LSA Command. All rights reserved. Google and Google Local Services Ads are trademarks of Google LLC. We are not affiliated with Google.</p>
+  </div></footer>
+<script>
+(function(){document.querySelectorAll('.yt-facade').forEach(function(f){var b=f.querySelector('.yt-play');if(!b)return;b.addEventListener('click',function(){var id=f.getAttribute('data-video-id');if(!id||id==='VIDEO_ID_PENDING')return;var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';i.title="Google Local Services Ads Lead Rating: AI Lead Scoring, and You Stay in Control";i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';i.setAttribute('allowfullscreen','');i.referrerPolicy='strict-origin-when-cross-origin';f.appendChild(i);b.remove();i.focus();});});})();
+</script>
+</body>
+</html>
